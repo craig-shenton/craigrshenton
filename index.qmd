@@ -1,6 +1,6 @@
 ---
 title: "🤔"
-subtitle: "My blog on data science, experimentation and learning"
+subtitle: "My blog on data engineering"
 listing:
   feed: true
   contents: posts

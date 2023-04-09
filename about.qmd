@@ -1,5 +1,5 @@
 ---
-title: "Daniel Tan"
+title: "Craig Robert Shenton"
 image: profile.png
 about:
   template: trestles
@@ -8,15 +8,11 @@ about:
   links:
     - icon: linkedin
       text: LinkedIn
-      href: https://www.linkedin.com/in/ddanieltan/
+      href: https://www.linkedin.com/in/craigrshenton/
     - icon: github
       text: Github
-      href: https://github.com/ddanieltan
+      href: https://github.com/craig-shenton
 
 ---
 
-Hi 👋, I'm Daniel, a data scientist based in Singapore.
-
-I currently work on Experimentation [@Apple](https://www.apple.com/careers/). Previously, I worked on Personalisation [@OCBC AI Labs](https://www.ocbc.com/group/careers/index.html) and on the metasearch auction [@TripAdvisor](https://careers.tripadvisor.com/).
-
-Ocassionally, I teach data science workshops [@General Assembly](https://generalassemb.ly/) and [@Vertical Institute](https://verticalinstitute.com/).
+Hi 👋, I'm Craig.

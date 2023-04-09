@@ -2,9 +2,9 @@ project:
   type: website
 
 website:
-  title: "ddanieltan.com"
-  site-url: https://www.ddanieltan.com
-  repo-url: https://github.com/ddanieltan/ddanieltan.com
+  title: "craigrshenton"
+  site-url: https://craig-shenton.github.io/craigrshenton
+  repo-url: https://github.com/craig-shenton/craigrshenton
   twitter-card: true
   open-graph: true
   navbar:
@@ -12,11 +12,10 @@ website:
       - about.qmd
       - icon: github
         aria-label: github
-        href: https://github.com/ddanieltan
+        href: https://github.com/craig-shenton
       - icon: linkedin
         aria-label: linkedin
-        href: https://www.linkedin.com/in/ddanieltan/
-  google-analytics: "G-BQGXLNCBHY"
+        href: https://www.linkedin.com/in/craigrshenton/
 format:
   html:
     theme: 
