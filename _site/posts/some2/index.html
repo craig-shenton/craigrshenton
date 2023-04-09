@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Daniel Tan">
+<meta name="dcterms.date" content="2022-08-08">
+<meta name="description" content="A #SoME2 submission">
+
+<title>ddanieltan.com - Explainers: Inverse Transform Theorem</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-BQGXLNCBHY"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-BQGXLNCBHY', { 'anonymize_ip': true});
+</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<meta property="og:title" content="ddanieltan.com - Explainers: Inverse Transform Theorem">
+<meta property="og:description" content="A #SoME2 submission">
+<meta property="og:image" content="https://www.ddanieltan.com/posts/some2/midjourney.png">
+<meta property="og:site-name" content="ddanieltan.com">
+<meta property="og:image:height" content="512">
+<meta property="og:image:width" content="512">
+<meta name="twitter:title" content="ddanieltan.com - Explainers: Inverse Transform Theorem">
+<meta name="twitter:description" content="A #SoME2 submission">
+<meta name="twitter:image" content="https://www.ddanieltan.com/posts/some2/midjourney.png">
+<meta name="twitter:image-height" content="512">
+<meta name="twitter:image-width" content="512">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="floating nav-fixed slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">ddanieltan.com</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">Daniel Tan</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ddanieltan"><i class="bi bi-github" role="img" aria-label="github">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/ddanieltan/"><i class="bi bi-linkedin" role="img" aria-label="linkedin">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#worlds-at-our-fingertips" id="toc-worlds-at-our-fingertips" class="nav-link active" data-scroll-target="#worlds-at-our-fingertips">Worlds at our fingertips</a></li>
+  <li><a href="#how-random-variates-are-generated" id="toc-how-random-variates-are-generated" class="nav-link" data-scroll-target="#how-random-variates-are-generated">How random variates are generated</a></li>
+  <li><a href="#inverse-transform-theorem" id="toc-inverse-transform-theorem" class="nav-link" data-scroll-target="#inverse-transform-theorem">Inverse Transform Theorem</a></li>
+  <li><a href="#visual-connection" id="toc-visual-connection" class="nav-link" data-scroll-target="#visual-connection">Visual connection</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a>
+  <ul class="collapse">
+  <li><a href="#last-updated" id="toc-last-updated" class="nav-link" data-scroll-target="#last-updated">Last Updated</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Explainers: Inverse Transform Theorem</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">explainers</div>
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">simulation</div>
+    <div class="quarto-category">randomness</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    A #SoME2 submission
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Daniel Tan </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 8, 2022</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This post is my submission to 2022’s Summer of Math Exposition 2 (SoME2), a competition encouraging people all around the world to create expository content on their favourite math topics during the summer. I thoroughly enjoyed learning from the <a href="https://www.youtube.com/playlist?list=PLnQX-jgAF5pTkwtUuVpqS5tuWmJ-6ZM-Z">submissions from SoME1</a>, and thought to scrape my spare time together this year to submit something for SoME2.</p>
+<p>You can learn more about #SoME2 from <a href="https://youtu.be/hZuYICAEN9Y">Grant Sanderson’s(3B1B) video</a>.</p>
+</div>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">set.seed</span>(<span class="fu">sum</span>(<span class="fu">utf8ToInt</span>(<span class="st">"SoME2"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<section id="worlds-at-our-fingertips" class="level1 page-columns page-full">
+<h1>Worlds at our fingertips</h1>
+<p>Modern day computers are pretty amazing simulation machines.</p>
+<p>Here’s an example. Say that I am a <a href="https://www.wikihow.com/Do-the-Water-Bottle-Flipping-Challenge">Bottle Flipping</a> enthusiast and I am eager to simulate 100 bottle flips. To simulate flipping a bottle 100 times, I could instruct my computer to provide 100 simulations. At a technical level, I am modelling bottle flipping as a <a href="https://en.wikipedia.org/wiki/Binomial_distribution">binomial distribution</a>, and for my simulation I am generating 100 random variates from that distribution.</p>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>totalFlips <span class="ot">=</span> <span class="dv">100</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>prob <span class="ot">=</span> <span class="fl">0.2</span> <span class="co"># Took me 5 tries to flip the bottle once</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">rbinom</span>(totalFlips, <span class="dv">1</span>, prob) <span class="co"># 1 represents a successful flip</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>  [1] 1 0 1 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 1 0 0
+ [38] 0 0 1 1 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0
+ [75] 1 0 0 0 0 1 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0</code></pre>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Yes, 🙄 I know bottle flipping was a trend way back in <a href="https://www.quora.com/What-are-the-origins-of-bottle-flipping-How-did-its-popularity-spread">2016</a>. I needed a success/failure example and it was either this of “coin flips” which I could not bring myself to use</p>
+</div></div><p>Or, say I’m a sports fan and my football team scores an average of 1 goal per game. I could simulate the goals scored over 100 games, by modelling the goals scored by my team after a <a href="https://en.wikipedia.org/wiki/Poisson_distribution">Poisson distribution</a>, and once again, run my simulation by generating 100 random variates from this distribution.</p>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>totalGames<span class="ot">=</span><span class="dv">100</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>avgGoalsPerGame <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="fu">rpois</span>(totalGames,avgGoalsPerGame)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>  [1] 0 1 2 1 2 2 0 0 1 2 2 0 1 0 1 3 2 2 1 1 2 1 1 1 1 0 4 3 1 0 0 0 2 1 0 1 0
+ [38] 0 2 2 1 0 3 1 3 0 0 0 1 1 2 2 1 2 2 0 2 2 0 0 0 1 0 0 2 1 1 2 2 0 3 0 0 0
+ [75] 0 0 0 1 1 2 1 2 0 1 3 1 2 0 0 2 2 0 2 1 0 0 2 2 1 1</code></pre>
+</div>
+</div>
+<p>You get the gist. From models using a single distribution to ones using complex combinations of distributions, our ability to generate random variates allows us to simulate almost any scenario we can think of!</p>
+</section>
+<section id="how-random-variates-are-generated" class="level1">
+<h1>How random variates are generated</h1>
+<p>But, how do computers even produce these random variates? Surely, there can’t be a specialised function for every one of the infinite distributions out in the world. It turns out that computers have a very simple solution in the form of two ingredients - a pseudorandom uniform generator and the inverse transform theorem.</p>
+<p>A pseudoranom uniform generator is an algorithm that produces random variates from a <span class="math inline">\(Unif~(0,1)\)</span> distribution, producing uniformly random numbers between 0 and 1. There are many different algorithms that can produce uniform random variates and they are judged on how well they can come close to a perfectly random generator. The assortment of different uniform generators each with their pros and cons are interesting, but that will not be the focus of today’s post. Today, I want to focus on the 2nd ingredient, the inverse transform theorem.</p>
+</section>
+<section id="inverse-transform-theorem" class="level1">
+<h1>Inverse Transform Theorem</h1>
+<p>The Inverse Transform Theorem is the backbone behind <a href="https://en.wikipedia.org/wiki/Inverse_transform_sampling">Inverse Transform Sampling</a>, and is how a uniform distribution is transformed to a diverse range of other distributions.</p>
+<p>My biggest challenge when I first encountered this theorem was to grasp the key idea behind its simplicity. Here is the theorem:</p>
+<blockquote class="blockquote">
+<p>Let <span class="math inline">\(X\)</span> be a continuous random variable with c.d.f <span class="math inline">\(F(x)\)</span>. Then <span class="math inline">\(F(X) \sim Unif(0,1)\)</span>.</p>
+</blockquote>
+<p>And, here’s the equally perplexing simple proof:</p>
+<blockquote class="blockquote">
+<p>Let <span class="math inline">\(Y = F(X)\)</span> and suppose that <span class="math inline">\(Y\)</span> has a c.d.f <span class="math inline">\(G(y)\)</span>, then <span class="math display">\[G(y) = P(Y \leq y) = P(F(Y) \leq y) \]</span> <span class="math display">\[ = P(X \leq F^{-1}(y)) = F(F^{-1}(y)) = y\]</span></p>
+</blockquote>
+<p>Let me explain the mechanics of the theorem. This theorem simply states that given we have a cumulative density function of a continuous random variable, the inverse of the CDF function will produce a Uniform distribution. While the usage of the theorem reads like a straight forward recipe, I had so many questions about why the theorem works:</p>
+<ul>
+<li>Why is the theorem and proof so simple?</li>
+<li>How could this theorem be universally true for any distribution?</li>
+<li>Why did the theorem introduce the cumulative density function seemingly out of nowhere?</li>
+</ul>
+</section>
+<section id="visual-connection" class="level1">
+<h1>Visual connection</h1>
+<p>And what I see as a recurring theme amongst SoME submissions, is that for many mathematical concepts that appear hard to understand in written form, we can achieve some clarity by expressing the ideas in visual form. Here is my go at it.</p>
+<p>Here are a number of cumulative density functions for an assortment of distributions.</p>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>normal <span class="ot">&lt;-</span> pnorm</span>
+<span id="cb6-2"><a href="#cb6-2"></a>logNormal <span class="ot">&lt;-</span> plnorm</span>
+<span id="cb6-3"><a href="#cb6-3"></a>exponential <span class="ot">&lt;-</span> pexp</span>
+<span id="cb6-4"><a href="#cb6-4"></a></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">xlim</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>) <span class="sc">+</span> </span>
+<span id="cb6-6"><a href="#cb6-6"></a>  <span class="fu">geom_function</span>(<span class="at">fun =</span> pnorm, <span class="at">colour=</span><span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a>  <span class="fu">geom_function</span>(<span class="at">fun =</span> logNormal, <span class="at">colour=</span><span class="st">"brown"</span>) <span class="sc">+</span></span>
+<span id="cb6-8"><a href="#cb6-8"></a>  <span class="fu">geom_function</span>(<span class="at">fun =</span> exponential, <span class="at">colour=</span><span class="st">"purple"</span>) <span class="sc">+</span></span>
+<span id="cb6-9"><a href="#cb6-9"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"CDFs from an assortment of distributions"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Despite coming in every imaginable shape and size, CDFs for any function have 1 similarity. Their output (y-axis) will always be bound between 0 and 1. This makes a lot of sense when we consider that the CDF is characterised for being a <em>monotonic increasing</em> function. The CDF graphs the probability of <span class="math inline">\(P(X&lt;x)\)</span>, given that the output is a probability, the Y axis will always be bounded between 0 and 1. This property is very useful when we match it back to the <span class="math inline">\(Unif(0,1)\)</span> distribution. A uniform distribution produces random variates similarly bound between 0 and 1.</p>
+<p>The last piece of the puzzle is to understand that just as a function <span class="math inline">\(F(x)\)</span> can be visually described as a transformation mapping values from the X axis to values on the Y axis, and the inverse of that said function <span class="math inline">\(F^{-1}(x)\)</span> is simply the inverse transformation mapping values from the Y axis to the X axis.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="inverse.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">What the inverse function means</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>So putting all the pieces together, this is how the Inverse Transform Theorem is put into action:</p>
+<ul>
+<li><p>The <span class="math inline">\(Unif(0,1)\)</span> distribution produces a random uniform between 0 and 1</p></li>
+<li><p>This is akin to picking a random point on the Y axis of a CDF for your distribution of interest</p></li>
+<li><p>The inverse function <span class="math inline">\(F^{-1}(x)\)</span> maps the random uniform on the Y axis to a value on the X axis</p></li>
+<li><p>And this X axis value in turn becomes a random variate from your distribution of interest</p></li>
+</ul>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>The Inverse Transform Theorem is a remarkable piece of math that links the uniform distribution to just about any other distribution we could think of. It’s a crucial piece in the machinery of modern machines that enable us to run simulations, and I hope this post helps to share the visual a-ha intuition I experienced when I was learning about this topic.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="midjourney.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption"><a href="https://www.midjourney.com/home/">Midjourney</a> AI Art with the prompt of ‘Inverse Transform Theorem’</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+
+</section>
+
+<div id="quarto-appendix" class="default"><section id="last-updated" class="level2 appendix"><h2 class="quarto-appendix-heading">Last Updated</h2><div class="quarto-appendix-contents">
+
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "06 January 2023"</code></pre>
+</div>
+</div>
+
+
+</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{tan2022,
+  author = {Daniel Tan},
+  title = {Explainers: {Inverse} {Transform} {Theorem}},
+  date = {2022-08-08},
+  url = {https://www.ddanieltan.com/posts/some2},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-tan2022" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
+Daniel Tan. 2022. <span>“Explainers: Inverse Transform Theorem.”</span>
+August 8, 2022. <a href="https://www.ddanieltan.com/posts/some2">https://www.ddanieltan.com/posts/some2</a>.
+</div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

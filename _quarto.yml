@@ -1,0 +1,32 @@
+project:
+  type: website
+
+website:
+  title: "ddanieltan.com"
+  site-url: https://www.ddanieltan.com
+  repo-url: https://github.com/ddanieltan/ddanieltan.com
+  twitter-card: true
+  open-graph: true
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        aria-label: github
+        href: https://github.com/ddanieltan
+      - icon: linkedin
+        aria-label: linkedin
+        href: https://www.linkedin.com/in/ddanieltan/
+  google-analytics: "G-BQGXLNCBHY"
+format:
+  html:
+    theme: 
+      light: 
+        - litera
+        - custom.scss
+      dark:
+        - slate
+        - custom.scss
+    smooth-scroll: true
+
+
+
