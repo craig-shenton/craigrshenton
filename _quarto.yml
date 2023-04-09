@@ -18,8 +18,8 @@ website:
         icon: "rss"
         href: index.qmd
     right:
-      - text: "about"
-        href: About.qmd
+      - text: "About"
+        href: about.qmd
       - icon: github
         aria-label: github
         href: https://github.com/craig-shenton
