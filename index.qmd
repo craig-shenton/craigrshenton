@@ -1,6 +1,18 @@
 ---
-title: "🤔"
+title: "Craig Robert Shenton (PhD)"
 subtitle: "My blog on data engineering"
+image: profile.png
+about:
+  template: trestles
+  image-width: 10em
+  image-shape: round
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/craigrshenton/
+    - icon: github
+      text: Github
+      href: https://github.com/craig-shenton
 listing:
   feed: true
   contents: posts
@@ -14,3 +26,4 @@ listing:
 page-layout: full
 title-block-banner: false
 ---
+

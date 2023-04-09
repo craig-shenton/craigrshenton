@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Craig Robert Shenton (PhD)",
+    "section": "",
+    "text": "test\n\n\n\n\n\n\n  \n\n\n\n\nHello world\n\n\n\n\nA new hope\n\n\n\n\n\n\nJuly 15, 2022\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/helloworld/index.html",
+    "href": "posts/helloworld/index.html",
+    "title": "Hello world",
+    "section": "",
+    "text": "Welcome to my blog\nI started this blog to have a place on the internet where I can practice and publish my writing.\n\n\n\n\nReuseMITCitationBibTeX citation:@online{robertshenton2022,\n  author = {Craig Robert Shenton},\n  title = {Hello World},\n  date = {2022-07-15},\n  url = {https://craig-shenton.github.io/craigrshenton/posts/helloworld},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nCraig Robert Shenton. 2022. “Hello World.” July 15, 2022.\nhttps://craig-shenton.github.io/craigrshenton/posts/helloworld."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Craig Robert Shenton",
+    "section": "",
+    "text": "Hi 👋, I’m Craig."
+  }
+]
