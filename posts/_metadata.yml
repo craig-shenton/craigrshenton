@@ -21,7 +21,7 @@ code-overflow: wrap
 code-copy: true
 
 ## Appendix
-license: "CC BY"
+license: "MIT"
 citation: true
 
 # Default knitr options
@@ -32,5 +32,5 @@ execute:
 
 # Default author
 author:
-  - name: Daniel Tan
-    url: https://www.ddanieltan.com
+  - name: Craig Robert Shenton
+    url: https://github.com/craig-shenton
