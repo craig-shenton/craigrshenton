@@ -1,20 +1,22 @@
 ---
 title: "Data Engineering Research"
-description: "A comprehensive guide to Data Engineering, exploring key concepts, tools, and best practices"
-date: "2023-04-09"
+description: "Research post into Data Engineering, exploring key concepts, tools, and best practices"
+date: "2023-04-08"
 categories: []
 ---
 
 # Data Storage and Databases
-## Types of databases
-- A. Relational databases (SQL)
-- B. NoSQL databases
-- C. Time-series databases
-- D. Graph databases
+## [Types of databases](posts/data-engineering-list/index.qmd)
+- A. [Relational databases (SQL)](posts/data-engineering-list/index.qmd#relational-databases-(sql))
+- B. [NoSQL databases](posts/data-engineering-list/index.qmd#nosql-databases)
+- C. [Time-series databases](posts/data-engineering-list/index.qmd#time-series-databases)
+- D. [Graph databases](posts/data-engineering-list/index.qmd#graph-databases)
+
 ## Database normalization and denormalization
 ## Data warehousing
 - A. Star schema
 - B. Snowflake schema
+
 ## Data lake
 ## Cloud storage
 
@@ -25,10 +27,12 @@ categories: []
 ## Data ingestion methods
 - A. Batch processing
 - B. Stream processing
+
 ## Data transformation
 - A. Data cleaning
 - B. Data enrichment
 - C. Data validation
+
 ## Data orchestration tools
 - A. Apache Airflow
 - B. Prefect

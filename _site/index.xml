@@ -19,6 +19,148 @@
 <generator>quarto-1.2.280</generator>
 <lastBuildDate>Sat, 08 Apr 2023 23:00:00 GMT</lastBuildDate>
 <item>
+  <title>Database Typology</title>
+  <dc:creator>Craig Shenton</dc:creator>
+  <link>https://craig-shenton.github.io/craigrshenton/posts/database-typology.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>One of the most critical aspects of data handling is choosing the right database for your project. In this blog post, we will explore four primary types of databases: relational databases (SQL), NoSQL databases, time-series databases, and graph databases. Understanding the strengths and weaknesses of each type will help you make informed decisions about the most suitable database for your specific needs. Types of databases</p>
+</section>
+<section id="relational-databases-sql" class="level2">
+<h2 class="anchored" data-anchor-id="relational-databases-sql">Relational databases (SQL)</h2>
+<p>Relational databases, also known as SQL databases, have been the industry standard for decades. They store data in tables with predefined schemas, consisting of rows and columns. The relationships between these tables are defined using keys, which allows for efficient querying and manipulation of data.</p>
+<p>Some popular relational databases include:</p>
+<ul>
+<li>MySQL</li>
+<li>PostgreSQL</li>
+<li>Oracle Database</li>
+<li>Microsoft SQL Server</li>
+</ul>
+<section id="strengths" class="level3">
+<h3 class="anchored" data-anchor-id="strengths">Strengths:</h3>
+<ul>
+<li>Strong consistency and data integrity due to ACID (Atomicity, Consistency, Isolation, Durability) properties</li>
+<li>Powerful querying capabilities using SQL (Structured Query Language)</li>
+<li>Wide range of use cases, from simple web applications to complex enterprise systems</li>
+</ul>
+</section>
+<section id="weaknesses" class="level3">
+<h3 class="anchored" data-anchor-id="weaknesses">Weaknesses:</h3>
+<ul>
+<li>Scalability challenges, especially with large volumes of data or high write loads</li>
+<li>Rigid schema requirements, which can make adapting to changing data models difficult</li>
+<li>Not optimised for storing hierarchical or complex data structures</li>
+</ul>
+</section>
+</section>
+<section id="nosql-databases" class="level2">
+<h2 class="anchored" data-anchor-id="nosql-databases">NoSQL databases</h2>
+<p>NoSQL (Not Only SQL) databases emerged as an alternative to traditional relational databases to address some of the limitations mentioned above. They are schema-less, which allows for greater flexibility in data modeling, and they can scale horizontally to handle massive amounts of data.</p>
+<p>There are four primary types of NoSQL databases:</p>
+<ul>
+<li>Document databases (e.g., MongoDB, Couchbase)</li>
+<li>Column-family stores (e.g., Cassandra, HBase)</li>
+<li>Key-value stores (e.g., Redis, Amazon DynamoDB)</li>
+<li>JSON databases (e.g., CouchDB, Azure Cosmos DB)</li>
+</ul>
+<section id="strengths-1" class="level3">
+<h3 class="anchored" data-anchor-id="strengths-1">Strengths:</h3>
+<ul>
+<li>High scalability and performance, particularly for read-heavy or write-heavy workloads</li>
+<li>Flexibility in data modeling without predefined schemas</li>
+<li>Suited for handling semi-structured or unstructured data</li>
+</ul>
+</section>
+<section id="weaknesses-1" class="level3">
+<h3 class="anchored" data-anchor-id="weaknesses-1">Weaknesses:</h3>
+<ul>
+<li>Weaker consistency and data integrity compared to relational databases</li>
+<li>Less powerful querying capabilities than SQL databases</li>
+<li>Not always the best fit for complex transactional systems</li>
+</ul>
+</section>
+</section>
+<section id="time-series-databases" class="level2">
+<h2 class="anchored" data-anchor-id="time-series-databases">Time-series databases</h2>
+<p>Time-series databases specialize in handling data with a time component, such as IoT sensor data, financial data, or application performance metrics. They are designed to store and query large volumes of time-stamped data efficiently.</p>
+<p>Some popular time-series databases include:</p>
+<ul>
+<li>InfluxDB</li>
+<li>TimescaleDB</li>
+<li>OpenTSDB</li>
+<li>Graphite</li>
+</ul>
+<section id="strengths-2" class="level3">
+<h3 class="anchored" data-anchor-id="strengths-2">Strengths:</h3>
+<ul>
+<li>Optimised for handling large volumes of time-series data</li>
+<li>High write and query performance</li>
+<li>Built-in support for data aggregation and downsampling</li>
+</ul>
+</section>
+<section id="weaknesses-2" class="level3">
+<h3 class="anchored" data-anchor-id="weaknesses-2">Weaknesses:</h3>
+<ul>
+<li>Limited use cases, primarily suited for time-series data</li>
+<li>Less flexible in data modeling compared to other database types</li>
+<li>May require additional databases for non-time-series data</li>
+</ul>
+</section>
+</section>
+<section id="graph-databases" class="level2">
+<h2 class="anchored" data-anchor-id="graph-databases">Graph databases</h2>
+<p>Graph databases excel at storing and querying complex, interconnected data. They use graph theory to represent data as nodes (entities) and edges (relationships). This structure makes it easy to model and query intricate relationships without the need for complex joins, as in relational databases.</p>
+<p>Some popular graph databases include:</p>
+<ul>
+<li>Neo4j</li>
+<li>Amazon Neptune</li>
+<li>ArangoDB</li>
+<li>JanusGraph</li>
+</ul>
+<section id="strengths-3" class="level3">
+<h3 class="anchored" data-anchor-id="strengths-3">Strengths:</h3>
+<ul>
+<li>Excellent for modeling and querying complex, interconnected data</li>
+<li>High query performance for relationship-heavy data sets</li>
+<li>Flexible data modeling using nodes and edges</li>
+</ul>
+</section>
+<section id="weaknesses-3" class="level3">
+<h3 class="anchored" data-anchor-id="weaknesses-3">Weaknesses:</h3>
+<ul>
+<li>Not optimized for non-graph use cases</li>
+<li>Less mature ecosystem compared to other database types</li>
+<li>May require additional databases for non-graph data</li>
+</ul>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Selecting the right database type for your project is crucial to ensure efficient data management and optimal performance. By understanding the strengths and weaknesses of relational databases (SQL), NoSQL databases, time-series databases, and graph databases, you can make informed decisions about the most suitable database for your specific use case.</p>
+<p>When choosing a database, consider factors such as scalability, data modeling flexibility, query performance, and consistency requirements. Keep in mind that you may need to employ multiple databases within a single application or project to leverage the best features of each type. As the world of data engineering continues to evolve, so too will the database landscape, offering even more options and solutions to meet your data storage and management needs.</p>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><div>MIT</div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shenton2023,
+  author = {Craig Shenton},
+  title = {Database {Typology}},
+  date = {2023-04-09},
+  url = {https://craig-shenton.github.io/craigrshenton/database-typology.html},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shenton2023" class="csl-entry quarto-appendix-citeas">
+Craig Shenton. 2023. <span>“Database Typology.”</span> April 9, 2023. <a href="https://craig-shenton.github.io/craigrshenton/database-typology.html">https://craig-shenton.github.io/craigrshenton/database-typology.html</a>.
+</div></div></section></div> ]]></description>
+  <category>database</category>
+  <guid>https://craig-shenton.github.io/craigrshenton/posts/database-typology.html</guid>
+  <pubDate>Sat, 08 Apr 2023 23:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Data Engineering Research</title>
   <dc:creator>Craig Shenton</dc:creator>
   <link>https://craig-shenton.github.io/craigrshenton/posts/data-engineering-list/index.html</link>
@@ -31,25 +173,27 @@
 <section id="types-of-databases" class="level2">
 <h2 class="anchored" data-anchor-id="types-of-databases">Types of databases</h2>
 <ul>
-<li><ol type="1">
-<li>Relational databases (SQL)</li>
-</ol></li>
-<li><ol start="2" type="1">
-<li>NoSQL databases</li>
-</ol></li>
-<li><ol start="3" type="1">
-<li>Time-series databases</li>
-</ol></li>
-<li><ol start="4" type="1">
-<li>Graph databases ## Database normalization and denormalization ## Data warehousing</li>
-</ol></li>
-<li><ol type="1">
-<li>Star schema</li>
-</ol></li>
-<li><ol start="2" type="1">
-<li>Snowflake schema ## Data lake ## Cloud storage</li>
-</ol></li>
+<li>A. Relational databases (SQL)</li>
+<li>B. NoSQL databases</li>
+<li>C. Time-series databases</li>
+<li>D. Graph databases</li>
 </ul>
+</section>
+<section id="database-normalization-and-denormalization" class="level2">
+<h2 class="anchored" data-anchor-id="database-normalization-and-denormalization">Database normalization and denormalization</h2>
+</section>
+<section id="data-warehousing" class="level2">
+<h2 class="anchored" data-anchor-id="data-warehousing">Data warehousing</h2>
+<ul>
+<li>A. Star schema</li>
+<li>B. Snowflake schema</li>
+</ul>
+</section>
+<section id="data-lake" class="level2">
+<h2 class="anchored" data-anchor-id="data-lake">Data lake</h2>
+</section>
+<section id="cloud-storage" class="level2">
+<h2 class="anchored" data-anchor-id="cloud-storage">Cloud storage</h2>
 </section>
 </section>
 <section id="data-integration" class="level1">
@@ -66,27 +210,23 @@
 <section id="data-ingestion-methods" class="level2">
 <h2 class="anchored" data-anchor-id="data-ingestion-methods">Data ingestion methods</h2>
 <ul>
-<li><ol type="1">
-<li>Batch processing</li>
-</ol></li>
-<li><ol start="2" type="1">
-<li>Stream processing ## Data transformation</li>
-</ol></li>
-<li><ol type="1">
-<li>Data cleaning</li>
-</ol></li>
-<li><ol start="2" type="1">
-<li>Data enrichment</li>
-</ol></li>
-<li><ol start="3" type="1">
-<li>Data validation ## Data orchestration tools</li>
-</ol></li>
-<li><ol type="1">
-<li>Apache Airflow</li>
-</ol></li>
-<li><ol start="2" type="1">
-<li>Prefect</li>
-</ol></li>
+<li>A. Batch processing</li>
+<li>B. Stream processing</li>
+</ul>
+</section>
+<section id="data-transformation" class="level2">
+<h2 class="anchored" data-anchor-id="data-transformation">Data transformation</h2>
+<ul>
+<li>A. Data cleaning</li>
+<li>B. Data enrichment</li>
+<li>C. Data validation</li>
+</ul>
+</section>
+<section id="data-orchestration-tools" class="level2">
+<h2 class="anchored" data-anchor-id="data-orchestration-tools">Data orchestration tools</h2>
+<ul>
+<li>A. Apache Airflow</li>
+<li>B. Prefect</li>
 </ul>
 </section>
 </section>
@@ -102,18 +242,10 @@
 <section id="data-storage-formats" class="level1">
 <h1>Data Storage Formats</h1>
 <ul>
-<li><ol type="1">
-<li>JSON (JavaScript Object Notation)</li>
-</ol></li>
-<li><ol start="2" type="1">
-<li>XML (eXtensible Markup Language)</li>
-</ol></li>
-<li><ol start="3" type="1">
-<li>CSV (Comma Separated Values)</li>
-</ol></li>
-<li><ol start="4" type="1">
-<li>Parquet</li>
-</ol></li>
+<li>A. JSON (JavaScript Object Notation)</li>
+<li>B. XML (eXtensible Markup Language)</li>
+<li>C. CSV (Comma Separated Values)</li>
+<li>D. Parquet</li>
 </ul>
 </section>
 <section id="real-time-data-processing" class="level1">
@@ -121,9 +253,7 @@
 <section id="streaming-data-processing" class="level2">
 <h2 class="anchored" data-anchor-id="streaming-data-processing">Streaming data processing</h2>
 <ul>
-<li><ol type="1">
-<li>Apache Kafka</li>
-</ol></li>
+<li>A. Apache Kafka</li>
 </ul>
 </section>
 </section>
@@ -143,9 +273,9 @@
 </section>
 <section id="compliance-and-regulations" class="level2">
 <h2 class="anchored" data-anchor-id="compliance-and-regulations">Compliance and regulations</h2>
-<ol type="1">
-<li>GDPR (General Data Protection Regulation)</li>
-</ol>
+<ul>
+<li>A. GDPR (General Data Protection Regulation)</li>
+</ul>
 </section>
 </section>
 <section id="data-quality-and-monitoring" class="level1">
@@ -176,11 +306,141 @@
 </section>
 <section id="continuous-integration-and-continuous-deployment-cicd" class="level2">
 <h2 class="anchored" data-anchor-id="continuous-integration-and-continuous-deployment-cicd">Continuous integration and continuous deployment (CI/CD)</h2>
+<section id="introduction-to-cicd" class="level3">
+<h3 class="anchored" data-anchor-id="introduction-to-cicd">Introduction to CI/CD</h3>
+<ul>
+<li>A. Definition and benefits</li>
+<li>B. CI/CD in data engineering projects</li>
+<li>C. CI/CD tools and platforms</li>
+</ul>
+</section>
+<section id="continuous-integration-ci" class="level3">
+<h3 class="anchored" data-anchor-id="continuous-integration-ci">Continuous Integration (CI)</h3>
+<ul>
+<li>A. Version control systems</li>
+<li>B. Automated build systems</li>
+<li>C. Automated testing in CI</li>
+<li>D. Code review and quality checks</li>
+</ul>
+</section>
+<section id="continuous-deployment-cd" class="level3">
+<h3 class="anchored" data-anchor-id="continuous-deployment-cd">Continuous Deployment (CD)</h3>
+<ul>
+<li>A. Deployment strategies</li>
+<li>B. Infrastructure as Code (IaC)</li>
+<li>C. Containerization and orchestration</li>
+<li>D. Deployment automation</li>
+</ul>
+</section>
+<section id="monitoring-and-observability-in-cicd" class="level3">
+<h3 class="anchored" data-anchor-id="monitoring-and-observability-in-cicd">Monitoring and observability in CI/CD</h3>
+<ul>
+<li>A. Monitoring tools integration</li>
+<li>B. Log management and analysis</li>
+<li>C. Performance monitoring</li>
+</ul>
+</section>
+<section id="cicd-best-practices-for-data-engineering" class="level3">
+<h3 class="anchored" data-anchor-id="cicd-best-practices-for-data-engineering">CI/CD best practices for data engineering</h3>
+<ul>
+<li>A. Incremental and iterative development</li>
+<li>B. Configuration management</li>
+<li>C. Secure and reliable deployments</li>
+</ul>
+</section>
+<section id="case-studies-and-success-stories" class="level3">
+<h3 class="anchored" data-anchor-id="case-studies-and-success-stories">Case studies and success stories</h3>
+<ul>
+<li>A. Real-world CI/CD implementations</li>
+<li>B. Lessons learned and challenges faced</li>
+</ul>
+</section>
 </section>
 <section id="testing-and-validation" class="level2">
 <h2 class="anchored" data-anchor-id="testing-and-validation">Testing and validation</h2>
+<section id="unit-testing-for-data-pipelines" class="level3">
+<h3 class="anchored" data-anchor-id="unit-testing-for-data-pipelines">Unit testing for data pipelines</h3>
+<ul>
+<li>A. Test individual components</li>
+<li>B. Mocking external dependencies</li>
+<li>C. Isolation of test environments</li>
+</ul>
+</section>
+<section id="integration-testing-for-data-pipelines" class="level3">
+<h3 class="anchored" data-anchor-id="integration-testing-for-data-pipelines">Integration testing for data pipelines</h3>
+<ul>
+<li>A. Test end-to-end data flow</li>
+<li>B. Validate data transformations and integrations</li>
+<li>C. Testing with realistic data sets</li>
+</ul>
+</section>
+<section id="data-validation" class="level3">
+<h3 class="anchored" data-anchor-id="data-validation">Data validation</h3>
+<ul>
+<li>A. Schema validation</li>
+<li>B. Data type validation</li>
+<li>C. Range and constraint validation</li>
+<li>D. Uniqueness and referential integrity validation</li>
+</ul>
+</section>
+<section id="performance-testing" class="level3">
+<h3 class="anchored" data-anchor-id="performance-testing">Performance testing</h3>
+<ul>
+<li>A. Load testing</li>
+<li>B. Stress testing</li>
+<li>C. Benchmarking</li>
+</ul>
+</section>
+<section id="data-quality-testing" class="level3">
+<h3 class="anchored" data-anchor-id="data-quality-testing">Data quality testing</h3>
+<ul>
+<li>A. Data accuracy and consistency</li>
+<li>B. Data completeness</li>
+<li>C. Data timeliness</li>
+<li>D. Data lineage verification</li>
+</ul>
+</section>
+<section id="regression-testing" class="level3">
+<h3 class="anchored" data-anchor-id="regression-testing">Regression testing</h3>
+<ul>
+<li>A. Test existing data pipelines for backward compatibility</li>
+<li>B. Validate new changes against old functionality</li>
+</ul>
+</section>
+<section id="test-automation" class="level3">
+<h3 class="anchored" data-anchor-id="test-automation">Test automation</h3>
+<ul>
+<li>A. Continuous testing in CI/CD pipelines</li>
+<li>B. Automated test generation</li>
+<li>C. Test execution and reporting</li>
+</ul>
+</section>
+<section id="monitoring-and-alerting-for-test-failures" class="level3">
+<h3 class="anchored" data-anchor-id="monitoring-and-alerting-for-test-failures">Monitoring and alerting for test failures</h3>
+<ul>
+<li>A. Integration with monitoring tools</li>
+<li>B. Anomaly detection</li>
+<li>C. Notification and escalation strategies</li>
+</ul>
+</section>
+<section id="test-data-management" class="level3">
+<h3 class="anchored" data-anchor-id="test-data-management">Test data management</h3>
+<ul>
+<li>A. Synthetic test data generation</li>
+<li>B. Test data masking and anonymisation</li>
+<li>C. Test data storage and versioning</li>
+</ul>
+</section>
+<section id="best-practices-for-testing-and-validation" class="level3">
+<h3 class="anchored" data-anchor-id="best-practices-for-testing-and-validation">Best practices for testing and validation</h3>
+<ul>
+<li>A. Test-driven development (TDD) in data engineering</li>
+<li>B. Code and test coverage metrics</li>
+<li>C. Testing strategies and test pyramid</li>
+</ul>
 
 
+</section>
 </section>
 </section>
 
@@ -196,7 +456,7 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 2023. <a href="https://craig-shenton.github.io/craigrshenton/posts/data-engineering-list">https://craig-shenton.github.io/craigrshenton/posts/data-engineering-list</a>.
 </div></div></section></div> ]]></description>
   <guid>https://craig-shenton.github.io/craigrshenton/posts/data-engineering-list/index.html</guid>
-  <pubDate>Sat, 08 Apr 2023 23:00:00 GMT</pubDate>
+  <pubDate>Fri, 07 Apr 2023 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Azure Data Factory Templates</title>

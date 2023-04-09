@@ -165,7 +165,7 @@
     "href": "index.html",
     "title": "Craig Robert Shenton",
     "section": "",
-    "text": "Data Engineering Research\n\n\n\n\nA comprehensive guide to Data Engineering, exploring key concepts, tools, and best practices\n\n\n\n\n\n\n4/9/23\n\n\n\n\n\n\n\n\nAzure Data Factory Templates\n\n\n\n\nOpen access and reusable design documentation of pipelines used in the NHSX Analytics Azure Data Factory (ADF) environment.\n\n\n\n\n\n\n9/9/21\n\n\n\n\n\n\n\n\nAzure Data Engineering Principles\n\n\n\n\nIn this post, we aim to set out the data engineering principles NHSX has developed in designing and building our Azure cloud-analytics infrastructure.\n\n\n\n\n\n\n9/1/21\n\n\n\n\n\n\nNo matching items"
+    "text": "Database Typology\n\n\n\n\nExploring the Landscape of Database Types: SQL, NoSQL, Time-Series, and Graph Databases.\n\n\n\n\n\n\n4/9/23\n\n\n\n\n\n\n\n\nData Engineering Research\n\n\n\n\nResearch post into Data Engineering, exploring key concepts, tools, and best practices\n\n\n\n\n\n\n4/8/23\n\n\n\n\n\n\n\n\nAzure Data Factory Templates\n\n\n\n\nOpen access and reusable design documentation of pipelines used in the NHSX Analytics Azure Data Factory (ADF) environment.\n\n\n\n\n\n\n9/9/21\n\n\n\n\n\n\n\n\nAzure Data Engineering Principles\n\n\n\n\nIn this post, we aim to set out the data engineering principles NHSX has developed in designing and building our Azure cloud-analytics infrastructure.\n\n\n\n\n\n\n9/1/21\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -179,7 +179,7 @@
     "href": "posts/data-engineering-list/index.html",
     "title": "Data Engineering Research",
     "section": "",
-    "text": "Relational databases (SQL)\n\n\nNoSQL databases\n\n\nTime-series databases\n\n\nGraph databases ## Database normalization and denormalization ## Data warehousing\n\n\nStar schema\n\n\nSnowflake schema ## Data lake ## Cloud storage"
+    "text": "A. Relational databases (SQL)\nB. NoSQL databases\nC. Time-series databases\nD. Graph databases\n\n\n\n\n\n\n\n\nA. Star schema\nB. Snowflake schema"
   },
   {
     "objectID": "posts/data-engineering-list/index.html#etl-extract-transform-load-process",
@@ -207,7 +207,7 @@
     "href": "posts/data-engineering-list/index.html#data-ingestion-methods",
     "title": "Data Engineering Research",
     "section": "Data ingestion methods",
-    "text": "Data ingestion methods\n\n\nBatch processing\n\n\nStream processing ## Data transformation\n\n\nData cleaning\n\n\nData enrichment\n\n\nData validation ## Data orchestration tools\n\n\nApache Airflow\n\n\nPrefect"
+    "text": "Data ingestion methods\n\nA. Batch processing\nB. Stream processing"
   },
   {
     "objectID": "posts/data-engineering-list/index.html#apache-spark",
@@ -228,7 +228,7 @@
     "href": "posts/data-engineering-list/index.html#streaming-data-processing",
     "title": "Data Engineering Research",
     "section": "Streaming data processing",
-    "text": "Streaming data processing\n\n\nApache Kafka"
+    "text": "Streaming data processing\n\nA. Apache Kafka"
   },
   {
     "objectID": "posts/data-engineering-list/index.html#data-encryption",
@@ -263,7 +263,7 @@
     "href": "posts/data-engineering-list/index.html#compliance-and-regulations",
     "title": "Data Engineering Research",
     "section": "Compliance and regulations",
-    "text": "Compliance and regulations\n\n\nGDPR (General Data Protection Regulation)"
+    "text": "Compliance and regulations\n\nA. GDPR (General Data Protection Regulation)"
   },
   {
     "objectID": "posts/data-engineering-list/index.html#data-quality-dimensions",
@@ -327,5 +327,61 @@
     "title": "Data Engineering Research",
     "section": "Testing and validation",
     "text": "Testing and validation\n\nUnit testing for data pipelines\n\nA. Test individual components\nB. Mocking external dependencies\nC. Isolation of test environments\n\n\n\nIntegration testing for data pipelines\n\nA. Test end-to-end data flow\nB. Validate data transformations and integrations\nC. Testing with realistic data sets\n\n\n\nData validation\n\nA. Schema validation\nB. Data type validation\nC. Range and constraint validation\nD. Uniqueness and referential integrity validation\n\n\n\nPerformance testing\n\nA. Load testing\nB. Stress testing\nC. Benchmarking\n\n\n\nData quality testing\n\nA. Data accuracy and consistency\nB. Data completeness\nC. Data timeliness\nD. Data lineage verification\n\n\n\nRegression testing\n\nA. Test existing data pipelines for backward compatibility\nB. Validate new changes against old functionality\n\n\n\nTest automation\n\nA. Continuous testing in CI/CD pipelines\nB. Automated test generation\nC. Test execution and reporting\n\n\n\nMonitoring and alerting for test failures\n\nA. Integration with monitoring tools\nB. Anomaly detection\nC. Notification and escalation strategies\n\n\n\nTest data management\n\nA. Synthetic test data generation\nB. Test data masking and anonymisation\nC. Test data storage and versioning\n\n\n\nBest practices for testing and validation\n\nA. Test-driven development (TDD) in data engineering\nB. Code and test coverage metrics\nC. Testing strategies and test pyramid"
+  },
+  {
+    "objectID": "posts/data-engineering-list/index.html#data-transformation",
+    "href": "posts/data-engineering-list/index.html#data-transformation",
+    "title": "Data Engineering Research",
+    "section": "Data transformation",
+    "text": "Data transformation\n\nA. Data cleaning\nB. Data enrichment\nC. Data validation"
+  },
+  {
+    "objectID": "posts/data-engineering-list/index.html#data-orchestration-tools",
+    "href": "posts/data-engineering-list/index.html#data-orchestration-tools",
+    "title": "Data Engineering Research",
+    "section": "Data orchestration tools",
+    "text": "Data orchestration tools\n\nA. Apache Airflow\nB. Prefect"
+  },
+  {
+    "objectID": "posts/database-typology.html",
+    "href": "posts/database-typology.html",
+    "title": "Database Typology",
+    "section": "",
+    "text": "One of the most critical aspects of data handling is choosing the right database for your project. In this blog post, we will explore four primary types of databases: relational databases (SQL), NoSQL databases, time-series databases, and graph databases. Understanding the strengths and weaknesses of each type will help you make informed decisions about the most suitable database for your specific needs. Types of databases"
+  },
+  {
+    "objectID": "posts/database-typology.html#relational-databases-sql",
+    "href": "posts/database-typology.html#relational-databases-sql",
+    "title": "Database Typology",
+    "section": "Relational databases (SQL)",
+    "text": "Relational databases (SQL)\nRelational databases, also known as SQL databases, have been the industry standard for decades. They store data in tables with predefined schemas, consisting of rows and columns. The relationships between these tables are defined using keys, which allows for efficient querying and manipulation of data.\nSome popular relational databases include:\n\nMySQL\nPostgreSQL\nOracle Database\nMicrosoft SQL Server\n\n\nStrengths:\n\nStrong consistency and data integrity due to ACID (Atomicity, Consistency, Isolation, Durability) properties\nPowerful querying capabilities using SQL (Structured Query Language)\nWide range of use cases, from simple web applications to complex enterprise systems\n\n\n\nWeaknesses:\n\nScalability challenges, especially with large volumes of data or high write loads\nRigid schema requirements, which can make adapting to changing data models difficult\nNot optimised for storing hierarchical or complex data structures"
+  },
+  {
+    "objectID": "posts/database-typology.html#nosql-databases",
+    "href": "posts/database-typology.html#nosql-databases",
+    "title": "Database Typology",
+    "section": "NoSQL databases",
+    "text": "NoSQL databases\nNoSQL (Not Only SQL) databases emerged as an alternative to traditional relational databases to address some of the limitations mentioned above. They are schema-less, which allows for greater flexibility in data modeling, and they can scale horizontally to handle massive amounts of data.\nThere are four primary types of NoSQL databases:\n\nDocument databases (e.g., MongoDB, Couchbase)\nColumn-family stores (e.g., Cassandra, HBase)\nKey-value stores (e.g., Redis, Amazon DynamoDB)\nJSON databases (e.g., CouchDB, Azure Cosmos DB)\n\n\nStrengths:\n\nHigh scalability and performance, particularly for read-heavy or write-heavy workloads\nFlexibility in data modeling without predefined schemas\nSuited for handling semi-structured or unstructured data\n\n\n\nWeaknesses:\n\nWeaker consistency and data integrity compared to relational databases\nLess powerful querying capabilities than SQL databases\nNot always the best fit for complex transactional systems"
+  },
+  {
+    "objectID": "posts/database-typology.html#time-series-databases",
+    "href": "posts/database-typology.html#time-series-databases",
+    "title": "Database Typology",
+    "section": "Time-series databases",
+    "text": "Time-series databases\nTime-series databases specialize in handling data with a time component, such as IoT sensor data, financial data, or application performance metrics. They are designed to store and query large volumes of time-stamped data efficiently.\nSome popular time-series databases include:\n\nInfluxDB\nTimescaleDB\nOpenTSDB\nGraphite\n\n\nStrengths:\n\nOptimised for handling large volumes of time-series data\nHigh write and query performance\nBuilt-in support for data aggregation and downsampling\n\n\n\nWeaknesses:\n\nLimited use cases, primarily suited for time-series data\nLess flexible in data modeling compared to other database types\nMay require additional databases for non-time-series data"
+  },
+  {
+    "objectID": "posts/database-typology.html#graph-databases",
+    "href": "posts/database-typology.html#graph-databases",
+    "title": "Database Typology",
+    "section": "Graph databases",
+    "text": "Graph databases\nGraph databases excel at storing and querying complex, interconnected data. They use graph theory to represent data as nodes (entities) and edges (relationships). This structure makes it easy to model and query intricate relationships without the need for complex joins, as in relational databases.\nSome popular graph databases include:\n\nNeo4j\nAmazon Neptune\nArangoDB\nJanusGraph\n\n\nStrengths:\n\nExcellent for modeling and querying complex, interconnected data\nHigh query performance for relationship-heavy data sets\nFlexible data modeling using nodes and edges\n\n\n\nWeaknesses:\n\nNot optimized for non-graph use cases\nLess mature ecosystem compared to other database types\nMay require additional databases for non-graph data"
+  },
+  {
+    "objectID": "posts/database-typology.html#conclusion",
+    "href": "posts/database-typology.html#conclusion",
+    "title": "Database Typology",
+    "section": "Conclusion",
+    "text": "Conclusion\nSelecting the right database type for your project is crucial to ensure efficient data management and optimal performance. By understanding the strengths and weaknesses of relational databases (SQL), NoSQL databases, time-series databases, and graph databases, you can make informed decisions about the most suitable database for your specific use case.\nWhen choosing a database, consider factors such as scalability, data modeling flexibility, query performance, and consistency requirements. Keep in mind that you may need to employ multiple databases within a single application or project to leverage the best features of each type. As the world of data engineering continues to evolve, so too will the database landscape, offering even more options and solutions to meet your data storage and management needs."
   }
 ]
