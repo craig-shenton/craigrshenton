@@ -1,43 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://craig-shenton.github.io/craigrshenton/index.html</loc>
-    <lastmod>2023-04-09T12:49:24.750Z</lastmod>
-  </url>
-  <url>
-    <loc>https://craig-shenton.github.io/craigrshenton/posts/helloworld/index.html</loc>
-    <lastmod>2023-04-09T12:49:36.299Z</lastmod>
-  </url>
-  <url>
-    <loc>https://craig-shenton.github.io/craigrshenton/about.html</loc>
-    <lastmod>2023-04-09T11:39:27.131Z</lastmod>
-  </url>
-  <url>
-    <loc>https://craig-shenton.github.io/craigrshenton/posts/azure-data-factory-templates/2021-09-09-azure-data-factory-templates.html</loc>
-    <lastmod>2023-04-09T12:30:52.638Z</lastmod>
-  </url>
-  <url>
-    <loc>https://craig-shenton.github.io/craigrshenton/posts/data-engineering-resources/2021-07-20-data-engineering-resources.html</loc>
-    <lastmod>2023-04-09T12:33:03.352Z</lastmod>
-  </url>
-  <url>
-    <loc>https://craig-shenton.github.io/craigrshenton/posts/azure-data-factory-resources/2021-08-14-azure-data-factory-resources.html</loc>
-    <lastmod>2023-04-09T11:59:42.856Z</lastmod>
-  </url>
-  <url>
-    <loc>https://craig-shenton.github.io/craigrshenton/posts/azure-data-engineering-principles/2021-09-01-azure-data-engineering-principles.html</loc>
-    <lastmod>2023-04-09T12:31:55.150Z</lastmod>
+    <loc>https://craig-shenton.github.io/craigrshenton/posts/azure-data-engineering-principles/azure-data-engineering-principles.html</loc>
+    <lastmod>2023-04-09T13:01:20.212Z</lastmod>
   </url>
   <url>
     <loc>https://craig-shenton.github.io/craigrshenton/posts/azure-data-factory-templates/azure-data-factory-templates.html</loc>
-    <lastmod>2023-04-09T12:49:29.426Z</lastmod>
+    <lastmod>2023-04-09T13:01:20.919Z</lastmod>
   </url>
   <url>
     <loc>https://craig-shenton.github.io/craigrshenton/drafts/azure-data-factory-resources.html</loc>
-    <lastmod>2023-04-09T12:48:48.648Z</lastmod>
+    <lastmod>2023-04-09T13:01:22.736Z</lastmod>
   </url>
   <url>
-    <loc>https://craig-shenton.github.io/craigrshenton/posts/azure-data-engineering-principles/azure-data-engineering-principles.html</loc>
-    <lastmod>2023-04-09T12:48:59.641Z</lastmod>
+    <loc>https://craig-shenton.github.io/craigrshenton/index.html</loc>
+    <lastmod>2023-04-09T13:01:23.007Z</lastmod>
+  </url>
+  <url>
+    <loc>https://craig-shenton.github.io/craigrshenton/about.html</loc>
+    <lastmod>2023-04-09T13:01:23.244Z</lastmod>
   </url>
 </urlset>

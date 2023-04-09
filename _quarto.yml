@@ -5,11 +5,21 @@ website:
   title: "craigrshenton"
   site-url: https://craig-shenton.github.io/craigrshenton
   repo-url: https://github.com/craig-shenton/craigrshenton
+  favicon: assets/favicons/Rubics_Cube.svg
   twitter-card: true
   open-graph: true
   navbar:
+    background: light
+    title: false
+    collapse-below: lg
+    left:
+      - text: "blog"
+        aria-label: home
+        icon: "rss"
+        href: index.qmd
     right:
-      - about.qmd
+      - text: "about"
+        href: about.qmd
       - icon: github
         aria-label: github
         href: https://github.com/craig-shenton
@@ -21,9 +31,6 @@ format:
     theme: 
       light: 
         - litera
-        - custom.scss
-      dark:
-        - slate
         - custom.scss
     smooth-scroll: true
 
