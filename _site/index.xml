@@ -17,7 +17,187 @@
 <width>144</width>
 </image>
 <generator>quarto-1.2.280</generator>
-<lastBuildDate>Wed, 08 Sep 2021 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 08 Apr 2023 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Data Engineering Research</title>
+  <dc:creator>Craig Shenton</dc:creator>
+  <link>https://craig-shenton.github.io/craigrshenton/posts/data-engineering-list/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="data-storage-and-databases" class="level1">
+<h1>Data Storage and Databases</h1>
+<section id="types-of-databases" class="level2">
+<h2 class="anchored" data-anchor-id="types-of-databases">Types of databases</h2>
+<ul>
+<li><ol type="1">
+<li>Relational databases (SQL)</li>
+</ol></li>
+<li><ol start="2" type="1">
+<li>NoSQL databases</li>
+</ol></li>
+<li><ol start="3" type="1">
+<li>Time-series databases</li>
+</ol></li>
+<li><ol start="4" type="1">
+<li>Graph databases ## Database normalization and denormalization ## Data warehousing</li>
+</ol></li>
+<li><ol type="1">
+<li>Star schema</li>
+</ol></li>
+<li><ol start="2" type="1">
+<li>Snowflake schema ## Data lake ## Cloud storage</li>
+</ol></li>
+</ul>
+</section>
+</section>
+<section id="data-integration" class="level1">
+<h1>Data Integration</h1>
+<section id="etl-extract-transform-load-process" class="level2">
+<h2 class="anchored" data-anchor-id="etl-extract-transform-load-process">ETL (Extract, Transform, Load) process</h2>
+</section>
+<section id="elt-extract-load-transform-process" class="level2">
+<h2 class="anchored" data-anchor-id="elt-extract-load-transform-process">ELT (Extract, Load, Transform) process</h2>
+</section>
+<section id="data-pipelines" class="level2">
+<h2 class="anchored" data-anchor-id="data-pipelines">Data pipelines</h2>
+</section>
+<section id="data-ingestion-methods" class="level2">
+<h2 class="anchored" data-anchor-id="data-ingestion-methods">Data ingestion methods</h2>
+<ul>
+<li><ol type="1">
+<li>Batch processing</li>
+</ol></li>
+<li><ol start="2" type="1">
+<li>Stream processing ## Data transformation</li>
+</ol></li>
+<li><ol type="1">
+<li>Data cleaning</li>
+</ol></li>
+<li><ol start="2" type="1">
+<li>Data enrichment</li>
+</ol></li>
+<li><ol start="3" type="1">
+<li>Data validation ## Data orchestration tools</li>
+</ol></li>
+<li><ol type="1">
+<li>Apache Airflow</li>
+</ol></li>
+<li><ol start="2" type="1">
+<li>Prefect</li>
+</ol></li>
+</ul>
+</section>
+</section>
+<section id="big-data-processing" class="level1">
+<h1>Big Data Processing</h1>
+<section id="apache-spark" class="level2">
+<h2 class="anchored" data-anchor-id="apache-spark">Apache Spark</h2>
+</section>
+<section id="data-partitioning-and-sharding" class="level2">
+<h2 class="anchored" data-anchor-id="data-partitioning-and-sharding">Data partitioning and sharding</h2>
+</section>
+</section>
+<section id="data-storage-formats" class="level1">
+<h1>Data Storage Formats</h1>
+<ul>
+<li><ol type="1">
+<li>JSON (JavaScript Object Notation)</li>
+</ol></li>
+<li><ol start="2" type="1">
+<li>XML (eXtensible Markup Language)</li>
+</ol></li>
+<li><ol start="3" type="1">
+<li>CSV (Comma Separated Values)</li>
+</ol></li>
+<li><ol start="4" type="1">
+<li>Parquet</li>
+</ol></li>
+</ul>
+</section>
+<section id="real-time-data-processing" class="level1">
+<h1>Real-time Data Processing</h1>
+<section id="streaming-data-processing" class="level2">
+<h2 class="anchored" data-anchor-id="streaming-data-processing">Streaming data processing</h2>
+<ul>
+<li><ol type="1">
+<li>Apache Kafka</li>
+</ol></li>
+</ul>
+</section>
+</section>
+<section id="data-security-and-governance" class="level1">
+<h1>Data Security and Governance</h1>
+<section id="data-encryption" class="level2">
+<h2 class="anchored" data-anchor-id="data-encryption">Data encryption</h2>
+</section>
+<section id="data-anonymization-and-masking" class="level2">
+<h2 class="anchored" data-anchor-id="data-anonymization-and-masking">Data anonymization and masking</h2>
+</section>
+<section id="data-lineage" class="level2">
+<h2 class="anchored" data-anchor-id="data-lineage">Data lineage</h2>
+</section>
+<section id="data-cataloging" class="level2">
+<h2 class="anchored" data-anchor-id="data-cataloging">Data cataloging</h2>
+</section>
+<section id="compliance-and-regulations" class="level2">
+<h2 class="anchored" data-anchor-id="compliance-and-regulations">Compliance and regulations</h2>
+<ol type="1">
+<li>GDPR (General Data Protection Regulation)</li>
+</ol>
+</section>
+</section>
+<section id="data-quality-and-monitoring" class="level1">
+<h1>Data Quality and Monitoring</h1>
+<section id="data-quality-dimensions" class="level2">
+<h2 class="anchored" data-anchor-id="data-quality-dimensions">Data quality dimensions</h2>
+</section>
+<section id="data-profiling" class="level2">
+<h2 class="anchored" data-anchor-id="data-profiling">Data profiling</h2>
+</section>
+<section id="data-quality-tools" class="level2">
+<h2 class="anchored" data-anchor-id="data-quality-tools">Data quality tools</h2>
+</section>
+<section id="data-monitoring-and-alerting" class="level2">
+<h2 class="anchored" data-anchor-id="data-monitoring-and-alerting">Data monitoring and alerting</h2>
+</section>
+</section>
+<section id="data-engineering-best-practices" class="level1">
+<h1>Data Engineering Best Practices</h1>
+<section id="scalability-and-performance-optimization" class="level2">
+<h2 class="anchored" data-anchor-id="scalability-and-performance-optimization">Scalability and performance optimization</h2>
+</section>
+<section id="fault-tolerance-and-reliability" class="level2">
+<h2 class="anchored" data-anchor-id="fault-tolerance-and-reliability">Fault tolerance and reliability</h2>
+</section>
+<section id="data-modeling" class="level2">
+<h2 class="anchored" data-anchor-id="data-modeling">Data modeling</h2>
+</section>
+<section id="continuous-integration-and-continuous-deployment-cicd" class="level2">
+<h2 class="anchored" data-anchor-id="continuous-integration-and-continuous-deployment-cicd">Continuous integration and continuous deployment (CI/CD)</h2>
+</section>
+<section id="testing-and-validation" class="level2">
+<h2 class="anchored" data-anchor-id="testing-and-validation">Testing and validation</h2>
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><div>MIT</div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shenton2023,
+  author = {Craig Shenton},
+  title = {Data {Engineering} {Research}},
+  date = {2023-04-09},
+  url = {https://craig-shenton.github.io/craigrshenton/posts/data-engineering-list},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shenton2023" class="csl-entry quarto-appendix-citeas">
+Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
+2023. <a href="https://craig-shenton.github.io/craigrshenton/posts/data-engineering-list">https://craig-shenton.github.io/craigrshenton/posts/data-engineering-list</a>.
+</div></div></section></div> ]]></description>
+  <guid>https://craig-shenton.github.io/craigrshenton/posts/data-engineering-list/index.html</guid>
+  <pubDate>Sat, 08 Apr 2023 23:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Azure Data Factory Templates</title>
   <dc:creator>Craig Shenton</dc:creator>

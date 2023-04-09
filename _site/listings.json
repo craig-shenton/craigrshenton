@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/data-engineering-list/index.html",
       "/posts/azure-data-factory-templates/azure-data-factory-templates.html",
       "/posts/azure-data-engineering-principles/azure-data-engineering-principles.html"
     ]
