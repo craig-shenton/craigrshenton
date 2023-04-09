@@ -17,503 +17,59 @@
 <width>144</width>
 </image>
 <generator>quarto-1.2.280</generator>
-<lastBuildDate>Sat, 08 Apr 2023 23:00:00 GMT</lastBuildDate>
-<item>
-  <title>Database Typology</title>
-  <dc:creator>Craig Shenton</dc:creator>
-  <link>https://craig-shenton.github.io/craigrshenton/posts/database-typology.html</link>
-  <description><![CDATA[ 
-
-
-
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>One of the most critical aspects of data handling is choosing the right database for your project. In this blog post, we will explore four primary types of databases: relational databases (SQL), NoSQL databases, time-series databases, and graph databases. Understanding the strengths and weaknesses of each type will help you make informed decisions about the most suitable database for your specific needs. Types of databases</p>
-</section>
-<section id="relational-databases-sql" class="level2">
-<h2 class="anchored" data-anchor-id="relational-databases-sql">Relational databases (SQL)</h2>
-<p>Relational databases, also known as SQL databases, have been the industry standard for decades. They store data in tables with predefined schemas, consisting of rows and columns. The relationships between these tables are defined using keys, which allows for efficient querying and manipulation of data.</p>
-<p>Some popular relational databases include:</p>
-<ul>
-<li>MySQL</li>
-<li>PostgreSQL</li>
-<li>Oracle Database</li>
-<li>Microsoft SQL Server</li>
-</ul>
-<section id="strengths" class="level3">
-<h3 class="anchored" data-anchor-id="strengths">Strengths:</h3>
-<ul>
-<li>Strong consistency and data integrity due to ACID (Atomicity, Consistency, Isolation, Durability) properties</li>
-<li>Powerful querying capabilities using SQL (Structured Query Language)</li>
-<li>Wide range of use cases, from simple web applications to complex enterprise systems</li>
-</ul>
-</section>
-<section id="weaknesses" class="level3">
-<h3 class="anchored" data-anchor-id="weaknesses">Weaknesses:</h3>
-<ul>
-<li>Scalability challenges, especially with large volumes of data or high write loads</li>
-<li>Rigid schema requirements, which can make adapting to changing data models difficult</li>
-<li>Not optimised for storing hierarchical or complex data structures</li>
-</ul>
-</section>
-</section>
-<section id="nosql-databases" class="level2">
-<h2 class="anchored" data-anchor-id="nosql-databases">NoSQL databases</h2>
-<p>NoSQL (Not Only SQL) databases emerged as an alternative to traditional relational databases to address some of the limitations mentioned above. They are schema-less, which allows for greater flexibility in data modeling, and they can scale horizontally to handle massive amounts of data.</p>
-<p>There are four primary types of NoSQL databases:</p>
-<ul>
-<li>Document databases (e.g., MongoDB, Couchbase)</li>
-<li>Column-family stores (e.g., Cassandra, HBase)</li>
-<li>Key-value stores (e.g., Redis, Amazon DynamoDB)</li>
-<li>JSON databases (e.g., CouchDB, Azure Cosmos DB)</li>
-</ul>
-<section id="strengths-1" class="level3">
-<h3 class="anchored" data-anchor-id="strengths-1">Strengths:</h3>
-<ul>
-<li>High scalability and performance, particularly for read-heavy or write-heavy workloads</li>
-<li>Flexibility in data modeling without predefined schemas</li>
-<li>Suited for handling semi-structured or unstructured data</li>
-</ul>
-</section>
-<section id="weaknesses-1" class="level3">
-<h3 class="anchored" data-anchor-id="weaknesses-1">Weaknesses:</h3>
-<ul>
-<li>Weaker consistency and data integrity compared to relational databases</li>
-<li>Less powerful querying capabilities than SQL databases</li>
-<li>Not always the best fit for complex transactional systems</li>
-</ul>
-</section>
-</section>
-<section id="time-series-databases" class="level2">
-<h2 class="anchored" data-anchor-id="time-series-databases">Time-series databases</h2>
-<p>Time-series databases specialize in handling data with a time component, such as IoT sensor data, financial data, or application performance metrics. They are designed to store and query large volumes of time-stamped data efficiently.</p>
-<p>Some popular time-series databases include:</p>
-<ul>
-<li>InfluxDB</li>
-<li>TimescaleDB</li>
-<li>OpenTSDB</li>
-<li>Graphite</li>
-</ul>
-<section id="strengths-2" class="level3">
-<h3 class="anchored" data-anchor-id="strengths-2">Strengths:</h3>
-<ul>
-<li>Optimised for handling large volumes of time-series data</li>
-<li>High write and query performance</li>
-<li>Built-in support for data aggregation and downsampling</li>
-</ul>
-</section>
-<section id="weaknesses-2" class="level3">
-<h3 class="anchored" data-anchor-id="weaknesses-2">Weaknesses:</h3>
-<ul>
-<li>Limited use cases, primarily suited for time-series data</li>
-<li>Less flexible in data modeling compared to other database types</li>
-<li>May require additional databases for non-time-series data</li>
-</ul>
-</section>
-</section>
-<section id="graph-databases" class="level2">
-<h2 class="anchored" data-anchor-id="graph-databases">Graph databases</h2>
-<p>Graph databases excel at storing and querying complex, interconnected data. They use graph theory to represent data as nodes (entities) and edges (relationships). This structure makes it easy to model and query intricate relationships without the need for complex joins, as in relational databases.</p>
-<p>Some popular graph databases include:</p>
-<ul>
-<li>Neo4j</li>
-<li>Amazon Neptune</li>
-<li>ArangoDB</li>
-<li>JanusGraph</li>
-</ul>
-<section id="strengths-3" class="level3">
-<h3 class="anchored" data-anchor-id="strengths-3">Strengths:</h3>
-<ul>
-<li>Excellent for modeling and querying complex, interconnected data</li>
-<li>High query performance for relationship-heavy data sets</li>
-<li>Flexible data modeling using nodes and edges</li>
-</ul>
-</section>
-<section id="weaknesses-3" class="level3">
-<h3 class="anchored" data-anchor-id="weaknesses-3">Weaknesses:</h3>
-<ul>
-<li>Not optimized for non-graph use cases</li>
-<li>Less mature ecosystem compared to other database types</li>
-<li>May require additional databases for non-graph data</li>
-</ul>
-</section>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>Selecting the right database type for your project is crucial to ensure efficient data management and optimal performance. By understanding the strengths and weaknesses of relational databases (SQL), NoSQL databases, time-series databases, and graph databases, you can make informed decisions about the most suitable database for your specific use case.</p>
-<p>When choosing a database, consider factors such as scalability, data modeling flexibility, query performance, and consistency requirements. Keep in mind that you may need to employ multiple databases within a single application or project to leverage the best features of each type. As the world of data engineering continues to evolve, so too will the database landscape, offering even more options and solutions to meet your data storage and management needs.</p>
-
-
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><div>MIT</div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shenton2023,
-  author = {Craig Shenton},
-  title = {Database {Typology}},
-  date = {2023-04-09},
-  url = {https://craig-shenton.github.io/craigrshenton/database-typology.html},
-  langid = {en}
-}
-</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shenton2023" class="csl-entry quarto-appendix-citeas">
-Craig Shenton. 2023. <span>“Database Typology.”</span> April 9, 2023. <a href="https://craig-shenton.github.io/craigrshenton/database-typology.html">https://craig-shenton.github.io/craigrshenton/database-typology.html</a>.
-</div></div></section></div> ]]></description>
-  <category>database</category>
-  <guid>https://craig-shenton.github.io/craigrshenton/posts/database-typology.html</guid>
-  <pubDate>Sat, 08 Apr 2023 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Data Engineering Research</title>
-  <dc:creator>Craig Shenton</dc:creator>
-  <link>https://craig-shenton.github.io/craigrshenton/posts/data-engineering-list/index.html</link>
-  <description><![CDATA[ 
-
-
-
-<section id="data-storage-and-databases" class="level1">
-<h1>Data Storage and Databases</h1>
-<section id="types-of-databases" class="level2">
-<h2 class="anchored" data-anchor-id="types-of-databases">Types of databases</h2>
-<ul>
-<li>A. Relational databases (SQL)</li>
-<li>B. NoSQL databases</li>
-<li>C. Time-series databases</li>
-<li>D. Graph databases</li>
-</ul>
-</section>
-<section id="database-normalization-and-denormalization" class="level2">
-<h2 class="anchored" data-anchor-id="database-normalization-and-denormalization">Database normalization and denormalization</h2>
-</section>
-<section id="data-warehousing" class="level2">
-<h2 class="anchored" data-anchor-id="data-warehousing">Data warehousing</h2>
-<ul>
-<li>A. Star schema</li>
-<li>B. Snowflake schema</li>
-</ul>
-</section>
-<section id="data-lake" class="level2">
-<h2 class="anchored" data-anchor-id="data-lake">Data lake</h2>
-</section>
-<section id="cloud-storage" class="level2">
-<h2 class="anchored" data-anchor-id="cloud-storage">Cloud storage</h2>
-</section>
-</section>
-<section id="data-integration" class="level1">
-<h1>Data Integration</h1>
-<section id="etl-extract-transform-load-process" class="level2">
-<h2 class="anchored" data-anchor-id="etl-extract-transform-load-process">ETL (Extract, Transform, Load) process</h2>
-</section>
-<section id="elt-extract-load-transform-process" class="level2">
-<h2 class="anchored" data-anchor-id="elt-extract-load-transform-process">ELT (Extract, Load, Transform) process</h2>
-</section>
-<section id="data-pipelines" class="level2">
-<h2 class="anchored" data-anchor-id="data-pipelines">Data pipelines</h2>
-</section>
-<section id="data-ingestion-methods" class="level2">
-<h2 class="anchored" data-anchor-id="data-ingestion-methods">Data ingestion methods</h2>
-<ul>
-<li>A. Batch processing</li>
-<li>B. Stream processing</li>
-</ul>
-</section>
-<section id="data-transformation" class="level2">
-<h2 class="anchored" data-anchor-id="data-transformation">Data transformation</h2>
-<ul>
-<li>A. Data cleaning</li>
-<li>B. Data enrichment</li>
-<li>C. Data validation</li>
-</ul>
-</section>
-<section id="data-orchestration-tools" class="level2">
-<h2 class="anchored" data-anchor-id="data-orchestration-tools">Data orchestration tools</h2>
-<ul>
-<li>A. Apache Airflow</li>
-<li>B. Prefect</li>
-</ul>
-</section>
-</section>
-<section id="big-data-processing" class="level1">
-<h1>Big Data Processing</h1>
-<section id="apache-spark" class="level2">
-<h2 class="anchored" data-anchor-id="apache-spark">Apache Spark</h2>
-</section>
-<section id="data-partitioning-and-sharding" class="level2">
-<h2 class="anchored" data-anchor-id="data-partitioning-and-sharding">Data partitioning and sharding</h2>
-</section>
-</section>
-<section id="data-storage-formats" class="level1">
-<h1>Data Storage Formats</h1>
-<ul>
-<li>A. JSON (JavaScript Object Notation)</li>
-<li>B. XML (eXtensible Markup Language)</li>
-<li>C. CSV (Comma Separated Values)</li>
-<li>D. Parquet</li>
-</ul>
-</section>
-<section id="real-time-data-processing" class="level1">
-<h1>Real-time Data Processing</h1>
-<section id="streaming-data-processing" class="level2">
-<h2 class="anchored" data-anchor-id="streaming-data-processing">Streaming data processing</h2>
-<ul>
-<li>A. Apache Kafka</li>
-</ul>
-</section>
-</section>
-<section id="data-security-and-governance" class="level1">
-<h1>Data Security and Governance</h1>
-<section id="data-encryption" class="level2">
-<h2 class="anchored" data-anchor-id="data-encryption">Data encryption</h2>
-</section>
-<section id="data-anonymization-and-masking" class="level2">
-<h2 class="anchored" data-anchor-id="data-anonymization-and-masking">Data anonymization and masking</h2>
-</section>
-<section id="data-lineage" class="level2">
-<h2 class="anchored" data-anchor-id="data-lineage">Data lineage</h2>
-</section>
-<section id="data-cataloging" class="level2">
-<h2 class="anchored" data-anchor-id="data-cataloging">Data cataloging</h2>
-</section>
-<section id="compliance-and-regulations" class="level2">
-<h2 class="anchored" data-anchor-id="compliance-and-regulations">Compliance and regulations</h2>
-<ul>
-<li>A. GDPR (General Data Protection Regulation)</li>
-</ul>
-</section>
-</section>
-<section id="data-quality-and-monitoring" class="level1">
-<h1>Data Quality and Monitoring</h1>
-<section id="data-quality-dimensions" class="level2">
-<h2 class="anchored" data-anchor-id="data-quality-dimensions">Data quality dimensions</h2>
-</section>
-<section id="data-profiling" class="level2">
-<h2 class="anchored" data-anchor-id="data-profiling">Data profiling</h2>
-</section>
-<section id="data-quality-tools" class="level2">
-<h2 class="anchored" data-anchor-id="data-quality-tools">Data quality tools</h2>
-</section>
-<section id="data-monitoring-and-alerting" class="level2">
-<h2 class="anchored" data-anchor-id="data-monitoring-and-alerting">Data monitoring and alerting</h2>
-</section>
-</section>
-<section id="data-engineering-best-practices" class="level1">
-<h1>Data Engineering Best Practices</h1>
-<section id="scalability-and-performance-optimization" class="level2">
-<h2 class="anchored" data-anchor-id="scalability-and-performance-optimization">Scalability and performance optimization</h2>
-</section>
-<section id="fault-tolerance-and-reliability" class="level2">
-<h2 class="anchored" data-anchor-id="fault-tolerance-and-reliability">Fault tolerance and reliability</h2>
-</section>
-<section id="data-modeling" class="level2">
-<h2 class="anchored" data-anchor-id="data-modeling">Data modeling</h2>
-</section>
-<section id="continuous-integration-and-continuous-deployment-cicd" class="level2">
-<h2 class="anchored" data-anchor-id="continuous-integration-and-continuous-deployment-cicd">Continuous integration and continuous deployment (CI/CD)</h2>
-<section id="introduction-to-cicd" class="level3">
-<h3 class="anchored" data-anchor-id="introduction-to-cicd">Introduction to CI/CD</h3>
-<ul>
-<li>A. Definition and benefits</li>
-<li>B. CI/CD in data engineering projects</li>
-<li>C. CI/CD tools and platforms</li>
-</ul>
-</section>
-<section id="continuous-integration-ci" class="level3">
-<h3 class="anchored" data-anchor-id="continuous-integration-ci">Continuous Integration (CI)</h3>
-<ul>
-<li>A. Version control systems</li>
-<li>B. Automated build systems</li>
-<li>C. Automated testing in CI</li>
-<li>D. Code review and quality checks</li>
-</ul>
-</section>
-<section id="continuous-deployment-cd" class="level3">
-<h3 class="anchored" data-anchor-id="continuous-deployment-cd">Continuous Deployment (CD)</h3>
-<ul>
-<li>A. Deployment strategies</li>
-<li>B. Infrastructure as Code (IaC)</li>
-<li>C. Containerization and orchestration</li>
-<li>D. Deployment automation</li>
-</ul>
-</section>
-<section id="monitoring-and-observability-in-cicd" class="level3">
-<h3 class="anchored" data-anchor-id="monitoring-and-observability-in-cicd">Monitoring and observability in CI/CD</h3>
-<ul>
-<li>A. Monitoring tools integration</li>
-<li>B. Log management and analysis</li>
-<li>C. Performance monitoring</li>
-</ul>
-</section>
-<section id="cicd-best-practices-for-data-engineering" class="level3">
-<h3 class="anchored" data-anchor-id="cicd-best-practices-for-data-engineering">CI/CD best practices for data engineering</h3>
-<ul>
-<li>A. Incremental and iterative development</li>
-<li>B. Configuration management</li>
-<li>C. Secure and reliable deployments</li>
-</ul>
-</section>
-<section id="case-studies-and-success-stories" class="level3">
-<h3 class="anchored" data-anchor-id="case-studies-and-success-stories">Case studies and success stories</h3>
-<ul>
-<li>A. Real-world CI/CD implementations</li>
-<li>B. Lessons learned and challenges faced</li>
-</ul>
-</section>
-</section>
-<section id="testing-and-validation" class="level2">
-<h2 class="anchored" data-anchor-id="testing-and-validation">Testing and validation</h2>
-<section id="unit-testing-for-data-pipelines" class="level3">
-<h3 class="anchored" data-anchor-id="unit-testing-for-data-pipelines">Unit testing for data pipelines</h3>
-<ul>
-<li>A. Test individual components</li>
-<li>B. Mocking external dependencies</li>
-<li>C. Isolation of test environments</li>
-</ul>
-</section>
-<section id="integration-testing-for-data-pipelines" class="level3">
-<h3 class="anchored" data-anchor-id="integration-testing-for-data-pipelines">Integration testing for data pipelines</h3>
-<ul>
-<li>A. Test end-to-end data flow</li>
-<li>B. Validate data transformations and integrations</li>
-<li>C. Testing with realistic data sets</li>
-</ul>
-</section>
-<section id="data-validation" class="level3">
-<h3 class="anchored" data-anchor-id="data-validation">Data validation</h3>
-<ul>
-<li>A. Schema validation</li>
-<li>B. Data type validation</li>
-<li>C. Range and constraint validation</li>
-<li>D. Uniqueness and referential integrity validation</li>
-</ul>
-</section>
-<section id="performance-testing" class="level3">
-<h3 class="anchored" data-anchor-id="performance-testing">Performance testing</h3>
-<ul>
-<li>A. Load testing</li>
-<li>B. Stress testing</li>
-<li>C. Benchmarking</li>
-</ul>
-</section>
-<section id="data-quality-testing" class="level3">
-<h3 class="anchored" data-anchor-id="data-quality-testing">Data quality testing</h3>
-<ul>
-<li>A. Data accuracy and consistency</li>
-<li>B. Data completeness</li>
-<li>C. Data timeliness</li>
-<li>D. Data lineage verification</li>
-</ul>
-</section>
-<section id="regression-testing" class="level3">
-<h3 class="anchored" data-anchor-id="regression-testing">Regression testing</h3>
-<ul>
-<li>A. Test existing data pipelines for backward compatibility</li>
-<li>B. Validate new changes against old functionality</li>
-</ul>
-</section>
-<section id="test-automation" class="level3">
-<h3 class="anchored" data-anchor-id="test-automation">Test automation</h3>
-<ul>
-<li>A. Continuous testing in CI/CD pipelines</li>
-<li>B. Automated test generation</li>
-<li>C. Test execution and reporting</li>
-</ul>
-</section>
-<section id="monitoring-and-alerting-for-test-failures" class="level3">
-<h3 class="anchored" data-anchor-id="monitoring-and-alerting-for-test-failures">Monitoring and alerting for test failures</h3>
-<ul>
-<li>A. Integration with monitoring tools</li>
-<li>B. Anomaly detection</li>
-<li>C. Notification and escalation strategies</li>
-</ul>
-</section>
-<section id="test-data-management" class="level3">
-<h3 class="anchored" data-anchor-id="test-data-management">Test data management</h3>
-<ul>
-<li>A. Synthetic test data generation</li>
-<li>B. Test data masking and anonymisation</li>
-<li>C. Test data storage and versioning</li>
-</ul>
-</section>
-<section id="best-practices-for-testing-and-validation" class="level3">
-<h3 class="anchored" data-anchor-id="best-practices-for-testing-and-validation">Best practices for testing and validation</h3>
-<ul>
-<li>A. Test-driven development (TDD) in data engineering</li>
-<li>B. Code and test coverage metrics</li>
-<li>C. Testing strategies and test pyramid</li>
-</ul>
-
-
-</section>
-</section>
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><div>MIT</div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shenton2023,
-  author = {Craig Shenton},
-  title = {Data {Engineering} {Research}},
-  date = {2023-04-09},
-  url = {https://craig-shenton.github.io/craigrshenton/posts/data-engineering-list},
-  langid = {en}
-}
-</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shenton2023" class="csl-entry quarto-appendix-citeas">
-Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
-2023. <a href="https://craig-shenton.github.io/craigrshenton/posts/data-engineering-list">https://craig-shenton.github.io/craigrshenton/posts/data-engineering-list</a>.
-</div></div></section></div> ]]></description>
-  <guid>https://craig-shenton.github.io/craigrshenton/posts/data-engineering-list/index.html</guid>
-  <pubDate>Fri, 07 Apr 2023 23:00:00 GMT</pubDate>
-</item>
+<lastBuildDate>Wed, 08 Sep 2021 23:00:00 GMT</lastBuildDate>
 <item>
   <title>Azure Data Factory Templates</title>
   <dc:creator>Craig Shenton</dc:creator>
-  <link>https://craig-shenton.github.io/craigrshenton/posts/azure-data-factory-templates/azure-data-factory-templates.html</link>
+  <link>https://craig-shenton.github.io/craigrshenton/posts/azure-data-factory-templates.html</link>
   <description><![CDATA[ 
 
 
 
-<section id="authors" class="level3">
-<h3 class="anchored" data-anchor-id="authors">Authors</h3>
-<ul>
-<li>Craig Robert Shenton, PhD - Senior Data Engineer, NHS England</li>
-<li>Mattia Ficarelli, PhD - Data Engineer, NHSX</li>
-</ul>
-<p>Originally posted on the <a href="https://nhsx.github.io/AnalyticsUnit/">NHSX technical gateway</a> website.</p>
-</section>
-<section id="content" class="level3">
-<h3 class="anchored" data-anchor-id="content">Content</h3>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
 <p>Open access and reusable design documentation of pipelines used in the NHSX Analytics Azure Data Factory (ADF) environment.</p>
 <ul>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-factory-templates/#sql-database-ingestion-pipeline">SQL Database Ingestion Pipeline</a></li>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-factory-templates/#databricks-ingestion-pipeline">Databricks Ingestion Pipeline</a></li>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-factory-templates/#excel-sheet-ingestion-pipeline">Excel Sheet Ingestion Pipeline</a></li>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-factory-templates/#multiple-excel-sheet-ingestion-pipeline">Multiple Excel Sheet Ingestion Pipeline</a></li>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-factory-templates/#web-url-data-ingestion-pipeline">Web URL Data Ingestion Pipeline</a></li>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-factory-templates/#azure-function-app-ingestion-pipeline">Azure Function App Ingestion Pipeline</a></li>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-factory-templates/#sharepoint-ingestion-pipeline">SharePoint Ingestion Pipeline</a></li>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-factory-templates/#databricks-processing-pipeline">Databricks Processing Pipeline</a></li>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-factory-templates/#azure-function-app-processing-pipeline">Azure Function App Processing Pipeline</a></li>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-factory-templates/#multiple-azure-function-apps-processing-pipeline">Multiple Azure Function Apps Processing Pipeline</a></li>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-factory-templates/#copy-file-processing-pipeline">Copy File Processing Pipeline</a></li>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-factory-templates/#sql-table-staging-pipeline">SQL Table Staging Pipeline</a></li>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-factory-templates/#multiple-sql-table-staging-pipeline">Multiple SQL Table Staging Pipeline</a></li>
+<li>SQL Database Ingestion Pipeline</li>
+<li>Databricks Ingestion Pipeline</li>
+<li>Excel Sheet Ingestion Pipeline</li>
+<li>Multiple Excel Sheet Ingestion Pipeline</li>
+<li>Web URL Data Ingestion Pipeline</li>
+<li>Azure Function App Ingestion Pipeline</li>
+<li>SharePoint Ingestion Pipeline</li>
+<li>Databricks Processing Pipeline</li>
+<li>Azure Function App Processing Pipeline</li>
+<li>Multiple Azure Function Apps Processing Pipeline</li>
+<li>Copy File Processing Pipeline</li>
+<li>SQL Table Staging Pipeline</li>
+<li>Multiple SQL Table Staging Pipeline</li>
 </ul>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Originally posted on the <a href="https://nhsx.github.io/AnalyticsUnit/azure-de-principles.html">NHSX technical gateway</a> website.</p>
+</div>
+</div>
 </section>
 <section id="sql-database-ingestion-pipeline" class="level2">
 <h2 class="anchored" data-anchor-id="sql-database-ingestion-pipeline">SQL Database Ingestion Pipeline</h2>
 <section id="metadata" class="level3">
 <h3 class="anchored" data-anchor-id="metadata">Metadata</h3>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="co" style="color: #5E5E5E;"># -------------------------------------------------------------------------</span></span>
-<span id="cb1-2"><span class="co" style="color: #5E5E5E;"># Copyright (c) 2021 NHS England and NHS Improvement. All rights reserved.</span></span>
-<span id="cb1-3"><span class="co" style="color: #5E5E5E;"># Licensed under the MIT License. See license.txt in the project root for</span></span>
-<span id="cb1-4"><span class="co" style="color: #5E5E5E;"># license information.</span></span>
-<span id="cb1-5"><span class="co" style="color: #5E5E5E;"># -------------------------------------------------------------------------</span></span>
-<span id="cb1-6"></span>
-<span id="cb1-7"><span class="co" style="color: #5E5E5E;">"""</span></span>
-<span id="cb1-8"><span class="co" style="color: #5E5E5E;">FILE:           ingestion_sql.json</span></span>
-<span id="cb1-9"><span class="co" style="color: #5E5E5E;">DESCRIPTION:</span></span>
-<span id="cb1-10"><span class="co" style="color: #5E5E5E;">                Pipeline to ingest raw data to Azure Datalake blob storage</span></span>
-<span id="cb1-11"><span class="co" style="color: #5E5E5E;">                from a SQL database.</span></span>
-<span id="cb1-12"></span>
-<span id="cb1-13"><span class="co" style="color: #5E5E5E;">CONTRIBUTORS:   Craig Shenton, Mattia Ficarelli</span></span>
-<span id="cb1-14"><span class="co" style="color: #5E5E5E;">CONTACT:        data@nhsx.nhs.uk</span></span>
-<span id="cb1-15"><span class="co" style="color: #5E5E5E;">CREATED:        20 Sept 2021</span></span>
-<span id="cb1-16"><span class="co" style="color: #5E5E5E;">VERSION:        0.0.1</span></span>
-<span id="cb1-17"><span class="co" style="color: #5E5E5E;">"""</span></span></code></pre></div>
+<ul>
+<li>FILE: ingestion_sql.json</li>
+<li>DESCRIPTION: Pipeline to ingest raw data to Azure Datalake blob storage from a SQL database.</li>
+<li>CONTRIBUTORS: Craig Shenton, Mattia Ficarelli</li>
+<li>CONTACT: data@nhsx.nhs.uk</li>
+<li>CREATED: 20 Sept 2021</li>
+<li>VERSION: 0.0.1</li>
+</ul>
 </section>
 <section id="description" class="level3">
 <h3 class="anchored" data-anchor-id="description">Description</h3>
@@ -525,7 +81,6 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 </div>
 <p><em>Figure 1: Data ingestion from a SQL database</em></p>
 <p>Pipeline to ingest raw data to Azure Datalake blob storage from a SQL database.</p>
-<blockquote class="blockquote">
 <ol type="1">
 <li>Looks up the <code>.json</code> configuration file for this pipeline</li>
 <li>Source:
@@ -543,23 +98,22 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 <li>Copy activity copies the data returned from the SQL query as either a <code>.csv</code> file or a <code>.parquet</code> file.</li>
 <li>If the copy activity fails, the error notification logic app API will notify the specified email address of the error</li>
 </ol>
-</blockquote>
 </section>
 <section id="pipeline-configuration" class="level3">
 <h3 class="anchored" data-anchor-id="pipeline-configuration">Pipeline Configuration</h3>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb2-1"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb2-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb2-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"ingestion_sql"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb2-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/ingestion/sql"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb2-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb2-6">    <span class="dt" style="color: #AD0000;">"raw"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb2-7">      <span class="dt" style="color: #AD0000;">"source_dbo"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"dbo"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb2-8">      <span class="dt" style="color: #AD0000;">"source_table"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"table_1"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb2-9">      <span class="dt" style="color: #AD0000;">"source_query"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"SELECT * FROM dbo.table_1 ORDER BY Date DESC"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb2-10">      <span class="dt" style="color: #AD0000;">"sink_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"raw/path/to/data"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb2-11">      <span class="dt" style="color: #AD0000;">"sink_file"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"table_1.parquet"</span></span>
-<span id="cb2-12">    <span class="fu" style="color: #4758AB;">}</span></span>
-<span id="cb2-13"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb1-1"><span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb1-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb1-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"ingestion_sql"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb1-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/ingestion/sql"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb1-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb1-6">    <span class="dt" style="color: #AD0000;">"raw"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb1-7">      <span class="dt" style="color: #AD0000;">"source_dbo"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"dbo"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb1-8">      <span class="dt" style="color: #AD0000;">"source_table"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"table_1"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb1-9">      <span class="dt" style="color: #AD0000;">"source_query"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"SELECT * FROM dbo.table_1 ORDER BY Date DESC"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb1-10">      <span class="dt" style="color: #AD0000;">"sink_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"raw/path/to/data"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb1-11">      <span class="dt" style="color: #AD0000;">"sink_file"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"table_1.parquet"</span></span>
+<span id="cb1-12">    <span class="fu" style="color: #4758AB;">}</span></span>
+<span id="cb1-13"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
 </section>
 <section id="data-factory-configuration" class="level3">
 <h3 class="anchored" data-anchor-id="data-factory-configuration">Data Factory Configuration</h3>
@@ -571,23 +125,14 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 <h2 class="anchored" data-anchor-id="databricks-ingestion-pipeline">Databricks Ingestion Pipeline</h2>
 <section id="metadata-1" class="level3">
 <h3 class="anchored" data-anchor-id="metadata-1">Metadata</h3>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="co" style="color: #5E5E5E;"># -------------------------------------------------------------------------</span></span>
-<span id="cb3-2"><span class="co" style="color: #5E5E5E;"># Copyright (c) 2021 NHS England and NHS Improvement. All rights reserved.</span></span>
-<span id="cb3-3"><span class="co" style="color: #5E5E5E;"># Licensed under the MIT License. See license.txt in the project root for</span></span>
-<span id="cb3-4"><span class="co" style="color: #5E5E5E;"># license information.</span></span>
-<span id="cb3-5"><span class="co" style="color: #5E5E5E;"># -------------------------------------------------------------------------</span></span>
-<span id="cb3-6"></span>
-<span id="cb3-7"><span class="co" style="color: #5E5E5E;">"""</span></span>
-<span id="cb3-8"><span class="co" style="color: #5E5E5E;">FILE:           ingestion_databricks.json</span></span>
-<span id="cb3-9"><span class="co" style="color: #5E5E5E;">DESCRIPTION:</span></span>
-<span id="cb3-10"><span class="co" style="color: #5E5E5E;">                Pipeline to ingest raw data to Azure Datalake blob storage</span></span>
-<span id="cb3-11"><span class="co" style="color: #5E5E5E;">                using a databricks notebook.</span></span>
-<span id="cb3-12"></span>
-<span id="cb3-13"><span class="co" style="color: #5E5E5E;">CONTRIBUTORS:   Craig Shenton, Mattia Ficarelli</span></span>
-<span id="cb3-14"><span class="co" style="color: #5E5E5E;">CONTACT:        data@nhsx.nhs.uk</span></span>
-<span id="cb3-15"><span class="co" style="color: #5E5E5E;">CREATED:        20 Sept 2021</span></span>
-<span id="cb3-16"><span class="co" style="color: #5E5E5E;">VERSION:        0.0.1</span></span>
-<span id="cb3-17"><span class="co" style="color: #5E5E5E;">"""</span></span></code></pre></div>
+<ul>
+<li>FILE: ingestion_databricks.json</li>
+<li>DESCRIPTION: Pipeline to ingest raw data to Azure Datalake blob storage using a databricks notebook.</li>
+<li>CONTRIBUTORS: Craig Shenton, Mattia Ficarelli</li>
+<li>CONTACT: data@nhsx.nhs.uk</li>
+<li>CREATED: 20 Sept 2021</li>
+<li>VERSION: 0.0.1</li>
+</ul>
 </section>
 <section id="description-1" class="level3">
 <h3 class="anchored" data-anchor-id="description-1">Description</h3>
@@ -599,27 +144,25 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 </div>
 <p><em>Figure 2: Data ingestion using a databricks notebook</em></p>
 <p>Pipeline to ingest raw data to Azure Datalake blob storage using a databricks notebook.</p>
-<blockquote class="blockquote">
 <ol type="1">
 <li>Lookup the <code>.json</code> configuration file for this pipeline.</li>
 <li>Set the databricks notebook path.</li>
 <li>Databricks notebook activity runs the databricks notebook specified using an ephemeral job cluster.</li>
 <li>If the databricks notebook activity fails, the error notification logic app API will notify the specified email address of the error.</li>
 </ol>
-</blockquote>
 <p>Within the databricks notebook, using Azure Databricks Functions, data can be saved to blob storage as either a <code>.csv</code> file or a <code>.parquet</code> file.</p>
 </section>
 <section id="pipeline-configuration-1" class="level3">
 <h3 class="anchored" data-anchor-id="pipeline-configuration-1">Pipeline Configuration</h3>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb4-1"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb4-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb4-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"ingestion_databricks"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb4-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/ingestion/databricks"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb4-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb4-6">    <span class="dt" style="color: #AD0000;">"raw"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb4-7">      <span class="dt" style="color: #AD0000;">"databricks_notebook"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"/path/to/databricks/notebook"</span></span>
-<span id="cb4-8">    <span class="fu" style="color: #4758AB;">}</span></span>
-<span id="cb4-9"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb2-1"><span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb2-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb2-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"ingestion_databricks"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb2-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/ingestion/databricks"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb2-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb2-6">    <span class="dt" style="color: #AD0000;">"raw"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb2-7">      <span class="dt" style="color: #AD0000;">"databricks_notebook"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"/path/to/databricks/notebook"</span></span>
+<span id="cb2-8">    <span class="fu" style="color: #4758AB;">}</span></span>
+<span id="cb2-9"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
 </section>
 <section id="data-factory-configuration-1" class="level3">
 <h3 class="anchored" data-anchor-id="data-factory-configuration-1">Data Factory Configuration</h3>
@@ -631,23 +174,14 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 <h2 class="anchored" data-anchor-id="excel-sheet-ingestion-pipeline">Excel Sheet Ingestion Pipeline</h2>
 <section id="metadata-2" class="level3">
 <h3 class="anchored" data-anchor-id="metadata-2">Metadata</h3>
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="co" style="color: #5E5E5E;"># -------------------------------------------------------------------------</span></span>
-<span id="cb5-2"><span class="co" style="color: #5E5E5E;"># Copyright (c) 2021 NHS England and NHS Improvement. All rights reserved.</span></span>
-<span id="cb5-3"><span class="co" style="color: #5E5E5E;"># Licensed under the MIT License. See license.txt in the project root for</span></span>
-<span id="cb5-4"><span class="co" style="color: #5E5E5E;"># license information.</span></span>
-<span id="cb5-5"><span class="co" style="color: #5E5E5E;"># -------------------------------------------------------------------------</span></span>
-<span id="cb5-6"></span>
-<span id="cb5-7"><span class="co" style="color: #5E5E5E;">"""</span></span>
-<span id="cb5-8"><span class="co" style="color: #5E5E5E;">FILE:           ingestion_excel_sheet.json</span></span>
-<span id="cb5-9"><span class="co" style="color: #5E5E5E;">DESCRIPTION:</span></span>
-<span id="cb5-10"><span class="co" style="color: #5E5E5E;">                Pipeline to ingest a specified excel file sheet, as a .csv</span></span>
-<span id="cb5-11"><span class="co" style="color: #5E5E5E;">                file, to Azure Datalake blob storage.</span></span>
-<span id="cb5-12"></span>
-<span id="cb5-13"><span class="co" style="color: #5E5E5E;">CONTRIBUTORS:   Craig Shenton, Mattia Ficarelli</span></span>
-<span id="cb5-14"><span class="co" style="color: #5E5E5E;">CONTACT:        data@nhsx.nhs.uk</span></span>
-<span id="cb5-15"><span class="co" style="color: #5E5E5E;">CREATED:        20 Sept 2021</span></span>
-<span id="cb5-16"><span class="co" style="color: #5E5E5E;">VERSION:        0.0.1</span></span>
-<span id="cb5-17"><span class="co" style="color: #5E5E5E;">"""</span></span></code></pre></div>
+<ul>
+<li>FILE: ingestion_excel_sheet.json</li>
+<li>DESCRIPTION: Pipeline to ingest a specified excel file sheet, as a .csv file, to Azure Datalake blob storage.</li>
+<li>CONTRIBUTORS: Craig Shenton, Mattia Ficarelli</li>
+<li>CONTACT: data@nhsx.nhs.uk</li>
+<li>CREATED: 20 Sept 2021</li>
+<li>VERSION: 0.0.1</li>
+</ul>
 </section>
 <section id="description-2" class="level3">
 <h3 class="anchored" data-anchor-id="description-2">Description</h3>
@@ -659,7 +193,6 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 </div>
 <p><em>Figure 3: Data ingestion of an excel file sheet</em></p>
 <p>Pipeline to ingest a specified excel file sheet, as a <code>.csv</code> file, to Azure Datalake blob storage.</p>
-<blockquote class="blockquote">
 <ol type="1">
 <li>Lookup the <code>.json</code> configuration file for this pipeline.</li>
 <li>Set the Azure Datalake file system.</li>
@@ -668,32 +201,29 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 <li>Copy activity ingests the excel sheet data to a <code>.csv</code> file.</li>
 <li>If the copy activity fails, the error notification logic app API will notify the specified email address of the error.</li>
 </ol>
-</blockquote>
 </section>
 <section id="pipeline-configuration-2" class="level3">
 <h3 class="anchored" data-anchor-id="pipeline-configuration-2">Pipeline Configuration</h3>
-<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb6-1"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb6-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb6-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"ingestion_excel_sheet"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb6-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/ingestion/excel_sheet"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb6-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb6-6">    <span class="dt" style="color: #AD0000;">"raw"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb6-7">      <span class="dt" style="color: #AD0000;">"source_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"raw/"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb6-8">      <span class="dt" style="color: #AD0000;">"source_file"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file.xlsx"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb6-9">      <span class="dt" style="color: #AD0000;">"source_sheet"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"table_1"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb6-10">      <span class="dt" style="color: #AD0000;">"sink_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"processed/"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb6-11">      <span class="dt" style="color: #AD0000;">"sink_name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"table_1.csv"</span></span>
-<span id="cb6-12">    <span class="fu" style="color: #4758AB;">}</span></span>
-<span id="cb6-13"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb3-1"><span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb3-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb3-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"ingestion_excel_sheet"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb3-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/ingestion/excel_sheet"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb3-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb3-6">    <span class="dt" style="color: #AD0000;">"raw"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb3-7">      <span class="dt" style="color: #AD0000;">"source_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"raw/"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb3-8">      <span class="dt" style="color: #AD0000;">"source_file"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file.xlsx"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb3-9">      <span class="dt" style="color: #AD0000;">"source_sheet"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"table_1"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb3-10">      <span class="dt" style="color: #AD0000;">"sink_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"processed/"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb3-11">      <span class="dt" style="color: #AD0000;">"sink_name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"table_1.csv"</span></span>
+<span id="cb3-12">    <span class="fu" style="color: #4758AB;">}</span></span>
+<span id="cb3-13"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
 </section>
 <section id="data-factory-configuration-2" class="level3">
 <h3 class="anchored" data-anchor-id="data-factory-configuration-2">Data Factory Configuration</h3>
 <p>Download the Azure Data Factory <code>.json</code> configuration file to use this template in your own data pipelines. <a href="https://raw.githubusercontent.com/nhsx/au-data-engineering/main/config-files/adf-templates/excel-sheet-ingestion.json">excel-sheet-ingestion.json</a></p>
 <section id="note" class="level4">
 <h4 class="anchored" data-anchor-id="note">Note</h4>
-<blockquote class="blockquote">
 <p>Alternatively this a variation of this pipeline can be used to ingest multiple excel file sheets to a set of <code>.csv</code> files in Azure Datalake blob storage.</p>
-</blockquote>
 </section>
 </section>
 </section>
@@ -701,23 +231,14 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 <h2 class="anchored" data-anchor-id="multiple-excel-sheet-ingestion-pipeline">Multiple Excel Sheet Ingestion Pipeline</h2>
 <section id="metadata-3" class="level3">
 <h3 class="anchored" data-anchor-id="metadata-3">Metadata</h3>
-<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><span class="co" style="color: #5E5E5E;"># -------------------------------------------------------------------------</span></span>
-<span id="cb7-2"><span class="co" style="color: #5E5E5E;"># Copyright (c) 2021 NHS England and NHS Improvement. All rights reserved.</span></span>
-<span id="cb7-3"><span class="co" style="color: #5E5E5E;"># Licensed under the MIT License. See license.txt in the project root for</span></span>
-<span id="cb7-4"><span class="co" style="color: #5E5E5E;"># license information.</span></span>
-<span id="cb7-5"><span class="co" style="color: #5E5E5E;"># -------------------------------------------------------------------------</span></span>
-<span id="cb7-6"></span>
-<span id="cb7-7"><span class="co" style="color: #5E5E5E;">"""</span></span>
-<span id="cb7-8"><span class="co" style="color: #5E5E5E;">FILE:           ingestion_multiple_excel_sheets.json</span></span>
-<span id="cb7-9"><span class="co" style="color: #5E5E5E;">DESCRIPTION:</span></span>
-<span id="cb7-10"><span class="co" style="color: #5E5E5E;">                Pipeline to ingest multiple specified excel file sheets as .csv files </span></span>
-<span id="cb7-11"><span class="co" style="color: #5E5E5E;">                to Azure Datalake blob storage.</span></span>
-<span id="cb7-12"></span>
-<span id="cb7-13"><span class="co" style="color: #5E5E5E;">CONTRIBUTORS:   Craig Shenton, Mattia Ficarelli</span></span>
-<span id="cb7-14"><span class="co" style="color: #5E5E5E;">CONTACT:        data@nhsx.nhs.uk</span></span>
-<span id="cb7-15"><span class="co" style="color: #5E5E5E;">CREATED:        20 Sept 2021</span></span>
-<span id="cb7-16"><span class="co" style="color: #5E5E5E;">VERSION:        0.0.1</span></span>
-<span id="cb7-17"><span class="co" style="color: #5E5E5E;">"""</span></span></code></pre></div>
+<ul>
+<li>FILE: ingestion_multiple_excel_sheets.json</li>
+<li>DESCRIPTION: Pipeline to ingest multiple specified excel file sheets as .csv files to Azure Datalake blob storage.</li>
+<li>CONTRIBUTORS: Craig Shenton, Mattia Ficarelli</li>
+<li>CONTACT: data@nhsx.nhs.uk</li>
+<li>CREATED: 20 Sept 2021</li>
+<li>VERSION: 0.0.1</li>
+</ul>
 </section>
 <section id="description-3" class="level3">
 <h3 class="anchored" data-anchor-id="description-3">Description</h3>
@@ -736,21 +257,19 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 </div>
 <p><em>Figure 5: ForEach loop activities within pipeline</em></p>
 <p>Pipeline to ingest multiple specified excel file sheets as <code>.csv</code> files to Azure Datalake blob storage.</p>
-<blockquote class="blockquote">
 <ol type="1">
 <li>Looks up the <code>.json</code> configuration file for this pipeline.</li>
 <li>Set the Azure Datalake file system.</li>
 <li>Set the source path to the folder containing the excel files.</li>
 <li>Set the sink path.</li>
 <li>Set an <code>array</code> variable containing the list of excel file metadata.</li>
-<li>ForEach loops over each excel file:
+<li>ForEach loops over each excel - FILE:
 <ol type="a">
 <li>Sets the source sheet and sink file.</li>
 <li>Copy activity ingests the excel sheet data and saves it as a <code>.csv</code> file.</li>
 <li>If the copy activity fails, the error notification logic app API will notify the specified email address of the error.</li>
 </ol></li>
 </ol>
-</blockquote>
 <section id="note-1" class="level4">
 <h4 class="anchored" data-anchor-id="note-1">Note</h4>
 <p>Copy activity has ‘File path type’ set to wildcard and the file name regex as <code>*.xlsx</code> (excel) (see Figure 6).</p>
@@ -765,30 +284,30 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 </section>
 <section id="pipeline-configuration-3" class="level3">
 <h3 class="anchored" data-anchor-id="pipeline-configuration-3">Pipeline Configuration</h3>
-<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb8-1"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb8-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb8-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"ingestion_multiple_excel_sheets"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb8-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/ingestion/multiple_excel_sheets"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb8-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb8-6">    <span class="dt" style="color: #AD0000;">"raw"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb8-7">      <span class="dt" style="color: #AD0000;">"source_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"ingestion/"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb8-8">      <span class="dt" style="color: #AD0000;">"sink_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"raw/path/to/data"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb8-9">      <span class="dt" style="color: #AD0000;">"sink_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"processed/"</span></span>
-<span id="cb8-10">      <span class="st" style="color: #20794D;">"excel"</span><span class="er" style="color: #AD0000;">:</span><span class="ot" style="color: #003B4F;">[</span></span>
-<span id="cb8-11">    <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb8-12">      <span class="dt" style="color: #AD0000;">"sink_file"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"table_1.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb8-13">      <span class="dt" style="color: #AD0000;">"source_sheet"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"sheet_1"</span></span>
-<span id="cb8-14">    <span class="fu" style="color: #4758AB;">}</span><span class="ot" style="color: #003B4F;">,</span></span>
-<span id="cb8-15">    <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb8-16">      <span class="dt" style="color: #AD0000;">"sink_file"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"table_2.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb8-17">      <span class="dt" style="color: #AD0000;">"source_sheet"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"sheet_2"</span></span>
-<span id="cb8-18">    <span class="fu" style="color: #4758AB;">}</span><span class="ot" style="color: #003B4F;">,</span></span>
-<span id="cb8-19">    <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb8-20">      <span class="dt" style="color: #AD0000;">"sink_file"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"table_3.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb8-21">      <span class="dt" style="color: #AD0000;">"source_sheet"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"sheet_3"</span></span>
-<span id="cb8-22">    <span class="fu" style="color: #4758AB;">}</span></span>
-<span id="cb8-23">  <span class="ot" style="color: #003B4F;">]</span></span>
-<span id="cb8-24"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb4-1"><span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb4-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb4-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"ingestion_multiple_excel_sheets"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb4-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/ingestion/multiple_excel_sheets"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb4-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb4-6">    <span class="dt" style="color: #AD0000;">"raw"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb4-7">      <span class="dt" style="color: #AD0000;">"source_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"ingestion/"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb4-8">      <span class="dt" style="color: #AD0000;">"sink_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"raw/path/to/data"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb4-9">      <span class="dt" style="color: #AD0000;">"sink_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"processed/"</span></span>
+<span id="cb4-10">      <span class="st" style="color: #20794D;">"excel"</span><span class="er" style="color: #AD0000;">:</span><span class="ot" style="color: #003B4F;">[</span></span>
+<span id="cb4-11">    <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb4-12">      <span class="dt" style="color: #AD0000;">"sink_file"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"table_1.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb4-13">      <span class="dt" style="color: #AD0000;">"source_sheet"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"sheet_1"</span></span>
+<span id="cb4-14">    <span class="fu" style="color: #4758AB;">}</span><span class="ot" style="color: #003B4F;">,</span></span>
+<span id="cb4-15">    <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb4-16">      <span class="dt" style="color: #AD0000;">"sink_file"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"table_2.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb4-17">      <span class="dt" style="color: #AD0000;">"source_sheet"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"sheet_2"</span></span>
+<span id="cb4-18">    <span class="fu" style="color: #4758AB;">}</span><span class="ot" style="color: #003B4F;">,</span></span>
+<span id="cb4-19">    <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb4-20">      <span class="dt" style="color: #AD0000;">"sink_file"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"table_3.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb4-21">      <span class="dt" style="color: #AD0000;">"source_sheet"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"sheet_3"</span></span>
+<span id="cb4-22">    <span class="fu" style="color: #4758AB;">}</span></span>
+<span id="cb4-23">  <span class="ot" style="color: #003B4F;">]</span></span>
+<span id="cb4-24"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
 </section>
 <section id="data-factory-configuration-3" class="level3">
 <h3 class="anchored" data-anchor-id="data-factory-configuration-3">Data Factory Configuration</h3>
@@ -800,23 +319,14 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 <h2 class="anchored" data-anchor-id="web-url-data-ingestion-pipeline">Web URL Data Ingestion Pipeline</h2>
 <section id="metadata-4" class="level3">
 <h3 class="anchored" data-anchor-id="metadata-4">Metadata</h3>
-<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><span class="co" style="color: #5E5E5E;"># -------------------------------------------------------------------------</span></span>
-<span id="cb9-2"><span class="co" style="color: #5E5E5E;"># Copyright (c) 2021 NHS England and NHS Improvement. All rights reserved.</span></span>
-<span id="cb9-3"><span class="co" style="color: #5E5E5E;"># Licensed under the MIT License. See license.txt in the project root for</span></span>
-<span id="cb9-4"><span class="co" style="color: #5E5E5E;"># license information.</span></span>
-<span id="cb9-5"><span class="co" style="color: #5E5E5E;"># -------------------------------------------------------------------------</span></span>
-<span id="cb9-6"></span>
-<span id="cb9-7"><span class="co" style="color: #5E5E5E;">"""</span></span>
-<span id="cb9-8"><span class="co" style="color: #5E5E5E;">FILE:           ingestion_web_url.json</span></span>
-<span id="cb9-9"><span class="co" style="color: #5E5E5E;">DESCRIPTION:</span></span>
-<span id="cb9-10"><span class="co" style="color: #5E5E5E;">                Pipeline to ingest data from a URL as a .csv file to </span></span>
-<span id="cb9-11"><span class="co" style="color: #5E5E5E;">                Azure Datalake blob storage.</span></span>
-<span id="cb9-12"></span>
-<span id="cb9-13"><span class="co" style="color: #5E5E5E;">CONTRIBUTORS:   Craig Shenton, Mattia Ficarelli</span></span>
-<span id="cb9-14"><span class="co" style="color: #5E5E5E;">CONTACT:        data@nhsx.nhs.uk</span></span>
-<span id="cb9-15"><span class="co" style="color: #5E5E5E;">CREATED:        20 Sept 2021</span></span>
-<span id="cb9-16"><span class="co" style="color: #5E5E5E;">VERSION:        0.0.1</span></span>
-<span id="cb9-17"><span class="co" style="color: #5E5E5E;">"""</span></span></code></pre></div>
+<ul>
+<li>FILE: ingestion_web_url.json</li>
+<li>DESCRIPTION: Pipeline to ingest data from a URL as a .csv file to Azure Datalake blob storage.</li>
+<li>CONTRIBUTORS: Craig Shenton, Mattia Ficarelli</li>
+<li>CONTACT: data@nhsx.nhs.uk</li>
+<li>CREATED: 20 Sept 2021</li>
+<li>VERSION: 0.0.1</li>
+</ul>
 </section>
 <section id="description-4" class="level3">
 <h3 class="anchored" data-anchor-id="description-4">Description</h3>
@@ -828,7 +338,6 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 </div>
 <p><em>Figure 7: Data ingestion from a web URL</em></p>
 <p>Pipeline to ingest data from a web URL as a <code>.csv</code> file to Azure Datalake blob storage.</p>
-<blockquote class="blockquote">
 <ol type="1">
 <li>Lookup the <code>.json</code> configuration file for this pipeline.</li>
 <li>Set the source URL.</li>
@@ -838,21 +347,20 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 <li>Copy activity copies the data returned from the URL as a <code>.csv</code> file.</li>
 <li>If the copy activity fails, the error notification logic app API will notify the specified email address of the error.</li>
 </ol>
-</blockquote>
 </section>
 <section id="pipeline-configuration-4" class="level3">
 <h3 class="anchored" data-anchor-id="pipeline-configuration-4">Pipeline Configuration</h3>
-<div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb10-1"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb10-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb10-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"ingestion_web_url"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb10-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/ingestion/web_url"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb10-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb10-6">    <span class="dt" style="color: #AD0000;">"raw"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb10-7">      <span class="dt" style="color: #AD0000;">"source_url"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"https://www.sourcedata.com"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb10-8">      <span class="dt" style="color: #AD0000;">"sink_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"raw/path/to/data"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb10-9">      <span class="dt" style="color: #AD0000;">"sink_file"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"table_1.csv"</span></span>
-<span id="cb10-10">    <span class="fu" style="color: #4758AB;">}</span></span>
-<span id="cb10-11"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb5-1"><span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb5-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb5-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"ingestion_web_url"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb5-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/ingestion/web_url"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb5-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb5-6">    <span class="dt" style="color: #AD0000;">"raw"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb5-7">      <span class="dt" style="color: #AD0000;">"source_url"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"https://www.sourcedata.com"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb5-8">      <span class="dt" style="color: #AD0000;">"sink_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"raw/path/to/data"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb5-9">      <span class="dt" style="color: #AD0000;">"sink_file"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"table_1.csv"</span></span>
+<span id="cb5-10">    <span class="fu" style="color: #4758AB;">}</span></span>
+<span id="cb5-11"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
 </section>
 <section id="data-factory-configuration-4" class="level3">
 <h3 class="anchored" data-anchor-id="data-factory-configuration-4">Data Factory Configuration</h3>
@@ -864,23 +372,14 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 <h2 class="anchored" data-anchor-id="azure-function-app-ingestion-pipeline">Azure Function App Ingestion Pipeline</h2>
 <section id="metadata-5" class="level3">
 <h3 class="anchored" data-anchor-id="metadata-5">Metadata</h3>
-<div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><span class="co" style="color: #5E5E5E;"># -------------------------------------------------------------------------</span></span>
-<span id="cb11-2"><span class="co" style="color: #5E5E5E;"># Copyright (c) 2021 NHS England and NHS Improvement. All rights reserved.</span></span>
-<span id="cb11-3"><span class="co" style="color: #5E5E5E;"># Licensed under the MIT License. See license.txt in the project root for</span></span>
-<span id="cb11-4"><span class="co" style="color: #5E5E5E;"># license information.</span></span>
-<span id="cb11-5"><span class="co" style="color: #5E5E5E;"># -------------------------------------------------------------------------</span></span>
-<span id="cb11-6"></span>
-<span id="cb11-7"><span class="co" style="color: #5E5E5E;">"""</span></span>
-<span id="cb11-8"><span class="co" style="color: #5E5E5E;">FILE:           ingestion_function_app.json</span></span>
-<span id="cb11-9"><span class="co" style="color: #5E5E5E;">DESCRIPTION:</span></span>
-<span id="cb11-10"><span class="co" style="color: #5E5E5E;">                Pipeline to ingest raw data to Azure Datalake blob storage</span></span>
-<span id="cb11-11"><span class="co" style="color: #5E5E5E;">                using an Azure function app.</span></span>
-<span id="cb11-12"></span>
-<span id="cb11-13"><span class="co" style="color: #5E5E5E;">CONTRIBUTORS:   Craig Shenton, Mattia Ficarelli</span></span>
-<span id="cb11-14"><span class="co" style="color: #5E5E5E;">CONTACT:        data@nhsx.nhs.uk</span></span>
-<span id="cb11-15"><span class="co" style="color: #5E5E5E;">CREATED:        29 Sept 2021</span></span>
-<span id="cb11-16"><span class="co" style="color: #5E5E5E;">VERSION:        0.0.1</span></span>
-<span id="cb11-17"><span class="co" style="color: #5E5E5E;">"""</span></span></code></pre></div>
+<ul>
+<li>FILE: ingestion_function_app.json</li>
+<li>DESCRIPTION: Pipeline to ingest raw data to Azure Datalake blob storage using an Azure function app.</li>
+<li>CONTRIBUTORS: Craig Shenton, Mattia Ficarelli</li>
+<li>CONTACT: data@nhsx.nhs.uk</li>
+<li>CREATED: 29 Sept 2021</li>
+<li>VERSION: 0.0.1</li>
+</ul>
 </section>
 <section id="description-5" class="level3">
 <h3 class="anchored" data-anchor-id="description-5">Description</h3>
@@ -892,27 +391,25 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 </div>
 <p><em>Figure 8: Data ingestion using an azure function app</em></p>
 <p>Pipeline to ingest raw data to Azure Datalake blob storage using an Azure function app.</p>
-<blockquote class="blockquote">
 <ol type="1">
 <li>Lookup the <code>.json</code> configuration file for this pipeline.</li>
 <li>Set the Azure function app.</li>
 <li>Azure function app activity triggers the specified function app.</li>
 <li>If the Azure function app activity fails, the error notification logic app API will notify the specified email address of the error.</li>
 </ol>
-</blockquote>
 <p>Within the Azure function app data can be saved to blob storage as either a <code>.csv</code> file or a <code>.parquet</code> file.</p>
 </section>
 <section id="pipeline-configuration-5" class="level3">
 <h3 class="anchored" data-anchor-id="pipeline-configuration-5">Pipeline Configuration</h3>
-<div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb12-1"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb12-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb12-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"ingestion_function_app"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb12-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/ingestion/function_app"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb12-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb12-6">    <span class="dt" style="color: #AD0000;">"raw"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb12-7">      <span class="dt" style="color: #AD0000;">"func_name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"azure_func_app"</span></span>
-<span id="cb12-8">    <span class="fu" style="color: #4758AB;">}</span></span>
-<span id="cb12-9"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb6-1"><span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb6-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb6-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"ingestion_function_app"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb6-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/ingestion/function_app"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb6-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb6-6">    <span class="dt" style="color: #AD0000;">"raw"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb6-7">      <span class="dt" style="color: #AD0000;">"func_name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"azure_func_app"</span></span>
+<span id="cb6-8">    <span class="fu" style="color: #4758AB;">}</span></span>
+<span id="cb6-9"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
 </section>
 <section id="data-factory-configuration-5" class="level3">
 <h3 class="anchored" data-anchor-id="data-factory-configuration-5">Data Factory Configuration</h3>
@@ -924,23 +421,14 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 <h2 class="anchored" data-anchor-id="sharepoint-ingestion-pipeline">SharePoint Ingestion Pipeline</h2>
 <section id="metadata-6" class="level3">
 <h3 class="anchored" data-anchor-id="metadata-6">Metadata</h3>
-<div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><span class="co" style="color: #5E5E5E;"># -------------------------------------------------------------------------</span></span>
-<span id="cb13-2"><span class="co" style="color: #5E5E5E;"># Copyright (c) 2021 NHS England and NHS Improvement. All rights reserved.</span></span>
-<span id="cb13-3"><span class="co" style="color: #5E5E5E;"># Licensed under the MIT License. See license.txt in the project root for</span></span>
-<span id="cb13-4"><span class="co" style="color: #5E5E5E;"># license information.</span></span>
-<span id="cb13-5"><span class="co" style="color: #5E5E5E;"># -------------------------------------------------------------------------</span></span>
-<span id="cb13-6"></span>
-<span id="cb13-7"><span class="co" style="color: #5E5E5E;">"""</span></span>
-<span id="cb13-8"><span class="co" style="color: #5E5E5E;">FILE:           ingestion_sharepoint.json</span></span>
-<span id="cb13-9"><span class="co" style="color: #5E5E5E;">DESCRIPTION:</span></span>
-<span id="cb13-10"><span class="co" style="color: #5E5E5E;">                Pipeline to ingest a specified folder and files from Microsoft</span></span>
-<span id="cb13-11"><span class="co" style="color: #5E5E5E;">                SharePoint to Azure Datalake blob storage.</span></span>
-<span id="cb13-12"></span>
-<span id="cb13-13"><span class="co" style="color: #5E5E5E;">CONTRIBUTORS:   Craig Shenton, Mattia Ficarelli</span></span>
-<span id="cb13-14"><span class="co" style="color: #5E5E5E;">CONTACT:        data@nhsx.nhs.uk</span></span>
-<span id="cb13-15"><span class="co" style="color: #5E5E5E;">CREATED:        29 Sept 2021</span></span>
-<span id="cb13-16"><span class="co" style="color: #5E5E5E;">VERSION:        0.0.1</span></span>
-<span id="cb13-17"><span class="co" style="color: #5E5E5E;">"""</span></span></code></pre></div>
+<ul>
+<li>FILE: ingestion_sharepoint.json</li>
+<li>DESCRIPTION: Pipeline to ingest a specified folder and files from Microsoft SharePoint to Azure Datalake blob storage.</li>
+<li>CONTRIBUTORS: Craig Shenton, Mattia Ficarelli</li>
+<li>CONTACT: data@nhsx.nhs.uk</li>
+<li>CREATED: 29 Sept 2021</li>
+<li>VERSION: 0.0.1</li>
+</ul>
 </section>
 <section id="description-6" class="level3">
 <h3 class="anchored" data-anchor-id="description-6">Description</h3>
@@ -952,27 +440,25 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 </div>
 <p><em>Figure 9: Data ingestion from microsoft sharepoint</em></p>
 <p>Pipeline to ingest a specified folder from Microsoft SharePoint to Azure Datalake blob storage.</p>
-<blockquote class="blockquote">
 <ol type="1">
 <li>Lookup the <code>.json</code> configuration file for this pipeline.</li>
 <li>Set the SharePoint file path and SharePoint logic app URL.</li>
 <li>Call the SharePoint logic app using a webhook that will send back a message once the file transfer is complete.</li>
 <li>If the logic app fails, the error notification logic app API will notify the specified email address of the error.</li>
 </ol>
-</blockquote>
 </section>
 <section id="pipeline-configuration-6" class="level3">
 <h3 class="anchored" data-anchor-id="pipeline-configuration-6">Pipeline Configuration</h3>
-<div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1">{</span>
-<span id="cb14-2">  <span class="st" style="color: #20794D;">"pipeline"</span>: {</span>
-<span id="cb14-3">    <span class="st" style="color: #20794D;">"name"</span>: <span class="st" style="color: #20794D;">"ingestion_sharepoint"</span>,</span>
-<span id="cb14-4">    <span class="st" style="color: #20794D;">"folder"</span>: <span class="st" style="color: #20794D;">"templates/ingestion/sharepoint"</span>,</span>
-<span id="cb14-5">    <span class="st" style="color: #20794D;">"adl_file_system"</span>: <span class="st" style="color: #20794D;">"file_system"</span>,</span>
-<span id="cb14-6">    <span class="st" style="color: #20794D;">"raw"</span>: {</span>
-<span id="cb14-7">      <span class="st" style="color: #20794D;">"source_path"</span>: <span class="st" style="color: #20794D;">"...sharepoint/..."</span>,</span>
-<span id="cb14-8">      <span class="st" style="color: #20794D;">"logic_app_url"</span>: <span class="st" style="color: #20794D;">"https://...logic.azure.com/..."</span></span>
-<span id="cb14-9">    }</span>
-<span id="cb14-10">}</span></code></pre></div>
+<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb7-1"><span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb7-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb7-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"ingestion_sharepoint"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb7-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/ingestion/sharepoint"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb7-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb7-6">    <span class="dt" style="color: #AD0000;">"raw"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb7-7">      <span class="dt" style="color: #AD0000;">"source_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"...sharepoint/..."</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb7-8">      <span class="dt" style="color: #AD0000;">"logic_app_url"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"https://...logic.azure.com/..."</span></span>
+<span id="cb7-9">    <span class="fu" style="color: #4758AB;">}</span></span>
+<span id="cb7-10"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
 </section>
 <section id="data-factory-configuration-6" class="level3">
 <h3 class="anchored" data-anchor-id="data-factory-configuration-6">Data Factory Configuration</h3>
@@ -984,23 +470,14 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 <h2 class="anchored" data-anchor-id="databricks-processing-pipeline">Databricks Processing Pipeline</h2>
 <section id="metadata-7" class="level3">
 <h3 class="anchored" data-anchor-id="metadata-7">Metadata</h3>
-<div class="sourceCode" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><span class="co" style="color: #5E5E5E;"># -------------------------------------------------------------------------</span></span>
-<span id="cb15-2"><span class="co" style="color: #5E5E5E;"># Copyright (c) 2021 NHS England and NHS Improvement. All rights reserved.</span></span>
-<span id="cb15-3"><span class="co" style="color: #5E5E5E;"># Licensed under the MIT License. See license.txt in the project root for</span></span>
-<span id="cb15-4"><span class="co" style="color: #5E5E5E;"># license information.</span></span>
-<span id="cb15-5"><span class="co" style="color: #5E5E5E;"># -------------------------------------------------------------------------</span></span>
-<span id="cb15-6"></span>
-<span id="cb15-7"><span class="co" style="color: #5E5E5E;">"""</span></span>
-<span id="cb15-8"><span class="co" style="color: #5E5E5E;">FILE:           processing_databricks.json</span></span>
-<span id="cb15-9"><span class="co" style="color: #5E5E5E;">DESCRIPTION:</span></span>
-<span id="cb15-10"><span class="co" style="color: #5E5E5E;">                Pipeline to process data from a folder in Azure Datalake </span></span>
-<span id="cb15-11"><span class="co" style="color: #5E5E5E;">                blob storage using a databricks notebook.</span></span>
-<span id="cb15-12"></span>
-<span id="cb15-13"><span class="co" style="color: #5E5E5E;">CONTRIBUTORS:   Craig Shenton, Mattia Ficarelli</span></span>
-<span id="cb15-14"><span class="co" style="color: #5E5E5E;">CONTACT:        data@nhsx.nhs.uk</span></span>
-<span id="cb15-15"><span class="co" style="color: #5E5E5E;">CREATED:        23 Sept 2021</span></span>
-<span id="cb15-16"><span class="co" style="color: #5E5E5E;">VERSION:        0.0.1</span></span>
-<span id="cb15-17"><span class="co" style="color: #5E5E5E;">"""</span></span></code></pre></div>
+<ul>
+<li>FILE: processing_databricks.json</li>
+<li>DESCRIPTION: Pipeline to process data from a folder in Azure Datalake blob storage using a databricks notebook.</li>
+<li>CONTRIBUTORS: Craig Shenton, Mattia Ficarelli</li>
+<li>CONTACT: data@nhsx.nhs.uk</li>
+<li>CREATED: 23 Sept 2021</li>
+<li>VERSION: 0.0.1</li>
+</ul>
 </section>
 <section id="description-7" class="level3">
 <h3 class="anchored" data-anchor-id="description-7">Description</h3>
@@ -1012,59 +489,55 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 </div>
 <p><em>Figure 10: Data processing using a Databricks notebook</em></p>
 <p>Pipeline to process data from a folder in Azure Datalake blob storage using a databricks notebook</p>
-<blockquote class="blockquote">
 <ol type="1">
 <li>Lookup the <code>.json</code> configuration file for this pipeline.</li>
 <li>Set the databricks notebook path.</li>
 <li>Databricks notebook activity runs the databricks notebook specified using an ephemeral job cluster.</li>
 <li>If the databricks notebook activity fails, the error notification logic app API will notify the specified email address of the error.</li>
 </ol>
-</blockquote>
 </section>
 <section id="pipeline-configuration-7" class="level3">
 <h3 class="anchored" data-anchor-id="pipeline-configuration-7">Pipeline Configuration</h3>
-<div class="sourceCode" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb16-1"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb16-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb16-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"processing_databricks"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb16-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/processing/databricks"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb16-5">    <span class="dt" style="color: #AD0000;">"project"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb16-6">      <span class="dt" style="color: #AD0000;">"databricks_notebook"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"/path/to/databricks/notebook"</span></span>
-<span id="cb16-7">    <span class="fu" style="color: #4758AB;">}</span></span>
-<span id="cb16-8"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb8-1"><span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb8-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb8-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"processing_databricks"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb8-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/processing/databricks"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb8-5">    <span class="dt" style="color: #AD0000;">"project"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb8-6">      <span class="dt" style="color: #AD0000;">"databricks_notebook"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"/path/to/databricks/notebook"</span></span>
+<span id="cb8-7">    <span class="fu" style="color: #4758AB;">}</span></span>
+<span id="cb8-8"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
 </section>
 <section id="databricks-orchestration" class="level3">
 <h3 class="anchored" data-anchor-id="databricks-orchestration">Databricks Orchestration</h3>
 <section id="note-2" class="level4">
 <h4 class="anchored" data-anchor-id="note-2">Note</h4>
-<blockquote class="blockquote">
 <p>Alternatively this pipeline can be used to trigger an orchestrator databricks notebook which in turn runs a series of data processing notebooks.</p>
-</blockquote>
-<div class="sourceCode" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb17-1"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb17-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb17-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"processing_databricks"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb17-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/processing/databricks_orchestrator"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb17-5">    <span class="dt" style="color: #AD0000;">"project"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb17-6">      <span class="dt" style="color: #AD0000;">"databricks_orchestrator_notebook"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"/path/to/databricks/orchestrator_notebook"</span></span>
-<span id="cb17-7">      <span class="st" style="color: #20794D;">"databricks"</span><span class="er" style="color: #AD0000;">:</span><span class="ot" style="color: #003B4F;">[</span>    </span>
-<span id="cb17-8">          <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb17-9">        <span class="dt" style="color: #AD0000;">"sink_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"path/to/processed/data"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb17-10">        <span class="dt" style="color: #AD0000;">"sink_file"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_1.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb17-11">        <span class="dt" style="color: #AD0000;">"databricks_notebook"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"/path/to/databricks/processing_notebook1"</span></span>
-<span id="cb17-12">        <span class="fu" style="color: #4758AB;">}</span><span class="ot" style="color: #003B4F;">,</span>    </span>
-<span id="cb17-13">          <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb17-14">        <span class="dt" style="color: #AD0000;">"sink_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"path/to/processed/data"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb17-15">        <span class="dt" style="color: #AD0000;">"sink_file"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_2.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb17-16">        <span class="dt" style="color: #AD0000;">"databricks_notebook"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"/path/to/databricks/processing_notebook2"</span></span>
-<span id="cb17-17">        <span class="fu" style="color: #4758AB;">}</span><span class="ot" style="color: #003B4F;">,</span></span>
-<span id="cb17-18">    <span class="er" style="color: #AD0000;">}</span></span>
-<span id="cb17-19"><span class="er" style="color: #AD0000;">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb9-1"><span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb9-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb9-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"processing_databricks"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb9-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/processing/databricks_orchestrator"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb9-5">    <span class="dt" style="color: #AD0000;">"project"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb9-6">      <span class="dt" style="color: #AD0000;">"databricks_orchestrator_notebook"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"/path/to/databricks/orchestrator_notebook"</span></span>
+<span id="cb9-7">      <span class="st" style="color: #20794D;">"databricks"</span><span class="er" style="color: #AD0000;">:</span><span class="ot" style="color: #003B4F;">[</span>    </span>
+<span id="cb9-8">          <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb9-9">        <span class="dt" style="color: #AD0000;">"sink_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"path/to/processed/data"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb9-10">        <span class="dt" style="color: #AD0000;">"sink_file"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_1.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb9-11">        <span class="dt" style="color: #AD0000;">"databricks_notebook"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"/path/to/databricks/processing_notebook1"</span></span>
+<span id="cb9-12">        <span class="fu" style="color: #4758AB;">}</span><span class="ot" style="color: #003B4F;">,</span>    </span>
+<span id="cb9-13">          <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb9-14">        <span class="dt" style="color: #AD0000;">"sink_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"path/to/processed/data"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb9-15">        <span class="dt" style="color: #AD0000;">"sink_file"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_2.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb9-16">        <span class="dt" style="color: #AD0000;">"databricks_notebook"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"/path/to/databricks/processing_notebook2"</span></span>
+<span id="cb9-17">        <span class="fu" style="color: #4758AB;">}</span><span class="ot" style="color: #003B4F;">,</span></span>
+<span id="cb9-18">    <span class="er" style="color: #AD0000;">}</span></span>
+<span id="cb9-19"><span class="er" style="color: #AD0000;">}</span></span></code></pre></div>
 <p>Python code to sequentially run databricks notebook paths specified in a <code>.json</code> config file from a databricks orchestrator notebook.</p>
-<div class="sourceCode" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><span class="co" style="color: #5E5E5E;">#Squentially run datbricks notebooks</span></span>
-<span id="cb18-2"><span class="cf" style="color: #003B4F;">for</span> index, item <span class="kw" style="color: #003B4F;">in</span> <span class="bu" style="color: null;">enumerate</span>(config_JSON[<span class="st" style="color: #20794D;">'pipeline'</span>][<span class="st" style="color: #20794D;">'project'</span>][<span class="st" style="color: #20794D;">'databricks'</span>]): </span>
-<span id="cb18-3">    notebook <span class="op" style="color: #5E5E5E;">=</span> config_JSON[<span class="st" style="color: #20794D;">'pipeline'</span>][<span class="st" style="color: #20794D;">'project'</span>][<span class="st" style="color: #20794D;">'databricks'</span>][index][<span class="st" style="color: #20794D;">'databricks_notebook'</span>]</span>
-<span id="cb18-4">    dbutils.notebook.run(notebook, <span class="dv" style="color: #AD0000;">120</span>)</span>
-<span id="cb18-5">  <span class="cf" style="color: #003B4F;">except</span> <span class="pp" style="color: #AD0000;">Exception</span> <span class="im" style="color: #00769E;">as</span> e:</span>
-<span id="cb18-6">    <span class="bu" style="color: null;">print</span>(e)</span></code></pre></div>
+<div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><span class="co" style="color: #5E5E5E;">#Squentially run datbricks notebooks</span></span>
+<span id="cb10-2"><span class="cf" style="color: #003B4F;">for</span> index, item <span class="kw" style="color: #003B4F;">in</span> <span class="bu" style="color: null;">enumerate</span>(config_JSON[<span class="st" style="color: #20794D;">'pipeline'</span>][<span class="st" style="color: #20794D;">'project'</span>][<span class="st" style="color: #20794D;">'databricks'</span>]): </span>
+<span id="cb10-3">    notebook <span class="op" style="color: #5E5E5E;">=</span> config_JSON[<span class="st" style="color: #20794D;">'pipeline'</span>][<span class="st" style="color: #20794D;">'project'</span>][<span class="st" style="color: #20794D;">'databricks'</span>][index][<span class="st" style="color: #20794D;">'databricks_notebook'</span>]</span>
+<span id="cb10-4">    dbutils.notebook.run(notebook, <span class="dv" style="color: #AD0000;">120</span>)</span>
+<span id="cb10-5">  <span class="cf" style="color: #003B4F;">except</span> <span class="pp" style="color: #AD0000;">Exception</span> <span class="im" style="color: #00769E;">as</span> e:</span>
+<span id="cb10-6">    <span class="bu" style="color: null;">print</span>(e)</span></code></pre></div>
 </section>
 </section>
 <section id="data-factory-configuration-7" class="level3">
@@ -1077,23 +550,14 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 <h2 class="anchored" data-anchor-id="azure-function-app-processing-pipeline">Azure Function App Processing Pipeline</h2>
 <section id="metadata-8" class="level3">
 <h3 class="anchored" data-anchor-id="metadata-8">Metadata</h3>
-<div class="sourceCode" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><span class="co" style="color: #5E5E5E;"># -------------------------------------------------------------------------</span></span>
-<span id="cb19-2"><span class="co" style="color: #5E5E5E;"># Copyright (c) 2021 NHS England and NHS Improvement. All rights reserved.</span></span>
-<span id="cb19-3"><span class="co" style="color: #5E5E5E;"># Licensed under the MIT License. See license.txt in the project root for</span></span>
-<span id="cb19-4"><span class="co" style="color: #5E5E5E;"># license information.</span></span>
-<span id="cb19-5"><span class="co" style="color: #5E5E5E;"># -------------------------------------------------------------------------</span></span>
-<span id="cb19-6"></span>
-<span id="cb19-7"><span class="co" style="color: #5E5E5E;">"""</span></span>
-<span id="cb19-8"><span class="co" style="color: #5E5E5E;">FILE:           processing_function_app.json</span></span>
-<span id="cb19-9"><span class="co" style="color: #5E5E5E;">DESCRIPTION:</span></span>
-<span id="cb19-10"><span class="co" style="color: #5E5E5E;">                Pipeline to process data to time-stamped folder in </span></span>
-<span id="cb19-11"><span class="co" style="color: #5E5E5E;">                Azure Datalake blob storage using an Azure function app.</span></span>
-<span id="cb19-12"></span>
-<span id="cb19-13"><span class="co" style="color: #5E5E5E;">CONTRIBUTORS:   Craig Shenton, Mattia Ficarelli</span></span>
-<span id="cb19-14"><span class="co" style="color: #5E5E5E;">CONTACT:        data@nhsx.nhs.uk</span></span>
-<span id="cb19-15"><span class="co" style="color: #5E5E5E;">CREATED:        29 Sept 2021</span></span>
-<span id="cb19-16"><span class="co" style="color: #5E5E5E;">VERSION:        0.0.1</span></span>
-<span id="cb19-17"><span class="co" style="color: #5E5E5E;">"""</span></span></code></pre></div>
+<ul>
+<li>FILE: processing_function_app.json</li>
+<li>DESCRIPTION: Pipeline to process data to time-stamped folder in Azure Datalake blob storage using an Azure function app.</li>
+<li>CONTRIBUTORS: Craig Shenton, Mattia Ficarelli</li>
+<li>CONTACT: data@nhsx.nhs.uk</li>
+<li>CREATED: 29 Sept 2021</li>
+<li>VERSION: 0.0.1</li>
+</ul>
 </section>
 <section id="description-8" class="level3">
 <h3 class="anchored" data-anchor-id="description-8">Description</h3>
@@ -1108,7 +572,6 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 <h4 class="anchored" data-anchor-id="note-3">Note</h4>
 <p>This pipeline is designed to allow for raw data to be ingested and then appended onto an existing table with historical data.</p>
 <p>Pipeline to process data to time-stamped folder in Azure Datalake blob storage using an Azure function app.</p>
-<blockquote class="blockquote">
 <ol type="1">
 <li>Lookup the <code>.json</code> configuration file for this pipeline.</li>
 <li>Set the source path (of the data to be processed).</li>
@@ -1122,22 +585,21 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 <li>Run the Azure function app activity.</li>
 <li>If the Azure function app activity fails, the error notification logic app API will notify the specified email address of the error.</li>
 </ol>
-</blockquote>
 <p>Within the Azure function app data can be saved to blob storage as either a <code>.csv</code> file or a <code>.parquet</code> file.</p>
 </section>
 </section>
 <section id="pipeline-configuration-8" class="level3">
 <h3 class="anchored" data-anchor-id="pipeline-configuration-8">Pipeline Configuration</h3>
-<div class="sourceCode" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb20-1"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb20-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb20-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"processing_function_app"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb20-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/processing/function_app"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb20-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb20-6">    <span class="dt" style="color: #AD0000;">"project"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb20-7">      <span class="dt" style="color: #AD0000;">"func_name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"azure_func_app"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb20-8">      <span class="dt" style="color: #AD0000;">"source_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"raw/historical/data/source"</span></span>
-<span id="cb20-9">    <span class="fu" style="color: #4758AB;">}</span></span>
-<span id="cb20-10"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb11-1"><span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb11-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb11-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"processing_function_app"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb11-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/processing/function_app"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb11-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb11-6">    <span class="dt" style="color: #AD0000;">"project"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb11-7">      <span class="dt" style="color: #AD0000;">"func_name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"azure_func_app"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb11-8">      <span class="dt" style="color: #AD0000;">"source_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"raw/historical/data/source"</span></span>
+<span id="cb11-9">    <span class="fu" style="color: #4758AB;">}</span></span>
+<span id="cb11-10"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
 </section>
 <section id="data-factory-configuration-8" class="level3">
 <h3 class="anchored" data-anchor-id="data-factory-configuration-8">Data Factory Configuration</h3>
@@ -1149,23 +611,14 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 <h2 class="anchored" data-anchor-id="multiple-azure-function-apps-processing-pipeline">Multiple Azure Function Apps Processing Pipeline</h2>
 <section id="metadata-9" class="level3">
 <h3 class="anchored" data-anchor-id="metadata-9">Metadata</h3>
-<div class="sourceCode" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><span class="co" style="color: #5E5E5E;"># -------------------------------------------------------------------------</span></span>
-<span id="cb21-2"><span class="co" style="color: #5E5E5E;"># Copyright (c) 2021 NHS England and NHS Improvement. All rights reserved.</span></span>
-<span id="cb21-3"><span class="co" style="color: #5E5E5E;"># Licensed under the MIT License. See license.txt in the project root for</span></span>
-<span id="cb21-4"><span class="co" style="color: #5E5E5E;"># license information.</span></span>
-<span id="cb21-5"><span class="co" style="color: #5E5E5E;"># -------------------------------------------------------------------------</span></span>
-<span id="cb21-6"></span>
-<span id="cb21-7"><span class="co" style="color: #5E5E5E;">"""</span></span>
-<span id="cb21-8"><span class="co" style="color: #5E5E5E;">FILE:           processing_multiple_function_apps.json</span></span>
-<span id="cb21-9"><span class="co" style="color: #5E5E5E;">DESCRIPTION:</span></span>
-<span id="cb21-10"><span class="co" style="color: #5E5E5E;">                Pipeline to process data to time-stamped folders in </span></span>
-<span id="cb21-11"><span class="co" style="color: #5E5E5E;">                Azure Datalake blob storage using multiple Azure function apps.</span></span>
-<span id="cb21-12"></span>
-<span id="cb21-13"><span class="co" style="color: #5E5E5E;">CONTRIBUTORS:   Craig Shenton, Mattia Ficarelli</span></span>
-<span id="cb21-14"><span class="co" style="color: #5E5E5E;">CONTACT:        data@nhsx.nhs.uk</span></span>
-<span id="cb21-15"><span class="co" style="color: #5E5E5E;">CREATED:        29 Sept 2021</span></span>
-<span id="cb21-16"><span class="co" style="color: #5E5E5E;">VERSION:        0.0.1</span></span>
-<span id="cb21-17"><span class="co" style="color: #5E5E5E;">"""</span></span></code></pre></div>
+<ul>
+<li>FILE: processing_multiple_function_apps.json</li>
+<li>DESCRIPTION: Pipeline to process data to time-stamped folders in Azure Datalake blob storage using multiple Azure function apps.</li>
+<li>CONTRIBUTORS: Craig Shenton, Mattia Ficarelli</li>
+<li>CONTACT: data@nhsx.nhs.uk</li>
+<li>CREATED: 29 Sept 2021</li>
+<li>VERSION: 0.0.1</li>
+</ul>
 </section>
 <section id="description-9" class="level3">
 <h3 class="anchored" data-anchor-id="description-9">Description</h3>
@@ -1187,7 +640,6 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 <h4 class="anchored" data-anchor-id="note-4">Note</h4>
 <p>This pipeline allows for multiple different processed data files to be generated from the same data source during a pipeline run by using multiple function apps running sequentially.</p>
 <p>Pipeline to process data to time-stamped folder in Azure Datalake blob storage using multiple Azure function apps.</p>
-<blockquote class="blockquote">
 <ol type="1">
 <li>Lookup the <code>.json</code> configuration file for this pipeline.</li>
 <li>Set the source path (of the data to be processed).</li>
@@ -1199,34 +651,31 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 <li>Set the latest folder.</li>
 <li>Set the <code>.json</code> body for the Azure function app.</li>
 <li>Set an <code>array</code> variable containing the list of Azure function apps to be run.</li>
-<li>ForEach loops over each azure function:</li>
+<li>ForEach loops over each azure function: &gt;</li>
 </ol>
-<blockquote class="blockquote">
 <ol type="a">
 <li>Runs the Azure function app activity.</li>
 <li>If the Azure function app activity fails, the error notification logic app API will notify the specified email address of the error.</li>
 </ol>
-</blockquote>
-</blockquote>
 <p>Within the Azure function app data can be saved to blob storage as either a <code>.csv</code> file or a <code>.parquet</code> file.</p>
 </section>
 </section>
 <section id="pipeline-configuration-9" class="level3">
 <h3 class="anchored" data-anchor-id="pipeline-configuration-9">Pipeline Configuration</h3>
-<div class="sourceCode" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb22-1"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb22-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb22-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"processing_function_app"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb22-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/processing/function_app"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb22-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb22-6">    <span class="dt" style="color: #AD0000;">"project"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb22-7">      <span class="dt" style="color: #AD0000;">"functions"</span><span class="fu" style="color: #4758AB;">:</span> <span class="ot" style="color: #003B4F;">[</span></span>
-<span id="cb22-8">        <span class="fu" style="color: #4758AB;">{</span><span class="dt" style="color: #AD0000;">"func_name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"azure_func_app_1"</span><span class="fu" style="color: #4758AB;">}</span><span class="ot" style="color: #003B4F;">,</span></span>
-<span id="cb22-9">        <span class="fu" style="color: #4758AB;">{</span><span class="dt" style="color: #AD0000;">"func_name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"azure_func_app_2"</span><span class="fu" style="color: #4758AB;">}</span><span class="ot" style="color: #003B4F;">,</span></span>
-<span id="cb22-10">        <span class="fu" style="color: #4758AB;">{</span><span class="dt" style="color: #AD0000;">"func_name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"azure_func_app_3"</span><span class="fu" style="color: #4758AB;">}</span></span>
-<span id="cb22-11">            <span class="ot" style="color: #003B4F;">]</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb22-12">      <span class="dt" style="color: #AD0000;">"source_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"raw/historical/data/source"</span></span>
-<span id="cb22-13">    <span class="fu" style="color: #4758AB;">}</span></span>
-<span id="cb22-14"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb12-1"><span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb12-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb12-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"processing_function_app"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb12-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/processing/function_app"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb12-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb12-6">    <span class="dt" style="color: #AD0000;">"project"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb12-7">      <span class="dt" style="color: #AD0000;">"functions"</span><span class="fu" style="color: #4758AB;">:</span> <span class="ot" style="color: #003B4F;">[</span></span>
+<span id="cb12-8">        <span class="fu" style="color: #4758AB;">{</span><span class="dt" style="color: #AD0000;">"func_name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"azure_func_app_1"</span><span class="fu" style="color: #4758AB;">}</span><span class="ot" style="color: #003B4F;">,</span></span>
+<span id="cb12-9">        <span class="fu" style="color: #4758AB;">{</span><span class="dt" style="color: #AD0000;">"func_name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"azure_func_app_2"</span><span class="fu" style="color: #4758AB;">}</span><span class="ot" style="color: #003B4F;">,</span></span>
+<span id="cb12-10">        <span class="fu" style="color: #4758AB;">{</span><span class="dt" style="color: #AD0000;">"func_name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"azure_func_app_3"</span><span class="fu" style="color: #4758AB;">}</span></span>
+<span id="cb12-11">            <span class="ot" style="color: #003B4F;">]</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb12-12">      <span class="dt" style="color: #AD0000;">"source_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"raw/historical/data/source"</span></span>
+<span id="cb12-13">    <span class="fu" style="color: #4758AB;">}</span></span>
+<span id="cb12-14"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
 </section>
 <section id="data-factory-configuration-9" class="level3">
 <h3 class="anchored" data-anchor-id="data-factory-configuration-9">Data Factory Configuration</h3>
@@ -1238,23 +687,14 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 <h2 class="anchored" data-anchor-id="copy-file-processing-pipeline">Copy File Processing Pipeline</h2>
 <section id="metadata-10" class="level3">
 <h3 class="anchored" data-anchor-id="metadata-10">Metadata</h3>
-<div class="sourceCode" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><span class="co" style="color: #5E5E5E;"># -------------------------------------------------------------------------</span></span>
-<span id="cb23-2"><span class="co" style="color: #5E5E5E;"># Copyright (c) 2021 NHS England and NHS Improvement. All rights reserved.</span></span>
-<span id="cb23-3"><span class="co" style="color: #5E5E5E;"># Licensed under the MIT License. See license.txt in the project root for</span></span>
-<span id="cb23-4"><span class="co" style="color: #5E5E5E;"># license information.</span></span>
-<span id="cb23-5"><span class="co" style="color: #5E5E5E;"># -------------------------------------------------------------------------</span></span>
-<span id="cb23-6"></span>
-<span id="cb23-7"><span class="co" style="color: #5E5E5E;">"""</span></span>
-<span id="cb23-8"><span class="co" style="color: #5E5E5E;">FILE:           processing_csv_file.json</span></span>
-<span id="cb23-9"><span class="co" style="color: #5E5E5E;">DESCRIPTION:</span></span>
-<span id="cb23-10"><span class="co" style="color: #5E5E5E;">                Pipeline to copy a .csv file in a time-stamped folder </span></span>
-<span id="cb23-11"><span class="co" style="color: #5E5E5E;">                between directories in Azure Datalake blob storage.</span></span>
-<span id="cb23-12"></span>
-<span id="cb23-13"><span class="co" style="color: #5E5E5E;">CONTRIBUTORS:   Craig Shenton, Mattia Ficarelli</span></span>
-<span id="cb23-14"><span class="co" style="color: #5E5E5E;">CONTACT:        data@nhsx.nhs.uk</span></span>
-<span id="cb23-15"><span class="co" style="color: #5E5E5E;">CREATED:        29 Sept 2021</span></span>
-<span id="cb23-16"><span class="co" style="color: #5E5E5E;">VERSION:        0.0.1</span></span>
-<span id="cb23-17"><span class="co" style="color: #5E5E5E;">"""</span></span></code></pre></div>
+<ul>
+<li><p>FILE: processing_csv_file.json</p></li>
+<li><p>DESCRIPTION: Pipeline to copy a .csv file in a time-stamped folder between directories in Azure Datalake blob storage.</p></li>
+<li><p>CONTRIBUTORS: Craig Shenton, Mattia Ficarelli</p></li>
+<li><p>CONTACT: data@nhsx.nhs.uk</p></li>
+<li><p>CREATED: 29 Sept 2021</p></li>
+<li><p>VERSION: 0.0.1</p></li>
+</ul>
 </section>
 <section id="description-10" class="level3">
 <h3 class="anchored" data-anchor-id="description-10">Description</h3>
@@ -1266,7 +706,6 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 </div>
 <p><em>Figure 14: Copying a <code>.csv</code> file between Azure Datalake directories</em></p>
 <p>Pipeline to copy a <code>.csv</code> file in a time-stamped folder between directories in Azure Datalake blob storage.</p>
-<blockquote class="blockquote">
 <ol type="1">
 <li>Lookup the <code>.json</code> configuration file for this pipeline.</li>
 <li>Set the Azure Datalake file system</li>
@@ -1279,22 +718,21 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 <li>Copy activity copies the <code>.csv</code> file between the Datalake directories.</li>
 <li>If the copy activity fails, the error notification logic app API will notify the specified email address of the error.</li>
 </ol>
-</blockquote>
 </section>
 <section id="pipeline-configuration-10" class="level3">
 <h3 class="anchored" data-anchor-id="pipeline-configuration-10">Pipeline Configuration</h3>
-<div class="sourceCode" id="cb24" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb24-1"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb24-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb24-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"processing_csv_file"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb24-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/processing/csv_file"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb24-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb24-6">    <span class="dt" style="color: #AD0000;">"project"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb24-7">      <span class="dt" style="color: #AD0000;">"source_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"raw/"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb24-8">      <span class="dt" style="color: #AD0000;">"source_name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb24-9">      <span class="dt" style="color: #AD0000;">"sink_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"proc/"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb24-10">      <span class="dt" style="color: #AD0000;">"sink_name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_copy.csv"</span></span>
-<span id="cb24-11">    <span class="fu" style="color: #4758AB;">}</span></span>
-<span id="cb24-12"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb13-1"><span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb13-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb13-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"processing_csv_file"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb13-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/processing/csv_file"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb13-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb13-6">    <span class="dt" style="color: #AD0000;">"project"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb13-7">      <span class="dt" style="color: #AD0000;">"source_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"raw/"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb13-8">      <span class="dt" style="color: #AD0000;">"source_name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb13-9">      <span class="dt" style="color: #AD0000;">"sink_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"proc/"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb13-10">      <span class="dt" style="color: #AD0000;">"sink_name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_copy.csv"</span></span>
+<span id="cb13-11">    <span class="fu" style="color: #4758AB;">}</span></span>
+<span id="cb13-12"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
 </section>
 <section id="data-factory-configuration-10" class="level3">
 <h3 class="anchored" data-anchor-id="data-factory-configuration-10">Data Factory Configuration</h3>
@@ -1306,23 +744,14 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 <h2 class="anchored" data-anchor-id="sql-table-staging-pipeline">SQL Table Staging Pipeline</h2>
 <section id="metadata-11" class="level3">
 <h3 class="anchored" data-anchor-id="metadata-11">Metadata</h3>
-<div class="sourceCode" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><span class="co" style="color: #5E5E5E;"># -------------------------------------------------------------------------</span></span>
-<span id="cb25-2"><span class="co" style="color: #5E5E5E;"># Copyright (c) 2021 NHS England and NHS Improvement. All rights reserved.</span></span>
-<span id="cb25-3"><span class="co" style="color: #5E5E5E;"># Licensed under the MIT License. See license.txt in the project root for</span></span>
-<span id="cb25-4"><span class="co" style="color: #5E5E5E;"># license information.</span></span>
-<span id="cb25-5"><span class="co" style="color: #5E5E5E;"># -------------------------------------------------------------------------</span></span>
-<span id="cb25-6"></span>
-<span id="cb25-7"><span class="co" style="color: #5E5E5E;">"""</span></span>
-<span id="cb25-8"><span class="co" style="color: #5E5E5E;">FILE:           staging_sql_database.json</span></span>
-<span id="cb25-9"><span class="co" style="color: #5E5E5E;">DESCRIPTION:</span></span>
-<span id="cb25-10"><span class="co" style="color: #5E5E5E;">                Pipeline to stage data from a time-stamped folder in </span></span>
-<span id="cb25-11"><span class="co" style="color: #5E5E5E;">                Azure Datalake blob storage to a table in an Azure SQL database. </span></span>
-<span id="cb25-12"></span>
-<span id="cb25-13"><span class="co" style="color: #5E5E5E;">CONTRIBUTORS:   Craig Shenton, Mattia Ficarelli</span></span>
-<span id="cb25-14"><span class="co" style="color: #5E5E5E;">CONTACT:        data@nhsx.nhs.uk</span></span>
-<span id="cb25-15"><span class="co" style="color: #5E5E5E;">CREATED:        29 Sept 2021</span></span>
-<span id="cb25-16"><span class="co" style="color: #5E5E5E;">VERSION:        0.0.1</span></span>
-<span id="cb25-17"><span class="co" style="color: #5E5E5E;">"""</span></span></code></pre></div>
+<ul>
+<li>FILE: staging_sql_database.json</li>
+<li>DESCRIPTION: Pipeline to stage data from a time-stamped folder in Azure Datalake blob storage to a table in an Azure SQL database.</li>
+<li>CONTRIBUTORS: Craig Shenton, Mattia Ficarelli</li>
+<li>CONTACT: data@nhsx.nhs.uk</li>
+<li>CREATED: 29 Sept 2021</li>
+<li>VERSION: 0.0.1</li>
+</ul>
 </section>
 <section id="description-11" class="level3">
 <h3 class="anchored" data-anchor-id="description-11">Description</h3>
@@ -1334,7 +763,6 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 </div>
 <p><em>Figure 15: Data staging to a table in an Azure SQL database</em></p>
 <p>Pipeline to stage data (<code>.csv</code> file) from a time-stamped folder in Azure Datalake blob storage to a table in an Azure SQL database.</p>
-<blockquote class="blockquote">
 <ol type="1">
 <li>Lookup the <code>.json</code> configuration file for this pipeline.</li>
 <li>Set the source path (of data to be staged).</li>
@@ -1350,22 +778,21 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 <li>Run the copy activity which stages data from a <code>.csv</code> file in Azure Datalake blob storage to an empty table in an Azure SQL database.</li>
 <li>If the Azure copy activity fails, the error notification logic app API will notify the specified email address of the error.</li>
 </ol>
-</blockquote>
 </section>
 <section id="pipeline-configuration-11" class="level3">
 <h3 class="anchored" data-anchor-id="pipeline-configuration-11">Pipeline Configuration</h3>
-<div class="sourceCode" id="cb26" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb26-1"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb26-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb26-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"staging_sql_database"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb26-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/staging/sql_database"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb26-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb26-6">    <span class="dt" style="color: #AD0000;">"staging"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb26-7">        <span class="dt" style="color: #AD0000;">"stored_procedure"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"[dbo].[sql_stored_procedure_table_1]"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb26-8">        <span class="dt" style="color: #AD0000;">"source_path"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"proc/projects/path/to/processed/data/"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb26-9">        <span class="dt" style="color: #AD0000;">"source_file"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"table_1.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb26-10">        <span class="dt" style="color: #AD0000;">"sink_table"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"sql_table_1"</span></span>
-<span id="cb26-11">    <span class="fu" style="color: #4758AB;">}</span></span>
-<span id="cb26-12"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb14-1"><span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb14-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb14-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"staging_sql_database"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb14-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/staging/sql_database"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb14-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb14-6">    <span class="dt" style="color: #AD0000;">"staging"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb14-7">        <span class="dt" style="color: #AD0000;">"stored_procedure"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"[dbo].[sql_stored_procedure_table_1]"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb14-8">        <span class="dt" style="color: #AD0000;">"source_path"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"proc/projects/path/to/processed/data/"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb14-9">        <span class="dt" style="color: #AD0000;">"source_file"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"table_1.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb14-10">        <span class="dt" style="color: #AD0000;">"sink_table"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"sql_table_1"</span></span>
+<span id="cb14-11">    <span class="fu" style="color: #4758AB;">}</span></span>
+<span id="cb14-12"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
 </section>
 <section id="data-factory-configuration-11" class="level3">
 <h3 class="anchored" data-anchor-id="data-factory-configuration-11">Data Factory Configuration</h3>
@@ -1377,23 +804,14 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 <h2 class="anchored" data-anchor-id="multiple-sql-table-staging-pipeline">Multiple SQL Table Staging Pipeline</h2>
 <section id="metadata-12" class="level3">
 <h3 class="anchored" data-anchor-id="metadata-12">Metadata</h3>
-<div class="sourceCode" id="cb27" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><span class="co" style="color: #5E5E5E;"># -------------------------------------------------------------------------</span></span>
-<span id="cb27-2"><span class="co" style="color: #5E5E5E;"># Copyright (c) 2021 NHS England and NHS Improvement. All rights reserved.</span></span>
-<span id="cb27-3"><span class="co" style="color: #5E5E5E;"># Licensed under the MIT License. See license.txt in the project root for</span></span>
-<span id="cb27-4"><span class="co" style="color: #5E5E5E;"># license information.</span></span>
-<span id="cb27-5"><span class="co" style="color: #5E5E5E;"># -------------------------------------------------------------------------</span></span>
-<span id="cb27-6"></span>
-<span id="cb27-7"><span class="co" style="color: #5E5E5E;">"""</span></span>
-<span id="cb27-8"><span class="co" style="color: #5E5E5E;">FILE:           multiple_tables_staging_sql_database.json</span></span>
-<span id="cb27-9"><span class="co" style="color: #5E5E5E;">DESCRIPTION:</span></span>
-<span id="cb27-10"><span class="co" style="color: #5E5E5E;">                Pipeline to stage data from a time-stamped folders in </span></span>
-<span id="cb27-11"><span class="co" style="color: #5E5E5E;">                Azure Datalake blob storage to multiple tables in an Azure SQL database. </span></span>
-<span id="cb27-12"></span>
-<span id="cb27-13"><span class="co" style="color: #5E5E5E;">CONTRIBUTORS:   Craig Shenton, Mattia Ficarelli</span></span>
-<span id="cb27-14"><span class="co" style="color: #5E5E5E;">CONTACT:        data@nhsx.nhs.uk</span></span>
-<span id="cb27-15"><span class="co" style="color: #5E5E5E;">CREATED:        29 Sept 2021</span></span>
-<span id="cb27-16"><span class="co" style="color: #5E5E5E;">VERSION:        0.0.1</span></span>
-<span id="cb27-17"><span class="co" style="color: #5E5E5E;">"""</span></span></code></pre></div>
+<ul>
+<li>FILE: multiple_tables_staging_sql_database.json</li>
+<li>DESCRIPTION: Pipeline to stage data from a time-stamped folders in Azure Datalake blob storage to multiple tables in an Azure SQL database.</li>
+<li>CONTRIBUTORS: Craig Shenton, Mattia Ficarelli</li>
+<li>CONTACT: data@nhsx.nhs.uk</li>
+<li>CREATED: 29 Sept 2021</li>
+<li>VERSION: 0.0.1</li>
+</ul>
 </section>
 <section id="description-12" class="level3">
 <h3 class="anchored" data-anchor-id="description-12">Description</h3>
@@ -1412,7 +830,6 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 </div>
 <p><em>Figure 17: ForEach loop activities within pipeline</em></p>
 <p>Pipeline to stage data (<code>.csv</code> files) from a time-stamped folders in Azure Datalake blob storage to multiple tables in an Azure SQL database.</p>
-<blockquote class="blockquote">
 <ol type="1">
 <li>Lookup the <code>.json</code> configuration file for this pipeline.</li>
 <li>Set the file system.</li>
@@ -1431,36 +848,35 @@ Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
 <li>If the Azure copy activity fails, the error notification logic app API will notify the specified email address of the error.</li>
 </ol></li>
 </ol>
-</blockquote>
 </section>
 <section id="pipeline-configuration-12" class="level3">
 <h3 class="anchored" data-anchor-id="pipeline-configuration-12">Pipeline Configuration</h3>
-<div class="sourceCode" id="cb28" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb28-1"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb28-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb28-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"multiple_tables_staging_sql_database"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb28-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/staging/multiple_tables_sql_database"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb28-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb28-6">    <span class="dt" style="color: #AD0000;">"staging"</span><span class="fu" style="color: #4758AB;">:</span> <span class="ot" style="color: #003B4F;">[</span></span>
-<span id="cb28-7">          <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb28-8">            <span class="dt" style="color: #AD0000;">"stored_procedure"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"[dbo].[sql_stored_procedure_table_1]"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb28-9">            <span class="dt" style="color: #AD0000;">"source_path"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"proc/projects/path/to/processed/data/"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb28-10">            <span class="dt" style="color: #AD0000;">"source_file"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"table_1.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb28-11">            <span class="dt" style="color: #AD0000;">"sink_table"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"sql_table_1"</span></span>
-<span id="cb28-12">          <span class="fu" style="color: #4758AB;">}</span><span class="ot" style="color: #003B4F;">,</span></span>
-<span id="cb28-13">          <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb28-14">            <span class="dt" style="color: #AD0000;">"stored_procedure"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"[dbo].[sql_stored_procedure_table_2]"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb28-15">            <span class="dt" style="color: #AD0000;">"source_path"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"proc/projects/path/to/processed/data2/"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb28-16">            <span class="dt" style="color: #AD0000;">"source_file"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"table_2.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb28-17">            <span class="dt" style="color: #AD0000;">"sink_table"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"sql_table_2"</span></span>
-<span id="cb28-18">          <span class="fu" style="color: #4758AB;">}</span><span class="ot" style="color: #003B4F;">,</span></span>
-<span id="cb28-19">          <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb28-20">            <span class="dt" style="color: #AD0000;">"stored_procedure"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"[dbo].[sql_stored_procedure_table_3]"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb28-21">            <span class="dt" style="color: #AD0000;">"source_path"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"proc/projects/path/to/processed/data3/"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb28-22">            <span class="dt" style="color: #AD0000;">"source_file"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"table_3.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb28-23">            <span class="dt" style="color: #AD0000;">"sink_table"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"sql_table_3"</span></span>
-<span id="cb28-24">          <span class="fu" style="color: #4758AB;">}</span></span>
-<span id="cb28-25">      <span class="ot" style="color: #003B4F;">]</span></span>
-<span id="cb28-26"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb15-1"><span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb15-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb15-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"multiple_tables_staging_sql_database"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb15-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/staging/multiple_tables_sql_database"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb15-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb15-6">    <span class="dt" style="color: #AD0000;">"staging"</span><span class="fu" style="color: #4758AB;">:</span> <span class="ot" style="color: #003B4F;">[</span></span>
+<span id="cb15-7">          <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb15-8">            <span class="dt" style="color: #AD0000;">"stored_procedure"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"[dbo].[sql_stored_procedure_table_1]"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb15-9">            <span class="dt" style="color: #AD0000;">"source_path"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"proc/projects/path/to/processed/data/"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb15-10">            <span class="dt" style="color: #AD0000;">"source_file"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"table_1.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb15-11">            <span class="dt" style="color: #AD0000;">"sink_table"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"sql_table_1"</span></span>
+<span id="cb15-12">          <span class="fu" style="color: #4758AB;">}</span><span class="ot" style="color: #003B4F;">,</span></span>
+<span id="cb15-13">          <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb15-14">            <span class="dt" style="color: #AD0000;">"stored_procedure"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"[dbo].[sql_stored_procedure_table_2]"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb15-15">            <span class="dt" style="color: #AD0000;">"source_path"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"proc/projects/path/to/processed/data2/"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb15-16">            <span class="dt" style="color: #AD0000;">"source_file"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"table_2.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb15-17">            <span class="dt" style="color: #AD0000;">"sink_table"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"sql_table_2"</span></span>
+<span id="cb15-18">          <span class="fu" style="color: #4758AB;">}</span><span class="ot" style="color: #003B4F;">,</span></span>
+<span id="cb15-19">          <span class="fu" style="color: #4758AB;">{</span></span>
+<span id="cb15-20">            <span class="dt" style="color: #AD0000;">"stored_procedure"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"[dbo].[sql_stored_procedure_table_3]"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb15-21">            <span class="dt" style="color: #AD0000;">"source_path"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"proc/projects/path/to/processed/data3/"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb15-22">            <span class="dt" style="color: #AD0000;">"source_file"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"table_3.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
+<span id="cb15-23">            <span class="dt" style="color: #AD0000;">"sink_table"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"sql_table_3"</span></span>
+<span id="cb15-24">          <span class="fu" style="color: #4758AB;">}</span></span>
+<span id="cb15-25">      <span class="ot" style="color: #003B4F;">]</span></span>
+<span id="cb15-26"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
 </section>
 <section id="data-factory-configuration-12" class="level3">
 <h3 class="anchored" data-anchor-id="data-factory-configuration-12">Data Factory Configuration</h3>
@@ -1484,47 +900,52 @@ September 9, 2021. <a href="https://craig-shenton.github.io/craigrshenton/azure-
 </div></div></section></div> ]]></description>
   <category>Azure</category>
   <category>Data Factory</category>
-  <guid>https://craig-shenton.github.io/craigrshenton/posts/azure-data-factory-templates/azure-data-factory-templates.html</guid>
+  <guid>https://craig-shenton.github.io/craigrshenton/posts/azure-data-factory-templates.html</guid>
   <pubDate>Wed, 08 Sep 2021 23:00:00 GMT</pubDate>
   <media:content url="https://craig-shenton.github.io/craigrshenton/assets/images/pipeline_temps/sql-ingest.png" medium="image" type="image/png" height="57" width="144"/>
 </item>
 <item>
   <title>Azure Data Engineering Principles</title>
   <dc:creator>Craig Shenton</dc:creator>
-  <link>https://craig-shenton.github.io/craigrshenton/posts/azure-data-engineering-principles/azure-data-engineering-principles.html</link>
+  <link>https://craig-shenton.github.io/craigrshenton/posts/azure-data-engineering-principles.html</link>
   <description><![CDATA[ 
 
 
 
-<section id="authors" class="level3">
-<h3 class="anchored" data-anchor-id="authors">Authors</h3>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Our principles are broken down into the following sections:</p>
 <ul>
-<li>Craig Robert Shenton, PhD - Senior Data Engineer, NHS England</li>
-<li>Mattia Ficarelli, PhD - Data Engineer, NHSX</li>
+<li>Azure Data Engineering Principles
+<ul>
+<li>Parameterisation
+<ul>
+<li>Example: latestFolder</li>
+</ul></li>
+<li>Configuration-as-code</li>
+<li>Standardised ETL Design Patterns
+<ul>
+<li>Example 1: SQL Database Ingestion Pipeline</li>
+<li>Example 2: Databricks Processing Pipeline</li>
+</ul></li>
+<li>Hierarchical Pipeline Orchestration</li>
+<li>Documentation-as-code</li>
+<li>References</li>
+</ul></li>
 </ul>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Originally posted on the <a href="https://nhsx.github.io/AnalyticsUnit/azure-de-principles.html">NHSX technical gateway</a> website.</p>
-</section>
-<section id="content" class="level2">
-<h2 class="anchored" data-anchor-id="content">Content</h2>
-<p>In this post, we aim to set out the data engineering principles we have developed over the last year, in designing and building our Azure cloud-analytics infrastructure. These principles are broken down into the following sections:</p>
-<ul>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#azure-data-engineering-principles">Azure Data Engineering Principles</a>
-<ul>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#parameterisation">Parameterisation</a>
-<ul>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#example-latestfolder">Example: latestFolder</a></li>
-</ul></li>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#configuration-as-code">Configuration-as-code</a></li>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#standardised-etl-design-patterns">Standardised ETL Design Patterns</a>
-<ul>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#example-1-sql-database-ingestion-pipeline">Example 1: SQL Database Ingestion Pipeline</a></li>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#example-2-databricks-processing-pipeline">Example 2: Databricks Processing Pipeline</a></li>
-</ul></li>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#hierarchical-pipeline-orchestration">Hierarchical Pipeline Orchestration</a></li>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#documentation-as-code">Documentation-as-code</a></li>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#references">References</a></li>
-</ul></li>
-</ul>
+</div>
+</div>
 </section>
 <section id="parameterisation" class="level2">
 <h2 class="anchored" data-anchor-id="parameterisation">Parameterisation</h2>
@@ -1534,10 +955,9 @@ September 9, 2021. <a href="https://craig-shenton.github.io/craigrshenton/azure-
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://craig-shenton.github.io/craigrshenton/assets/images/posts/azure-data-engineering-principles/fig1.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">An Azure Data Factory dataset file path configuration.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure 1. An Azure Data Factory dataset file path configuration using the parameters; <code>@dataset().fileSystem</code>, <code>@dataset().filePath</code>, <code>@dataset().fileName</code> to denote the datalake file system name, the file path and and the file name.</figcaption><p></p>
 </figure>
 </div>
-<p><b>Figure 1.</b> An Azure Data Factory dataset file path configuration using the parameters; <code>@dataset().fileSystem</code>, <code>@dataset().filePath</code>, <code>@dataset().fileName</code> to denote the datalake file system name, the file path and and the file name.</p>
 <p>From these parameters, that specify the file path and name and the file system of the Azure Datalake linked service, we can use any <code>.csv</code> file available as the source for any pipeline activity. This has reduced the number of datasets listed in our ADF environment dramatically, reducing the overhead required to organise, search, and maintain our pipelines.</p>
 <p>A downside of highly parameterised pipelines is that they can become harder to debug due to the new level of abstraction. Now, in addition to the file paths the parameters may also be incorrectly configured. However, we find that the reduction in complexity and centralisation of pipeline configuration outweighs the initial growing pains of parameterisation.</p>
 <section id="example-latestfolder" class="level3">
@@ -1545,10 +965,9 @@ September 9, 2021. <a href="https://craig-shenton.github.io/craigrshenton/azure-
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://craig-shenton.github.io/craigrshenton/assets/images/posts/azure-data-engineering-principles/fig2.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">An example Azure Data Factory pipeline utility that can append the source path of any file with the latest time-stamped folder path.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure 2. An example Azure Data Factory pipeline utility that can append the source path of any file with the latest time-stamped folder path.</figcaption><p></p>
 </figure>
 </div>
-<p><b>Figure 2.</b> An example Azure Data Factory pipeline utility that can append the source path of any file with the latest time-stamped folder path.</p>
 <p>A practical example of the utility of parameterisation is the ability to append the source path of any file with a time-stamped folder, for example <code>@concat(variables('sourcePath'),variables('latestFolder'))</code>. This allows for a well organised record of data sampled at different time points to be stored within the Datalake.</p>
 </section>
 </section>
@@ -1578,10 +997,9 @@ September 9, 2021. <a href="https://craig-shenton.github.io/craigrshenton/azure-
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://craig-shenton.github.io/craigrshenton/assets/images/posts/azure-data-engineering-principles/fig3.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">An example Azure Data Factory ingestion pipeline template that can be configured to extract data from an Azure SQL database to Azure Datalake blob storage.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure 3. An example Azure Data Factory ingestion pipeline template that can be configured to extract data from an Azure SQL database to Azure Datalake blob storage.</figcaption><p></p>
 </figure>
 </div>
-<p><b>Figure 3.</b> An example Azure Data Factory ingestion pipeline template that can be configured to extract data from an Azure SQL database to Azure Datalake blob storage.</p>
 <p>The pipeline shown above is a fully parameterised template developed to ingest raw data from an Azure SQL database to Azure Datalake blob storage. This is an example of a ‘Source-Sink’ pattern–used for parameterising and configuring data copy activities that move data from one location to another. As mentioned in the parameterisation section, each Azure Data Factory copy activity requires at least two datasets to configure both source and sink locations. However, here we have created a generic SQL dataset and a generic Azure Datalake dataset that can be dynamically configured across all pipelines. As such, this template can be used and re-used to move data from any Azure SQL server to any Azure blob storage container.</p>
 <p>The SQL ingestion template works as follows:</p>
 <ul>
@@ -1598,10 +1016,9 @@ September 9, 2021. <a href="https://craig-shenton.github.io/craigrshenton/azure-
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://craig-shenton.github.io/craigrshenton/assets/images/posts/azure-data-engineering-principles/fig4.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">An example Azure Data Factory pipeline processing pipeline template that can be configured to run a Databricks notebook.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure 4. An example Azure Data Factory pipeline processing pipeline template that can be configured to run a Databricks notebook.</figcaption><p></p>
 </figure>
 </div>
-<p><b>Figure 4.</b> An example Azure Data Factory pipeline processing pipeline template that can be configured to run a Databricks notebook.</p>
 <p>The parameterised pipeline template above has been developed to run a Databricks notebook from Azure Data Factory. This is an example of a ‘Key-Value’ pattern–useful for configuring the settings of activities outside of Azure Data Factory itself. Here the json configuration file is providing the key-value of a Databricks notebook file path. This could also be used to give the URL of an Azure logic app or pass multiple variables to an Azure function app for example.</p>
 <p>The Databricks processing template works as follows:</p>
 <ul>
@@ -1618,10 +1035,9 @@ September 9, 2021. <a href="https://craig-shenton.github.io/craigrshenton/azure-
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://craig-shenton.github.io/craigrshenton/assets/images/posts/azure-data-engineering-principles/fig5.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">A hierarchicy of pipelines. At the top, a orchestration pipeline that triggers the sub-pipelines below.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure 5.A hierarchicy of pipelines. At the top, a orchestration pipeline that triggers the sub-pipelines below. Each phase of the data processing (extract, transform, and load, or ETL) is a fully parameterised template that requires no setup of its own.</figcaption><p></p>
 </figure>
 </div>
-<p><b>Figure 5.</b> A hierarchicy of pipelines. At the top, a orchestration pipeline that triggers the sub-pipelines below. Each phase of the data processing (extract, transform, and load, or ETL) is a fully parameterised template that requires no setup of its own [<a href="https://github.com/mrpaulandrew/ContentCollateral">8</a>].</p>
 <p>One of the most significant changes made to our data engineering setup is the use of hierarchical pipelines; that is the use of a single orchestration pipeline to trigger multiple ETL pipelines and utility sub-pipelines. This is based on Paul Andrews’ grandparent, parent, child design pattern that may be familiar to SSIS users [<a href="https://mrpaulandrew.com/2019/09/25/azure-data-factory-pipeline-hierarchies-generation-control/">9</a>]. With this design, and the generic ETL templates outlined above, we can create a ‘plug-and-play’ data engineering system. We simply select the ingestion, transformation, and staging patterns required from the templates and link them together under the orchestration pipeline. A single json config file is then created with all the ‘Sink-Source’ and ‘Key-Value’ pairs needed to move the data through the ETL process, so no configuration is required in Azure Data Factory itself. This has significantly reduced the amount of time needed to set up new pipelines, and ensures best practices are maintained across all our products.</p>
 <p>If we use the SQL ingestion and Databricks processing examples outlined above, we could very rapidly make a new ETL pipeline using the hierarchical system of pipeline development:</p>
 <ul>
@@ -1664,7 +1080,7 @@ Craig Shenton. 2021. <span>“Azure Data Engineering Principles.”</span>
 September 1, 2021. <a href="https://craig-shenton.github.io/craigrshenton/azure-data-engineering-principles.html">https://craig-shenton.github.io/craigrshenton/azure-data-engineering-principles.html</a>.
 </div></div></section></div> ]]></description>
   <category>Azure</category>
-  <guid>https://craig-shenton.github.io/craigrshenton/posts/azure-data-engineering-principles/azure-data-engineering-principles.html</guid>
+  <guid>https://craig-shenton.github.io/craigrshenton/posts/azure-data-engineering-principles.html</guid>
   <pubDate>Tue, 31 Aug 2021 23:00:00 GMT</pubDate>
   <media:content url="https://craig-shenton.github.io/craigrshenton/assets/images/posts/azure-data-engineering-principles/fig1.png" medium="image" type="image/png" height="17" width="144"/>
 </item>

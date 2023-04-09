@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://craig-shenton.github.io/craigrshenton/index.html</loc>
-    <lastmod>2023-04-09T20:53:02.487Z</lastmod>
+    <lastmod>2023-04-09T21:18:35.288Z</lastmod>
   </url>
   <url>
     <loc>https://craig-shenton.github.io/craigrshenton/about.html</loc>
@@ -27,5 +27,17 @@
   <url>
     <loc>https://craig-shenton.github.io/craigrshenton/posts/database-typology.html</loc>
     <lastmod>2023-04-09T20:53:00.812Z</lastmod>
+  </url>
+  <url>
+    <loc>https://craig-shenton.github.io/craigrshenton/posts/azure-data-engineering-principles.html</loc>
+    <lastmod>2023-04-09T21:04:49.853Z</lastmod>
+  </url>
+  <url>
+    <loc>https://craig-shenton.github.io/craigrshenton/posts/azure-data-factory-templates.html</loc>
+    <lastmod>2023-04-09T21:18:37.701Z</lastmod>
+  </url>
+  <url>
+    <loc>https://craig-shenton.github.io/craigrshenton/drafts/data_eng_list.html</loc>
+    <lastmod>2023-04-09T20:59:03.460Z</lastmod>
   </url>
 </urlset>
