@@ -7,8 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Craig Shenton">
-<meta name="dcterms.date" content="2023-04-09">
-<meta name="description" content="A comprehensive guide to Data Engineering, exploring key concepts, tools, and best practices">
+<meta name="dcterms.date" content="2023-04-08">
+<meta name="description" content="Research post into Data Engineering, exploring key concepts, tools, and best practices">
 
 <title>craigrshenton - Data Engineering Research</title>
 <style>
@@ -66,10 +66,10 @@ ul.task-list li input[type="checkbox"] {
 
 
 <meta property="og:title" content="craigrshenton - Data Engineering Research">
-<meta property="og:description" content="A comprehensive guide to Data Engineering, exploring key concepts, tools, and best practices">
+<meta property="og:description" content="Research post into Data Engineering, exploring key concepts, tools, and best practices">
 <meta property="og:site-name" content="craigrshenton">
 <meta name="twitter:title" content="craigrshenton - Data Engineering Research">
-<meta name="twitter:description" content="A comprehensive guide to Data Engineering, exploring key concepts, tools, and best practices">
+<meta name="twitter:description" content="Research post into Data Engineering, exploring key concepts, tools, and best practices">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -122,6 +122,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#data-storage-and-databases" id="toc-data-storage-and-databases" class="nav-link active" data-scroll-target="#data-storage-and-databases">Data Storage and Databases</a>
   <ul class="collapse">
   <li><a href="#types-of-databases" id="toc-types-of-databases" class="nav-link" data-scroll-target="#types-of-databases">Types of databases</a></li>
+  <li><a href="#database-normalization-and-denormalization" id="toc-database-normalization-and-denormalization" class="nav-link" data-scroll-target="#database-normalization-and-denormalization">Database normalization and denormalization</a></li>
+  <li><a href="#data-warehousing" id="toc-data-warehousing" class="nav-link" data-scroll-target="#data-warehousing">Data warehousing</a></li>
+  <li><a href="#data-lake" id="toc-data-lake" class="nav-link" data-scroll-target="#data-lake">Data lake</a></li>
+  <li><a href="#cloud-storage" id="toc-cloud-storage" class="nav-link" data-scroll-target="#cloud-storage">Cloud storage</a></li>
   </ul></li>
   <li><a href="#data-integration" id="toc-data-integration" class="nav-link" data-scroll-target="#data-integration">Data Integration</a>
   <ul class="collapse">
@@ -129,6 +133,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#elt-extract-load-transform-process" id="toc-elt-extract-load-transform-process" class="nav-link" data-scroll-target="#elt-extract-load-transform-process">ELT (Extract, Load, Transform) process</a></li>
   <li><a href="#data-pipelines" id="toc-data-pipelines" class="nav-link" data-scroll-target="#data-pipelines">Data pipelines</a></li>
   <li><a href="#data-ingestion-methods" id="toc-data-ingestion-methods" class="nav-link" data-scroll-target="#data-ingestion-methods">Data ingestion methods</a></li>
+  <li><a href="#data-transformation" id="toc-data-transformation" class="nav-link" data-scroll-target="#data-transformation">Data transformation</a></li>
+  <li><a href="#data-orchestration-tools" id="toc-data-orchestration-tools" class="nav-link" data-scroll-target="#data-orchestration-tools">Data orchestration tools</a></li>
   </ul></li>
   <li><a href="#big-data-processing" id="toc-big-data-processing" class="nav-link" data-scroll-target="#big-data-processing">Big Data Processing</a>
   <ul class="collapse">
@@ -199,7 +205,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    A comprehensive guide to Data Engineering, exploring key concepts, tools, and best practices
+    Research post into Data Engineering, exploring key concepts, tools, and best practices
   </div>
 </div>
 
@@ -216,7 +222,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 9, 2023</p>
+      <p class="date">April 8, 2023</p>
     </div>
   </div>
   
@@ -229,15 +235,29 @@ ul.task-list li input[type="checkbox"] {
 <section id="data-storage-and-databases" class="level1">
 <h1>Data Storage and Databases</h1>
 <section id="types-of-databases" class="level2">
-<h2 class="anchored" data-anchor-id="types-of-databases">Types of databases</h2>
+<h2 class="anchored" data-anchor-id="types-of-databases"><a href="posts/data-engineering-list/index.qmd">Types of databases</a></h2>
 <ul>
-<li>A. Relational databases (SQL)</li>
-<li>B. NoSQL databases</li>
-<li>C. Time-series databases</li>
-<li>D. Graph databases ## Database normalization and denormalization ## Data warehousing</li>
-<li>A. Star schema</li>
-<li>B. Snowflake schema ## Data lake ## Cloud storage</li>
+<li>A. <a href="posts/data-engineering-list/index.qmd#relational-databases-(sql)">Relational databases (SQL)</a></li>
+<li>B. <a href="posts/data-engineering-list/index.qmd#nosql-databases">NoSQL databases</a></li>
+<li>C. <a href="posts/data-engineering-list/index.qmd#time-series-databases">Time-series databases</a></li>
+<li>D. <a href="posts/data-engineering-list/index.qmd#graph-databases">Graph databases</a></li>
 </ul>
+</section>
+<section id="database-normalization-and-denormalization" class="level2">
+<h2 class="anchored" data-anchor-id="database-normalization-and-denormalization">Database normalization and denormalization</h2>
+</section>
+<section id="data-warehousing" class="level2">
+<h2 class="anchored" data-anchor-id="data-warehousing">Data warehousing</h2>
+<ul>
+<li>A. Star schema</li>
+<li>B. Snowflake schema</li>
+</ul>
+</section>
+<section id="data-lake" class="level2">
+<h2 class="anchored" data-anchor-id="data-lake">Data lake</h2>
+</section>
+<section id="cloud-storage" class="level2">
+<h2 class="anchored" data-anchor-id="cloud-storage">Cloud storage</h2>
 </section>
 </section>
 <section id="data-integration" class="level1">
@@ -255,10 +275,20 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="data-ingestion-methods">Data ingestion methods</h2>
 <ul>
 <li>A. Batch processing</li>
-<li>B. Stream processing ## Data transformation</li>
+<li>B. Stream processing</li>
+</ul>
+</section>
+<section id="data-transformation" class="level2">
+<h2 class="anchored" data-anchor-id="data-transformation">Data transformation</h2>
+<ul>
 <li>A. Data cleaning</li>
 <li>B. Data enrichment</li>
-<li>C. Data validation ## Data orchestration tools</li>
+<li>C. Data validation</li>
+</ul>
+</section>
+<section id="data-orchestration-tools" class="level2">
+<h2 class="anchored" data-anchor-id="data-orchestration-tools">Data orchestration tools</h2>
+<ul>
 <li>A. Apache Airflow</li>
 <li>B. Prefect</li>
 </ul>
@@ -481,12 +511,12 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><div>MIT</div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shenton2023,
   author = {Craig Shenton},
   title = {Data {Engineering} {Research}},
-  date = {2023-04-09},
+  date = {2023-04-08},
   url = {https://craig-shenton.github.io/craigrshenton/posts/data-engineering-list},
   langid = {en}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shenton2023" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
-Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
+Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 8,
 2023. <a href="https://craig-shenton.github.io/craigrshenton/posts/data-engineering-list">https://craig-shenton.github.io/craigrshenton/posts/data-engineering-list</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
