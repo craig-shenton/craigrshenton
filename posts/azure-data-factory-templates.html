@@ -155,8 +155,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../About.qmd">
- <span class="menu-text">about</span></a>
+    <a class="nav-link" href="../about.html">
+ <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/craig-shenton"><i class="bi bi-github" role="img" aria-label="github">
@@ -830,7 +830,7 @@ Note
 <p>Python code to sequentially run databricks notebook paths specified in a <code>.json</code> config file from a databricks orchestrator notebook.</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="co">#Squentially run datbricks notebooks</span></span>
 <span id="cb10-2"><a href="#cb10-2"></a><span class="cf">for</span> index, item <span class="kw">in</span> <span class="bu">enumerate</span>(config_JSON[<span class="st">'pipeline'</span>][<span class="st">'project'</span>][<span class="st">'databricks'</span>]): </span>
-<span id="cb10-3"><a href="#cb10-3"></a>    notebook <span class="op">=</span> config_JSON[<span class="st">'pipeline'</span>][<span class="st">'project'</span>][<span class="st">'databricks'</span>][index][<span class="st">'databricks_notebook'</span>]</span>
+<span id="cb10-3"><a href="#cb10-3"></a>notebook <span class="op">=</span> config_JSON[<span class="st">'pipeline'</span>][<span class="st">'project'</span>][<span class="st">'databricks'</span>][index][<span class="st">'databricks_notebook'</span>]</span>
 <span id="cb10-4"><a href="#cb10-4"></a>    dbutils.notebook.run(notebook, <span class="dv">120</span>)</span>
 <span id="cb10-5"><a href="#cb10-5"></a>  <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
 <span id="cb10-6"><a href="#cb10-6"></a>    <span class="bu">print</span>(e)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
