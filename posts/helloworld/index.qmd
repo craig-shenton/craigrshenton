@@ -1,9 +1,0 @@
----
-title: "Hello world"
-description: "A new hope"
-date: "2022-07-15"
-image: "quartoWorld.png"
-categories: [quarto]
----
-# Welcome to my blog
-I started this blog to have a place on the internet where I can practice and publish my writing.

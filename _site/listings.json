@@ -2,7 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/helloworld/index.html"
+      "/posts/helloworld/index.html",
+      "/posts/azure-data-factory-templates/azure-data-factory-templates.html",
+      "/posts/azure-data-engineering-principles/azure-data-engineering-principles.html"
     ]
   }
 ]

@@ -1,10 +1,10 @@
 ---
-title: "Craig Robert Shenton (PhD)"
-subtitle: "My blog on data engineering"
+title: "Craig Robert Shenton"
+subtitle: "Senior Data Engineer @ NHS England, Medical Directorate. This is my blog on data engineering."
 image: profile.png
 about:
   template: trestles
-  image-width: 10em
+  image-width: 8em
   image-shape: round
   links:
     - icon: linkedin
@@ -16,11 +16,11 @@ about:
 listing:
   feed: true
   contents: posts
-  date-format: long
+  date-format: short
   sort: "date desc"
   type: default
   categories: true
-  fields: [image, date, title, subtitle, description]
+  fields: [date, title, description]
   sort-ui: false
   filter-ui: false
 page-layout: full

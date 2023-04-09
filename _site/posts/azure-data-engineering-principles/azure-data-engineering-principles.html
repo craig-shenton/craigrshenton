@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Craig Shenton">
+<meta name="dcterms.date" content="2021-09-01">
+<meta name="description" content="In this post, we aim to set out the data engineering principles NHSX has developed in designing and building our Azure cloud-analytics infrastructure.">
+
+<title>craigrshenton - Azure Data Engineering Principles</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<meta property="og:title" content="craigrshenton - Azure Data Engineering Principles">
+<meta property="og:description" content="In this post, we aim to set out the data engineering principles NHSX has developed in designing and building our Azure cloud-analytics infrastructure.">
+<meta property="og:site-name" content="craigrshenton">
+<meta name="twitter:title" content="craigrshenton - Azure Data Engineering Principles">
+<meta name="twitter:description" content="In this post, we aim to set out the data engineering principles NHSX has developed in designing and building our Azure cloud-analytics infrastructure.">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">craigrshenton</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">Craig Robert Shenton</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/craig-shenton"><i class="bi bi-github" role="img" aria-label="github">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/craigrshenton/"><i class="bi bi-linkedin" role="img" aria-label="linkedin">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#authors" id="toc-authors" class="nav-link active" data-scroll-target="#authors">Authors</a></li>
+  <li><a href="#content" id="toc-content" class="nav-link" data-scroll-target="#content">Content</a></li>
+  <li><a href="#parameterisation" id="toc-parameterisation" class="nav-link" data-scroll-target="#parameterisation">Parameterisation</a>
+  <ul class="collapse">
+  <li><a href="#example-latestfolder" id="toc-example-latestfolder" class="nav-link" data-scroll-target="#example-latestfolder">Example: latestFolder</a></li>
+  </ul></li>
+  <li><a href="#configuration-as-code" id="toc-configuration-as-code" class="nav-link" data-scroll-target="#configuration-as-code">Configuration-as-code</a></li>
+  <li><a href="#standardised-etl-design-patterns" id="toc-standardised-etl-design-patterns" class="nav-link" data-scroll-target="#standardised-etl-design-patterns">Standardised ETL Design Patterns</a>
+  <ul class="collapse">
+  <li><a href="#example-1-sql-database-ingestion-pipeline" id="toc-example-1-sql-database-ingestion-pipeline" class="nav-link" data-scroll-target="#example-1-sql-database-ingestion-pipeline"><strong>Example 1</strong>: SQL Database Ingestion Pipeline</a></li>
+  <li><a href="#example-2-databricks-processing-pipeline" id="toc-example-2-databricks-processing-pipeline" class="nav-link" data-scroll-target="#example-2-databricks-processing-pipeline"><strong>Example 2</strong>: Databricks Processing Pipeline</a></li>
+  </ul></li>
+  <li><a href="#hierarchical-pipeline-orchestration" id="toc-hierarchical-pipeline-orchestration" class="nav-link" data-scroll-target="#hierarchical-pipeline-orchestration">Hierarchical Pipeline Orchestration</a></li>
+  <li><a href="#documentation-as-code" id="toc-documentation-as-code" class="nav-link" data-scroll-target="#documentation-as-code">Documentation-as-code</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Azure Data Engineering Principles</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Azure</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    In this post, we aim to set out the data engineering principles NHSX has developed in designing and building our Azure cloud-analytics infrastructure.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Craig Shenton </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 1, 2021</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="authors" class="level3">
+<h3 class="anchored" data-anchor-id="authors">Authors</h3>
+<ul>
+<li>Craig Robert Shenton, PhD - Senior Data Engineer, NHS England</li>
+<li>Mattia Ficarelli, PhD - Data Engineer, NHSX</li>
+</ul>
+<p>Originally posted on the <a href="https://nhsx.github.io/AnalyticsUnit/azure-de-principles.html">NHSX technical gateway</a> website.</p>
+</section>
+<section id="content" class="level2">
+<h2 class="anchored" data-anchor-id="content">Content</h2>
+<p>In this post, we aim to set out the data engineering principles we have developed over the last year, in designing and building our Azure cloud-analytics infrastructure. These principles are broken down into the following sections:</p>
+<ul>
+<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#azure-data-engineering-principles">Azure Data Engineering Principles</a>
+<ul>
+<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#parameterisation">Parameterisation</a>
+<ul>
+<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#example-latestfolder">Example: latestFolder</a></li>
+</ul></li>
+<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#configuration-as-code">Configuration-as-code</a></li>
+<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#standardised-etl-design-patterns">Standardised ETL Design Patterns</a>
+<ul>
+<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#example-1-sql-database-ingestion-pipeline">Example 1: SQL Database Ingestion Pipeline</a></li>
+<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#example-2-databricks-processing-pipeline">Example 2: Databricks Processing Pipeline</a></li>
+</ul></li>
+<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#hierarchical-pipeline-orchestration">Hierarchical Pipeline Orchestration</a></li>
+<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#documentation-as-code">Documentation-as-code</a></li>
+<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#references">References</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="parameterisation" class="level2">
+<h2 class="anchored" data-anchor-id="parameterisation">Parameterisation</h2>
+<p>In straightforward copy activities, hard coding each activity’s file paths is easy enough. In Azure Data Factory (ADF), this requires creating a new dataset object for each sink and for each source. Like many users, we initially created new datasets at every stage of our Extract, Transform, and Load (ETL) pipelines. However, once these processes started to scale in complexity to include iteration and conditionals, the sheer amount of datasets and variables that were required to run our pipelines became unmanageable.</p>
+<p>The first step in untangling this web of configurations is applying parameterisation to your data pipelines. This adds a layer of abstraction to ADF that can dramatically reduce the amount of complexity needed to handle a multitude of ETL processes. Parameterisation transforms your activities into something akin to a function in python that accepts a certain set of variables and arguments. Much like in python, this abstraction allows you to use and re-use the parameterised dataset for all processes of the same type, reducing the need to create a new dataset for each process.</p>
+<p>For example, we created a generic dataset for handling <code>.csv</code> files on our Azure Datalake that passes the following parameters at runtime:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/images/posts/azure-data-engineering-principles/fig1.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">An Azure Data Factory dataset file path configuration.</figcaption><p></p>
+</figure>
+</div>
+<p><b>Figure 1.</b> An Azure Data Factory dataset file path configuration using the parameters; <code>@dataset().fileSystem</code>, <code>@dataset().filePath</code>, <code>@dataset().fileName</code> to denote the datalake file system name, the file path and and the file name.</p>
+<p>From these parameters, that specify the file path and name and the file system of the Azure Datalake linked service, we can use any <code>.csv</code> file available as the source for any pipeline activity. This has reduced the number of datasets listed in our ADF environment dramatically, reducing the overhead required to organise, search, and maintain our pipelines.</p>
+<p>A downside of highly parameterised pipelines is that they can become harder to debug due to the new level of abstraction. Now, in addition to the file paths the parameters may also be incorrectly configured. However, we find that the reduction in complexity and centralisation of pipeline configuration outweighs the initial growing pains of parameterisation.</p>
+<section id="example-latestfolder" class="level3">
+<h3 class="anchored" data-anchor-id="example-latestfolder">Example: latestFolder</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/images/posts/azure-data-engineering-principles/fig2.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">An example Azure Data Factory pipeline utility that can append the source path of any file with the latest time-stamped folder path.</figcaption><p></p>
+</figure>
+</div>
+<p><b>Figure 2.</b> An example Azure Data Factory pipeline utility that can append the source path of any file with the latest time-stamped folder path.</p>
+<p>A practical example of the utility of parameterisation is the ability to append the source path of any file with a time-stamped folder, for example <code>@concat(variables('sourcePath'),variables('latestFolder'))</code>. This allows for a well organised record of data sampled at different time points to be stored within the Datalake.</p>
+</section>
+</section>
+<section id="configuration-as-code" class="level2">
+<h2 class="anchored" data-anchor-id="configuration-as-code">Configuration-as-code</h2>
+<p>Configuration-as-code is the practice of managing the configuration of software using plain text <code>.json</code> files stored within a git repository. [<a href="https://www.perforce.com/blog/vcs/configuration-as-code">2</a>].</p>
+<p>These ‘config’ files establish the parameters and settings for all of the datasets, linked services, and stored procedures required for a particular ETL pipeline. These files are called via ADF Lookup activities with values set as variables to give ADF everything it needs to know for a pipeline to run end-to-end. This approach means that in order to deploy a whole new data pipeline in ADF, only a new configuration file is required. Thus, in addition to making it easier and quicker to create a new ETL pipeline, maintaining configurations is also centralised, making configuration mismatches between activities easier to avoid, allowing for more consistent deployments.</p>
+<p>Data Engineers often store their configurations in a database, alongside the data for convenience, however using structured <code>.json</code> files has additional advantages that should be considered:</p>
+<ul>
+<li>The first is that as plain text files, they can be saved in a git repository, thus putting them under version control. This gives you a level of traceability in terms of how-and-when changes were made and allows for your configurations to go through the same DevOps best practices and code review before they are deployed to production [<a href="https://www.perforce.com/blog/vcs/configuration-as-code">2</a>].</li>
+<li>The second benefit is that keeping configuration-as-code separates out your pipeline and configuration deployments. Decoupling these processes allows you to release and/or roll-back changes separately, which is important for tracing and debugging errors. Critically, this allows you to rapidly determine if the returned error is due to a configuration issue or a pipeline coding issue [<a href="https://www.cloudbees.com/blog/configuration-as-code-everything-need-know">3</a>].</li>
+</ul>
+</section>
+<section id="standardised-etl-design-patterns" class="level2">
+<h2 class="anchored" data-anchor-id="standardised-etl-design-patterns">Standardised ETL Design Patterns</h2>
+<p>Templates help us avoid building the same workflows repeatedly, as once developed and thoroughly tested, they can be used in many different pipelines. There are a growing number of common ETL templates available in ADF that are a great resource to get you started, found on Microsoft’s Azure documentation site [<a href="https://docs.microsoft.com/en-us/azure/data-factory/solution-templates-introduction">4</a>].</p>
+<p>However, these templates still need to be hand configured for your specific pipeline. Applying the parameterisation and configuration-as-code principles outlined above to our templates allows us to go much further. We have created a set of fully abstract and perameratised ETL workflows that only require a configuration file lookup to run. In essence, these templates become ‘plug-and-play’, and can be chained together very quickly. By focusing on just a handful of generic and reusable templates, more resources can be allocated to testing and maintaining these resources, knowing that they will be used over and over, by many members of the development team. This is a far more efficient use of development time, and allows us to be confident that new pipelines will run upon their first implementation without much issue. Like the other components in ADF, our template files are simply stored as a JSON file within our code repository, so they can be shared and improved upon by the wider data engineering community.</p>
+<p>For our internal analytics data engineering work, we have found it useful to break the templates into the following categories:</p>
+<ul>
+<li><strong>Ingestion:</strong> In the first instance we developed ingestion templates for every scenario, allowing us to rapidly ingest new datasets with minimal configuration. These typically involve HTTP requests, API calls, SQL stored procedures, and processes to copy files from SharePoint.</li>
+<li><strong>Processing:</strong> Our analytical processing is largely done through databricks, so these pipelines configure the analytics notebook and start a new spark job cluster.</li>
+<li><strong>Staging:</strong> Staging is where we push data to our Tableau SQL server, so we have templates to run multiple stored procedures and update metric tables for each of our analytical products.</li>
+<li><strong>Utilities:</strong> Last but by no means least, these are smaller functions that can be called multiple times at any stage of an ETL pipeline. Most involve sending data back and forth to systems outside ADF and/or updating configuration files.</li>
+</ul>
+<section id="example-1-sql-database-ingestion-pipeline" class="level3">
+<h3 class="anchored" data-anchor-id="example-1-sql-database-ingestion-pipeline"><strong>Example 1</strong>: SQL Database Ingestion Pipeline</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/images/posts/azure-data-engineering-principles/fig3.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">An example Azure Data Factory ingestion pipeline template that can be configured to extract data from an Azure SQL database to Azure Datalake blob storage.</figcaption><p></p>
+</figure>
+</div>
+<p><b>Figure 3.</b> An example Azure Data Factory ingestion pipeline template that can be configured to extract data from an Azure SQL database to Azure Datalake blob storage.</p>
+<p>The pipeline shown above is a fully parameterised template developed to ingest raw data from an Azure SQL database to Azure Datalake blob storage. This is an example of a ‘Source-Sink’ pattern–used for parameterising and configuring data copy activities that move data from one location to another. As mentioned in the parameterisation section, each Azure Data Factory copy activity requires at least two datasets to configure both source and sink locations. However, here we have created a generic SQL dataset and a generic Azure Datalake dataset that can be dynamically configured across all pipelines. As such, this template can be used and re-used to move data from any Azure SQL server to any Azure blob storage container.</p>
+<p>The SQL ingestion template works as follows:</p>
+<ul>
+<li>The configuration file is called using a lookup activity and the resulting configuration values are saved as variables before executing the copy activity at runtime.</li>
+<li>For the source dataset, we require the parameters for connecting to an Azure SQL server.</li>
+<li>The server details and connection credentials are passed via an ADF linked service, which itself can be further parameterised.</li>
+<li>The configuration file then sets the source database owner (dbo) string, the source table name, and if required, a SQL query to filter the data before the copy activity is run.</li>
+<li>On the sink side, the Datalake connection string is also passed via an ADF linked service, but the file system, sink path, and file name are all set by the configuration file. This could be a .csv file or a .parquet file for example</li>
+<li>Finally, if the copy activity fails for some reason, an error notification pipeline is called that contains a simple logic app used to notify a specified email address of the error [<a href="https://www.mssqltips.com/sqlservertip/5718/azure-data-factory-pipeline-email-notification-part-1/">5</a>].</li>
+</ul>
+</section>
+<section id="example-2-databricks-processing-pipeline" class="level3">
+<h3 class="anchored" data-anchor-id="example-2-databricks-processing-pipeline"><strong>Example 2</strong>: Databricks Processing Pipeline</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/images/posts/azure-data-engineering-principles/fig4.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">An example Azure Data Factory pipeline processing pipeline template that can be configured to run a Databricks notebook.</figcaption><p></p>
+</figure>
+</div>
+<p><b>Figure 4.</b> An example Azure Data Factory pipeline processing pipeline template that can be configured to run a Databricks notebook.</p>
+<p>The parameterised pipeline template above has been developed to run a Databricks notebook from Azure Data Factory. This is an example of a ‘Key-Value’ pattern–useful for configuring the settings of activities outside of Azure Data Factory itself. Here the json configuration file is providing the key-value of a Databricks notebook file path. This could also be used to give the URL of an Azure logic app or pass multiple variables to an Azure function app for example.</p>
+<p>The Databricks processing template works as follows:</p>
+<ul>
+<li>The configuration file is called using a lookup activity and the resulting configuration values are saved as variables before executing the copy activity at runtime.</li>
+<li>A Set variable activity reads the databricks notebook path and saves it as a Azure Data Factory variable.</li>
+<li>The Databricks notebook activity runs the specified Databricks notebook using an ephemeral job cluster (therefore no cluster ID is required).</li>
+<li>Finally, if the Databricks notebook activity fails, an error notification pipeline is called that contains a simple logic app used to notify a specified email address of the error.</li>
+</ul>
+<p>We typically use this pipeline to trigger an orchestrator Databricks notebook which in turn runs a series of data processing notebooks. This allows for much more flexibility, as we may want to process multiple metric calculations from the same data source.</p>
+</section>
+</section>
+<section id="hierarchical-pipeline-orchestration" class="level2">
+<h2 class="anchored" data-anchor-id="hierarchical-pipeline-orchestration">Hierarchical Pipeline Orchestration</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/images/posts/azure-data-engineering-principles/fig5.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">A hierarchicy of pipelines. At the top, a orchestration pipeline that triggers the sub-pipelines below.</figcaption><p></p>
+</figure>
+</div>
+<p><b>Figure 5.</b> A hierarchicy of pipelines. At the top, a orchestration pipeline that triggers the sub-pipelines below. Each phase of the data processing (extract, transform, and load, or ETL) is a fully parameterised template that requires no setup of its own [<a href="https://github.com/mrpaulandrew/ContentCollateral">8</a>].</p>
+<p>One of the most significant changes made to our data engineering setup is the use of hierarchical pipelines; that is the use of a single orchestration pipeline to trigger multiple ETL pipelines and utility sub-pipelines. This is based on Paul Andrews’ grandparent, parent, child design pattern that may be familiar to SSIS users [<a href="https://mrpaulandrew.com/2019/09/25/azure-data-factory-pipeline-hierarchies-generation-control/">9</a>]. With this design, and the generic ETL templates outlined above, we can create a ‘plug-and-play’ data engineering system. We simply select the ingestion, transformation, and staging patterns required from the templates and link them together under the orchestration pipeline. A single json config file is then created with all the ‘Sink-Source’ and ‘Key-Value’ pairs needed to move the data through the ETL process, so no configuration is required in Azure Data Factory itself. This has significantly reduced the amount of time needed to set up new pipelines, and ensures best practices are maintained across all our products.</p>
+<p>If we use the SQL ingestion and Databricks processing examples outlined above, we could very rapidly make a new ETL pipeline using the hierarchical system of pipeline development:</p>
+<ul>
+<li>First we would create an orchestration pipeline that would lookup the configuration file and attach any Azure Data Factory triggers that set when, and how often the pipeline would run.</li>
+<li>Next we can simply ‘plug-and-play’ with the ETL templates, first to ingest new data from a SQL server, then process that data with a Databricks notebook.</li>
+<li>Finally, the processed data could be staged, on a Tableau server for example, for BI developers to transform into visualisations and metrics.</li>
+<li>Within each ETL pipeline there would also be running pre-defined utility sub-pipelines, such as any testing and error handling processes, or our latestFolder example, which could be used to make sure we are processing the latest cut of the data before handing over to Databricks.</li>
+</ul>
+</section>
+<section id="documentation-as-code" class="level2">
+<h2 class="anchored" data-anchor-id="documentation-as-code">Documentation-as-code</h2>
+<p>Documentation-as-code is the principle that either; documentation should be written with the same tools as your code, or that documentation should be automatically generated from your code [<a href="https://technology.blog.gov.uk/2017/08/25/why-we-use-a-docs-as-code-approach-for-technical-documentation/">10</a>]. On a basic level this means that we manage our documentation via GitHub, following a Git workflow, and putting it under version control in the same way as our configuration files. In addition to the standard GitFlow best practices, we can also compare versions of both the product and the documentation, making it easier to see where one might be out of sync with the other. Like much of our work, we make the documentation repository open source to increase transparency and allow for others in the healthcare sector to implement our data engineering principles and best practice. Due to the structured nature of the .json format, our pipeline configuration files and the configuration files generated from ADF are readily transformed into tables and diagrams using python. As a result, we can automatically generate a great deal of our documentation and make sure it directly represents the live product.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>[1] NHSX (2021). Data Engineering Documentation Site: ADF Utilities - latestFolder [Online] <a href="https://nhsx.github.io/au-data-engineering/adfutilities.html#latest-folder-lookup">https://nhsx.github.io/au-data-engineering/adfutilities.html#latest-folder-lookup</a></p>
+<p>[2] Perforce (2020). Configuration as Code: How to Streamline Your Pipeline. [Online] <a href="https://www.perforce.com/blog/vcs/configuration-as-code">https://www.perforce.com/blog/vcs/configuration-as-code</a></p>
+<p>[3] Cloud Bees (2018). Configuration as Code: Everything You Need to Know. [Online] <a href="https://www.cloudbees.com/blog/configuration-as-code-everything-need-know">https://www.cloudbees.com/blog/configuration-as-code-everything-need-know</a></p>
+<p>[4] Microsoft (2021). Azure Data Factory documentation site [Online] <a href="https://docs.microsoft.com/en-us/azure/data-factory/solution-templates-introduction">https://docs.microsoft.com/en-us/azure/data-factory/solution-templates-introduction</a></p>
+<p>[5] MSSQL Tips (2019). Azure Data Factory Pipeline Email Notification. [Online] <a href="https://www.mssqltips.com/sqlservertip/5718/azure-data-factory-pipeline-email-notification-part-1/">https://www.mssqltips.com/sqlservertip/5718/azure-data-factory-pipeline-email-notification-part-1/</a></p>
+<p>[6] NHSX (2021). Data Engineering Documentation Site: SQL Database Ingestion Pipeline [Online] <a href="https://nhsx.github.io/au-data-engineering/adfpipelines.html#sql-database-ingestion-pipeline">https://nhsx.github.io/au-data-engineering/adfpipelines.html#sql-database-ingestion-pipeline</a></p>
+<p>[7] NHSX (2021). Data Engineering Documentation Site: Databricks Processing Pipeline [Online] <a href="https://nhsx.github.io/au-data-engineering/adfpipelines.html#databricks-processing-pipeline">https://nhsx.github.io/au-data-engineering/adfpipelines.html#databricks-processing-pipeline</a></p>
+<p>[8] Paul Andrews (2019). The icons used for the hierarchical pipeline orchestration section of this post were designed by Paul Andrews. [Online] <a href="https://github.com/mrpaulandrew/ContentCollateral">https://github.com/mrpaulandrew/ContentCollateral</a></p>
+<p>[9] Paul Andrews (2019). Azure Data Factory Pipeline Hierarchies (Generation Control) [Online] <a href="https://mrpaulandrew.com/2019/09/25/azure-data-factory-pipeline-hierarchies-generation-control/">https://mrpaulandrew.com/2019/09/25/azure-data-factory-pipeline-hierarchies-generation-control/</a>]</p>
+<p>[10] GOV.UK Technology in Government (2017). Why we use a ‘docs as code’ approach for technical documentation. [Online] <a href="https://technology.blog.gov.uk/2017/08/25/why-we-use-a-docs-as-code-approach-for-technical-documentation/">https://technology.blog.gov.uk/2017/08/25/why-we-use-a-docs-as-code-approach-for-technical-documentation/</a></p>
+<p>Chris Ried 2018. Cover photo from Unsplash. [Online] <a href="https://unsplash.com/s/photos/python?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">https://unsplash.com/s/photos/python?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText</a></p>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><div>MIT</div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shenton2021,
+  author = {Craig Shenton},
+  title = {Azure {Data} {Engineering} {Principles}},
+  date = {2021-09-01},
+  url = {https://craig-shenton.github.io/craigrshenton/azure-data-engineering-principles.html},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shenton2021" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
+Craig Shenton. 2021. <span>“Azure Data Engineering Principles.”</span>
+September 1, 2021. <a href="https://craig-shenton.github.io/craigrshenton/azure-data-engineering-principles.html">https://craig-shenton.github.io/craigrshenton/azure-data-engineering-principles.html</a>.
+</div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
