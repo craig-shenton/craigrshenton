@@ -17,7 +17,281 @@
 <width>144</width>
 </image>
 <generator>quarto-1.2.475</generator>
-<lastBuildDate>Thu, 09 Sep 2021 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 09 Apr 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Data Engineering Research</title>
+  <dc:creator>Craig Shenton</dc:creator>
+  <link>https://craig-shenton.github.io/craigrshenton/posts/data-engineering-list/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="data-storage-and-databases" class="level1">
+<h1>Data Storage and Databases</h1>
+<section id="types-of-databases" class="level2">
+<h2 class="anchored" data-anchor-id="types-of-databases">Types of databases</h2>
+<ul>
+<li>A. Relational databases (SQL)</li>
+<li>B. NoSQL databases</li>
+<li>C. Time-series databases</li>
+<li>D. Graph databases ## Database normalization and denormalization ## Data warehousing</li>
+<li>A. Star schema</li>
+<li>B. Snowflake schema ## Data lake ## Cloud storage</li>
+</ul>
+</section>
+</section>
+<section id="data-integration" class="level1">
+<h1>Data Integration</h1>
+<section id="etl-extract-transform-load-process" class="level2">
+<h2 class="anchored" data-anchor-id="etl-extract-transform-load-process">ETL (Extract, Transform, Load) process</h2>
+</section>
+<section id="elt-extract-load-transform-process" class="level2">
+<h2 class="anchored" data-anchor-id="elt-extract-load-transform-process">ELT (Extract, Load, Transform) process</h2>
+</section>
+<section id="data-pipelines" class="level2">
+<h2 class="anchored" data-anchor-id="data-pipelines">Data pipelines</h2>
+</section>
+<section id="data-ingestion-methods" class="level2">
+<h2 class="anchored" data-anchor-id="data-ingestion-methods">Data ingestion methods</h2>
+<ul>
+<li>A. Batch processing</li>
+<li>B. Stream processing ## Data transformation</li>
+<li>A. Data cleaning</li>
+<li>B. Data enrichment</li>
+<li>C. Data validation ## Data orchestration tools</li>
+<li>A. Apache Airflow</li>
+<li>B. Prefect</li>
+</ul>
+</section>
+</section>
+<section id="big-data-processing" class="level1">
+<h1>Big Data Processing</h1>
+<section id="apache-spark" class="level2">
+<h2 class="anchored" data-anchor-id="apache-spark">Apache Spark</h2>
+</section>
+<section id="data-partitioning-and-sharding" class="level2">
+<h2 class="anchored" data-anchor-id="data-partitioning-and-sharding">Data partitioning and sharding</h2>
+</section>
+</section>
+<section id="data-storage-formats" class="level1">
+<h1>Data Storage Formats</h1>
+<ul>
+<li>A. JSON (JavaScript Object Notation)</li>
+<li>B. XML (eXtensible Markup Language)</li>
+<li>C. CSV (Comma Separated Values)</li>
+<li>D. Parquet</li>
+</ul>
+</section>
+<section id="real-time-data-processing" class="level1">
+<h1>Real-time Data Processing</h1>
+<section id="streaming-data-processing" class="level2">
+<h2 class="anchored" data-anchor-id="streaming-data-processing">Streaming data processing</h2>
+<ul>
+<li>A. Apache Kafka</li>
+</ul>
+</section>
+</section>
+<section id="data-security-and-governance" class="level1">
+<h1>Data Security and Governance</h1>
+<section id="data-encryption" class="level2">
+<h2 class="anchored" data-anchor-id="data-encryption">Data encryption</h2>
+</section>
+<section id="data-anonymization-and-masking" class="level2">
+<h2 class="anchored" data-anchor-id="data-anonymization-and-masking">Data anonymization and masking</h2>
+</section>
+<section id="data-lineage" class="level2">
+<h2 class="anchored" data-anchor-id="data-lineage">Data lineage</h2>
+</section>
+<section id="data-cataloging" class="level2">
+<h2 class="anchored" data-anchor-id="data-cataloging">Data cataloging</h2>
+</section>
+<section id="compliance-and-regulations" class="level2">
+<h2 class="anchored" data-anchor-id="compliance-and-regulations">Compliance and regulations</h2>
+<ul>
+<li>A. GDPR (General Data Protection Regulation)</li>
+</ul>
+</section>
+</section>
+<section id="data-quality-and-monitoring" class="level1">
+<h1>Data Quality and Monitoring</h1>
+<section id="data-quality-dimensions" class="level2">
+<h2 class="anchored" data-anchor-id="data-quality-dimensions">Data quality dimensions</h2>
+</section>
+<section id="data-profiling" class="level2">
+<h2 class="anchored" data-anchor-id="data-profiling">Data profiling</h2>
+</section>
+<section id="data-quality-tools" class="level2">
+<h2 class="anchored" data-anchor-id="data-quality-tools">Data quality tools</h2>
+</section>
+<section id="data-monitoring-and-alerting" class="level2">
+<h2 class="anchored" data-anchor-id="data-monitoring-and-alerting">Data monitoring and alerting</h2>
+</section>
+</section>
+<section id="data-engineering-best-practices" class="level1">
+<h1>Data Engineering Best Practices</h1>
+<section id="scalability-and-performance-optimization" class="level2">
+<h2 class="anchored" data-anchor-id="scalability-and-performance-optimization">Scalability and performance optimization</h2>
+</section>
+<section id="fault-tolerance-and-reliability" class="level2">
+<h2 class="anchored" data-anchor-id="fault-tolerance-and-reliability">Fault tolerance and reliability</h2>
+</section>
+<section id="data-modeling" class="level2">
+<h2 class="anchored" data-anchor-id="data-modeling">Data modeling</h2>
+</section>
+<section id="continuous-integration-and-continuous-deployment-cicd" class="level2">
+<h2 class="anchored" data-anchor-id="continuous-integration-and-continuous-deployment-cicd">Continuous integration and continuous deployment (CI/CD)</h2>
+<section id="introduction-to-cicd" class="level3">
+<h3 class="anchored" data-anchor-id="introduction-to-cicd">Introduction to CI/CD</h3>
+<ul>
+<li>A. Definition and benefits</li>
+<li>B. CI/CD in data engineering projects</li>
+<li>C. CI/CD tools and platforms</li>
+</ul>
+</section>
+<section id="continuous-integration-ci" class="level3">
+<h3 class="anchored" data-anchor-id="continuous-integration-ci">Continuous Integration (CI)</h3>
+<ul>
+<li>A. Version control systems</li>
+<li>B. Automated build systems</li>
+<li>C. Automated testing in CI</li>
+<li>D. Code review and quality checks</li>
+</ul>
+</section>
+<section id="continuous-deployment-cd" class="level3">
+<h3 class="anchored" data-anchor-id="continuous-deployment-cd">Continuous Deployment (CD)</h3>
+<ul>
+<li>A. Deployment strategies</li>
+<li>B. Infrastructure as Code (IaC)</li>
+<li>C. Containerization and orchestration</li>
+<li>D. Deployment automation</li>
+</ul>
+</section>
+<section id="monitoring-and-observability-in-cicd" class="level3">
+<h3 class="anchored" data-anchor-id="monitoring-and-observability-in-cicd">Monitoring and observability in CI/CD</h3>
+<ul>
+<li>A. Monitoring tools integration</li>
+<li>B. Log management and analysis</li>
+<li>C. Performance monitoring</li>
+</ul>
+</section>
+<section id="cicd-best-practices-for-data-engineering" class="level3">
+<h3 class="anchored" data-anchor-id="cicd-best-practices-for-data-engineering">CI/CD best practices for data engineering</h3>
+<ul>
+<li>A. Incremental and iterative development</li>
+<li>B. Configuration management</li>
+<li>C. Secure and reliable deployments</li>
+</ul>
+</section>
+<section id="case-studies-and-success-stories" class="level3">
+<h3 class="anchored" data-anchor-id="case-studies-and-success-stories">Case studies and success stories</h3>
+<ul>
+<li>A. Real-world CI/CD implementations</li>
+<li>B. Lessons learned and challenges faced</li>
+</ul>
+</section>
+</section>
+<section id="testing-and-validation" class="level2">
+<h2 class="anchored" data-anchor-id="testing-and-validation">Testing and validation</h2>
+<section id="unit-testing-for-data-pipelines" class="level3">
+<h3 class="anchored" data-anchor-id="unit-testing-for-data-pipelines">Unit testing for data pipelines</h3>
+<ul>
+<li>A. Test individual components</li>
+<li>B. Mocking external dependencies</li>
+<li>C. Isolation of test environments</li>
+</ul>
+</section>
+<section id="integration-testing-for-data-pipelines" class="level3">
+<h3 class="anchored" data-anchor-id="integration-testing-for-data-pipelines">Integration testing for data pipelines</h3>
+<ul>
+<li>A. Test end-to-end data flow</li>
+<li>B. Validate data transformations and integrations</li>
+<li>C. Testing with realistic data sets</li>
+</ul>
+</section>
+<section id="data-validation" class="level3">
+<h3 class="anchored" data-anchor-id="data-validation">Data validation</h3>
+<ul>
+<li>A. Schema validation</li>
+<li>B. Data type validation</li>
+<li>C. Range and constraint validation</li>
+<li>D. Uniqueness and referential integrity validation</li>
+</ul>
+</section>
+<section id="performance-testing" class="level3">
+<h3 class="anchored" data-anchor-id="performance-testing">Performance testing</h3>
+<ul>
+<li>A. Load testing</li>
+<li>B. Stress testing</li>
+<li>C. Benchmarking</li>
+</ul>
+</section>
+<section id="data-quality-testing" class="level3">
+<h3 class="anchored" data-anchor-id="data-quality-testing">Data quality testing</h3>
+<ul>
+<li>A. Data accuracy and consistency</li>
+<li>B. Data completeness</li>
+<li>C. Data timeliness</li>
+<li>D. Data lineage verification</li>
+</ul>
+</section>
+<section id="regression-testing" class="level3">
+<h3 class="anchored" data-anchor-id="regression-testing">Regression testing</h3>
+<ul>
+<li>A. Test existing data pipelines for backward compatibility</li>
+<li>B. Validate new changes against old functionality</li>
+</ul>
+</section>
+<section id="test-automation" class="level3">
+<h3 class="anchored" data-anchor-id="test-automation">Test automation</h3>
+<ul>
+<li>A. Continuous testing in CI/CD pipelines</li>
+<li>B. Automated test generation</li>
+<li>C. Test execution and reporting</li>
+</ul>
+</section>
+<section id="monitoring-and-alerting-for-test-failures" class="level3">
+<h3 class="anchored" data-anchor-id="monitoring-and-alerting-for-test-failures">Monitoring and alerting for test failures</h3>
+<ul>
+<li>A. Integration with monitoring tools</li>
+<li>B. Anomaly detection</li>
+<li>C. Notification and escalation strategies</li>
+</ul>
+</section>
+<section id="test-data-management" class="level3">
+<h3 class="anchored" data-anchor-id="test-data-management">Test data management</h3>
+<ul>
+<li>A. Synthetic test data generation</li>
+<li>B. Test data masking and anonymisation</li>
+<li>C. Test data storage and versioning</li>
+</ul>
+</section>
+<section id="best-practices-for-testing-and-validation" class="level3">
+<h3 class="anchored" data-anchor-id="best-practices-for-testing-and-validation">Best practices for testing and validation</h3>
+<ul>
+<li>A. Test-driven development (TDD) in data engineering</li>
+<li>B. Code and test coverage metrics</li>
+<li>C. Testing strategies and test pyramid</li>
+</ul>
+
+
+</section>
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><div>MIT</div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shenton2023,
+  author = {Craig Shenton},
+  title = {Data {Engineering} {Research}},
+  date = {2023-04-09},
+  url = {https://craig-shenton.github.io/craigrshenton/posts/data-engineering-list},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shenton2023" class="csl-entry quarto-appendix-citeas">
+Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
+2023. <a href="https://craig-shenton.github.io/craigrshenton/posts/data-engineering-list">https://craig-shenton.github.io/craigrshenton/posts/data-engineering-list</a>.
+</div></div></section></div> ]]></description>
+  <guid>https://craig-shenton.github.io/craigrshenton/posts/data-engineering-list/index.html</guid>
+  <pubDate>Sun, 09 Apr 2023 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Azure Data Factory Templates</title>
   <dc:creator>Craig Shenton</dc:creator>

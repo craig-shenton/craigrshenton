@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.475">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Craig Shenton">
+<meta name="dcterms.date" content="2023-04-09">
+<meta name="description" content="A comprehensive guide to Data Engineering, exploring key concepts, tools, and best practices">
+
+<title>craigrshenton - Data Engineering Research</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/favicons/Rubics_Cube.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<meta property="og:title" content="craigrshenton - Data Engineering Research">
+<meta property="og:description" content="A comprehensive guide to Data Engineering, exploring key concepts, tools, and best practices">
+<meta property="og:site-name" content="craigrshenton">
+<meta name="twitter:title" content="craigrshenton - Data Engineering Research">
+<meta name="twitter:description" content="A comprehensive guide to Data Engineering, exploring key concepts, tools, and best practices">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"><i class="bi bi-rss" role="img" aria-label="home">
+</i> 
+ <span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../About.qmd">
+ <span class="menu-text">about</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/craig-shenton"><i class="bi bi-github" role="img" aria-label="github">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/craigrshenton/"><i class="bi bi-linkedin" role="img" aria-label="linkedin">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#data-storage-and-databases" id="toc-data-storage-and-databases" class="nav-link active" data-scroll-target="#data-storage-and-databases">Data Storage and Databases</a>
+  <ul class="collapse">
+  <li><a href="#types-of-databases" id="toc-types-of-databases" class="nav-link" data-scroll-target="#types-of-databases">Types of databases</a></li>
+  </ul></li>
+  <li><a href="#data-integration" id="toc-data-integration" class="nav-link" data-scroll-target="#data-integration">Data Integration</a>
+  <ul class="collapse">
+  <li><a href="#etl-extract-transform-load-process" id="toc-etl-extract-transform-load-process" class="nav-link" data-scroll-target="#etl-extract-transform-load-process">ETL (Extract, Transform, Load) process</a></li>
+  <li><a href="#elt-extract-load-transform-process" id="toc-elt-extract-load-transform-process" class="nav-link" data-scroll-target="#elt-extract-load-transform-process">ELT (Extract, Load, Transform) process</a></li>
+  <li><a href="#data-pipelines" id="toc-data-pipelines" class="nav-link" data-scroll-target="#data-pipelines">Data pipelines</a></li>
+  <li><a href="#data-ingestion-methods" id="toc-data-ingestion-methods" class="nav-link" data-scroll-target="#data-ingestion-methods">Data ingestion methods</a></li>
+  </ul></li>
+  <li><a href="#big-data-processing" id="toc-big-data-processing" class="nav-link" data-scroll-target="#big-data-processing">Big Data Processing</a>
+  <ul class="collapse">
+  <li><a href="#apache-spark" id="toc-apache-spark" class="nav-link" data-scroll-target="#apache-spark">Apache Spark</a></li>
+  <li><a href="#data-partitioning-and-sharding" id="toc-data-partitioning-and-sharding" class="nav-link" data-scroll-target="#data-partitioning-and-sharding">Data partitioning and sharding</a></li>
+  </ul></li>
+  <li><a href="#data-storage-formats" id="toc-data-storage-formats" class="nav-link" data-scroll-target="#data-storage-formats">Data Storage Formats</a></li>
+  <li><a href="#real-time-data-processing" id="toc-real-time-data-processing" class="nav-link" data-scroll-target="#real-time-data-processing">Real-time Data Processing</a>
+  <ul class="collapse">
+  <li><a href="#streaming-data-processing" id="toc-streaming-data-processing" class="nav-link" data-scroll-target="#streaming-data-processing">Streaming data processing</a></li>
+  </ul></li>
+  <li><a href="#data-security-and-governance" id="toc-data-security-and-governance" class="nav-link" data-scroll-target="#data-security-and-governance">Data Security and Governance</a>
+  <ul class="collapse">
+  <li><a href="#data-encryption" id="toc-data-encryption" class="nav-link" data-scroll-target="#data-encryption">Data encryption</a></li>
+  <li><a href="#data-anonymization-and-masking" id="toc-data-anonymization-and-masking" class="nav-link" data-scroll-target="#data-anonymization-and-masking">Data anonymization and masking</a></li>
+  <li><a href="#data-lineage" id="toc-data-lineage" class="nav-link" data-scroll-target="#data-lineage">Data lineage</a></li>
+  <li><a href="#data-cataloging" id="toc-data-cataloging" class="nav-link" data-scroll-target="#data-cataloging">Data cataloging</a></li>
+  <li><a href="#compliance-and-regulations" id="toc-compliance-and-regulations" class="nav-link" data-scroll-target="#compliance-and-regulations">Compliance and regulations</a></li>
+  </ul></li>
+  <li><a href="#data-quality-and-monitoring" id="toc-data-quality-and-monitoring" class="nav-link" data-scroll-target="#data-quality-and-monitoring">Data Quality and Monitoring</a>
+  <ul class="collapse">
+  <li><a href="#data-quality-dimensions" id="toc-data-quality-dimensions" class="nav-link" data-scroll-target="#data-quality-dimensions">Data quality dimensions</a></li>
+  <li><a href="#data-profiling" id="toc-data-profiling" class="nav-link" data-scroll-target="#data-profiling">Data profiling</a></li>
+  <li><a href="#data-quality-tools" id="toc-data-quality-tools" class="nav-link" data-scroll-target="#data-quality-tools">Data quality tools</a></li>
+  <li><a href="#data-monitoring-and-alerting" id="toc-data-monitoring-and-alerting" class="nav-link" data-scroll-target="#data-monitoring-and-alerting">Data monitoring and alerting</a></li>
+  </ul></li>
+  <li><a href="#data-engineering-best-practices" id="toc-data-engineering-best-practices" class="nav-link" data-scroll-target="#data-engineering-best-practices">Data Engineering Best Practices</a>
+  <ul class="collapse">
+  <li><a href="#scalability-and-performance-optimization" id="toc-scalability-and-performance-optimization" class="nav-link" data-scroll-target="#scalability-and-performance-optimization">Scalability and performance optimization</a></li>
+  <li><a href="#fault-tolerance-and-reliability" id="toc-fault-tolerance-and-reliability" class="nav-link" data-scroll-target="#fault-tolerance-and-reliability">Fault tolerance and reliability</a></li>
+  <li><a href="#data-modeling" id="toc-data-modeling" class="nav-link" data-scroll-target="#data-modeling">Data modeling</a></li>
+  <li><a href="#continuous-integration-and-continuous-deployment-cicd" id="toc-continuous-integration-and-continuous-deployment-cicd" class="nav-link" data-scroll-target="#continuous-integration-and-continuous-deployment-cicd">Continuous integration and continuous deployment (CI/CD)</a>
+  <ul class="collapse">
+  <li><a href="#introduction-to-cicd" id="toc-introduction-to-cicd" class="nav-link" data-scroll-target="#introduction-to-cicd">Introduction to CI/CD</a></li>
+  <li><a href="#continuous-integration-ci" id="toc-continuous-integration-ci" class="nav-link" data-scroll-target="#continuous-integration-ci">Continuous Integration (CI)</a></li>
+  <li><a href="#continuous-deployment-cd" id="toc-continuous-deployment-cd" class="nav-link" data-scroll-target="#continuous-deployment-cd">Continuous Deployment (CD)</a></li>
+  <li><a href="#monitoring-and-observability-in-cicd" id="toc-monitoring-and-observability-in-cicd" class="nav-link" data-scroll-target="#monitoring-and-observability-in-cicd">Monitoring and observability in CI/CD</a></li>
+  <li><a href="#cicd-best-practices-for-data-engineering" id="toc-cicd-best-practices-for-data-engineering" class="nav-link" data-scroll-target="#cicd-best-practices-for-data-engineering">CI/CD best practices for data engineering</a></li>
+  <li><a href="#case-studies-and-success-stories" id="toc-case-studies-and-success-stories" class="nav-link" data-scroll-target="#case-studies-and-success-stories">Case studies and success stories</a></li>
+  </ul></li>
+  <li><a href="#testing-and-validation" id="toc-testing-and-validation" class="nav-link" data-scroll-target="#testing-and-validation">Testing and validation</a>
+  <ul class="collapse">
+  <li><a href="#unit-testing-for-data-pipelines" id="toc-unit-testing-for-data-pipelines" class="nav-link" data-scroll-target="#unit-testing-for-data-pipelines">Unit testing for data pipelines</a></li>
+  <li><a href="#integration-testing-for-data-pipelines" id="toc-integration-testing-for-data-pipelines" class="nav-link" data-scroll-target="#integration-testing-for-data-pipelines">Integration testing for data pipelines</a></li>
+  <li><a href="#data-validation" id="toc-data-validation" class="nav-link" data-scroll-target="#data-validation">Data validation</a></li>
+  <li><a href="#performance-testing" id="toc-performance-testing" class="nav-link" data-scroll-target="#performance-testing">Performance testing</a></li>
+  <li><a href="#data-quality-testing" id="toc-data-quality-testing" class="nav-link" data-scroll-target="#data-quality-testing">Data quality testing</a></li>
+  <li><a href="#regression-testing" id="toc-regression-testing" class="nav-link" data-scroll-target="#regression-testing">Regression testing</a></li>
+  <li><a href="#test-automation" id="toc-test-automation" class="nav-link" data-scroll-target="#test-automation">Test automation</a></li>
+  <li><a href="#monitoring-and-alerting-for-test-failures" id="toc-monitoring-and-alerting-for-test-failures" class="nav-link" data-scroll-target="#monitoring-and-alerting-for-test-failures">Monitoring and alerting for test failures</a></li>
+  <li><a href="#test-data-management" id="toc-test-data-management" class="nav-link" data-scroll-target="#test-data-management">Test data management</a></li>
+  <li><a href="#best-practices-for-testing-and-validation" id="toc-best-practices-for-testing-and-validation" class="nav-link" data-scroll-target="#best-practices-for-testing-and-validation">Best practices for testing and validation</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Data Engineering Research</h1>
+</div>
+
+<div>
+  <div class="description">
+    A comprehensive guide to Data Engineering, exploring key concepts, tools, and best practices
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Craig Shenton </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 9, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="data-storage-and-databases" class="level1">
+<h1>Data Storage and Databases</h1>
+<section id="types-of-databases" class="level2">
+<h2 class="anchored" data-anchor-id="types-of-databases">Types of databases</h2>
+<ul>
+<li>A. Relational databases (SQL)</li>
+<li>B. NoSQL databases</li>
+<li>C. Time-series databases</li>
+<li>D. Graph databases ## Database normalization and denormalization ## Data warehousing</li>
+<li>A. Star schema</li>
+<li>B. Snowflake schema ## Data lake ## Cloud storage</li>
+</ul>
+</section>
+</section>
+<section id="data-integration" class="level1">
+<h1>Data Integration</h1>
+<section id="etl-extract-transform-load-process" class="level2">
+<h2 class="anchored" data-anchor-id="etl-extract-transform-load-process">ETL (Extract, Transform, Load) process</h2>
+</section>
+<section id="elt-extract-load-transform-process" class="level2">
+<h2 class="anchored" data-anchor-id="elt-extract-load-transform-process">ELT (Extract, Load, Transform) process</h2>
+</section>
+<section id="data-pipelines" class="level2">
+<h2 class="anchored" data-anchor-id="data-pipelines">Data pipelines</h2>
+</section>
+<section id="data-ingestion-methods" class="level2">
+<h2 class="anchored" data-anchor-id="data-ingestion-methods">Data ingestion methods</h2>
+<ul>
+<li>A. Batch processing</li>
+<li>B. Stream processing ## Data transformation</li>
+<li>A. Data cleaning</li>
+<li>B. Data enrichment</li>
+<li>C. Data validation ## Data orchestration tools</li>
+<li>A. Apache Airflow</li>
+<li>B. Prefect</li>
+</ul>
+</section>
+</section>
+<section id="big-data-processing" class="level1">
+<h1>Big Data Processing</h1>
+<section id="apache-spark" class="level2">
+<h2 class="anchored" data-anchor-id="apache-spark">Apache Spark</h2>
+</section>
+<section id="data-partitioning-and-sharding" class="level2">
+<h2 class="anchored" data-anchor-id="data-partitioning-and-sharding">Data partitioning and sharding</h2>
+</section>
+</section>
+<section id="data-storage-formats" class="level1">
+<h1>Data Storage Formats</h1>
+<ul>
+<li>A. JSON (JavaScript Object Notation)</li>
+<li>B. XML (eXtensible Markup Language)</li>
+<li>C. CSV (Comma Separated Values)</li>
+<li>D. Parquet</li>
+</ul>
+</section>
+<section id="real-time-data-processing" class="level1">
+<h1>Real-time Data Processing</h1>
+<section id="streaming-data-processing" class="level2">
+<h2 class="anchored" data-anchor-id="streaming-data-processing">Streaming data processing</h2>
+<ul>
+<li>A. Apache Kafka</li>
+</ul>
+</section>
+</section>
+<section id="data-security-and-governance" class="level1">
+<h1>Data Security and Governance</h1>
+<section id="data-encryption" class="level2">
+<h2 class="anchored" data-anchor-id="data-encryption">Data encryption</h2>
+</section>
+<section id="data-anonymization-and-masking" class="level2">
+<h2 class="anchored" data-anchor-id="data-anonymization-and-masking">Data anonymization and masking</h2>
+</section>
+<section id="data-lineage" class="level2">
+<h2 class="anchored" data-anchor-id="data-lineage">Data lineage</h2>
+</section>
+<section id="data-cataloging" class="level2">
+<h2 class="anchored" data-anchor-id="data-cataloging">Data cataloging</h2>
+</section>
+<section id="compliance-and-regulations" class="level2">
+<h2 class="anchored" data-anchor-id="compliance-and-regulations">Compliance and regulations</h2>
+<ul>
+<li>A. GDPR (General Data Protection Regulation)</li>
+</ul>
+</section>
+</section>
+<section id="data-quality-and-monitoring" class="level1">
+<h1>Data Quality and Monitoring</h1>
+<section id="data-quality-dimensions" class="level2">
+<h2 class="anchored" data-anchor-id="data-quality-dimensions">Data quality dimensions</h2>
+</section>
+<section id="data-profiling" class="level2">
+<h2 class="anchored" data-anchor-id="data-profiling">Data profiling</h2>
+</section>
+<section id="data-quality-tools" class="level2">
+<h2 class="anchored" data-anchor-id="data-quality-tools">Data quality tools</h2>
+</section>
+<section id="data-monitoring-and-alerting" class="level2">
+<h2 class="anchored" data-anchor-id="data-monitoring-and-alerting">Data monitoring and alerting</h2>
+</section>
+</section>
+<section id="data-engineering-best-practices" class="level1">
+<h1>Data Engineering Best Practices</h1>
+<section id="scalability-and-performance-optimization" class="level2">
+<h2 class="anchored" data-anchor-id="scalability-and-performance-optimization">Scalability and performance optimization</h2>
+</section>
+<section id="fault-tolerance-and-reliability" class="level2">
+<h2 class="anchored" data-anchor-id="fault-tolerance-and-reliability">Fault tolerance and reliability</h2>
+</section>
+<section id="data-modeling" class="level2">
+<h2 class="anchored" data-anchor-id="data-modeling">Data modeling</h2>
+</section>
+<section id="continuous-integration-and-continuous-deployment-cicd" class="level2">
+<h2 class="anchored" data-anchor-id="continuous-integration-and-continuous-deployment-cicd">Continuous integration and continuous deployment (CI/CD)</h2>
+<section id="introduction-to-cicd" class="level3">
+<h3 class="anchored" data-anchor-id="introduction-to-cicd">Introduction to CI/CD</h3>
+<ul>
+<li>A. Definition and benefits</li>
+<li>B. CI/CD in data engineering projects</li>
+<li>C. CI/CD tools and platforms</li>
+</ul>
+</section>
+<section id="continuous-integration-ci" class="level3">
+<h3 class="anchored" data-anchor-id="continuous-integration-ci">Continuous Integration (CI)</h3>
+<ul>
+<li>A. Version control systems</li>
+<li>B. Automated build systems</li>
+<li>C. Automated testing in CI</li>
+<li>D. Code review and quality checks</li>
+</ul>
+</section>
+<section id="continuous-deployment-cd" class="level3">
+<h3 class="anchored" data-anchor-id="continuous-deployment-cd">Continuous Deployment (CD)</h3>
+<ul>
+<li>A. Deployment strategies</li>
+<li>B. Infrastructure as Code (IaC)</li>
+<li>C. Containerization and orchestration</li>
+<li>D. Deployment automation</li>
+</ul>
+</section>
+<section id="monitoring-and-observability-in-cicd" class="level3">
+<h3 class="anchored" data-anchor-id="monitoring-and-observability-in-cicd">Monitoring and observability in CI/CD</h3>
+<ul>
+<li>A. Monitoring tools integration</li>
+<li>B. Log management and analysis</li>
+<li>C. Performance monitoring</li>
+</ul>
+</section>
+<section id="cicd-best-practices-for-data-engineering" class="level3">
+<h3 class="anchored" data-anchor-id="cicd-best-practices-for-data-engineering">CI/CD best practices for data engineering</h3>
+<ul>
+<li>A. Incremental and iterative development</li>
+<li>B. Configuration management</li>
+<li>C. Secure and reliable deployments</li>
+</ul>
+</section>
+<section id="case-studies-and-success-stories" class="level3">
+<h3 class="anchored" data-anchor-id="case-studies-and-success-stories">Case studies and success stories</h3>
+<ul>
+<li>A. Real-world CI/CD implementations</li>
+<li>B. Lessons learned and challenges faced</li>
+</ul>
+</section>
+</section>
+<section id="testing-and-validation" class="level2">
+<h2 class="anchored" data-anchor-id="testing-and-validation">Testing and validation</h2>
+<section id="unit-testing-for-data-pipelines" class="level3">
+<h3 class="anchored" data-anchor-id="unit-testing-for-data-pipelines">Unit testing for data pipelines</h3>
+<ul>
+<li>A. Test individual components</li>
+<li>B. Mocking external dependencies</li>
+<li>C. Isolation of test environments</li>
+</ul>
+</section>
+<section id="integration-testing-for-data-pipelines" class="level3">
+<h3 class="anchored" data-anchor-id="integration-testing-for-data-pipelines">Integration testing for data pipelines</h3>
+<ul>
+<li>A. Test end-to-end data flow</li>
+<li>B. Validate data transformations and integrations</li>
+<li>C. Testing with realistic data sets</li>
+</ul>
+</section>
+<section id="data-validation" class="level3">
+<h3 class="anchored" data-anchor-id="data-validation">Data validation</h3>
+<ul>
+<li>A. Schema validation</li>
+<li>B. Data type validation</li>
+<li>C. Range and constraint validation</li>
+<li>D. Uniqueness and referential integrity validation</li>
+</ul>
+</section>
+<section id="performance-testing" class="level3">
+<h3 class="anchored" data-anchor-id="performance-testing">Performance testing</h3>
+<ul>
+<li>A. Load testing</li>
+<li>B. Stress testing</li>
+<li>C. Benchmarking</li>
+</ul>
+</section>
+<section id="data-quality-testing" class="level3">
+<h3 class="anchored" data-anchor-id="data-quality-testing">Data quality testing</h3>
+<ul>
+<li>A. Data accuracy and consistency</li>
+<li>B. Data completeness</li>
+<li>C. Data timeliness</li>
+<li>D. Data lineage verification</li>
+</ul>
+</section>
+<section id="regression-testing" class="level3">
+<h3 class="anchored" data-anchor-id="regression-testing">Regression testing</h3>
+<ul>
+<li>A. Test existing data pipelines for backward compatibility</li>
+<li>B. Validate new changes against old functionality</li>
+</ul>
+</section>
+<section id="test-automation" class="level3">
+<h3 class="anchored" data-anchor-id="test-automation">Test automation</h3>
+<ul>
+<li>A. Continuous testing in CI/CD pipelines</li>
+<li>B. Automated test generation</li>
+<li>C. Test execution and reporting</li>
+</ul>
+</section>
+<section id="monitoring-and-alerting-for-test-failures" class="level3">
+<h3 class="anchored" data-anchor-id="monitoring-and-alerting-for-test-failures">Monitoring and alerting for test failures</h3>
+<ul>
+<li>A. Integration with monitoring tools</li>
+<li>B. Anomaly detection</li>
+<li>C. Notification and escalation strategies</li>
+</ul>
+</section>
+<section id="test-data-management" class="level3">
+<h3 class="anchored" data-anchor-id="test-data-management">Test data management</h3>
+<ul>
+<li>A. Synthetic test data generation</li>
+<li>B. Test data masking and anonymisation</li>
+<li>C. Test data storage and versioning</li>
+</ul>
+</section>
+<section id="best-practices-for-testing-and-validation" class="level3">
+<h3 class="anchored" data-anchor-id="best-practices-for-testing-and-validation">Best practices for testing and validation</h3>
+<ul>
+<li>A. Test-driven development (TDD) in data engineering</li>
+<li>B. Code and test coverage metrics</li>
+<li>C. Testing strategies and test pyramid</li>
+</ul>
+
+
+</section>
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><div>MIT</div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shenton2023,
+  author = {Craig Shenton},
+  title = {Data {Engineering} {Research}},
+  date = {2023-04-09},
+  url = {https://craig-shenton.github.io/craigrshenton/posts/data-engineering-list},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shenton2023" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
+Craig Shenton. 2023. <span>“Data Engineering Research.”</span> April 9,
+2023. <a href="https://craig-shenton.github.io/craigrshenton/posts/data-engineering-list">https://craig-shenton.github.io/craigrshenton/posts/data-engineering-list</a>.
+</div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

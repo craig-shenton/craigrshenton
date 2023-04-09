@@ -56,6 +56,160 @@
     "text": "References\n[1] NHSX (2021). Data Engineering Documentation Site: ADF Utilities - latestFolder [Online] https://nhsx.github.io/au-data-engineering/adfutilities.html#latest-folder-lookup\n[2] Perforce (2020). Configuration as Code: How to Streamline Your Pipeline. [Online] https://www.perforce.com/blog/vcs/configuration-as-code\n[3] Cloud Bees (2018). Configuration as Code: Everything You Need to Know. [Online] https://www.cloudbees.com/blog/configuration-as-code-everything-need-know\n[4] Microsoft (2021). Azure Data Factory documentation site [Online] https://docs.microsoft.com/en-us/azure/data-factory/solution-templates-introduction\n[5] MSSQL Tips (2019). Azure Data Factory Pipeline Email Notification. [Online] https://www.mssqltips.com/sqlservertip/5718/azure-data-factory-pipeline-email-notification-part-1/\n[6] NHSX (2021). Data Engineering Documentation Site: SQL Database Ingestion Pipeline [Online] https://nhsx.github.io/au-data-engineering/adfpipelines.html#sql-database-ingestion-pipeline\n[7] NHSX (2021). Data Engineering Documentation Site: Databricks Processing Pipeline [Online] https://nhsx.github.io/au-data-engineering/adfpipelines.html#databricks-processing-pipeline\n[8] Paul Andrews (2019). The icons used for the hierarchical pipeline orchestration section of this post were designed by Paul Andrews. [Online] https://github.com/mrpaulandrew/ContentCollateral\n[9] Paul Andrews (2019). Azure Data Factory Pipeline Hierarchies (Generation Control) [Online] https://mrpaulandrew.com/2019/09/25/azure-data-factory-pipeline-hierarchies-generation-control/]\n[10] GOV.UK Technology in Government (2017). Why we use a ‘docs as code’ approach for technical documentation. [Online] https://technology.blog.gov.uk/2017/08/25/why-we-use-a-docs-as-code-approach-for-technical-documentation/\nChris Ried 2018. Cover photo from Unsplash. [Online] https://unsplash.com/s/photos/python?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
   },
   {
+    "objectID": "posts/data-engineering-list/index.html",
+    "href": "posts/data-engineering-list/index.html",
+    "title": "Data Engineering Research",
+    "section": "",
+    "text": "A. Relational databases (SQL)\nB. NoSQL databases\nC. Time-series databases\nD. Graph databases ## Database normalization and denormalization ## Data warehousing\nA. Star schema\nB. Snowflake schema ## Data lake ## Cloud storage"
+  },
+  {
+    "objectID": "posts/data-engineering-list/index.html#etl-extract-transform-load-process",
+    "href": "posts/data-engineering-list/index.html#etl-extract-transform-load-process",
+    "title": "Data Engineering Research",
+    "section": "ETL (Extract, Transform, Load) process",
+    "text": "ETL (Extract, Transform, Load) process"
+  },
+  {
+    "objectID": "posts/data-engineering-list/index.html#elt-extract-load-transform-process",
+    "href": "posts/data-engineering-list/index.html#elt-extract-load-transform-process",
+    "title": "Data Engineering Research",
+    "section": "ELT (Extract, Load, Transform) process",
+    "text": "ELT (Extract, Load, Transform) process"
+  },
+  {
+    "objectID": "posts/data-engineering-list/index.html#data-pipelines",
+    "href": "posts/data-engineering-list/index.html#data-pipelines",
+    "title": "Data Engineering Research",
+    "section": "Data pipelines",
+    "text": "Data pipelines"
+  },
+  {
+    "objectID": "posts/data-engineering-list/index.html#data-ingestion-methods",
+    "href": "posts/data-engineering-list/index.html#data-ingestion-methods",
+    "title": "Data Engineering Research",
+    "section": "Data ingestion methods",
+    "text": "Data ingestion methods\n\nA. Batch processing\nB. Stream processing ## Data transformation\nA. Data cleaning\nB. Data enrichment\nC. Data validation ## Data orchestration tools\nA. Apache Airflow\nB. Prefect"
+  },
+  {
+    "objectID": "posts/data-engineering-list/index.html#apache-spark",
+    "href": "posts/data-engineering-list/index.html#apache-spark",
+    "title": "Data Engineering Research",
+    "section": "Apache Spark",
+    "text": "Apache Spark"
+  },
+  {
+    "objectID": "posts/data-engineering-list/index.html#data-partitioning-and-sharding",
+    "href": "posts/data-engineering-list/index.html#data-partitioning-and-sharding",
+    "title": "Data Engineering Research",
+    "section": "Data partitioning and sharding",
+    "text": "Data partitioning and sharding"
+  },
+  {
+    "objectID": "posts/data-engineering-list/index.html#streaming-data-processing",
+    "href": "posts/data-engineering-list/index.html#streaming-data-processing",
+    "title": "Data Engineering Research",
+    "section": "Streaming data processing",
+    "text": "Streaming data processing\n\nA. Apache Kafka"
+  },
+  {
+    "objectID": "posts/data-engineering-list/index.html#data-encryption",
+    "href": "posts/data-engineering-list/index.html#data-encryption",
+    "title": "Data Engineering Research",
+    "section": "Data encryption",
+    "text": "Data encryption"
+  },
+  {
+    "objectID": "posts/data-engineering-list/index.html#data-anonymization-and-masking",
+    "href": "posts/data-engineering-list/index.html#data-anonymization-and-masking",
+    "title": "Data Engineering Research",
+    "section": "Data anonymization and masking",
+    "text": "Data anonymization and masking"
+  },
+  {
+    "objectID": "posts/data-engineering-list/index.html#data-lineage",
+    "href": "posts/data-engineering-list/index.html#data-lineage",
+    "title": "Data Engineering Research",
+    "section": "Data lineage",
+    "text": "Data lineage"
+  },
+  {
+    "objectID": "posts/data-engineering-list/index.html#data-cataloging",
+    "href": "posts/data-engineering-list/index.html#data-cataloging",
+    "title": "Data Engineering Research",
+    "section": "Data cataloging",
+    "text": "Data cataloging"
+  },
+  {
+    "objectID": "posts/data-engineering-list/index.html#compliance-and-regulations",
+    "href": "posts/data-engineering-list/index.html#compliance-and-regulations",
+    "title": "Data Engineering Research",
+    "section": "Compliance and regulations",
+    "text": "Compliance and regulations\n\nA. GDPR (General Data Protection Regulation)"
+  },
+  {
+    "objectID": "posts/data-engineering-list/index.html#data-quality-dimensions",
+    "href": "posts/data-engineering-list/index.html#data-quality-dimensions",
+    "title": "Data Engineering Research",
+    "section": "Data quality dimensions",
+    "text": "Data quality dimensions"
+  },
+  {
+    "objectID": "posts/data-engineering-list/index.html#data-profiling",
+    "href": "posts/data-engineering-list/index.html#data-profiling",
+    "title": "Data Engineering Research",
+    "section": "Data profiling",
+    "text": "Data profiling"
+  },
+  {
+    "objectID": "posts/data-engineering-list/index.html#data-quality-tools",
+    "href": "posts/data-engineering-list/index.html#data-quality-tools",
+    "title": "Data Engineering Research",
+    "section": "Data quality tools",
+    "text": "Data quality tools"
+  },
+  {
+    "objectID": "posts/data-engineering-list/index.html#data-monitoring-and-alerting",
+    "href": "posts/data-engineering-list/index.html#data-monitoring-and-alerting",
+    "title": "Data Engineering Research",
+    "section": "Data monitoring and alerting",
+    "text": "Data monitoring and alerting"
+  },
+  {
+    "objectID": "posts/data-engineering-list/index.html#scalability-and-performance-optimization",
+    "href": "posts/data-engineering-list/index.html#scalability-and-performance-optimization",
+    "title": "Data Engineering Research",
+    "section": "Scalability and performance optimization",
+    "text": "Scalability and performance optimization"
+  },
+  {
+    "objectID": "posts/data-engineering-list/index.html#fault-tolerance-and-reliability",
+    "href": "posts/data-engineering-list/index.html#fault-tolerance-and-reliability",
+    "title": "Data Engineering Research",
+    "section": "Fault tolerance and reliability",
+    "text": "Fault tolerance and reliability"
+  },
+  {
+    "objectID": "posts/data-engineering-list/index.html#data-modeling",
+    "href": "posts/data-engineering-list/index.html#data-modeling",
+    "title": "Data Engineering Research",
+    "section": "Data modeling",
+    "text": "Data modeling"
+  },
+  {
+    "objectID": "posts/data-engineering-list/index.html#continuous-integration-and-continuous-deployment-cicd",
+    "href": "posts/data-engineering-list/index.html#continuous-integration-and-continuous-deployment-cicd",
+    "title": "Data Engineering Research",
+    "section": "Continuous integration and continuous deployment (CI/CD)",
+    "text": "Continuous integration and continuous deployment (CI/CD)\n\nIntroduction to CI/CD\n\nA. Definition and benefits\nB. CI/CD in data engineering projects\nC. CI/CD tools and platforms\n\n\n\nContinuous Integration (CI)\n\nA. Version control systems\nB. Automated build systems\nC. Automated testing in CI\nD. Code review and quality checks\n\n\n\nContinuous Deployment (CD)\n\nA. Deployment strategies\nB. Infrastructure as Code (IaC)\nC. Containerization and orchestration\nD. Deployment automation\n\n\n\nMonitoring and observability in CI/CD\n\nA. Monitoring tools integration\nB. Log management and analysis\nC. Performance monitoring\n\n\n\nCI/CD best practices for data engineering\n\nA. Incremental and iterative development\nB. Configuration management\nC. Secure and reliable deployments\n\n\n\nCase studies and success stories\n\nA. Real-world CI/CD implementations\nB. Lessons learned and challenges faced"
+  },
+  {
+    "objectID": "posts/data-engineering-list/index.html#testing-and-validation",
+    "href": "posts/data-engineering-list/index.html#testing-and-validation",
+    "title": "Data Engineering Research",
+    "section": "Testing and validation",
+    "text": "Testing and validation\n\nUnit testing for data pipelines\n\nA. Test individual components\nB. Mocking external dependencies\nC. Isolation of test environments\n\n\n\nIntegration testing for data pipelines\n\nA. Test end-to-end data flow\nB. Validate data transformations and integrations\nC. Testing with realistic data sets\n\n\n\nData validation\n\nA. Schema validation\nB. Data type validation\nC. Range and constraint validation\nD. Uniqueness and referential integrity validation\n\n\n\nPerformance testing\n\nA. Load testing\nB. Stress testing\nC. Benchmarking\n\n\n\nData quality testing\n\nA. Data accuracy and consistency\nB. Data completeness\nC. Data timeliness\nD. Data lineage verification\n\n\n\nRegression testing\n\nA. Test existing data pipelines for backward compatibility\nB. Validate new changes against old functionality\n\n\n\nTest automation\n\nA. Continuous testing in CI/CD pipelines\nB. Automated test generation\nC. Test execution and reporting\n\n\n\nMonitoring and alerting for test failures\n\nA. Integration with monitoring tools\nB. Anomaly detection\nC. Notification and escalation strategies\n\n\n\nTest data management\n\nA. Synthetic test data generation\nB. Test data masking and anonymisation\nC. Test data storage and versioning\n\n\n\nBest practices for testing and validation\n\nA. Test-driven development (TDD) in data engineering\nB. Code and test coverage metrics\nC. Testing strategies and test pyramid"
+  },
+  {
     "objectID": "posts/azure-data-factory-templates/azure-data-factory-templates.html",
     "href": "posts/azure-data-factory-templates/azure-data-factory-templates.html",
     "title": "Azure Data Factory Templates",
@@ -158,7 +312,7 @@
     "href": "index.html",
     "title": "Craig Robert Shenton",
     "section": "",
-    "text": "Azure Data Factory Templates\n\n\n\n\nOpen access and reusable design documentation of pipelines used in the NHSX Analytics Azure Data Factory (ADF) environment.\n\n\n\n\n\n\n9/9/21\n\n\n\n\n\n\n\n\nAzure Data Engineering Principles\n\n\n\n\nIn this post, we aim to set out the data engineering principles NHSX has developed in designing and building our Azure cloud-analytics infrastructure.\n\n\n\n\n\n\n9/1/21\n\n\n\n\n\n\nNo matching items"
+    "text": "Data Engineering Research\n\n\n\n\nA comprehensive guide to Data Engineering, exploring key concepts, tools, and best practices\n\n\n\n\n\n\n4/9/23\n\n\n\n\n\n\n\n\nAzure Data Factory Templates\n\n\n\n\nOpen access and reusable design documentation of pipelines used in the NHSX Analytics Azure Data Factory (ADF) environment.\n\n\n\n\n\n\n9/9/21\n\n\n\n\n\n\n\n\nAzure Data Engineering Principles\n\n\n\n\nIn this post, we aim to set out the data engineering principles NHSX has developed in designing and building our Azure cloud-analytics infrastructure.\n\n\n\n\n\n\n9/1/21\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "drafts/azure-data-factory-resources.html",
