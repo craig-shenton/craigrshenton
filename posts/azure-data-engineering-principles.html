@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.280">
+<meta name="generator" content="quarto-1.2.475">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -26,23 +26,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../assets/favicons/Rubics_Cube.svg" rel="icon" type="image/svg+xml">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/favicons/Rubics_Cube.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -85,15 +85,15 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"><i class="bi bi-bookmark-check" role="img" aria-label="home">
+    <a class="nav-link" href="../index.html"><i class="bi bi-rss" role="img" aria-label="home">
 </i> 
- <span class="menu-text">craig-r-shenton</span></a>
+ <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html">
- <span class="menu-text">Craig Robert Shenton</span></a>
+    <a class="nav-link" href="../About.qmd">
+ <span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/craig-shenton"><i class="bi bi-github" role="img" aria-label="github">
@@ -119,8 +119,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#authors" id="toc-authors" class="nav-link active" data-scroll-target="#authors">Authors</a></li>
-  <li><a href="#content" id="toc-content" class="nav-link" data-scroll-target="#content">Content</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#parameterisation" id="toc-parameterisation" class="nav-link" data-scroll-target="#parameterisation">Parameterisation</a>
   <ul class="collapse">
   <li><a href="#example-latestfolder" id="toc-example-latestfolder" class="nav-link" data-scroll-target="#example-latestfolder">Example: latestFolder</a></li>
@@ -180,35 +179,40 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="authors" class="level3">
-<h3 class="anchored" data-anchor-id="authors">Authors</h3>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Our principles are broken down into the following sections:</p>
 <ul>
-<li>Craig Robert Shenton, PhD - Senior Data Engineer, NHS England</li>
-<li>Mattia Ficarelli, PhD - Data Engineer, NHSX</li>
+<li>Azure Data Engineering Principles
+<ul>
+<li><a href="#parameterisation">Parameterisation</a>
+<ul>
+<li><a href="#example-latestfolder">Example: latestFolder</a></li>
+</ul></li>
+<li><a href="#configuration-as-code">Configuration-as-code</a></li>
+<li><a href="#standardised-etl-design-patterns">Standardised ETL Design Patterns</a>
+<ul>
+<li><a href="#example-1-sql-database-ingestion-pipeline">Example 1: SQL Database Ingestion Pipeline</a></li>
+<li><a href="#example-2-databricks-processing-pipeline">Example 2: Databricks Processing Pipeline</a></li>
+</ul></li>
+<li><a href="#hierarchical-pipeline-orchestration">Hierarchical Pipeline Orchestration</a></li>
+<li><a href="#documentation-as-code">Documentation-as-code</a></li>
+<li><a href="#references">References</a></li>
+</ul></li>
 </ul>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Originally posted on the <a href="https://nhsx.github.io/AnalyticsUnit/azure-de-principles.html">NHSX technical gateway</a> website.</p>
-</section>
-<section id="content" class="level2">
-<h2 class="anchored" data-anchor-id="content">Content</h2>
-<p>In this post, we aim to set out the data engineering principles we have developed over the last year, in designing and building our Azure cloud-analytics infrastructure. These principles are broken down into the following sections:</p>
-<ul>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#azure-data-engineering-principles">Azure Data Engineering Principles</a>
-<ul>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#parameterisation">Parameterisation</a>
-<ul>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#example-latestfolder">Example: latestFolder</a></li>
-</ul></li>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#configuration-as-code">Configuration-as-code</a></li>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#standardised-etl-design-patterns">Standardised ETL Design Patterns</a>
-<ul>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#example-1-sql-database-ingestion-pipeline">Example 1: SQL Database Ingestion Pipeline</a></li>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#example-2-databricks-processing-pipeline">Example 2: Databricks Processing Pipeline</a></li>
-</ul></li>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#hierarchical-pipeline-orchestration">Hierarchical Pipeline Orchestration</a></li>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#documentation-as-code">Documentation-as-code</a></li>
-<li><a href="https://craig-shenton.github.io/nhs-data-engineer/azure-data-engineering-principles/#references">References</a></li>
-</ul></li>
-</ul>
+</div>
+</div>
 </section>
 <section id="parameterisation" class="level2">
 <h2 class="anchored" data-anchor-id="parameterisation">Parameterisation</h2>
@@ -217,22 +221,20 @@ ul.task-list li input[type="checkbox"] {
 <p>For example, we created a generic dataset for handling <code>.csv</code> files on our Azure Datalake that passes the following parameters at runtime:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../../assets/images/posts/azure-data-engineering-principles/fig1.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">An Azure Data Factory dataset file path configuration.</figcaption><p></p>
+<p><img src="../assets/images/posts/azure-data-engineering-principles/fig1.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure 1. An Azure Data Factory dataset file path configuration using the parameters; <code>@dataset().fileSystem</code>, <code>@dataset().filePath</code>, <code>@dataset().fileName</code> to denote the datalake file system name, the file path and and the file name.</figcaption><p></p>
 </figure>
 </div>
-<p><b>Figure 1.</b> An Azure Data Factory dataset file path configuration using the parameters; <code>@dataset().fileSystem</code>, <code>@dataset().filePath</code>, <code>@dataset().fileName</code> to denote the datalake file system name, the file path and and the file name.</p>
 <p>From these parameters, that specify the file path and name and the file system of the Azure Datalake linked service, we can use any <code>.csv</code> file available as the source for any pipeline activity. This has reduced the number of datasets listed in our ADF environment dramatically, reducing the overhead required to organise, search, and maintain our pipelines.</p>
 <p>A downside of highly parameterised pipelines is that they can become harder to debug due to the new level of abstraction. Now, in addition to the file paths the parameters may also be incorrectly configured. However, we find that the reduction in complexity and centralisation of pipeline configuration outweighs the initial growing pains of parameterisation.</p>
 <section id="example-latestfolder" class="level3">
 <h3 class="anchored" data-anchor-id="example-latestfolder">Example: latestFolder</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../../assets/images/posts/azure-data-engineering-principles/fig2.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">An example Azure Data Factory pipeline utility that can append the source path of any file with the latest time-stamped folder path.</figcaption><p></p>
+<p><img src="../assets/images/posts/azure-data-engineering-principles/fig2.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure 2. An example Azure Data Factory pipeline utility that can append the source path of any file with the latest time-stamped folder path.</figcaption><p></p>
 </figure>
 </div>
-<p><b>Figure 2.</b> An example Azure Data Factory pipeline utility that can append the source path of any file with the latest time-stamped folder path.</p>
 <p>A practical example of the utility of parameterisation is the ability to append the source path of any file with a time-stamped folder, for example <code>@concat(variables('sourcePath'),variables('latestFolder'))</code>. This allows for a well organised record of data sampled at different time points to be stored within the Datalake.</p>
 </section>
 </section>
@@ -261,11 +263,10 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="example-1-sql-database-ingestion-pipeline"><strong>Example 1</strong>: SQL Database Ingestion Pipeline</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../../assets/images/posts/azure-data-engineering-principles/fig3.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">An example Azure Data Factory ingestion pipeline template that can be configured to extract data from an Azure SQL database to Azure Datalake blob storage.</figcaption><p></p>
+<p><img src="../assets/images/posts/azure-data-engineering-principles/fig3.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure 3. An example Azure Data Factory ingestion pipeline template that can be configured to extract data from an Azure SQL database to Azure Datalake blob storage.</figcaption><p></p>
 </figure>
 </div>
-<p><b>Figure 3.</b> An example Azure Data Factory ingestion pipeline template that can be configured to extract data from an Azure SQL database to Azure Datalake blob storage.</p>
 <p>The pipeline shown above is a fully parameterised template developed to ingest raw data from an Azure SQL database to Azure Datalake blob storage. This is an example of a ‘Source-Sink’ pattern–used for parameterising and configuring data copy activities that move data from one location to another. As mentioned in the parameterisation section, each Azure Data Factory copy activity requires at least two datasets to configure both source and sink locations. However, here we have created a generic SQL dataset and a generic Azure Datalake dataset that can be dynamically configured across all pipelines. As such, this template can be used and re-used to move data from any Azure SQL server to any Azure blob storage container.</p>
 <p>The SQL ingestion template works as follows:</p>
 <ul>
@@ -281,11 +282,10 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="example-2-databricks-processing-pipeline"><strong>Example 2</strong>: Databricks Processing Pipeline</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../../assets/images/posts/azure-data-engineering-principles/fig4.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">An example Azure Data Factory pipeline processing pipeline template that can be configured to run a Databricks notebook.</figcaption><p></p>
+<p><img src="../assets/images/posts/azure-data-engineering-principles/fig4.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure 4. An example Azure Data Factory pipeline processing pipeline template that can be configured to run a Databricks notebook.</figcaption><p></p>
 </figure>
 </div>
-<p><b>Figure 4.</b> An example Azure Data Factory pipeline processing pipeline template that can be configured to run a Databricks notebook.</p>
 <p>The parameterised pipeline template above has been developed to run a Databricks notebook from Azure Data Factory. This is an example of a ‘Key-Value’ pattern–useful for configuring the settings of activities outside of Azure Data Factory itself. Here the json configuration file is providing the key-value of a Databricks notebook file path. This could also be used to give the URL of an Azure logic app or pass multiple variables to an Azure function app for example.</p>
 <p>The Databricks processing template works as follows:</p>
 <ul>
@@ -301,11 +301,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="hierarchical-pipeline-orchestration">Hierarchical Pipeline Orchestration</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../../assets/images/posts/azure-data-engineering-principles/fig5.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">A hierarchicy of pipelines. At the top, a orchestration pipeline that triggers the sub-pipelines below.</figcaption><p></p>
+<p><img src="../assets/images/posts/azure-data-engineering-principles/fig5.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure 5.A hierarchicy of pipelines. At the top, a orchestration pipeline that triggers the sub-pipelines below. Each phase of the data processing (extract, transform, and load, or ETL) is a fully parameterised template that requires no setup of its own.</figcaption><p></p>
 </figure>
 </div>
-<p><b>Figure 5.</b> A hierarchicy of pipelines. At the top, a orchestration pipeline that triggers the sub-pipelines below. Each phase of the data processing (extract, transform, and load, or ETL) is a fully parameterised template that requires no setup of its own [<a href="https://github.com/mrpaulandrew/ContentCollateral">8</a>].</p>
 <p>One of the most significant changes made to our data engineering setup is the use of hierarchical pipelines; that is the use of a single orchestration pipeline to trigger multiple ETL pipelines and utility sub-pipelines. This is based on Paul Andrews’ grandparent, parent, child design pattern that may be familiar to SSIS users [<a href="https://mrpaulandrew.com/2019/09/25/azure-data-factory-pipeline-hierarchies-generation-control/">9</a>]. With this design, and the generic ETL templates outlined above, we can create a ‘plug-and-play’ data engineering system. We simply select the ingestion, transformation, and staging patterns required from the templates and link them together under the orchestration pipeline. A single json config file is then created with all the ‘Sink-Source’ and ‘Key-Value’ pairs needed to move the data through the ETL process, so no configuration is required in Azure Data Factory itself. This has significantly reduced the amount of time needed to set up new pipelines, and ensures best practices are maintained across all our products.</p>
 <p>If we use the SQL ingestion and Databricks processing examples outlined above, we could very rapidly make a new ETL pipeline using the hierarchical system of pipeline development:</p>
 <ul>
@@ -484,5 +483,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
