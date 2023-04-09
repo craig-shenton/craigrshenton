@@ -13,13 +13,13 @@ website:
     title: false
     collapse-below: lg
     left:
-      - text: "blog"
+      - text: "Blog"
         aria-label: home
         icon: "rss"
         href: index.qmd
     right:
       - text: "about"
-        href: about.qmd
+        href: About.qmd
       - icon: github
         aria-label: github
         href: https://github.com/craig-shenton
