@@ -16,8 +16,8 @@
 <height>140</height>
 <width>144</width>
 </image>
-<generator>quarto-1.2.280</generator>
-<lastBuildDate>Wed, 08 Sep 2021 23:00:00 GMT</lastBuildDate>
+<generator>quarto-1.2.475</generator>
+<lastBuildDate>Thu, 09 Sep 2021 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Azure Data Factory Templates</title>
   <dc:creator>Craig Shenton</dc:creator>
@@ -1045,7 +1045,7 @@ September 9, 2021. <a href="https://craig-shenton.github.io/craigrshenton/azure-
   <category>Azure</category>
   <category>Data Factory</category>
   <guid>https://craig-shenton.github.io/craigrshenton/posts/azure-data-factory-templates/azure-data-factory-templates.html</guid>
-  <pubDate>Wed, 08 Sep 2021 23:00:00 GMT</pubDate>
+  <pubDate>Thu, 09 Sep 2021 00:00:00 GMT</pubDate>
   <media:content url="https://craig-shenton.github.io/craigrshenton/assets/images/pipeline_temps/sql-ingest.png" medium="image" type="image/png" height="57" width="144"/>
 </item>
 <item>
@@ -1225,7 +1225,7 @@ September 1, 2021. <a href="https://craig-shenton.github.io/craigrshenton/azure-
 </div></div></section></div> ]]></description>
   <category>Azure</category>
   <guid>https://craig-shenton.github.io/craigrshenton/posts/azure-data-engineering-principles/azure-data-engineering-principles.html</guid>
-  <pubDate>Tue, 31 Aug 2021 23:00:00 GMT</pubDate>
+  <pubDate>Wed, 01 Sep 2021 00:00:00 GMT</pubDate>
   <media:content url="https://craig-shenton.github.io/craigrshenton/assets/images/posts/azure-data-engineering-principles/fig1.png" medium="image" type="image/png" height="17" width="144"/>
 </item>
 </channel>
