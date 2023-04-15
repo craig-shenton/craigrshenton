@@ -2,10 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.280">
+<meta name="generator" content="quarto-1.2.475">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Craig Shenton">
 <meta name="dcterms.date" content="2023-04-08">
 <meta name="description" content="Data Engineering key concepts, tools, and best practices.">
 
@@ -72,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="twitter:card" content="summary">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -88,12 +89,13 @@ ul.task-list li input[type="checkbox"] {
 </i> 
  <span class="menu-text">Blog</span></a>
   </li>  
-</ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../about.html">
+    <a class="nav-link" href="../about.html"><i class="bi bi-address-card" role="img">
+</i> 
  <span class="menu-text">About</span></a>
   </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/craig-shenton"><i class="bi bi-github" role="img" aria-label="github">
 </i> 
@@ -113,8 +115,43 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#databases" id="toc-databases" class="nav-link active" data-scroll-target="#databases">Databases</a></li>
+  <li><a href="#projects" id="toc-projects" class="nav-link" data-scroll-target="#projects">Projects</a></li>
+  <li><a href="#pipelines" id="toc-pipelines" class="nav-link" data-scroll-target="#pipelines">Pipelines</a>
+  <ul class="collapse">
+  <li><a href="#orchestration" id="toc-orchestration" class="nav-link" data-scroll-target="#orchestration">Orchestration</a></li>
+  <li><a href="#spark" id="toc-spark" class="nav-link" data-scroll-target="#spark">Spark</a></li>
+  <li><a href="#dbt" id="toc-dbt" class="nav-link" data-scroll-target="#dbt">dbt</a></li>
+  <li><a href="#kubernetes" id="toc-kubernetes" class="nav-link" data-scroll-target="#kubernetes">Kubernetes</a></li>
+  <li><a href="#data-lake" id="toc-data-lake" class="nav-link" data-scroll-target="#data-lake">Data Lake</a></li>
+  </ul></li>
+  <li><a href="#testing" id="toc-testing" class="nav-link" data-scroll-target="#testing">Testing</a></li>
+  <li><a href="#data-quality" id="toc-data-quality" class="nav-link" data-scroll-target="#data-quality">Data Quality</a></li>
+  <li><a href="#cicd" id="toc-cicd" class="nav-link" data-scroll-target="#cicd">CI/CD</a></li>
+  <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation">Documentation</a></li>
+  <li><a href="#managment" id="toc-managment" class="nav-link" data-scroll-target="#managment">Managment</a></li>
+  <li><a href="#observability" id="toc-observability" class="nav-link" data-scroll-target="#observability">Observability</a></li>
+  <li><a href="#analytics" id="toc-analytics" class="nav-link" data-scroll-target="#analytics">Analytics</a></li>
+  <li><a href="#follow" id="toc-follow" class="nav-link" data-scroll-target="#follow">Follow</a></li>
+  <li><a href="#career" id="toc-career" class="nav-link" data-scroll-target="#career">Career</a></li>
+  <li><a href="#data-science" id="toc-data-science" class="nav-link" data-scroll-target="#data-science">Data Science</a></li>
+  <li><a href="#security" id="toc-security" class="nav-link" data-scroll-target="#security">Security</a></li>
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a></li>
+  <li><a href="#sql" id="toc-sql" class="nav-link" data-scroll-target="#sql">SQL</a></li>
+  <li><a href="#learn" id="toc-learn" class="nav-link" data-scroll-target="#learn">Learn</a></li>
+  <li><a href="#misc" id="toc-misc" class="nav-link" data-scroll-target="#misc">Misc</a></li>
+  <li><a href="#uncategorised-todo" id="toc-uncategorised-todo" class="nav-link" data-scroll-target="#uncategorised-todo">Uncategorised (todo)</a></li>
+  </ul>
+</nav>
+</nav>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -132,6 +169,12 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Craig Shenton </p>
+          </div>
+  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
@@ -153,14 +196,27 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://www.databricks.com/blog/2023/02/24/data-vault-best-practice-implementation-lakehouse.html">What’s a Data Vault Model and How to Implement It on the Databricks Lakehouse Platform - The Databricks Blog</a></li>
 <li><a href="https://blog.fal.ai/composable-olap/">Composable OLAP</a></li>
 <li><a href="https://questdb.io/">QuestDB Fast SQL for time-series</a></li>
+<li><a href="https://www.prequel.co/">Prequel - Data syncs &amp; data warehouse integration</a></li>
 </ul>
-<section id="projects" class="level3">
-<h3 class="anchored" data-anchor-id="projects">Projects</h3>
+</section>
+<section id="projects" class="level2">
+<h2 class="anchored" data-anchor-id="projects">Projects</h2>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=8HlNG8bdlM0">Project A Data Modelling Best Practices Part I: How to Model Data in a Data Warehouse? - YouTube</a></li>
 <li><a href="https://www.youtube.com/watch?v=24Uvo5vZJWA">(500) Project A Data Modelling Best Practices Part II: How to Build a Data Warehouse? - YouTube</a></li>
+<li><a href="https://www.startdataengineering.com/post/data-engineering-project-to-impress-hiring-managers/">Designing a Data Project to Impress Hiring Managers - Start Data Engineering</a></li>
+<li><a href="https://www.startdataengineering.com/post/data-engineering-projects-with-free-template/">Build Data Engineering Projects, with Free Template - Start Data Engineering</a></li>
+<li><a href="https://www.startdataengineering.com/post/data-engineering-project-for-beginners-batch-edition/">Data Engineering Project for Beginners - Batch edition - Start Data Engineering</a></li>
+<li><a href="https://www.reddit.com/r/dataengineering/comments/ygieh8/data_engineering_projects_with_template_airflow/">Data engineering projects with template: Airflow, dbt, Docker, Terraform (IAC), Github actions (CI/CD) &amp; more : dataengineering</a></li>
+<li><a href="https://github.com/DataTalksClub/data-engineering-zoomcamp">GitHub - DataTalksClub/data-engineering-zoomcamp: Free Data Engineering course!</a></li>
+<li><a href="https://medium.com/@ryanelamb/a-data-engineering-project-with-prefect-docker-terraform-google-cloudrun-bigquery-and-streamlit-3fc6e08b9398">A data engineering project with Prefect, Docker, Terraform, Google CloudRun, BigQuery and Streamlit by Ryan Lamb Mar, 2023 Medium</a></li>
+<li><a href="https://eliasbenaddouidrissi.dev/posts/data_engineering_project_monzo/">eliasbenaddouidrissi</a></li>
+<li><a href="https://github.com/RSKriegs/finnhub-streaming-data-pipeline">GitHub - RSKriegs/finnhub-streaming-data-pipeline: Stream processing pipeline from Finnhub websocket using Spark, Kafka, Kubernetes and more</a></li>
+<li><a href="https://github.com/ankurchavda/streamify">GitHub - ankurchavda/streamify: A data engineering project with Kafka, Spark Streaming, dbt, Docker, Airflow, Terraform, GCP and much more!</a></li>
+<li><a href="https://github.com/ABZ-Aaron/Reddit-API-Pipeline">GitHub - ABZ-Aaron/Reddit-API-Pipeline</a></li>
+<li><a href="https://github.com/ris-tlp/audiophile-e2e-pipeline">GitHub - ris-tlp/audiophile-e2e-pipeline: Pipeline that extracts data from Crinacle’s Headphone and InEarMonitor databases and finalizes data for a Metabase Dashboard.</a></li>
+<li><a href="https://github.com/dominikhei/Local-Data-LakeHouse">GitHub - dominikhei/Local-Data-LakeHouse: Sample Data Lakehouse deployed in Docker containers using Apache Iceberg, Minio, Trino and a Hive Metastore. Can be used for local testing.</a></li>
 </ul>
-</section>
 </section>
 <section id="pipelines" class="level2">
 <h2 class="anchored" data-anchor-id="pipelines">Pipelines</h2>
@@ -177,25 +233,42 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><a href="https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/leverage-azure-databricks-jobs-orchestration-from-azure-data/ba-p/3123862">Leverage Azure Databricks jobs orchestration from Azure Data Factory - Microsoft Community Hub</a></li>
 <li><a href="https://www.databricks.com/blog/2022/05/10/introducing-databricks-workflows.html">Introducing Databricks Workflows - The Databricks Blog</a></li>
+<li><a href="https://dagster.io/blog/dagster-airflow">Dagster vs.&nbsp;Airflow Dagster Blog</a></li>
 </ul>
 </section>
 <section id="spark" class="level3">
 <h3 class="anchored" data-anchor-id="spark">Spark</h3>
+<ul>
+<li><a href="https://luminousmen.com/post/introduction-to-pyspark-join-types">Introduction to Pyspark join types - Blog luminousmen</a></li>
+<li><a href="https://luminousmen.com/post/the-5-minute-guide-to-using-bucketing-in-pyspark">The 5-minute guide to using bucketing in Pyspark - Blog luminousmen</a></li>
+<li><a href="https://luminousmen.com/post/spark-tips-dataframe-api">Spark tips. DataFrame API - Blog luminousmen</a></li>
+<li><a href="https://luminousmen.com/post/spark-core-concepts-explained">Spark core concepts explained - Blog luminousmen</a></li>
+</ul>
 </section>
 <section id="dbt" class="level3">
 <h3 class="anchored" data-anchor-id="dbt">dbt</h3>
 <ul>
 <li><a href="https://www.getdbt.com/">dbt - Transform data in your warehouse</a></li>
 <li><a href="https://www.youtube.com/watch?v=M8oi7nSaWps">(702) Introduction to dbt (data build tool) from Fishtown Analytics - YouTube</a></li>
+<li><a href="https://www.kahandatasolutions.com/the-playbook-for-dbt">Learn exactly how to use dbt™ in a modern data workflow Course</a></li>
 <li><a href="https://www.startdataengineering.com/post/dbt-data-build-tool-tutorial/">dbt(Data Build Tool) Tutorial - Start Data Engineering</a></li>
 <li><a href="https://github.com/dbt-labs/corp/blob/main/dbt_style_guide.md">corp/dbt_style_guide.md at main - dbt-labs/corp - GitHub</a></li>
 <li><a href="https://blog.fal.ai/populate-dbt-models-with-csv-data-part-2-the-power-of-dbt-fal/">Populate dbt models with CSV data. Part 2: the power of dbt-fal</a></li>
+<li><a href="https://medium.com/albert-franzi/dbt-core-airflow-7d94edac9cdf">DBT Core &amp; Airflow. Empowering our data organization with… by Albert Franzi Albert Franzi Medium</a></li>
 </ul>
 </section>
 <section id="kubernetes" class="level3">
 <h3 class="anchored" data-anchor-id="kubernetes">Kubernetes</h3>
 <ul>
 <li><a href="https://www.reddit.com/r/dataengineering/comments/rja8s6/what_is_kubernetes_used_for_in_data_engineering/">What is Kubernetes used for in data engineering? : dataengineering</a></li>
+</ul>
+</section>
+<section id="data-lake" class="level3">
+<h3 class="anchored" data-anchor-id="data-lake">Data Lake</h3>
+<ul>
+<li><a href="https://luminousmen.com/post/big-data-file-formats">Big Data file formats - Blog luminousmen</a></li>
+<li><a href="https://medium.com/claimsforce/lakehouse-a-resum%C3%A9-750368e57914">Lakehouse — A resumé by Robert Kossendey claimsforce</a></li>
+<li><a href="https://csvbase.com/blog/3">Parquet: more than just “Turbo CSV”</a></li>
 </ul>
 </section>
 </section>
@@ -207,40 +280,59 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://rich-iannone.github.io/pointblank/articles/VALID-II.html">Introduction to the Pipeline Data Validation Workflow (VALID-II) - pointblank</a></li>
 <li><a href="https://docs.greatexpectations.io/docs/deployment_patterns/how_to_use_great_expectations_in_databricks/">How to Use Great Expectations in Databricks Great Expectations</a></li>
 <li><a href="https://github.com/gladykov/chain.train/">GitHub - gladykov/chain.train: ETL &amp; database testing framework for big data, written with Python, using Pytest. With connectors for Spark, Snowflake, MySQL/MariaDB.</a></li>
+<li><a href="https://www.synthesized.io/post/test-data-generation-there-and-back">Test data generation: There and back</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-test-your-data-with-great-expectations">How To Test Your Data With Great Expectations DigitalOcean</a></li>
+<li><a href="https://pythontest.com/pytest-tips-tricks/">pytest tips and tricks pythontest</a></li>
 </ul>
 </section>
 <section id="data-quality" class="level2">
 <h2 class="anchored" data-anchor-id="data-quality">Data Quality</h2>
+<ul>
+<li><a href="https://www.datafold.com/blog/dbt-expectations">How to use dbt-expectations to detect data quality issues</a></li>
+<li><a href="https://www.kdnuggets.com/2023/03/data-quality-dimensions-assuring-data-quality-great-expectations.html">Data Quality Dimensions: Assuring Your Data Quality with Great Expectations - KDnuggets</a></li>
+<li><a href="https://aws.amazon.com/blogs/big-data/test-data-quality-at-scale-with-deequ/">Test data quality at scale with Deequ AWS Big Data Blog</a></li>
+<li><a href="https://ajithshetty28.medium.com/deequ-i-mean-data-quality-a0e6c048469d">DEEQU, I mean Data Quality. We say how we can turn the world upside… by Ajith Shetty Medium</a></li>
+<li><a href="https://www.velotio.com/engineering-blog/test-data-quality-at-scale-using-deequ-and-apache-spark">Unit Testing Data at Scale using Deequ and Apache Spark</a></li>
+<li><a href="https://www.youtube.com/watch?v=D29txlJyBvk">Guaranteeing Data Quality SLAs with Deequ &amp; Databand - YouTube</a></li>
+</ul>
 </section>
 <section id="cicd" class="level2">
 <h2 class="anchored" data-anchor-id="cicd">CI/CD</h2>
 <ul>
 <li><a href="https://www.infrastructureposts.com/p/e5-building-better-cicd-pipelines">E5: Building Better CI/CD Pipelines - by Marius Kimmina</a></li>
+<li><a href="https://www.youtube.com/@ContinuousDelivery/videos">Continuous Delivery - YouTube</a></li>
+<li><a href="https://cloud.google.com/devops/state-of-devops">2022 State of DevOps Report &nbsp;&nbsp; Google Cloud</a></li>
+<li><a href="https://www.youtube.com/watch?v=mBzDPRgue6s">Continuous Deployment or Continuous Delivery? When To Release - YouTube</a></li>
 </ul>
 </section>
 <section id="documentation" class="level2">
 <h2 class="anchored" data-anchor-id="documentation">Documentation</h2>
 <ul>
 <li><a href="https://about.gitlab.com/company/culture/all-remote/handbook-first-documentation/">The importance of a handbook-first approach to documentation GitLab</a></li>
+<li><a href="https://swimm.io/blog/what-is-continuous-documentation-manifesto-part-1/?utm_source=IPE_circuit&amp;utm_medium=paid_pub&amp;utm_campaign=IPE-march&amp;utm_content=gm-test">What is Continuous Documentation? The Manifesto Part I</a></li>
 </ul>
 </section>
 <section id="managment" class="level2">
 <h2 class="anchored" data-anchor-id="managment">Managment</h2>
 <ul>
+<li><a href="https://www.thoughtworks.com/content/dam/thoughtworks/documents/e-book/tw_ebook_modern_data_engineering_playbook.pdf">Modern data engineering playbook</a></li>
+<li><a href="https://github.com/andkret/Cookbook">GitHub - andkret/Cookbook: The Data Engineering Cookbook</a></li>
 <li><a href="https://about.gitlab.com/handbook/business-technology/data-team/">Data Team GitLab</a></li>
 <li><a href="https://mukulrathi.com/facebook-bootcamp-experience/">My Facebook Bootcamp Experience</a></li>
 <li><a href="https://lethain.com/eng-strategies/">Writing an engineering strategy. Irrational Exuberance</a></li>
 <li><a href="https://airbyte.com/blog/measuring-data-teams-value">The Art and Science of Measuring Data Teams Value Airbyte</a></li>
-</ul>
-</section>
-<section id="metadata" class="level2">
-<h2 class="anchored" data-anchor-id="metadata">Metadata</h2>
-<ul>
-<li><a href="https://www.amundsen.io/">Amundsen, the leading open source data catalog</a></li>
+<li><a href="https://www.engprod.guide/docs/dora-four-key-metrics-accelerate-book">DORA Four Key Metrics (Accelerate book) - Measuring Engineering Productivity</a></li>
+<li><a href="https://www.tomdalling.com/blog/software-processes/agile-is-a-glass-cannon/">Agile Is A Glass Cannon — Tom Dalling</a></li>
+<li><a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/architectural-decision-records/welcome.html">Using architectural decision records to streamline technical decision-making for a software development project - AWS Prescriptive Guidance</a></li>
+<li><a href="https://jsonnet.org/">Jsonnet - The Data Templating Language</a></li>
 </ul>
 </section>
 <section id="observability" class="level2">
 <h2 class="anchored" data-anchor-id="observability">Observability</h2>
+<ul>
+<li><a href="https://medium.com/alvin-ai/if-data-lineage-is-the-answer-what-is-the-question-bad7f5f44fb5">If data lineage is the answer, what is the question? by Gabs Ferreira Alvin Mar, 2023 Medium</a></li>
+<li><a href="https://medium.com/@danilo.drobac/modern-data-strategy-quality-observability-cataloging-and-lineage-45ef492771b">Modern Data Strategy: Quality, Observability, Cataloging and Lineage by Danilo Drobac Feb, 2023 Medium</a></li>
+</ul>
 </section>
 <section id="analytics" class="level2">
 <h2 class="anchored" data-anchor-id="analytics">Analytics</h2>
@@ -255,6 +347,11 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><a href="https://www.youtube.com/@SeattleDataGuy">(756) Seattle Data Guy - YouTube</a></li>
 <li><a href="https://www.deepchannel.com/">Deep Channel - Tools for the data craft.</a></li>
+<li><a href="https://www.youtube.com/channel/UCY8mzqqGwl5_bTpBY9qLMAA">Andreas Kretz - YouTube</a></li>
+<li><a href="https://www.youtube.com/c/kahandatasolutions">Kahan Data Solutions - YouTube</a></li>
+<li><a href="https://www.developing.dev/">The Developing Dev Ryan Peterman Substack</a></li>
+<li><a href="https://www.linkedin.com/showcase/skills-data-engineering/posts/?feedView=all">Data Engineering: Posts LinkedIn</a></li>
+<li><a href="https://quastor.substack.com/?nthPub=24">Quastor Quastor Tech Substack</a></li>
 </ul>
 </section>
 <section id="career" class="level2">
@@ -267,7 +364,58 @@ ul.task-list li input[type="checkbox"] {
 <section id="data-science" class="level2">
 <h2 class="anchored" data-anchor-id="data-science">Data Science</h2>
 <ul>
-<li><p><a href="https://towardsdatascience.com/faker-library-in-python-an-intriguing-expedient-for-data-scientists-7dd06f953050">Faker library in python - An intriguing expedient for data scientists by Sanjay Nandakumar Towards Data Science</a></p></li>
+<li><a href="https://towardsdatascience.com/faker-library-in-python-an-intriguing-expedient-for-data-scientists-7dd06f953050">Faker library in python - An intriguing expedient for data scientists by Sanjay Nandakumar Towards Data Science</a></li>
+</ul>
+</section>
+<section id="security" class="level2">
+<h2 class="anchored" data-anchor-id="security">Security</h2>
+<ul>
+<li><a href="https://devm.io/devops/devops-pipelines-security">5 Ways for Enterprise Teams to Secure Their DevOps Pipelines in 2023</a></li>
+</ul>
+</section>
+<section id="python" class="level2">
+<h2 class="anchored" data-anchor-id="python">Python</h2>
+<ul>
+<li><a href="https://antonz.org/makefile-automation/">Automate your Python project with Makefile</a></li>
+</ul>
+</section>
+<section id="sql" class="level2">
+<h2 class="anchored" data-anchor-id="sql">SQL</h2>
+<ul>
+<li><a href="https://twitter.com/HaroldSinnott/status/1637559588231806977/photo/1">Harold Sinnott #MWC23 on Twitter: “Best of #SQL Cheat Sheet</a></li>
+<li><a href="https://sqlbolt.com/">SQLBolt - Learn SQL - Introduction to SQL</a></li>
+</ul>
+</section>
+<section id="learn" class="level2">
+<h2 class="anchored" data-anchor-id="learn">Learn</h2>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/certifications/exams/dp-203/">Exam DP-203: Data Engineering on Microsoft Azure - Certifications Microsoft Learn</a></li>
+<li><a href="https://www.udemy.com/course/sqldatabases/?ranMID=39197&amp;ranEAID=GjbDpcHcs4w&amp;ranSiteID=GjbDpcHcs4w-PUSFwymG6hWEeJK4omaHXw&amp;LSNPUBID=GjbDpcHcs4w&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">Learn MS SQL Server &amp; PostgreSQL: Database Design A-Z™ Udemy</a></li>
+<li><a href="https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/?LSNPUBID=GjbDpcHcs4w&amp;ranEAID=GjbDpcHcs4w&amp;ranMID=39197&amp;ranSiteID=GjbDpcHcs4w-WwMLJrOGOzPYaIxBnd3xQw&amp;utm_medium=udemyads&amp;utm_source=aff-campaign">Ultimate AWS Certified Solutions Architect Associate (SAA) Udemy</a></li>
+<li><a href="https://www.udemy.com/course/the-complete-sql-bootcamp/?ranMID=39197&amp;ranEAID=HTtUFxqit0c&amp;ranSiteID=HTtUFxqit0c-4gKQS74XfsAh.IZSlqreSA&amp;LSNPUBID=HTtUFxqit0c&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">The Complete SQL Bootcamp for the Manipulation and Analysis of Data Udemy</a></li>
+<li><a href="https://www.udemy.com/course/linux-for-beginners-2021/?ranMID=39197&amp;ranEAID=HTtUFxqit0c&amp;ranSiteID=HTtUFxqit0c-DuIubHb12wJSCBhhkJ.YLQ&amp;LSNPUBID=HTtUFxqit0c&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">Linux for Beginners: Linux Basics Udemy</a></li>
+<li><a href="https://www.udemy.com/course/data-warehouse-fundamentals-for-beginners/?ranMID=39197&amp;ranEAID=HTtUFxqit0c&amp;ranSiteID=HTtUFxqit0c-9yFtjfjjGG9Hb2iBfrIPWg&amp;LSNPUBID=HTtUFxqit0c&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">Data Warehouse Fundamentals for Beginners Udemy</a></li>
+<li><a href="https://www.udemy.com/course/spark-and-python-for-big-data-with-pyspark/?ranMID=39197&amp;ranEAID=HTtUFxqit0c&amp;ranSiteID=HTtUFxqit0c-Pbp3UMxUqvLxanBaqwTPJg&amp;LSNPUBID=HTtUFxqit0c&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">Spark and Python for Big Data with PySpark Udemy</a></li>
+<li><a href="https://www.udemy.com/course/the-complete-hands-on-course-to-master-apache-airflow/?ranMID=39197&amp;ranEAID=HTtUFxqit0c&amp;ranSiteID=HTtUFxqit0c-J6iO3LtbOFBDGXT2lH5dUA&amp;LSNPUBID=HTtUFxqit0c&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">The Complete Hands-On Introduction to Apache Airflow Udemy</a></li>
+<li><a href="https://www.udemy.com/course/implementing-real-world-use-cases-in-azure-data-factory-v2/?ranMID=39197&amp;ranEAID=HTtUFxqit0c&amp;ranSiteID=HTtUFxqit0c-hziIO3LSO84o8wc3_JYtrw&amp;LSNPUBID=HTtUFxqit0c&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">[8 Course BUNDLE]: DP-203: Data Engineering on MS Azure Udemy</a></li>
+<li><a href="https://www.udemy.com/course/sql-mysql-for-data-analytics-and-business-intelligence/?ranMID=39197&amp;ranEAID=GjbDpcHcs4w&amp;ranSiteID=GjbDpcHcs4w-d4YWyAls6bMMAhmDcmEN1g&amp;utm_source=aff-campaign&amp;LSNPUBID=GjbDpcHcs4w&amp;utm_medium=udemyads">BI Analysis: MySQL for Data Analytics and Business Intelligence Udemy</a></li>
+<li><a href="https://www.udemy.com/course/docker-kubernetes-the-practical-guide/?ranMID=39197&amp;ranEAID=GjbDpcHcs4w&amp;ranSiteID=GjbDpcHcs4w-7ellSaNnSbyL6hGq9tSvag&amp;LSNPUBID=GjbDpcHcs4w&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">Docker &amp; Kubernetes: The Practical Guide- [2023 Edition] Udemy</a></li>
+<li><a href="https://www.udemy.com/course/data-warehouse-the-ultimate-guide/?ranMID=39197&amp;ranEAID=GjbDpcHcs4w&amp;ranSiteID=GjbDpcHcs4w-ivsJYgXfpWSS23Z3otILXg&amp;LSNPUBID=GjbDpcHcs4w&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">Data Warehouse - The Ultimate Guide Udemy</a></li>
+<li><a href="https://www.udemy.com/course/practice-exams-aws-certified-solutions-architect-associate/?src=sac&amp;kw=aws&amp;ranMID=39197&amp;ranEAID=GjbDpcHcs4w&amp;ranSiteID=GjbDpcHcs4w-pZEYq01OMjucejKWZqCn.w&amp;LSNPUBID=GjbDpcHcs4w&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">Practice Exams AWS Certified Solutions Architect Associate Udemy</a></li>
+</ul>
+</section>
+<section id="misc" class="level2">
+<h2 class="anchored" data-anchor-id="misc">Misc</h2>
+<ul>
+<li><a href="https://blog.pragmaticengineer.com/what-is-data-engineering/?utm_source=substack&amp;utm_medium=email">What is Data Engineering? - The Pragmatic Engineer</a></li>
+<li><a href="https://medium.com/geekculture/if-you-only-read-a-few-data-articles-in-2023-read-these-c589a00c763d">If You Only Read A Few Data Articles In 2023, Read These by Sven Balnojan Geek Culture Feb, 2023 Medium</a></li>
+<li><a href="https://jaylittle.com/post/view/2023/4/low-code-software-development-is-a-lie">Low Code Software Development Is A Lie</a></li>
+<li><a href="https://github.com/davidbullado/blog/blob/main/we-need-a-new-versioning-notation.md">blog/we-need-a-new-versioning-notation.md at main - davidbullado/blog - GitHub</a></li>
+</ul>
+</section>
+<section id="uncategorised-todo" class="level2">
+<h2 class="anchored" data-anchor-id="uncategorised-todo">Uncategorised (todo)</h2>
+<ul>
 <li><p><a href="https://superset.apache.org/">Welcome Superset</a></p></li>
 <li><p><a href="https://libgen.li/index.php">Library Genesis</a></p></li>
 <li><p><a href="https://iceberg.apache.org/">Apache Iceberg</a></p></li>
@@ -276,77 +424,16 @@ ul.task-list li input[type="checkbox"] {
 <li><p><a href="https://earthly.dev/blog/launching-earthly-ci/">Earthly CI: Launching a new era for CI - Earthly Blog</a></p></li>
 <li><p><a href="https://tabular.email/pricing">Pricing Tabular</a></p></li>
 <li><p><a href="https://pypi.org/project/pydantic-factories/">pydantic-factories - PyPI</a></p></li>
-<li><p><a href="https://towardsdatascience.com/faker-library-in-python-an-intriguing-expedient-for-data-scientists-7dd06f953050">Faker library in python - An intriguing expedient for data scientists by Sanjay Nandakumar Towards Data Science</a></p></li>
-<li><p><a href="https://github.com/davidbullado/blog/blob/main/we-need-a-new-versioning-notation.md">blog/we-need-a-new-versioning-notation.md at main - davidbullado/blog - GitHub</a></p></li>
-<li><p><a href="https://www.prequel.co/">Prequel - Data syncs &amp; data warehouse integration</a></p></li>
-<li><p><a href="https://www.datafold.com/blog/dbt-expectations">How to use dbt-expectations to detect data quality issues</a></p></li>
-<li><p><a href="https://medium.com/alvin-ai/if-data-lineage-is-the-answer-what-is-the-question-bad7f5f44fb5">If data lineage is the answer, what is the question? by Gabs Ferreira Alvin Mar, 2023 Medium</a></p></li>
-<li><p><a href="https://medium.com/@danilo.drobac/modern-data-strategy-quality-observability-cataloging-and-lineage-45ef492771b">Modern Data Strategy: Quality, Observability, Cataloging and Lineage by Danilo Drobac Feb, 2023 Medium</a></p></li>
-<li><p><a href="https://medium.com/geekculture/if-you-only-read-a-few-data-articles-in-2023-read-these-c589a00c763d">If You Only Read A Few Data Articles In 2023, Read These by Sven Balnojan Geek Culture Feb, 2023 Medium</a></p></li>
-<li><p><a href="https://learn.microsoft.com/en-us/certifications/exams/dp-203/">Exam DP-203: Data Engineering on Microsoft Azure - Certifications Microsoft Learn</a></p></li>
 <li><p><a href="https://www.vaultproject.io/">Vault by HashiCorp</a></p></li>
-<li><p><a href="https://medium.com/claimsforce/lakehouse-a-resum%C3%A9-750368e57914">Lakehouse — A resumé by Robert Kossendey claimsforce</a></p></li>
-<li><p><a href="https://www.youtube.com/@ContinuousDelivery/videos">(1752) Continuous Delivery - YouTube</a></p></li>
-<li><p><a href="https://www.udemy.com/course/sqldatabases/?ranMID=39197&amp;ranEAID=GjbDpcHcs4w&amp;ranSiteID=GjbDpcHcs4w-PUSFwymG6hWEeJK4omaHXw&amp;LSNPUBID=GjbDpcHcs4w&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">Learn MS SQL Server &amp; PostgreSQL: Database Design A-Z™ Udemy</a></p></li>
-<li><p><a href="https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/?LSNPUBID=GjbDpcHcs4w&amp;ranEAID=GjbDpcHcs4w&amp;ranMID=39197&amp;ranSiteID=GjbDpcHcs4w-WwMLJrOGOzPYaIxBnd3xQw&amp;utm_medium=udemyads&amp;utm_source=aff-campaign">Ultimate AWS Certified Solutions Architect Associate (SAA) Udemy</a></p></li>
-<li><p><a href="https://www.udemy.com/course/the-complete-sql-bootcamp/?ranMID=39197&amp;ranEAID=HTtUFxqit0c&amp;ranSiteID=HTtUFxqit0c-4gKQS74XfsAh.IZSlqreSA&amp;LSNPUBID=HTtUFxqit0c&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">The Complete SQL Bootcamp for the Manipulation and Analysis of Data Udemy</a></p></li>
-<li><p><a href="https://www.udemy.com/course/linux-for-beginners-2021/?ranMID=39197&amp;ranEAID=HTtUFxqit0c&amp;ranSiteID=HTtUFxqit0c-DuIubHb12wJSCBhhkJ.YLQ&amp;LSNPUBID=HTtUFxqit0c&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">Linux for Beginners: Linux Basics Udemy</a></p></li>
-<li><p><a href="https://www.udemy.com/course/data-warehouse-fundamentals-for-beginners/?ranMID=39197&amp;ranEAID=HTtUFxqit0c&amp;ranSiteID=HTtUFxqit0c-9yFtjfjjGG9Hb2iBfrIPWg&amp;LSNPUBID=HTtUFxqit0c&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">Data Warehouse Fundamentals for Beginners Udemy</a></p></li>
-<li><p><a href="https://www.udemy.com/course/spark-and-python-for-big-data-with-pyspark/?ranMID=39197&amp;ranEAID=HTtUFxqit0c&amp;ranSiteID=HTtUFxqit0c-Pbp3UMxUqvLxanBaqwTPJg&amp;LSNPUBID=HTtUFxqit0c&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">Spark and Python for Big Data with PySpark Udemy</a></p></li>
-<li><p><a href="https://www.udemy.com/course/the-complete-hands-on-course-to-master-apache-airflow/?ranMID=39197&amp;ranEAID=HTtUFxqit0c&amp;ranSiteID=HTtUFxqit0c-J6iO3LtbOFBDGXT2lH5dUA&amp;LSNPUBID=HTtUFxqit0c&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">The Complete Hands-On Introduction to Apache Airflow Udemy</a></p></li>
-<li><p><a href="https://www.udemy.com/course/implementing-real-world-use-cases-in-azure-data-factory-v2/?ranMID=39197&amp;ranEAID=HTtUFxqit0c&amp;ranSiteID=HTtUFxqit0c-hziIO3LSO84o8wc3_JYtrw&amp;LSNPUBID=HTtUFxqit0c&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">[8 Course BUNDLE]: DP-203: Data Engineering on MS Azure Udemy</a></p></li>
-<li><p><a href="https://www.udemy.com/course/sql-mysql-for-data-analytics-and-business-intelligence/?ranMID=39197&amp;ranEAID=GjbDpcHcs4w&amp;ranSiteID=GjbDpcHcs4w-d4YWyAls6bMMAhmDcmEN1g&amp;utm_source=aff-campaign&amp;LSNPUBID=GjbDpcHcs4w&amp;utm_medium=udemyads">BI Analysis: MySQL for Data Analytics and Business Intelligence Udemy</a></p></li>
-<li><p><a href="https://www.udemy.com/course/docker-kubernetes-the-practical-guide/?ranMID=39197&amp;ranEAID=GjbDpcHcs4w&amp;ranSiteID=GjbDpcHcs4w-7ellSaNnSbyL6hGq9tSvag&amp;LSNPUBID=GjbDpcHcs4w&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">Docker &amp; Kubernetes: The Practical Guide- [2023 Edition] Udemy</a></p></li>
-<li><p><a href="https://www.udemy.com/course/data-warehouse-the-ultimate-guide/?ranMID=39197&amp;ranEAID=GjbDpcHcs4w&amp;ranSiteID=GjbDpcHcs4w-ivsJYgXfpWSS23Z3otILXg&amp;LSNPUBID=GjbDpcHcs4w&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">Data Warehouse - The Ultimate Guide Udemy</a></p></li>
-<li><p><a href="https://www.udemy.com/course/practice-exams-aws-certified-solutions-architect-associate/?src=sac&amp;kw=aws&amp;ranMID=39197&amp;ranEAID=GjbDpcHcs4w&amp;ranSiteID=GjbDpcHcs4w-pZEYq01OMjucejKWZqCn.w&amp;LSNPUBID=GjbDpcHcs4w&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">Practice Exams AWS Certified Solutions Architect Associate Udemy</a></p></li>
-<li><p><a href="https://www.digitalocean.com/community/tutorials/how-to-test-your-data-with-great-expectations">How To Test Your Data With Great Expectations DigitalOcean</a></p></li>
-<li><p><a href="https://pythontest.com/pytest-tips-tricks/">pytest tips and tricks pythontest</a></p></li>
-<li><p><a href="https://staysaasy.com/">Stay SaaSy Keeping it SaaSy</a></p></li>
-<li><p><a href="https://law.stanford.edu/wp-content/uploads/2023/03/Next-Steps-on-Protests-and-Free-Speech.pdf?mkt_tok=ODg0LUZTQi0zMDcAAAGKqNfmUfz2S_PCzkgUjCQGrC2DR1ji-TGeKtn3NnnIoJpAduaZaZdKteNsL5dGzCkk5cwWC_6vm8autYIUyUQO4uIJy6lLbBGo47NHk8_3iTA">SLS Letter from Dean</a></p></li>
-<li><p><a href="https://www.thoughtworks.com/content/dam/thoughtworks/documents/e-book/tw_ebook_modern_data_engineering_playbook.pdf">Modern data engineering playbook</a></p></li>
-<li><p><a href="https://github.com/andkret/Cookbook">GitHub - andkret/Cookbook: The Data Engineering Cookbook</a></p></li>
-<li><p><a href="https://www.youtube.com/channel/UCY8mzqqGwl5_bTpBY9qLMAA">(1871) Andreas Kretz - YouTube</a></p></li>
-<li><p><a href="https://www.kahandatasolutions.com/the-playbook-for-dbt">Learn exactly how to use dbt™ in a modern data workflow Course</a></p></li>
-<li><p><a href="https://www.youtube.com/c/kahandatasolutions">(1871) Kahan Data Solutions - YouTube</a></p></li>
-<li><p><a href="https://www.startdataengineering.com/post/data-engineering-project-to-impress-hiring-managers/">Designing a Data Project to Impress Hiring Managers - Start Data Engineering</a></p></li>
-<li><p><a href="https://www.startdataengineering.com/post/data-engineering-projects-with-free-template/">Build Data Engineering Projects, with Free Template - Start Data Engineering</a></p></li>
-<li><p><a href="https://www.startdataengineering.com/post/data-engineering-project-for-beginners-batch-edition/">Data Engineering Project for Beginners - Batch edition - Start Data Engineering</a></p></li>
-<li><p><a href="https://www.reddit.com/r/dataengineering/comments/ygieh8/data_engineering_projects_with_template_airflow/">Data engineering projects with template: Airflow, dbt, Docker, Terraform (IAC), Github actions (CI/CD) &amp; more : dataengineering</a></p></li>
-<li><p><a href="https://github.com/DataTalksClub/data-engineering-zoomcamp">GitHub - DataTalksClub/data-engineering-zoomcamp: Free Data Engineering course!</a></p></li>
-<li><p><a href="https://medium.com/@ryanelamb/a-data-engineering-project-with-prefect-docker-terraform-google-cloudrun-bigquery-and-streamlit-3fc6e08b9398">A data engineering project with Prefect, Docker, Terraform, Google CloudRun, BigQuery and Streamlit by Ryan Lamb Mar, 2023 Medium</a></p></li>
-<li><p><a href="https://eliasbenaddouidrissi.dev/posts/data_engineering_project_monzo/">eliasbenaddouidrissi</a></p></li>
 <li><p><a href="https://github.com/digitalghost-dev">digitalghost-dev (Christian) - GitHub</a></p></li>
-<li><p><a href="https://github.com/RSKriegs/finnhub-streaming-data-pipeline">GitHub - RSKriegs/finnhub-streaming-data-pipeline: Stream processing pipeline from Finnhub websocket using Spark, Kafka, Kubernetes and more</a></p></li>
-<li><p><a href="https://github.com/ankurchavda/streamify">GitHub - ankurchavda/streamify: A data engineering project with Kafka, Spark Streaming, dbt, Docker, Airflow, Terraform, GCP and much more!</a></p></li>
-<li><p><a href="https://github.com/ABZ-Aaron/Reddit-API-Pipeline">GitHub - ABZ-Aaron/Reddit-API-Pipeline</a></p></li>
-<li><p><a href="https://github.com/ris-tlp/audiophile-e2e-pipeline">GitHub - ris-tlp/audiophile-e2e-pipeline: Pipeline that extracts data from Crinacle’s Headphone and InEarMonitor databases and finalizes data for a Metabase Dashboard.</a></p></li>
 <li><p><a href="https://github.com/andrem8/surf_dash">GitHub - andrem8/surf_dash</a></p></li>
-<li><p><a href="https://www.developing.dev/">The Developing Dev Ryan Peterman Substack</a></p></li>
-<li><p><a href="https://blog.pragmaticengineer.com/what-is-data-engineering/?utm_source=substack&amp;utm_medium=email">What is Data Engineering? - The Pragmatic Engineer</a></p></li>
-<li><p><a href="https://cloud.google.com/devops/state-of-devops">2022 State of DevOps Report &nbsp;&nbsp; Google Cloud</a></p></li>
-<li><p><a href="https://www.engprod.guide/docs/dora-four-key-metrics-accelerate-book">DORA Four Key Metrics (Accelerate book) - Measuring Engineering Productivity</a></p></li>
-<li><p><a href="https://www.youtube.com/watch?v=mBzDPRgue6s">(1932) Continuous Deployment or Continuous Delivery? When To Release - YouTube</a></p></li>
 <li><p><a href="https://github.com/context-labs/autodoc">GitHub - context-labs/autodoc: Toolkit for auto-generating codebase documentation using LLMs</a></p></li>
-<li><p><a href="https://www.tomdalling.com/blog/software-processes/agile-is-a-glass-cannon/">Agile Is A Glass Cannon — Tom Dalling</a></p></li>
-<li><p><a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/architectural-decision-records/welcome.html">Using architectural decision records to streamline technical decision-making for a software development project - AWS Prescriptive Guidance</a></p></li>
 <li><p><a href="https://jsonnet.org/">Jsonnet - The Data Templating Language</a></p></li>
-<li><p><a href="https://www.linkedin.com/showcase/skills-data-engineering/posts/?feedView=all">(2) Data Engineering: Posts LinkedIn</a></p></li>
-<li><p><a href="https://antonz.org/makefile-automation/">Automate your Python project with Makefile</a></p></li>
-<li><p><a href="https://twitter.com/HaroldSinnott/status/1637559588231806977/photo/1">Harold Sinnott #MWC23 on Twitter: “Best of #SQL Cheat Sheet</a></p></li>
-<li><p><a href="https://sqlbolt.com/">SQLBolt - Learn SQL - Introduction to SQL</a></p></li>
 <li><p><a href="https://www.reddit.com/r/dataengineering/comments/125cd6n/mountpoint_for_s3/">Mountpoint for S3 : dataengineering</a></p></li>
-<li><p><a href="https://dagster.io/blog/dagster-airflow">Dagster vs.&nbsp;Airflow Dagster Blog</a></p></li>
 <li><p><a href="https://www.kdnuggets.com/2023/03/data-quality-dimensions-assuring-data-quality-great-expectations.html">Data Quality Dimensions: Assuring Your Data Quality with Great Expectations - KDnuggets</a></p></li>
-<li><p><a href="https://swimm.io/blog/what-is-continuous-documentation-manifesto-part-1/?utm_source=IPE_circuit&amp;utm_medium=paid_pub&amp;utm_campaign=IPE-march&amp;utm_content=gm-test">What is Continuous Documentation? The Manifesto Part I</a></p></li>
 <li><p><a href="https://sqlmesh.com/">SQLMesh</a></p></li>
 <li><p><a href="https://sqlmesh.readthedocs.io/en/stable/comparisons/#complexity">Comparisons - SQLMesh</a></p></li>
-<li><p><a href="https://csvbase.com/blog/3">Parquet: more than just “Turbo CSV”</a></p></li>
 <li><p><a href="https://www.soda.io/core">Soda Core - Data Reliability Engineering as Code</a></p></li>
-<li><p><a href="https://aws.amazon.com/blogs/big-data/test-data-quality-at-scale-with-deequ/">Test data quality at scale with Deequ AWS Big Data Blog</a></p></li>
-<li><p><a href="https://ajithshetty28.medium.com/deequ-i-mean-data-quality-a0e6c048469d">DEEQU, I mean Data Quality. We say how we can turn the world upside… by Ajith Shetty Medium</a></p></li>
-<li><p><a href="https://www.velotio.com/engineering-blog/test-data-quality-at-scale-using-deequ-and-apache-spark">Unit Testing Data at Scale using Deequ and Apache Spark</a></p></li>
-<li><p><a href="https://www.youtube.com/watch?v=D29txlJyBvk">(2251) Guaranteeing Data Quality SLAs with Deequ &amp; Databand - YouTube</a></p></li>
-<li><p><a href="https://github.com/dominikhei/Local-Data-LakeHouse">GitHub - dominikhei/Local-Data-LakeHouse: Sample Data Lakehouse deployed in Docker containers using Apache Iceberg, Minio, Trino and a Hive Metastore. Can be used for local testing.</a></p></li>
 <li><p><a href="https://www.startdataengineering.com/post/how-to-join-fact-scd2-tables/">How to Join a fact and a type 2 dimension (SCD2) table - Start Data Engineering</a></p></li>
 <li><p><a href="https://perspective.finos.org/">Perspective Perspective</a></p></li>
 <li><p><a href="https://towardsdatascience.com/5-helpful-extract-load-practices-for-high-quality-raw-data-65b9a59a8721">5 Helpful Extract &amp; Load Practices for High-Quality Raw Data by Sven Balnojan Apr, 2023 Towards Data Science</a></p></li>
@@ -357,40 +444,38 @@ ul.task-list li input[type="checkbox"] {
 <li><p><a href="https://getdozer.io/">Dozer Start building real-time data apps in minutes Dozer Start building real-time data apps in minutes</a></p></li>
 <li><p><a href="https://octopus.com/blog/devops-uses-capability-not-maturity">DevOps uses a capability model, not a maturity model - Octopus Deploy</a></p></li>
 <li><p><a href="https://www.ddanieltan.com/posts/blogtips/">ddanieltan.com - How to add some personality to your Quarto Blog</a></p></li>
-<li><p><a href="https://medium.com/albert-franzi/dbt-core-airflow-7d94edac9cdf">DBT Core &amp; Airflow. Empowering our data organization with… by Albert Franzi Albert Franzi Medium</a></p></li>
-<li><p><a href="https://quastor.substack.com/?nthPub=24">(3) Quastor Quastor Tech Substack</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/-tech-dive-apis">(3) ☕ Tech Dive - APIs - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/-tech-dive-apis-part-2">(3) ☕ Tech Dive - APIs PART 2 - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/-tech-dive-database-sharding">(3) ☕ Tech Dive - Database Sharding - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/-learn-system-design">(3) ☕ Learn System Design? - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/-the-metaverse">(3) ☕ The Metaverse - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/-software-architecture-in-the-real">(3) ☕ Software Architecture in the Real World - by Quastor Tech</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/-docker-explained-13d">(3) ☕ Docker Explained - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/-the-architecture-behind-the-worlds">(3) ☕ The Architecture Behind the World’s Largest Developer Site…</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/tech-dive-apis">(3) Tech Dive - APIs - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/-the-engineering-behind-facebook">(3) ☕ The Engineering Behind Facebook Newsfeed</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/-distributed-databases-explained">(3) ☕ Distributed Databases Explained - by Quastor Tech</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/khan-academys-migration-from-python">(3) Khan Academy’s migration from Python to Go</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/-writing-clean-code">(3) ☕ A summary of Clean Code - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/clean-code-part-2">(3) Clean Code - Part 2 - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/clean-code-part-3">(3) Clean Code - Part 3 - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/how-whatsapp-scaled-to-1-billion">(3) How WhatsApp scaled to 1 billion users with only 50 engineers</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/the-architecture-of-databases">(3) The Architecture of Databases - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/principles-for-api-design">(3) Principles for API Design - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/how-notion-sharded-their-postgres">(3) How Notion sharded their Postgres Database</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/githubs-shift-from-monolith-to-microservices">(3) How GitHub shifted from a Monolith to Microservices</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/partitioning-relational-databases">(3) Partitioning Relational Databases at GitHub</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/software-architecture-principles">(3) Software Architecture Principles - by Quastor Tech</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/an-introduction-to-big-data-architectures">(3) An Introduction to Big Data Architectures - by Quastor Tech</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/why-linkedin-changed-their-tech-stack">(3) Why LinkedIn changed their tech stack - by Quastor Tech</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/how-khan-academy-rewrote-their-backend">(3) How Khan Academy Rewrote their Backend - by Quastor Tech</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/how-distributed-databases-work">(3) How Distributed Databases work - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/clean-codes-advice-on-comments">(3) Clean Code’s Advice on Comments - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/the-architecture-of-databases-ba6">(3) The Architecture of Databases - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/observability-at-twitter">(3) Observability at Twitter - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/airbnbs-architecture">(3) Airbnb’s Architecture - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/how-to-design-better-apis">(3) How to Design Better APIs - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/reliability-engineering-at-blackrock">(3) Reliability Engineering at BlackRock - by Quastor Tech</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/-tech-dive-apis">Tech Dive - APIs - by Quastor Tech - Quastor</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/-tech-dive-apis-part-2">Tech Dive - APIs PART 2 - by Quastor Tech - Quastor</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/-tech-dive-database-sharding">Tech Dive - Database Sharding - by Quastor Tech - Quastor</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/-learn-system-design">Learn System Design? - by Quastor Tech - Quastor</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/-the-metaverse">The Metaverse - by Quastor Tech - Quastor</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/-software-architecture-in-the-real">Software Architecture in the Real World - by Quastor Tech</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/-docker-explained-13d">Docker Explained - by Quastor Tech - Quastor</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/-the-architecture-behind-the-worlds">The Architecture Behind the World’s Largest Developer Site…</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/tech-dive-apis">Tech Dive - APIs - by Quastor Tech - Quastor</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/-the-engineering-behind-facebook">The Engineering Behind Facebook Newsfeed</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/-distributed-databases-explained">Distributed Databases Explained - by Quastor Tech</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/khan-academys-migration-from-python">Khan Academy’s migration from Python to Go</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/-writing-clean-code">A summary of Clean Code - by Quastor Tech - Quastor</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/clean-code-part-2">Clean Code - Part 2 - by Quastor Tech - Quastor</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/clean-code-part-3">Clean Code - Part 3 - by Quastor Tech - Quastor</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/how-whatsapp-scaled-to-1-billion">How WhatsApp scaled to 1 billion users with only 50 engineers</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/the-architecture-of-databases">The Architecture of Databases - by Quastor Tech - Quastor</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/principles-for-api-design">Principles for API Design - by Quastor Tech - Quastor</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/how-notion-sharded-their-postgres">How Notion sharded their Postgres Database</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/githubs-shift-from-monolith-to-microservices">How GitHub shifted from a Monolith to Microservices</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/partitioning-relational-databases">Partitioning Relational Databases at GitHub</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/software-architecture-principles">Software Architecture Principles - by Quastor Tech</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/an-introduction-to-big-data-architectures">An Introduction to Big Data Architectures - by Quastor Tech</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/why-linkedin-changed-their-tech-stack">Why LinkedIn changed their tech stack - by Quastor Tech</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/how-khan-academy-rewrote-their-backend">How Khan Academy Rewrote their Backend - by Quastor Tech</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/how-distributed-databases-work">How Distributed Databases work - by Quastor Tech - Quastor</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/clean-codes-advice-on-comments">Clean Code’s Advice on Comments - by Quastor Tech - Quastor</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/the-architecture-of-databases-ba6">The Architecture of Databases - by Quastor Tech - Quastor</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/observability-at-twitter">Observability at Twitter - by Quastor Tech - Quastor</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/airbnbs-architecture">Airbnb’s Architecture - by Quastor Tech - Quastor</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/how-to-design-better-apis">How to Design Better APIs - by Quastor Tech - Quastor</a></p></li>
+<li><p><a href="https://quastor.substack.com/p/reliability-engineering-at-blackrock">Reliability Engineering at BlackRock - by Quastor Tech</a></p></li>
 <li><p><a href="https://www.industrialempathy.com/posts/design-docs-at-google/">Design Docs at Google</a></p></li>
 <li><p><a href="https://blog.quastor.org/p/notion-sharded-postgres-database-8af4">How Notion Sharded Their Postgres Database</a></p></li>
 <li><p><a href="https://blog.quastor.org/p/whatsapp-scaled-1-billion-users-50-engineers">How WhatsApp scaled to 1 billion users with only 50 engineers</a></p></li>
@@ -418,18 +503,24 @@ ul.task-list li input[type="checkbox"] {
 <li><p><a href="https://luminousmen.com/post/data-lake-vs-data-warehouse">Data Lake vs Data Warehouse - Blog luminousmen</a></p></li>
 <li><p><a href="https://luminousmen.com/post/python-resource-limitation">Python resource limitation - Blog luminousmen</a></p></li>
 <li><p><a href="https://luminousmen.com/post/the-ultimate-python-style-guidelines">The ultimate Python style guidelines - Blog luminousmen</a></p></li>
-<li><p><a href="https://luminousmen.com/post/introduction-to-pyspark-join-types">Introduction to Pyspark join types - Blog luminousmen</a></p></li>
-<li><p><a href="https://luminousmen.com/post/the-5-minute-guide-to-using-bucketing-in-pyspark">The 5-minute guide to using bucketing in Pyspark - Blog luminousmen</a></p></li>
-<li><p><a href="https://luminousmen.com/post/spark-tips-dataframe-api">Spark tips. DataFrame API - Blog luminousmen</a></p></li>
-<li><p><a href="https://luminousmen.com/post/big-data-file-formats">Big Data file formats - Blog luminousmen</a></p></li>
-<li><p><a href="https://luminousmen.com/post/spark-core-concepts-explained">Spark core concepts explained - Blog luminousmen</a></p></li>
-<li><p><a href="https://media.licdn.com/dms/image/D5622AQGZ0QxPNYZNHQ/feedshare-shrink_2048_1536/0/1681145807848?e=1684368000&amp;v=beta&amp;t=Ix0oXn9DW5bvaYTQoPrOVGnsGNECAprxBoPQok5i7KU">1681145807848 (1284×1295)</a></p></li>
+<li><p><a href="https://staysaasy.com/">Stay SaaSy Keeping it SaaSy</a></p></li>
+<li><p><a href="https://law.stanford.edu/wp-content/uploads/2023/03/Next-Steps-on-Protests-and-Free-Speech.pdf?mkt_tok=ODg0LUZTQi0zMDcAAAGKqNfmUfz2S_PCzkgUjCQGrC2DR1ji-TGeKtn3NnnIoJpAduaZaZdKteNsL5dGzCkk5cwWC_6vm8autYIUyUQO4uIJy6lLbBGo47NHk8_3iTA">SLS Letter from Dean</a></p></li>
 </ul>
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><div>MIT</div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shenton2023,
+  author = {Craig Shenton},
+  title = {Data {Engineering} {Links}},
+  date = {2023-04-08},
+  url = {https://craig-shenton.github.io/craigrshenton/data_eng_list.html},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shenton2023" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
+Craig Shenton. 2023. <span>“Data Engineering Links.”</span> April 8,
+2023. <a href="https://craig-shenton.github.io/craigrshenton/data_eng_list.html">https://craig-shenton.github.io/craigrshenton/data_eng_list.html</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
