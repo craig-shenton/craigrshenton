@@ -165,7 +165,7 @@
     "href": "index.html",
     "title": "Craig Robert Shenton",
     "section": "",
-    "text": "Azure Data Factory Templates\n\n\n\n\nOpen access and reusable design documentation of pipelines used in the NHSX Analytics Azure Data Factory (ADF) environment.\n\n\n\n\n\n\n9/9/21\n\n\n\n\n\n\n\n\nAzure Data Engineering Principles\n\n\n\n\nIn this post, we aim to set out the data engineering principles NHSX has developed in designing and building our Azure cloud-analytics infrastructure.\n\n\n\n\n\n\n9/1/21\n\n\n\n\n\n\nNo matching items"
+    "text": "Data Engineering Links\n\n\n\n\nData Engineering key concepts, tools, and best practices.\n\n\n\n\n\n\n4/8/23\n\n\n\n\n\n\n\n\nAzure Data Factory Templates\n\n\n\n\nOpen access and reusable design documentation of pipelines used in the NHSX Analytics Azure Data Factory (ADF) environment.\n\n\n\n\n\n\n9/9/21\n\n\n\n\n\n\n\n\nAzure Data Engineering Principles\n\n\n\n\nIn this post, we aim to set out the data engineering principles NHSX has developed in designing and building our Azure cloud-analytics infrastructure.\n\n\n\n\n\n\n9/1/21\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -501,7 +501,7 @@
     "href": "posts/azure-data-factory-templates.html#databricks-processing-pipeline",
     "title": "Azure Data Factory Templates",
     "section": "Databricks Processing Pipeline",
-    "text": "Databricks Processing Pipeline\n\nMetadata\n\nFILE: processing_databricks.json\nDESCRIPTION: Pipeline to process data from a folder in Azure Datalake blob storage using a databricks notebook.\nCONTRIBUTORS: Craig Shenton, Mattia Ficarelli\nCONTACT: data@nhsx.nhs.uk\nCREATED: 23 Sept 2021\nVERSION: 0.0.1\n\n\n\nDescription\n\n\n\nData processing using a Databricks notebook\n\n\nFigure 10: Data processing using a Databricks notebook\nPipeline to process data from a folder in Azure Datalake blob storage using a databricks notebook\n\nLookup the .json configuration file for this pipeline.\nSet the databricks notebook path.\nDatabricks notebook activity runs the databricks notebook specified using an ephemeral job cluster.\nIf the databricks notebook activity fails, the error notification logic app API will notify the specified email address of the error.\n\n\n\nPipeline Configuration\n{\n  \"pipeline\": {\n    \"name\": \"processing_databricks\",\n    \"folder\": \"templates/processing/databricks\",\n    \"project\": {\n      \"databricks_notebook\": \"/path/to/databricks/notebook\"\n    }\n}\n\n\nDatabricks Orchestration\n\nNote\nAlternatively this pipeline can be used to trigger an orchestrator databricks notebook which in turn runs a series of data processing notebooks.\n{\n  \"pipeline\": {\n    \"name\": \"processing_databricks\",\n    \"folder\": \"templates/processing/databricks_orchestrator\",\n    \"project\": {\n      \"databricks_orchestrator_notebook\": \"/path/to/databricks/orchestrator_notebook\"\n      \"databricks\":[    \n          {\n        \"sink_path\": \"path/to/processed/data\",\n        \"sink_file\": \"file_1.csv\",\n        \"databricks_notebook\": \"/path/to/databricks/processing_notebook1\"\n        },    \n          {\n        \"sink_path\": \"path/to/processed/data\",\n        \"sink_file\": \"file_2.csv\",\n        \"databricks_notebook\": \"/path/to/databricks/processing_notebook2\"\n        },\n    }\n}\nPython code to sequentially run databricks notebook paths specified in a .json config file from a databricks orchestrator notebook.\n#Squentially run datbricks notebooks\nfor index, item in enumerate(config_JSON['pipeline']['project']['databricks']): \n    notebook = config_JSON['pipeline']['project']['databricks'][index]['databricks_notebook']\n    dbutils.notebook.run(notebook, 120)\n  except Exception as e:\n    print(e)\n\n\n\nData Factory Configuration\nDownload the Azure Data Factory .json configuration file to use this template in your own data pipelines.\nprocessing-databricks.json"
+    "text": "Databricks Processing Pipeline\n\nMetadata\n\nFILE: processing_databricks.json\nDESCRIPTION: Pipeline to process data from a folder in Azure Datalake blob storage using a databricks notebook.\nCONTRIBUTORS: Craig Shenton, Mattia Ficarelli\nCONTACT: data@nhsx.nhs.uk\nCREATED: 23 Sept 2021\nVERSION: 0.0.1\n\n\n\nDescription\n\n\n\nData processing using a Databricks notebook\n\n\nFigure 10: Data processing using a Databricks notebook\nPipeline to process data from a folder in Azure Datalake blob storage using a databricks notebook\n\nLookup the .json configuration file for this pipeline.\nSet the databricks notebook path.\nDatabricks notebook activity runs the databricks notebook specified using an ephemeral job cluster.\nIf the databricks notebook activity fails, the error notification logic app API will notify the specified email address of the error.\n\n\n\nPipeline Configuration\n{\n  \"pipeline\": {\n    \"name\": \"processing_databricks\",\n    \"folder\": \"templates/processing/databricks\",\n    \"project\": {\n      \"databricks_notebook\": \"/path/to/databricks/notebook\"\n    }\n}\n\n\nDatabricks Orchestration\n\nNote\nAlternatively this pipeline can be used to trigger an orchestrator databricks notebook which in turn runs a series of data processing notebooks.\n{\n  \"pipeline\": {\n    \"name\": \"processing_databricks\",\n    \"folder\": \"templates/processing/databricks_orchestrator\",\n    \"project\": {\n      \"databricks_orchestrator_notebook\": \"/path/to/databricks/orchestrator_notebook\"\n      \"databricks\":[    \n          {\n        \"sink_path\": \"path/to/processed/data\",\n        \"sink_file\": \"file_1.csv\",\n        \"databricks_notebook\": \"/path/to/databricks/processing_notebook1\"\n        },    \n          {\n        \"sink_path\": \"path/to/processed/data\",\n        \"sink_file\": \"file_2.csv\",\n        \"databricks_notebook\": \"/path/to/databricks/processing_notebook2\"\n        },\n    }\n}\nPython code to sequentially run databricks notebook paths specified in a .json config file from a databricks orchestrator notebook.\n#Squentially run datbricks notebooks\nfor index, item in enumerate(config_JSON['pipeline']['project']['databricks']): \nnotebook = config_JSON['pipeline']['project']['databricks'][index]['databricks_notebook']\n    dbutils.notebook.run(notebook, 120)\n  except Exception as e:\n    print(e)\n\n\n\nData Factory Configuration\nDownload the Azure Data Factory .json configuration file to use this template in your own data pipelines.\nprocessing-databricks.json"
   },
   {
     "objectID": "posts/azure-data-factory-templates.html#azure-function-app-processing-pipeline",
@@ -541,9 +541,9 @@
   {
     "objectID": "drafts/data_eng_list.html",
     "href": "drafts/data_eng_list.html",
-    "title": "Data Engineering Research",
+    "title": "Data Engineering Links",
     "section": "",
-    "text": "A. Relational databases (SQL)\nB. NoSQL databases\nC. Time-series databases\nD. Graph databases\n\n\n\n\n\n\n\n\nA. Star schema\nB. Snowflake schema"
+    "text": "Do You Need A Data Warehouse - A Quick Guide - Seattle Data Guy\nWhat’s a Data Vault Model and How to Implement It on the Databricks Lakehouse Platform - The Databricks Blog\nComposable OLAP\nQuestDB Fast SQL for time-series\n\n\n\n\nProject A Data Modelling Best Practices Part I: How to Model Data in a Data Warehouse? - YouTube\n(500) Project A Data Modelling Best Practices Part II: How to Build a Data Warehouse? - YouTube"
   },
   {
     "objectID": "drafts/data_eng_list.html#etl-extract-transform-load-process",
@@ -705,5 +705,264 @@
     "title": "Data Engineering Research",
     "section": "Testing and validation",
     "text": "Testing and validation\n\nUnit testing for data pipelines\n\nA. Test individual components\nB. Mocking external dependencies\nC. Isolation of test environments\n\n\n\nIntegration testing for data pipelines\n\nA. Test end-to-end data flow\nB. Validate data transformations and integrations\nC. Testing with realistic data sets\n\n\n\nData validation\n\nA. Schema validation\nB. Data type validation\nC. Range and constraint validation\nD. Uniqueness and referential integrity validation\n\n\n\nPerformance testing\n\nA. Load testing\nB. Stress testing\nC. Benchmarking\n\n\n\nData quality testing\n\nA. Data accuracy and consistency\nB. Data completeness\nC. Data timeliness\nD. Data lineage verification\n\n\n\nRegression testing\n\nA. Test existing data pipelines for backward compatibility\nB. Validate new changes against old functionality\n\n\n\nTest automation\n\nA. Continuous testing in CI/CD pipelines\nB. Automated test generation\nC. Test execution and reporting\n\n\n\nMonitoring and alerting for test failures\n\nA. Integration with monitoring tools\nB. Anomaly detection\nC. Notification and escalation strategies\n\n\n\nTest data management\n\nA. Synthetic test data generation\nB. Test data masking and anonymisation\nC. Test data storage and versioning\n\n\n\nBest practices for testing and validation\n\nA. Test-driven development (TDD) in data engineering\nB. Code and test coverage metrics\nC. Testing strategies and test pyramid"
+  },
+  {
+    "objectID": "drafts/data_eng_list.html#orchestration",
+    "href": "drafts/data_eng_list.html#orchestration",
+    "title": "Data Engineering Links",
+    "section": "Orchestration",
+    "text": "Orchestration\n\nLeverage Azure Databricks jobs orchestration from Azure Data Factory - Microsoft Community Hub\nIntroducing Databricks Workflows - The Databricks Blog"
+  },
+  {
+    "objectID": "drafts/data_eng_list.html#spark",
+    "href": "drafts/data_eng_list.html#spark",
+    "title": "Data Engineering Links",
+    "section": "Spark",
+    "text": "Spark"
+  },
+  {
+    "objectID": "drafts/data_eng_list.html#dbt",
+    "href": "drafts/data_eng_list.html#dbt",
+    "title": "Data Engineering Links",
+    "section": "dbt",
+    "text": "dbt\n\ndbt - Transform data in your warehouse\n(702) Introduction to dbt (data build tool) from Fishtown Analytics - YouTube\ndbt(Data Build Tool) Tutorial - Start Data Engineering\ncorp/dbt_style_guide.md at main - dbt-labs/corp - GitHub\nPopulate dbt models with CSV data. Part 2: the power of dbt-fal ## Kubernetes\nWhat is Kubernetes used for in data engineering? : dataengineering"
+  },
+  {
+    "objectID": "drafts/data_eng_list.html#pipelines",
+    "href": "drafts/data_eng_list.html#pipelines",
+    "title": "Data Engineering Links",
+    "section": "Pipelines",
+    "text": "Pipelines\n\nData Pipeline Design Patterns - #1. Data flow patterns - Start Data Engineering\nstevecrox0914 comments on ETL using pandas\nMinimally Sufficient Pandas. In this article, I will offer an… by Ted Petrou Dunder Data Medium\n(756) Building a robust data pipeline with dbt, Airflow, and Great Expectations - YouTube\n\nReal-time Data Processing and Analysis with Kafka, Connect, KSQL, Elasticsearch, and Flask by Stefentaime Feb, 2023 Medium\n\n\nOrchestration\n\nLeverage Azure Databricks jobs orchestration from Azure Data Factory - Microsoft Community Hub\nIntroducing Databricks Workflows - The Databricks Blog\n\n\n\nSpark\n\n\ndbt\n\ndbt - Transform data in your warehouse\n(702) Introduction to dbt (data build tool) from Fishtown Analytics - YouTube\ndbt(Data Build Tool) Tutorial - Start Data Engineering\ncorp/dbt_style_guide.md at main - dbt-labs/corp - GitHub\nPopulate dbt models with CSV data. Part 2: the power of dbt-fal\n\n\n\nKubernetes\n\nWhat is Kubernetes used for in data engineering? : dataengineering"
+  },
+  {
+    "objectID": "drafts/data_eng_list.html#testing",
+    "href": "drafts/data_eng_list.html#testing",
+    "title": "Data Engineering Links",
+    "section": "Testing",
+    "text": "Testing\n\nCleaning sample data in standardized way Crystal Lewis\nThe Unreasonable Effectiveness of Data Pipeline Smoke Tests Dagster Blog\nIntroduction to the Pipeline Data Validation Workflow (VALID-II) - pointblank\nHow to Use Great Expectations in Databricks Great Expectations\nGitHub - gladykov/chain.train: ETL & database testing framework for big data, written with Python, using Pytest. With connectors for Spark, Snowflake, MySQL/MariaDB."
+  },
+  {
+    "objectID": "drafts/data_eng_list.html#data-quality",
+    "href": "drafts/data_eng_list.html#data-quality",
+    "title": "Data Engineering Links",
+    "section": "Data Quality",
+    "text": "Data Quality"
+  },
+  {
+    "objectID": "drafts/data_eng_list.html#cicd",
+    "href": "drafts/data_eng_list.html#cicd",
+    "title": "Data Engineering Links",
+    "section": "CI/CD",
+    "text": "CI/CD\n\nE5: Building Better CI/CD Pipelines - by Marius Kimmina"
+  },
+  {
+    "objectID": "drafts/data_eng_list.html#documentation",
+    "href": "drafts/data_eng_list.html#documentation",
+    "title": "Data Engineering Links",
+    "section": "Documentation",
+    "text": "Documentation\n\nThe importance of a handbook-first approach to documentation GitLab"
+  },
+  {
+    "objectID": "drafts/data_eng_list.html#managment",
+    "href": "drafts/data_eng_list.html#managment",
+    "title": "Data Engineering Links",
+    "section": "Managment",
+    "text": "Managment\n\nData Team GitLab\nMy Facebook Bootcamp Experience\nWriting an engineering strategy. Irrational Exuberance\nThe Art and Science of Measuring Data Teams Value Airbyte"
+  },
+  {
+    "objectID": "drafts/data_eng_list.html#metadata",
+    "href": "drafts/data_eng_list.html#metadata",
+    "title": "Data Engineering Links",
+    "section": "Metadata",
+    "text": "Metadata\n\nAmundsen, the leading open source data catalog"
+  },
+  {
+    "objectID": "drafts/data_eng_list.html#observability",
+    "href": "drafts/data_eng_list.html#observability",
+    "title": "Data Engineering Links",
+    "section": "Observability",
+    "text": "Observability"
+  },
+  {
+    "objectID": "drafts/data_eng_list.html#analytics",
+    "href": "drafts/data_eng_list.html#analytics",
+    "title": "Data Engineering Links",
+    "section": "Analytics",
+    "text": "Analytics\n\nPouria Hadjibagheri and the UK’s abandoned open data revolution The Spectator\nHow The Post is replacing Mapbox with open source solutions - Kevin Schaul\nGitHub - protomaps/protomaps.js: Lightweight vector map rendering, labeling and symbology for the web"
+  },
+  {
+    "objectID": "drafts/data_eng_list.html#follow",
+    "href": "drafts/data_eng_list.html#follow",
+    "title": "Data Engineering Links",
+    "section": "Follow",
+    "text": "Follow\n\n(756) Seattle Data Guy - YouTube\nDeep Channel - Tools for the data craft."
+  },
+  {
+    "objectID": "drafts/data_eng_list.html#career",
+    "href": "drafts/data_eng_list.html#career",
+    "title": "Data Engineering Links",
+    "section": "Career",
+    "text": "Career\n\nA Senior Engineer’s Guide to the System Design Interview interviewing.io\nGitHub - jithendray/dp203-azure-data-engineering: notes for DP203-Data Engineering on Azure"
+  },
+  {
+    "objectID": "drafts/data_eng_list.html#data-science",
+    "href": "drafts/data_eng_list.html#data-science",
+    "title": "Data Engineering Links",
+    "section": "Data Science",
+    "text": "Data Science\n\nFaker library in python - An intriguing expedient for data scientists by Sanjay Nandakumar Towards Data Science\nWelcome Superset\nLibrary Genesis\nApache Iceberg\nconfusables - PyPI\nfal - Features & Labels\nEarthly CI: Launching a new era for CI - Earthly Blog\nPricing Tabular\npydantic-factories - PyPI\nFaker library in python - An intriguing expedient for data scientists by Sanjay Nandakumar Towards Data Science\nblog/we-need-a-new-versioning-notation.md at main - davidbullado/blog - GitHub\nPrequel - Data syncs & data warehouse integration\nHow to use dbt-expectations to detect data quality issues\nIf data lineage is the answer, what is the question? by Gabs Ferreira Alvin Mar, 2023 Medium\nModern Data Strategy: Quality, Observability, Cataloging and Lineage by Danilo Drobac Feb, 2023 Medium\nIf You Only Read A Few Data Articles In 2023, Read These by Sven Balnojan Geek Culture Feb, 2023 Medium\nExam DP-203: Data Engineering on Microsoft Azure - Certifications Microsoft Learn\nVault by HashiCorp\nLakehouse — A resumé by Robert Kossendey claimsforce\n(1752) Continuous Delivery - YouTube\nLearn MS SQL Server & PostgreSQL: Database Design A-Z™ Udemy\nUltimate AWS Certified Solutions Architect Associate (SAA) Udemy\nThe Complete SQL Bootcamp for the Manipulation and Analysis of Data Udemy\nLinux for Beginners: Linux Basics Udemy\nData Warehouse Fundamentals for Beginners Udemy\nSpark and Python for Big Data with PySpark Udemy\nThe Complete Hands-On Introduction to Apache Airflow Udemy\n[8 Course BUNDLE]: DP-203: Data Engineering on MS Azure Udemy\nBI Analysis: MySQL for Data Analytics and Business Intelligence Udemy\nDocker & Kubernetes: The Practical Guide- [2023 Edition] Udemy\nData Warehouse - The Ultimate Guide Udemy\nPractice Exams AWS Certified Solutions Architect Associate Udemy\nHow To Test Your Data With Great Expectations DigitalOcean\npytest tips and tricks pythontest\nStay SaaSy Keeping it SaaSy\nSLS Letter from Dean\nModern data engineering playbook\nGitHub - andkret/Cookbook: The Data Engineering Cookbook\n(1871) Andreas Kretz - YouTube\nLearn exactly how to use dbt™ in a modern data workflow Course\n(1871) Kahan Data Solutions - YouTube\nDesigning a Data Project to Impress Hiring Managers - Start Data Engineering\nBuild Data Engineering Projects, with Free Template - Start Data Engineering\nData Engineering Project for Beginners - Batch edition - Start Data Engineering\nData engineering projects with template: Airflow, dbt, Docker, Terraform (IAC), Github actions (CI/CD) & more : dataengineering\nGitHub - DataTalksClub/data-engineering-zoomcamp: Free Data Engineering course!\nA data engineering project with Prefect, Docker, Terraform, Google CloudRun, BigQuery and Streamlit by Ryan Lamb Mar, 2023 Medium\neliasbenaddouidrissi\ndigitalghost-dev (Christian) - GitHub\nGitHub - RSKriegs/finnhub-streaming-data-pipeline: Stream processing pipeline from Finnhub websocket using Spark, Kafka, Kubernetes and more\nGitHub - ankurchavda/streamify: A data engineering project with Kafka, Spark Streaming, dbt, Docker, Airflow, Terraform, GCP and much more!\nGitHub - ABZ-Aaron/Reddit-API-Pipeline\nGitHub - ris-tlp/audiophile-e2e-pipeline: Pipeline that extracts data from Crinacle’s Headphone and InEarMonitor databases and finalizes data for a Metabase Dashboard.\nGitHub - andrem8/surf_dash\nThe Developing Dev Ryan Peterman Substack\nWhat is Data Engineering? - The Pragmatic Engineer\n2022 State of DevOps Report    Google Cloud\nDORA Four Key Metrics (Accelerate book) - Measuring Engineering Productivity\n(1932) Continuous Deployment or Continuous Delivery? When To Release - YouTube\nGitHub - context-labs/autodoc: Toolkit for auto-generating codebase documentation using LLMs\nAgile Is A Glass Cannon — Tom Dalling\nUsing architectural decision records to streamline technical decision-making for a software development project - AWS Prescriptive Guidance\nJsonnet - The Data Templating Language\n(2) Data Engineering: Posts LinkedIn\nAutomate your Python project with Makefile\nHarold Sinnott #MWC23 on Twitter: “Best of #SQL Cheat Sheet\nSQLBolt - Learn SQL - Introduction to SQL\nMountpoint for S3 : dataengineering\nDagster vs. Airflow Dagster Blog\nData Quality Dimensions: Assuring Your Data Quality with Great Expectations - KDnuggets\nWhat is Continuous Documentation? The Manifesto Part I\nSQLMesh\nComparisons - SQLMesh\nParquet: more than just “Turbo CSV”\nSoda Core - Data Reliability Engineering as Code\nTest data quality at scale with Deequ AWS Big Data Blog\nDEEQU, I mean Data Quality. We say how we can turn the world upside… by Ajith Shetty Medium\nUnit Testing Data at Scale using Deequ and Apache Spark\n(2251) Guaranteeing Data Quality SLAs with Deequ & Databand - YouTube\nGitHub - dominikhei/Local-Data-LakeHouse: Sample Data Lakehouse deployed in Docker containers using Apache Iceberg, Minio, Trino and a Hive Metastore. Can be used for local testing.\nHow to Join a fact and a type 2 dimension (SCD2) table - Start Data Engineering\nPerspective Perspective\n5 Helpful Extract & Load Practices for High-Quality Raw Data by Sven Balnojan Apr, 2023 Towards Data Science\nCDC in Production: An Operating Guide\nImplementing Data Contracts at GoCardless Tech @ GoCardless\nA complete Apache Airflow tutorial: building data pipelines with Python AI Summer\nGitHub - getdozer/dozer: Connect any data source, combine them in real-time and instantly get low-latency Data APIs. All with just a simple configuration!\nDozer Start building real-time data apps in minutes Dozer Start building real-time data apps in minutes\nDevOps uses a capability model, not a maturity model - Octopus Deploy\nddanieltan.com - How to add some personality to your Quarto Blog\nDBT Core & Airflow. Empowering our data organization with… by Albert Franzi Albert Franzi Medium\n(3) Quastor Quastor Tech Substack\n(3) ☕ Tech Dive - APIs - by Quastor Tech - Quastor\n(3) ☕ Tech Dive - APIs PART 2 - by Quastor Tech - Quastor\n(3) ☕ Tech Dive - Database Sharding - by Quastor Tech - Quastor\n(3) ☕ Learn System Design? - by Quastor Tech - Quastor\n(3) ☕ The Metaverse - by Quastor Tech - Quastor\n(3) ☕ Software Architecture in the Real World - by Quastor Tech\n(3) ☕ Docker Explained - by Quastor Tech - Quastor\n(3) ☕ The Architecture Behind the World’s Largest Developer Site…\n(3) Tech Dive - APIs - by Quastor Tech - Quastor\n(3) ☕ The Engineering Behind Facebook Newsfeed\n(3) ☕ Distributed Databases Explained - by Quastor Tech\n(3) Khan Academy’s migration from Python to Go\n(3) ☕ A summary of Clean Code - by Quastor Tech - Quastor\n(3) Clean Code - Part 2 - by Quastor Tech - Quastor\n(3) Clean Code - Part 3 - by Quastor Tech - Quastor\n(3) How WhatsApp scaled to 1 billion users with only 50 engineers\n(3) The Architecture of Databases - by Quastor Tech - Quastor\n(3) Principles for API Design - by Quastor Tech - Quastor\n(3) How Notion sharded their Postgres Database\n(3) How GitHub shifted from a Monolith to Microservices\n(3) Partitioning Relational Databases at GitHub\n(3) Software Architecture Principles - by Quastor Tech\n(3) An Introduction to Big Data Architectures - by Quastor Tech\n(3) Why LinkedIn changed their tech stack - by Quastor Tech\n(3) How Khan Academy Rewrote their Backend - by Quastor Tech\n(3) How Distributed Databases work - by Quastor Tech - Quastor\n(3) Clean Code’s Advice on Comments - by Quastor Tech - Quastor\n(3) The Architecture of Databases - by Quastor Tech - Quastor\n(3) Observability at Twitter - by Quastor Tech - Quastor\n(3) Airbnb’s Architecture - by Quastor Tech - Quastor\n(3) How to Design Better APIs - by Quastor Tech - Quastor\n(3) Reliability Engineering at BlackRock - by Quastor Tech\nDesign Docs at Google\nHow Notion Sharded Their Postgres Database\nHow WhatsApp scaled to 1 billion users with only 50 engineers\nExplaining the mechanics of Spark caching - Blog luminousmen\nChoosing the Right AWS Storage Service: A Comprehensive Guide to S3, S3N, and S3A - Blog luminousmen\nMaking CI workflow faster with Github Actions - Blog luminousmen\nQuality is the responsibility of the team - Blog luminousmen\nRumbling about Test Driven Development - Blog luminousmen\nDrunk Post: Things I’ve learned as a Sr Engineer- [reddit] - Blog luminousmen\nFirst rule of the leader - grow people - Blog luminousmen\nChange Data Capture (CDC) - Blog luminousmen\nACID vs BASE: Comparison of two Design Philosophies - Blog luminousmen\nOperational Challenges in Big Data - Blog luminousmen\nAnalytical Challenges in Big Data - Blog luminousmen\nArchitecturally Significant Requirements - Blog luminousmen\nManagement Challenges in Big Data - Blog luminousmen\nData Challenges in Big Data - Blog luminousmen\nSoft Skills guide for Software Engineer - Blog luminousmen\nModern Big Data Architectures - Lambda & Kappa - Blog luminousmen\nGuidelines for business meetings - Blog luminousmen\nAirflow dag dependencies - Blog luminousmen\nClean up your digital hygiene - Blog luminousmen\nData Engineering skills - Blog luminousmen\nKubernetes 101 - Blog luminousmen\nData Lake vs Data Warehouse - Blog luminousmen\nPython resource limitation - Blog luminousmen\nThe ultimate Python style guidelines - Blog luminousmen\nIntroduction to Pyspark join types - Blog luminousmen\nThe 5-minute guide to using bucketing in Pyspark - Blog luminousmen\nSpark tips. DataFrame API - Blog luminousmen\nBig Data file formats - Blog luminousmen\nSpark core concepts explained - Blog luminousmen\n1681145807848 (1284×1295)"
+  },
+  {
+    "objectID": "posts/data_eng_list.html",
+    "href": "posts/data_eng_list.html",
+    "title": "Data Engineering Links",
+    "section": "",
+    "text": "Do You Need A Data Warehouse - A Quick Guide - Seattle Data Guy\nWhat’s a Data Vault Model and How to Implement It on the Databricks Lakehouse Platform - The Databricks Blog\nComposable OLAP\nQuestDB Fast SQL for time-series\nPrequel - Data syncs & data warehouse integration"
+  },
+  {
+    "objectID": "posts/data_eng_list.html#pipelines",
+    "href": "posts/data_eng_list.html#pipelines",
+    "title": "Data Engineering Links",
+    "section": "Pipelines",
+    "text": "Pipelines\n\nData Pipeline Design Patterns - #1. Data flow patterns - Start Data Engineering\nstevecrox0914 comments on ETL using pandas\nMinimally Sufficient Pandas. In this article, I will offer an… by Ted Petrou Dunder Data Medium\n(756) Building a robust data pipeline with dbt, Airflow, and Great Expectations - YouTube\n\nReal-time Data Processing and Analysis with Kafka, Connect, KSQL, Elasticsearch, and Flask by Stefentaime Feb, 2023 Medium\n\n\nOrchestration\n\nLeverage Azure Databricks jobs orchestration from Azure Data Factory - Microsoft Community Hub\nIntroducing Databricks Workflows - The Databricks Blog\nDagster vs. Airflow Dagster Blog\n\n\n\nSpark\n\nIntroduction to Pyspark join types - Blog luminousmen\nThe 5-minute guide to using bucketing in Pyspark - Blog luminousmen\nSpark tips. DataFrame API - Blog luminousmen\nSpark core concepts explained - Blog luminousmen\n\n\n\ndbt\n\ndbt - Transform data in your warehouse\n(702) Introduction to dbt (data build tool) from Fishtown Analytics - YouTube\nLearn exactly how to use dbt™ in a modern data workflow Course\ndbt(Data Build Tool) Tutorial - Start Data Engineering\ncorp/dbt_style_guide.md at main - dbt-labs/corp - GitHub\nPopulate dbt models with CSV data. Part 2: the power of dbt-fal\nDBT Core & Airflow. Empowering our data organization with… by Albert Franzi Albert Franzi Medium\n\n\n\nKubernetes\n\nWhat is Kubernetes used for in data engineering? : dataengineering\n\n\n\nData Lake\n\nBig Data file formats - Blog luminousmen\nLakehouse — A resumé by Robert Kossendey claimsforce\nParquet: more than just “Turbo CSV”"
+  },
+  {
+    "objectID": "posts/data_eng_list.html#testing",
+    "href": "posts/data_eng_list.html#testing",
+    "title": "Data Engineering Links",
+    "section": "Testing",
+    "text": "Testing\n\nCleaning sample data in standardized way Crystal Lewis\nThe Unreasonable Effectiveness of Data Pipeline Smoke Tests Dagster Blog\nIntroduction to the Pipeline Data Validation Workflow (VALID-II) - pointblank\nHow to Use Great Expectations in Databricks Great Expectations\nGitHub - gladykov/chain.train: ETL & database testing framework for big data, written with Python, using Pytest. With connectors for Spark, Snowflake, MySQL/MariaDB.\nTest data generation: There and back\nHow To Test Your Data With Great Expectations DigitalOcean\npytest tips and tricks pythontest"
+  },
+  {
+    "objectID": "posts/data_eng_list.html#data-quality",
+    "href": "posts/data_eng_list.html#data-quality",
+    "title": "Data Engineering Links",
+    "section": "Data Quality",
+    "text": "Data Quality\n\nHow to use dbt-expectations to detect data quality issues\nData Quality Dimensions: Assuring Your Data Quality with Great Expectations - KDnuggets\nTest data quality at scale with Deequ AWS Big Data Blog\nDEEQU, I mean Data Quality. We say how we can turn the world upside… by Ajith Shetty Medium\nUnit Testing Data at Scale using Deequ and Apache Spark\nGuaranteeing Data Quality SLAs with Deequ & Databand - YouTube"
+  },
+  {
+    "objectID": "posts/data_eng_list.html#cicd",
+    "href": "posts/data_eng_list.html#cicd",
+    "title": "Data Engineering Links",
+    "section": "CI/CD",
+    "text": "CI/CD\n\nE5: Building Better CI/CD Pipelines - by Marius Kimmina\nContinuous Delivery - YouTube\n2022 State of DevOps Report    Google Cloud\nContinuous Deployment or Continuous Delivery? When To Release - YouTube"
+  },
+  {
+    "objectID": "posts/data_eng_list.html#documentation",
+    "href": "posts/data_eng_list.html#documentation",
+    "title": "Data Engineering Links",
+    "section": "Documentation",
+    "text": "Documentation\n\nThe importance of a handbook-first approach to documentation GitLab\nWhat is Continuous Documentation? The Manifesto Part I"
+  },
+  {
+    "objectID": "posts/data_eng_list.html#managment",
+    "href": "posts/data_eng_list.html#managment",
+    "title": "Data Engineering Links",
+    "section": "Managment",
+    "text": "Managment\n\nModern data engineering playbook\nGitHub - andkret/Cookbook: The Data Engineering Cookbook\nData Team GitLab\nMy Facebook Bootcamp Experience\nWriting an engineering strategy. Irrational Exuberance\nThe Art and Science of Measuring Data Teams Value Airbyte\nDORA Four Key Metrics (Accelerate book) - Measuring Engineering Productivity\nAgile Is A Glass Cannon — Tom Dalling\nUsing architectural decision records to streamline technical decision-making for a software development project - AWS Prescriptive Guidance\nJsonnet - The Data Templating Language"
+  },
+  {
+    "objectID": "posts/data_eng_list.html#metadata",
+    "href": "posts/data_eng_list.html#metadata",
+    "title": "Data Engineering Links",
+    "section": "Metadata",
+    "text": "Metadata\n\nAmundsen, the leading open source data catalog"
+  },
+  {
+    "objectID": "posts/data_eng_list.html#observability",
+    "href": "posts/data_eng_list.html#observability",
+    "title": "Data Engineering Links",
+    "section": "Observability",
+    "text": "Observability\n\nIf data lineage is the answer, what is the question? by Gabs Ferreira Alvin Mar, 2023 Medium\nModern Data Strategy: Quality, Observability, Cataloging and Lineage by Danilo Drobac Feb, 2023 Medium"
+  },
+  {
+    "objectID": "posts/data_eng_list.html#analytics",
+    "href": "posts/data_eng_list.html#analytics",
+    "title": "Data Engineering Links",
+    "section": "Analytics",
+    "text": "Analytics\n\nPouria Hadjibagheri and the UK’s abandoned open data revolution The Spectator\nHow The Post is replacing Mapbox with open source solutions - Kevin Schaul\nGitHub - protomaps/protomaps.js: Lightweight vector map rendering, labeling and symbology for the web"
+  },
+  {
+    "objectID": "posts/data_eng_list.html#follow",
+    "href": "posts/data_eng_list.html#follow",
+    "title": "Data Engineering Links",
+    "section": "Follow",
+    "text": "Follow\n\n(756) Seattle Data Guy - YouTube\nDeep Channel - Tools for the data craft.\nAndreas Kretz - YouTube\nKahan Data Solutions - YouTube\nThe Developing Dev Ryan Peterman Substack\nData Engineering: Posts LinkedIn\nQuastor Quastor Tech Substack"
+  },
+  {
+    "objectID": "posts/data_eng_list.html#career",
+    "href": "posts/data_eng_list.html#career",
+    "title": "Data Engineering Links",
+    "section": "Career",
+    "text": "Career\n\nA Senior Engineer’s Guide to the System Design Interview interviewing.io\nGitHub - jithendray/dp203-azure-data-engineering: notes for DP203-Data Engineering on Azure"
+  },
+  {
+    "objectID": "posts/data_eng_list.html#data-science",
+    "href": "posts/data_eng_list.html#data-science",
+    "title": "Data Engineering Links",
+    "section": "Data Science",
+    "text": "Data Science\n\nFaker library in python - An intriguing expedient for data scientists by Sanjay Nandakumar Towards Data Science"
+  },
+  {
+    "objectID": "posts/data_eng_list.html#projects",
+    "href": "posts/data_eng_list.html#projects",
+    "title": "Data Engineering Links",
+    "section": "Projects",
+    "text": "Projects\n\nProject A Data Modelling Best Practices Part I: How to Model Data in a Data Warehouse? - YouTube\n(500) Project A Data Modelling Best Practices Part II: How to Build a Data Warehouse? - YouTube\nDesigning a Data Project to Impress Hiring Managers - Start Data Engineering\nBuild Data Engineering Projects, with Free Template - Start Data Engineering\nData Engineering Project for Beginners - Batch edition - Start Data Engineering\nData engineering projects with template: Airflow, dbt, Docker, Terraform (IAC), Github actions (CI/CD) & more : dataengineering\nGitHub - DataTalksClub/data-engineering-zoomcamp: Free Data Engineering course!\nA data engineering project with Prefect, Docker, Terraform, Google CloudRun, BigQuery and Streamlit by Ryan Lamb Mar, 2023 Medium\neliasbenaddouidrissi\nGitHub - RSKriegs/finnhub-streaming-data-pipeline: Stream processing pipeline from Finnhub websocket using Spark, Kafka, Kubernetes and more\nGitHub - ankurchavda/streamify: A data engineering project with Kafka, Spark Streaming, dbt, Docker, Airflow, Terraform, GCP and much more!\nGitHub - ABZ-Aaron/Reddit-API-Pipeline\nGitHub - ris-tlp/audiophile-e2e-pipeline: Pipeline that extracts data from Crinacle’s Headphone and InEarMonitor databases and finalizes data for a Metabase Dashboard.\nGitHub - dominikhei/Local-Data-LakeHouse: Sample Data Lakehouse deployed in Docker containers using Apache Iceberg, Minio, Trino and a Hive Metastore. Can be used for local testing."
+  },
+  {
+    "objectID": "posts/data_eng_list.html#security",
+    "href": "posts/data_eng_list.html#security",
+    "title": "Data Engineering Links",
+    "section": "Security",
+    "text": "Security\n\n5 Ways for Enterprise Teams to Secure Their DevOps Pipelines in 2023"
+  },
+  {
+    "objectID": "posts/data_eng_list.html#misc",
+    "href": "posts/data_eng_list.html#misc",
+    "title": "Data Engineering Links",
+    "section": "Misc",
+    "text": "Misc\n\nWhat is Data Engineering? - The Pragmatic Engineer\nIf You Only Read A Few Data Articles In 2023, Read These by Sven Balnojan Geek Culture Feb, 2023 Medium\nLow Code Software Development Is A Lie\nblog/we-need-a-new-versioning-notation.md at main - davidbullado/blog - GitHub"
+  },
+  {
+    "objectID": "posts/data_eng_list.html#misc2",
+    "href": "posts/data_eng_list.html#misc2",
+    "title": "Data Engineering Links",
+    "section": "Misc2",
+    "text": "Misc2\n\nWelcome Superset\nLibrary Genesis\nApache Iceberg\nconfusables - PyPI\nfal - Features & Labels\nEarthly CI: Launching a new era for CI - Earthly Blog\nPricing Tabular\npydantic-factories - PyPI\nVault by HashiCorp\ndigitalghost-dev (Christian) - GitHub\nGitHub - andrem8/surf_dash\nThe Developing Dev Ryan Peterman Substack\nGitHub - context-labs/autodoc: Toolkit for auto-generating codebase documentation using LLMs\nJsonnet - The Data Templating Language\n(2) Data Engineering: Posts LinkedIn\nAutomate your Python project with Makefile\nHarold Sinnott #MWC23 on Twitter: “Best of #SQL Cheat Sheet\nSQLBolt - Learn SQL - Introduction to SQL\nMountpoint for S3 : dataengineering\nDagster vs. Airflow Dagster Blog\nData Quality Dimensions: Assuring Your Data Quality with Great Expectations - KDnuggets\nWhat is Continuous Documentation? The Manifesto Part I\nSQLMesh\nComparisons - SQLMesh\nParquet: more than just “Turbo CSV”\nSoda Core - Data Reliability Engineering as Code\nTest data quality at scale with Deequ AWS Big Data Blog\nDEEQU, I mean Data Quality. We say how we can turn the world upside… by Ajith Shetty Medium\nUnit Testing Data at Scale using Deequ and Apache Spark\nGuaranteeing Data Quality SLAs with Deequ & Databand - YouTube\nGitHub - dominikhei/Local-Data-LakeHouse: Sample Data Lakehouse deployed in Docker containers using Apache Iceberg, Minio, Trino and a Hive Metastore. Can be used for local testing.\nHow to Join a fact and a type 2 dimension (SCD2) table - Start Data Engineering\nPerspective Perspective\n5 Helpful Extract & Load Practices for High-Quality Raw Data by Sven Balnojan Apr, 2023 Towards Data Science\nCDC in Production: An Operating Guide\nImplementing Data Contracts at GoCardless Tech @ GoCardless\nA complete Apache Airflow tutorial: building data pipelines with Python AI Summer\nGitHub - getdozer/dozer: Connect any data source, combine them in real-time and instantly get low-latency Data APIs. All with just a simple configuration!\nDozer Start building real-time data apps in minutes Dozer Start building real-time data apps in minutes\nDevOps uses a capability model, not a maturity model - Octopus Deploy\nddanieltan.com - How to add some personality to your Quarto Blog\nDBT Core & Airflow. Empowering our data organization with… by Albert Franzi Albert Franzi Medium\nQuastor Quastor Tech Substack\nTech Dive - APIs - by Quastor Tech - Quastor\nTech Dive - APIs PART 2 - by Quastor Tech - Quastor\nTech Dive - Database Sharding - by Quastor Tech - Quastor\nLearn System Design? - by Quastor Tech - Quastor\nThe Metaverse - by Quastor Tech - Quastor\nSoftware Architecture in the Real World - by Quastor Tech\nDocker Explained - by Quastor Tech - Quastor\nThe Architecture Behind the World’s Largest Developer Site…\nTech Dive - APIs - by Quastor Tech - Quastor\nThe Engineering Behind Facebook Newsfeed\nDistributed Databases Explained - by Quastor Tech\nKhan Academy’s migration from Python to Go\nA summary of Clean Code - by Quastor Tech - Quastor\nClean Code - Part 2 - by Quastor Tech - Quastor\nClean Code - Part 3 - by Quastor Tech - Quastor\nHow WhatsApp scaled to 1 billion users with only 50 engineers\nThe Architecture of Databases - by Quastor Tech - Quastor\nPrinciples for API Design - by Quastor Tech - Quastor\nHow Notion sharded their Postgres Database\nHow GitHub shifted from a Monolith to Microservices\nPartitioning Relational Databases at GitHub\nSoftware Architecture Principles - by Quastor Tech\nAn Introduction to Big Data Architectures - by Quastor Tech\nWhy LinkedIn changed their tech stack - by Quastor Tech\nHow Khan Academy Rewrote their Backend - by Quastor Tech\nHow Distributed Databases work - by Quastor Tech - Quastor\nClean Code’s Advice on Comments - by Quastor Tech - Quastor\nThe Architecture of Databases - by Quastor Tech - Quastor\nObservability at Twitter - by Quastor Tech - Quastor\nAirbnb’s Architecture - by Quastor Tech - Quastor\nHow to Design Better APIs - by Quastor Tech - Quastor\nReliability Engineering at BlackRock - by Quastor Tech\nDesign Docs at Google\nHow Notion Sharded Their Postgres Database\nHow WhatsApp scaled to 1 billion users with only 50 engineers\nExplaining the mechanics of Spark caching - Blog luminousmen\nChoosing the Right AWS Storage Service: A Comprehensive Guide to S3, S3N, and S3A - Blog luminousmen\nMaking CI workflow faster with Github Actions - Blog luminousmen\nQuality is the responsibility of the team - Blog luminousmen\nRumbling about Test Driven Development - Blog luminousmen\nDrunk Post: Things I’ve learned as a Sr Engineer- [reddit] - Blog luminousmen\nFirst rule of the leader - grow people - Blog luminousmen\nChange Data Capture (CDC) - Blog luminousmen\nACID vs BASE: Comparison of two Design Philosophies - Blog luminousmen\nOperational Challenges in Big Data - Blog luminousmen\nAnalytical Challenges in Big Data - Blog luminousmen\nArchitecturally Significant Requirements - Blog luminousmen\nManagement Challenges in Big Data - Blog luminousmen\nData Challenges in Big Data - Blog luminousmen\nSoft Skills guide for Software Engineer - Blog luminousmen\nModern Big Data Architectures - Lambda & Kappa - Blog luminousmen\nGuidelines for business meetings - Blog luminousmen\nAirflow dag dependencies - Blog luminousmen\nClean up your digital hygiene - Blog luminousmen\nData Engineering skills - Blog luminousmen\nKubernetes 101 - Blog luminousmen\nData Lake vs Data Warehouse - Blog luminousmen\nPython resource limitation - Blog luminousmen\nThe ultimate Python style guidelines - Blog luminousmen\nExam DP-203: Data Engineering on Microsoft Azure - Certifications Microsoft Learn\nLearn MS SQL Server & PostgreSQL: Database Design A-Z™ Udemy\nUltimate AWS Certified Solutions Architect Associate (SAA) Udemy\nThe Complete SQL Bootcamp for the Manipulation and Analysis of Data Udemy\nLinux for Beginners: Linux Basics Udemy\nData Warehouse Fundamentals for Beginners Udemy\nSpark and Python for Big Data with PySpark Udemy\nThe Complete Hands-On Introduction to Apache Airflow Udemy\n[8 Course BUNDLE]: DP-203: Data Engineering on MS Azure Udemy\nBI Analysis: MySQL for Data Analytics and Business Intelligence Udemy\nDocker & Kubernetes: The Practical Guide- [2023 Edition] Udemy\nData Warehouse - The Ultimate Guide Udemy\nPractice Exams AWS Certified Solutions Architect Associate Udemy\nStay SaaSy Keeping it SaaSy\nSLS Letter from Dean"
+  },
+  {
+    "objectID": "posts/data_eng_list.html#python",
+    "href": "posts/data_eng_list.html#python",
+    "title": "Data Engineering Links",
+    "section": "Python",
+    "text": "Python\n\nAutomate your Python project with Makefile"
+  },
+  {
+    "objectID": "posts/data_eng_list.html#sql",
+    "href": "posts/data_eng_list.html#sql",
+    "title": "Data Engineering Links",
+    "section": "SQL",
+    "text": "SQL\n\nHarold Sinnott #MWC23 on Twitter: “Best of #SQL Cheat Sheet\nSQLBolt - Learn SQL - Introduction to SQL"
+  },
+  {
+    "objectID": "posts/data_eng_list.html#learn",
+    "href": "posts/data_eng_list.html#learn",
+    "title": "Data Engineering Links",
+    "section": "Learn",
+    "text": "Learn\n\nExam DP-203: Data Engineering on Microsoft Azure - Certifications Microsoft Learn\nLearn MS SQL Server & PostgreSQL: Database Design A-Z™ Udemy\nUltimate AWS Certified Solutions Architect Associate (SAA) Udemy\nThe Complete SQL Bootcamp for the Manipulation and Analysis of Data Udemy\nLinux for Beginners: Linux Basics Udemy\nData Warehouse Fundamentals for Beginners Udemy\nSpark and Python for Big Data with PySpark Udemy\nThe Complete Hands-On Introduction to Apache Airflow Udemy\n[8 Course BUNDLE]: DP-203: Data Engineering on MS Azure Udemy\nBI Analysis: MySQL for Data Analytics and Business Intelligence Udemy\nDocker & Kubernetes: The Practical Guide- [2023 Edition] Udemy\nData Warehouse - The Ultimate Guide Udemy\nPractice Exams AWS Certified Solutions Architect Associate Udemy"
+  },
+  {
+    "objectID": "posts/data_eng_list.html#uncatogrised-todo",
+    "href": "posts/data_eng_list.html#uncatogrised-todo",
+    "title": "Data Engineering Links",
+    "section": "Uncatogrised (todo)",
+    "text": "Uncatogrised (todo)\n\nWelcome Superset\nLibrary Genesis\nApache Iceberg\nconfusables - PyPI\nfal - Features & Labels\nEarthly CI: Launching a new era for CI - Earthly Blog\nPricing Tabular\npydantic-factories - PyPI\nVault by HashiCorp\ndigitalghost-dev (Christian) - GitHub\nGitHub - andrem8/surf_dash\nGitHub - context-labs/autodoc: Toolkit for auto-generating codebase documentation using LLMs\nJsonnet - The Data Templating Language\nMountpoint for S3 : dataengineering\nData Quality Dimensions: Assuring Your Data Quality with Great Expectations - KDnuggets\nSQLMesh\nComparisons - SQLMesh\nSoda Core - Data Reliability Engineering as Code\nHow to Join a fact and a type 2 dimension (SCD2) table - Start Data Engineering\nPerspective Perspective\n5 Helpful Extract & Load Practices for High-Quality Raw Data by Sven Balnojan Apr, 2023 Towards Data Science\nCDC in Production: An Operating Guide\nImplementing Data Contracts at GoCardless Tech @ GoCardless\nA complete Apache Airflow tutorial: building data pipelines with Python AI Summer\nGitHub - getdozer/dozer: Connect any data source, combine them in real-time and instantly get low-latency Data APIs. All with just a simple configuration!\nDozer Start building real-time data apps in minutes Dozer Start building real-time data apps in minutes\nDevOps uses a capability model, not a maturity model - Octopus Deploy\nddanieltan.com - How to add some personality to your Quarto Blog\nTech Dive - APIs - by Quastor Tech - Quastor\nTech Dive - APIs PART 2 - by Quastor Tech - Quastor\nTech Dive - Database Sharding - by Quastor Tech - Quastor\nLearn System Design? - by Quastor Tech - Quastor\nThe Metaverse - by Quastor Tech - Quastor\nSoftware Architecture in the Real World - by Quastor Tech\nDocker Explained - by Quastor Tech - Quastor\nThe Architecture Behind the World’s Largest Developer Site…\nTech Dive - APIs - by Quastor Tech - Quastor\nThe Engineering Behind Facebook Newsfeed\nDistributed Databases Explained - by Quastor Tech\nKhan Academy’s migration from Python to Go\nA summary of Clean Code - by Quastor Tech - Quastor\nClean Code - Part 2 - by Quastor Tech - Quastor\nClean Code - Part 3 - by Quastor Tech - Quastor\nHow WhatsApp scaled to 1 billion users with only 50 engineers\nThe Architecture of Databases - by Quastor Tech - Quastor\nPrinciples for API Design - by Quastor Tech - Quastor\nHow Notion sharded their Postgres Database\nHow GitHub shifted from a Monolith to Microservices\nPartitioning Relational Databases at GitHub\nSoftware Architecture Principles - by Quastor Tech\nAn Introduction to Big Data Architectures - by Quastor Tech\nWhy LinkedIn changed their tech stack - by Quastor Tech\nHow Khan Academy Rewrote their Backend - by Quastor Tech\nHow Distributed Databases work - by Quastor Tech - Quastor\nClean Code’s Advice on Comments - by Quastor Tech - Quastor\nThe Architecture of Databases - by Quastor Tech - Quastor\nObservability at Twitter - by Quastor Tech - Quastor\nAirbnb’s Architecture - by Quastor Tech - Quastor\nHow to Design Better APIs - by Quastor Tech - Quastor\nReliability Engineering at BlackRock - by Quastor Tech\nDesign Docs at Google\nHow Notion Sharded Their Postgres Database\nHow WhatsApp scaled to 1 billion users with only 50 engineers\nExplaining the mechanics of Spark caching - Blog luminousmen\nChoosing the Right AWS Storage Service: A Comprehensive Guide to S3, S3N, and S3A - Blog luminousmen\nMaking CI workflow faster with Github Actions - Blog luminousmen\nQuality is the responsibility of the team - Blog luminousmen\nRumbling about Test Driven Development - Blog luminousmen\nDrunk Post: Things I’ve learned as a Sr Engineer- [reddit] - Blog luminousmen\nFirst rule of the leader - grow people - Blog luminousmen\nChange Data Capture (CDC) - Blog luminousmen\nACID vs BASE: Comparison of two Design Philosophies - Blog luminousmen\nOperational Challenges in Big Data - Blog luminousmen\nAnalytical Challenges in Big Data - Blog luminousmen\nArchitecturally Significant Requirements - Blog luminousmen\nManagement Challenges in Big Data - Blog luminousmen\nData Challenges in Big Data - Blog luminousmen\nSoft Skills guide for Software Engineer - Blog luminousmen\nModern Big Data Architectures - Lambda & Kappa - Blog luminousmen\nGuidelines for business meetings - Blog luminousmen\nAirflow dag dependencies - Blog luminousmen\nClean up your digital hygiene - Blog luminousmen\nData Engineering skills - Blog luminousmen\nKubernetes 101 - Blog luminousmen\nData Lake vs Data Warehouse - Blog luminousmen\nPython resource limitation - Blog luminousmen\nThe ultimate Python style guidelines - Blog luminousmen\nStay SaaSy Keeping it SaaSy\nSLS Letter from Dean"
+  },
+  {
+    "objectID": "posts/data_eng_list.html#uncategorised-todo",
+    "href": "posts/data_eng_list.html#uncategorised-todo",
+    "title": "Data Engineering Links",
+    "section": "Uncategorised (todo)",
+    "text": "Uncategorised (todo)\n\nWelcome Superset\nLibrary Genesis\nApache Iceberg\nconfusables - PyPI\nfal - Features & Labels\nEarthly CI: Launching a new era for CI - Earthly Blog\nPricing Tabular\npydantic-factories - PyPI\nVault by HashiCorp\ndigitalghost-dev (Christian) - GitHub\nGitHub - andrem8/surf_dash\nGitHub - context-labs/autodoc: Toolkit for auto-generating codebase documentation using LLMs\nJsonnet - The Data Templating Language\nMountpoint for S3 : dataengineering\nData Quality Dimensions: Assuring Your Data Quality with Great Expectations - KDnuggets\nSQLMesh\nComparisons - SQLMesh\nSoda Core - Data Reliability Engineering as Code\nHow to Join a fact and a type 2 dimension (SCD2) table - Start Data Engineering\nPerspective Perspective\n5 Helpful Extract & Load Practices for High-Quality Raw Data by Sven Balnojan Apr, 2023 Towards Data Science\nCDC in Production: An Operating Guide\nImplementing Data Contracts at GoCardless Tech @ GoCardless\nA complete Apache Airflow tutorial: building data pipelines with Python AI Summer\nGitHub - getdozer/dozer: Connect any data source, combine them in real-time and instantly get low-latency Data APIs. All with just a simple configuration!\nDozer Start building real-time data apps in minutes Dozer Start building real-time data apps in minutes\nDevOps uses a capability model, not a maturity model - Octopus Deploy\nddanieltan.com - How to add some personality to your Quarto Blog\nTech Dive - APIs - by Quastor Tech - Quastor\nTech Dive - APIs PART 2 - by Quastor Tech - Quastor\nTech Dive - Database Sharding - by Quastor Tech - Quastor\nLearn System Design? - by Quastor Tech - Quastor\nThe Metaverse - by Quastor Tech - Quastor\nSoftware Architecture in the Real World - by Quastor Tech\nDocker Explained - by Quastor Tech - Quastor\nThe Architecture Behind the World’s Largest Developer Site…\nTech Dive - APIs - by Quastor Tech - Quastor\nThe Engineering Behind Facebook Newsfeed\nDistributed Databases Explained - by Quastor Tech\nKhan Academy’s migration from Python to Go\nA summary of Clean Code - by Quastor Tech - Quastor\nClean Code - Part 2 - by Quastor Tech - Quastor\nClean Code - Part 3 - by Quastor Tech - Quastor\nHow WhatsApp scaled to 1 billion users with only 50 engineers\nThe Architecture of Databases - by Quastor Tech - Quastor\nPrinciples for API Design - by Quastor Tech - Quastor\nHow Notion sharded their Postgres Database\nHow GitHub shifted from a Monolith to Microservices\nPartitioning Relational Databases at GitHub\nSoftware Architecture Principles - by Quastor Tech\nAn Introduction to Big Data Architectures - by Quastor Tech\nWhy LinkedIn changed their tech stack - by Quastor Tech\nHow Khan Academy Rewrote their Backend - by Quastor Tech\nHow Distributed Databases work - by Quastor Tech - Quastor\nClean Code’s Advice on Comments - by Quastor Tech - Quastor\nThe Architecture of Databases - by Quastor Tech - Quastor\nObservability at Twitter - by Quastor Tech - Quastor\nAirbnb’s Architecture - by Quastor Tech - Quastor\nHow to Design Better APIs - by Quastor Tech - Quastor\nReliability Engineering at BlackRock - by Quastor Tech\nDesign Docs at Google\nHow Notion Sharded Their Postgres Database\nHow WhatsApp scaled to 1 billion users with only 50 engineers\nExplaining the mechanics of Spark caching - Blog luminousmen\nChoosing the Right AWS Storage Service: A Comprehensive Guide to S3, S3N, and S3A - Blog luminousmen\nMaking CI workflow faster with Github Actions - Blog luminousmen\nQuality is the responsibility of the team - Blog luminousmen\nRumbling about Test Driven Development - Blog luminousmen\nDrunk Post: Things I’ve learned as a Sr Engineer- [reddit] - Blog luminousmen\nFirst rule of the leader - grow people - Blog luminousmen\nChange Data Capture (CDC) - Blog luminousmen\nACID vs BASE: Comparison of two Design Philosophies - Blog luminousmen\nOperational Challenges in Big Data - Blog luminousmen\nAnalytical Challenges in Big Data - Blog luminousmen\nArchitecturally Significant Requirements - Blog luminousmen\nManagement Challenges in Big Data - Blog luminousmen\nData Challenges in Big Data - Blog luminousmen\nSoft Skills guide for Software Engineer - Blog luminousmen\nModern Big Data Architectures - Lambda & Kappa - Blog luminousmen\nGuidelines for business meetings - Blog luminousmen\nAirflow dag dependencies - Blog luminousmen\nClean up your digital hygiene - Blog luminousmen\nData Engineering skills - Blog luminousmen\nKubernetes 101 - Blog luminousmen\nData Lake vs Data Warehouse - Blog luminousmen\nPython resource limitation - Blog luminousmen\nThe ultimate Python style guidelines - Blog luminousmen\nStay SaaSy Keeping it SaaSy\nSLS Letter from Dean"
   }
 ]

@@ -17,9 +17,10 @@ website:
         aria-label: home
         icon: "rss"
         href: index.qmd
-    right:
       - text: "About"
+        icon: "address-card"
         href: about.qmd
+    right:
       - icon: github
         aria-label: github
         href: https://github.com/craig-shenton
@@ -29,10 +30,8 @@ website:
 format:
   html:
     theme: 
-      light: 
-        - litera
-        - custom.scss
+      - litera
+      - custom.scss
+    mainfont: "'Source Sans 3', 'Source Sans Pro', 'Segoe UI', 'Roboto', 'Helvetica', sans-serif"
+    monofont: "Fira Mono"
     smooth-scroll: true
-
-
-
