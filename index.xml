@@ -16,351 +16,8 @@
 <height>140</height>
 <width>144</width>
 </image>
-<generator>quarto-1.2.475</generator>
-<lastBuildDate>Sat, 08 Apr 2023 00:00:00 GMT</lastBuildDate>
-<item>
-  <title>Data Engineering Links</title>
-  <dc:creator>Craig Shenton</dc:creator>
-  <link>https://craig-shenton.github.io/craigrshenton/posts/data_eng_list.html</link>
-  <description><![CDATA[ 
-
-
-
-<section id="databases" class="level2">
-<h2 class="anchored" data-anchor-id="databases">Databases</h2>
-<ul>
-<li><a href="https://www.theseattledataguy.com/do-you-need-a-data-warehouse-a-quick-guide/#page-content">Do You Need A Data Warehouse - A Quick Guide - Seattle Data Guy</a></li>
-<li><a href="https://www.databricks.com/blog/2023/02/24/data-vault-best-practice-implementation-lakehouse.html">What’s a Data Vault Model and How to Implement It on the Databricks Lakehouse Platform - The Databricks Blog</a></li>
-<li><a href="https://blog.fal.ai/composable-olap/">Composable OLAP</a></li>
-<li><a href="https://questdb.io/">QuestDB Fast SQL for time-series</a></li>
-<li><a href="https://www.prequel.co/">Prequel - Data syncs &amp; data warehouse integration</a></li>
-</ul>
-</section>
-<section id="projects" class="level2">
-<h2 class="anchored" data-anchor-id="projects">Projects</h2>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=8HlNG8bdlM0">Project A Data Modelling Best Practices Part I: How to Model Data in a Data Warehouse? - YouTube</a></li>
-<li><a href="https://www.youtube.com/watch?v=24Uvo5vZJWA">(500) Project A Data Modelling Best Practices Part II: How to Build a Data Warehouse? - YouTube</a></li>
-<li><a href="https://www.startdataengineering.com/post/data-engineering-project-to-impress-hiring-managers/">Designing a Data Project to Impress Hiring Managers - Start Data Engineering</a></li>
-<li><a href="https://www.startdataengineering.com/post/data-engineering-projects-with-free-template/">Build Data Engineering Projects, with Free Template - Start Data Engineering</a></li>
-<li><a href="https://www.startdataengineering.com/post/data-engineering-project-for-beginners-batch-edition/">Data Engineering Project for Beginners - Batch edition - Start Data Engineering</a></li>
-<li><a href="https://www.reddit.com/r/dataengineering/comments/ygieh8/data_engineering_projects_with_template_airflow/">Data engineering projects with template: Airflow, dbt, Docker, Terraform (IAC), Github actions (CI/CD) &amp; more : dataengineering</a></li>
-<li><a href="https://github.com/DataTalksClub/data-engineering-zoomcamp">GitHub - DataTalksClub/data-engineering-zoomcamp: Free Data Engineering course!</a></li>
-<li><a href="https://medium.com/@ryanelamb/a-data-engineering-project-with-prefect-docker-terraform-google-cloudrun-bigquery-and-streamlit-3fc6e08b9398">A data engineering project with Prefect, Docker, Terraform, Google CloudRun, BigQuery and Streamlit by Ryan Lamb Mar, 2023 Medium</a></li>
-<li><a href="https://eliasbenaddouidrissi.dev/posts/data_engineering_project_monzo/">eliasbenaddouidrissi</a></li>
-<li><a href="https://github.com/RSKriegs/finnhub-streaming-data-pipeline">GitHub - RSKriegs/finnhub-streaming-data-pipeline: Stream processing pipeline from Finnhub websocket using Spark, Kafka, Kubernetes and more</a></li>
-<li><a href="https://github.com/ankurchavda/streamify">GitHub - ankurchavda/streamify: A data engineering project with Kafka, Spark Streaming, dbt, Docker, Airflow, Terraform, GCP and much more!</a></li>
-<li><a href="https://github.com/ABZ-Aaron/Reddit-API-Pipeline">GitHub - ABZ-Aaron/Reddit-API-Pipeline</a></li>
-<li><a href="https://github.com/ris-tlp/audiophile-e2e-pipeline">GitHub - ris-tlp/audiophile-e2e-pipeline: Pipeline that extracts data from Crinacle’s Headphone and InEarMonitor databases and finalizes data for a Metabase Dashboard.</a></li>
-<li><a href="https://github.com/dominikhei/Local-Data-LakeHouse">GitHub - dominikhei/Local-Data-LakeHouse: Sample Data Lakehouse deployed in Docker containers using Apache Iceberg, Minio, Trino and a Hive Metastore. Can be used for local testing.</a></li>
-</ul>
-</section>
-<section id="pipelines" class="level2">
-<h2 class="anchored" data-anchor-id="pipelines">Pipelines</h2>
-<ul>
-<li><a href="https://www.startdataengineering.com/post/design-patterns/">Data Pipeline Design Patterns - #1. Data flow patterns - Start Data Engineering</a></li>
-<li><a href="https://www.reddit.com/r/dataengineering/comments/zr2klf/etl_using_pandas/j1324sh/">stevecrox0914 comments on ETL using pandas</a></li>
-<li><a href="https://medium.com/dunder-data/minimally-sufficient-pandas-a8e67f2a2428">Minimally Sufficient Pandas. In this article, I will offer an… by Ted Petrou Dunder Data Medium</a></li>
-<li><a href="https://www.youtube.com/watch?v=9iN6iw7Lamo">(756) Building a robust data pipeline with dbt, Airflow, and Great Expectations - YouTube</a><br>
-</li>
-<li><a href="https://medium.com/@stefentaime_10958/real-time-data-processing-and-analysis-with-kafka-connect-ksql-elasticsearch-and-flask-f55366032d78">Real-time Data Processing and Analysis with Kafka, Connect, KSQL, Elasticsearch, and Flask by Stefentaime Feb, 2023 Medium</a></li>
-</ul>
-<section id="orchestration" class="level3">
-<h3 class="anchored" data-anchor-id="orchestration">Orchestration</h3>
-<ul>
-<li><a href="https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/leverage-azure-databricks-jobs-orchestration-from-azure-data/ba-p/3123862">Leverage Azure Databricks jobs orchestration from Azure Data Factory - Microsoft Community Hub</a></li>
-<li><a href="https://www.databricks.com/blog/2022/05/10/introducing-databricks-workflows.html">Introducing Databricks Workflows - The Databricks Blog</a></li>
-<li><a href="https://dagster.io/blog/dagster-airflow">Dagster vs.&nbsp;Airflow Dagster Blog</a></li>
-</ul>
-</section>
-<section id="spark" class="level3">
-<h3 class="anchored" data-anchor-id="spark">Spark</h3>
-<ul>
-<li><a href="https://luminousmen.com/post/introduction-to-pyspark-join-types">Introduction to Pyspark join types - Blog luminousmen</a></li>
-<li><a href="https://luminousmen.com/post/the-5-minute-guide-to-using-bucketing-in-pyspark">The 5-minute guide to using bucketing in Pyspark - Blog luminousmen</a></li>
-<li><a href="https://luminousmen.com/post/spark-tips-dataframe-api">Spark tips. DataFrame API - Blog luminousmen</a></li>
-<li><a href="https://luminousmen.com/post/spark-core-concepts-explained">Spark core concepts explained - Blog luminousmen</a></li>
-</ul>
-</section>
-<section id="dbt" class="level3">
-<h3 class="anchored" data-anchor-id="dbt">dbt</h3>
-<ul>
-<li><a href="https://www.getdbt.com/">dbt - Transform data in your warehouse</a></li>
-<li><a href="https://www.youtube.com/watch?v=M8oi7nSaWps">(702) Introduction to dbt (data build tool) from Fishtown Analytics - YouTube</a></li>
-<li><a href="https://www.kahandatasolutions.com/the-playbook-for-dbt">Learn exactly how to use dbt™ in a modern data workflow Course</a></li>
-<li><a href="https://www.startdataengineering.com/post/dbt-data-build-tool-tutorial/">dbt(Data Build Tool) Tutorial - Start Data Engineering</a></li>
-<li><a href="https://github.com/dbt-labs/corp/blob/main/dbt_style_guide.md">corp/dbt_style_guide.md at main - dbt-labs/corp - GitHub</a></li>
-<li><a href="https://blog.fal.ai/populate-dbt-models-with-csv-data-part-2-the-power-of-dbt-fal/">Populate dbt models with CSV data. Part 2: the power of dbt-fal</a></li>
-<li><a href="https://medium.com/albert-franzi/dbt-core-airflow-7d94edac9cdf">DBT Core &amp; Airflow. Empowering our data organization with… by Albert Franzi Albert Franzi Medium</a></li>
-</ul>
-</section>
-<section id="kubernetes" class="level3">
-<h3 class="anchored" data-anchor-id="kubernetes">Kubernetes</h3>
-<ul>
-<li><a href="https://www.reddit.com/r/dataengineering/comments/rja8s6/what_is_kubernetes_used_for_in_data_engineering/">What is Kubernetes used for in data engineering? : dataengineering</a></li>
-</ul>
-</section>
-<section id="data-lake" class="level3">
-<h3 class="anchored" data-anchor-id="data-lake">Data Lake</h3>
-<ul>
-<li><a href="https://luminousmen.com/post/big-data-file-formats">Big Data file formats - Blog luminousmen</a></li>
-<li><a href="https://medium.com/claimsforce/lakehouse-a-resum%C3%A9-750368e57914">Lakehouse — A resumé by Robert Kossendey claimsforce</a></li>
-<li><a href="https://csvbase.com/blog/3">Parquet: more than just “Turbo CSV”</a></li>
-</ul>
-</section>
-</section>
-<section id="testing" class="level2">
-<h2 class="anchored" data-anchor-id="testing">Testing</h2>
-<ul>
-<li><a href="https://cghlewis.com/blog/data_clean_03/?utm_source=substack&amp;utm_medium=email">Cleaning sample data in standardized way Crystal Lewis</a></li>
-<li><a href="https://dagster.io/blog/smoke-test-data-pipeline">The Unreasonable Effectiveness of Data Pipeline Smoke Tests Dagster Blog</a></li>
-<li><a href="https://rich-iannone.github.io/pointblank/articles/VALID-II.html">Introduction to the Pipeline Data Validation Workflow (VALID-II) - pointblank</a></li>
-<li><a href="https://docs.greatexpectations.io/docs/deployment_patterns/how_to_use_great_expectations_in_databricks/">How to Use Great Expectations in Databricks Great Expectations</a></li>
-<li><a href="https://github.com/gladykov/chain.train/">GitHub - gladykov/chain.train: ETL &amp; database testing framework for big data, written with Python, using Pytest. With connectors for Spark, Snowflake, MySQL/MariaDB.</a></li>
-<li><a href="https://www.synthesized.io/post/test-data-generation-there-and-back">Test data generation: There and back</a></li>
-<li><a href="https://www.digitalocean.com/community/tutorials/how-to-test-your-data-with-great-expectations">How To Test Your Data With Great Expectations DigitalOcean</a></li>
-<li><a href="https://pythontest.com/pytest-tips-tricks/">pytest tips and tricks pythontest</a></li>
-</ul>
-</section>
-<section id="data-quality" class="level2">
-<h2 class="anchored" data-anchor-id="data-quality">Data Quality</h2>
-<ul>
-<li><a href="https://www.datafold.com/blog/dbt-expectations">How to use dbt-expectations to detect data quality issues</a></li>
-<li><a href="https://www.kdnuggets.com/2023/03/data-quality-dimensions-assuring-data-quality-great-expectations.html">Data Quality Dimensions: Assuring Your Data Quality with Great Expectations - KDnuggets</a></li>
-<li><a href="https://aws.amazon.com/blogs/big-data/test-data-quality-at-scale-with-deequ/">Test data quality at scale with Deequ AWS Big Data Blog</a></li>
-<li><a href="https://ajithshetty28.medium.com/deequ-i-mean-data-quality-a0e6c048469d">DEEQU, I mean Data Quality. We say how we can turn the world upside… by Ajith Shetty Medium</a></li>
-<li><a href="https://www.velotio.com/engineering-blog/test-data-quality-at-scale-using-deequ-and-apache-spark">Unit Testing Data at Scale using Deequ and Apache Spark</a></li>
-<li><a href="https://www.youtube.com/watch?v=D29txlJyBvk">Guaranteeing Data Quality SLAs with Deequ &amp; Databand - YouTube</a></li>
-</ul>
-</section>
-<section id="cicd" class="level2">
-<h2 class="anchored" data-anchor-id="cicd">CI/CD</h2>
-<ul>
-<li><a href="https://www.infrastructureposts.com/p/e5-building-better-cicd-pipelines">E5: Building Better CI/CD Pipelines - by Marius Kimmina</a></li>
-<li><a href="https://www.youtube.com/@ContinuousDelivery/videos">Continuous Delivery - YouTube</a></li>
-<li><a href="https://cloud.google.com/devops/state-of-devops">2022 State of DevOps Report &nbsp;&nbsp; Google Cloud</a></li>
-<li><a href="https://www.youtube.com/watch?v=mBzDPRgue6s">Continuous Deployment or Continuous Delivery? When To Release - YouTube</a></li>
-</ul>
-</section>
-<section id="documentation" class="level2">
-<h2 class="anchored" data-anchor-id="documentation">Documentation</h2>
-<ul>
-<li><a href="https://about.gitlab.com/company/culture/all-remote/handbook-first-documentation/">The importance of a handbook-first approach to documentation GitLab</a></li>
-<li><a href="https://swimm.io/blog/what-is-continuous-documentation-manifesto-part-1/?utm_source=IPE_circuit&amp;utm_medium=paid_pub&amp;utm_campaign=IPE-march&amp;utm_content=gm-test">What is Continuous Documentation? The Manifesto Part I</a></li>
-</ul>
-</section>
-<section id="managment" class="level2">
-<h2 class="anchored" data-anchor-id="managment">Managment</h2>
-<ul>
-<li><a href="https://www.thoughtworks.com/content/dam/thoughtworks/documents/e-book/tw_ebook_modern_data_engineering_playbook.pdf">Modern data engineering playbook</a></li>
-<li><a href="https://github.com/andkret/Cookbook">GitHub - andkret/Cookbook: The Data Engineering Cookbook</a></li>
-<li><a href="https://about.gitlab.com/handbook/business-technology/data-team/">Data Team GitLab</a></li>
-<li><a href="https://mukulrathi.com/facebook-bootcamp-experience/">My Facebook Bootcamp Experience</a></li>
-<li><a href="https://lethain.com/eng-strategies/">Writing an engineering strategy. Irrational Exuberance</a></li>
-<li><a href="https://airbyte.com/blog/measuring-data-teams-value">The Art and Science of Measuring Data Teams Value Airbyte</a></li>
-<li><a href="https://www.engprod.guide/docs/dora-four-key-metrics-accelerate-book">DORA Four Key Metrics (Accelerate book) - Measuring Engineering Productivity</a></li>
-<li><a href="https://www.tomdalling.com/blog/software-processes/agile-is-a-glass-cannon/">Agile Is A Glass Cannon — Tom Dalling</a></li>
-<li><a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/architectural-decision-records/welcome.html">Using architectural decision records to streamline technical decision-making for a software development project - AWS Prescriptive Guidance</a></li>
-<li><a href="https://jsonnet.org/">Jsonnet - The Data Templating Language</a></li>
-</ul>
-</section>
-<section id="observability" class="level2">
-<h2 class="anchored" data-anchor-id="observability">Observability</h2>
-<ul>
-<li><a href="https://medium.com/alvin-ai/if-data-lineage-is-the-answer-what-is-the-question-bad7f5f44fb5">If data lineage is the answer, what is the question? by Gabs Ferreira Alvin Mar, 2023 Medium</a></li>
-<li><a href="https://medium.com/@danilo.drobac/modern-data-strategy-quality-observability-cataloging-and-lineage-45ef492771b">Modern Data Strategy: Quality, Observability, Cataloging and Lineage by Danilo Drobac Feb, 2023 Medium</a></li>
-</ul>
-</section>
-<section id="analytics" class="level2">
-<h2 class="anchored" data-anchor-id="analytics">Analytics</h2>
-<ul>
-<li><a href="https://www.spectator.co.uk/article/pouria-hadjibagheri-and-the-uks-abandoned-open-data-revolution/">Pouria Hadjibagheri and the UK’s abandoned open data revolution The Spectator</a></li>
-<li><a href="https://www.kschaul.com/post/2023/02/16/how-the-post-is-replacing-mapbox-with-open-source-solutions/">How The Post is replacing Mapbox with open source solutions - Kevin Schaul</a></li>
-<li><a href="https://github.com/protomaps/protomaps.js">GitHub - protomaps/protomaps.js: Lightweight vector map rendering, labeling and symbology for the web</a></li>
-</ul>
-</section>
-<section id="follow" class="level2">
-<h2 class="anchored" data-anchor-id="follow">Follow</h2>
-<ul>
-<li><a href="https://www.youtube.com/@SeattleDataGuy">(756) Seattle Data Guy - YouTube</a></li>
-<li><a href="https://www.deepchannel.com/">Deep Channel - Tools for the data craft.</a></li>
-<li><a href="https://www.youtube.com/channel/UCY8mzqqGwl5_bTpBY9qLMAA">Andreas Kretz - YouTube</a></li>
-<li><a href="https://www.youtube.com/c/kahandatasolutions">Kahan Data Solutions - YouTube</a></li>
-<li><a href="https://www.developing.dev/">The Developing Dev Ryan Peterman Substack</a></li>
-<li><a href="https://www.linkedin.com/showcase/skills-data-engineering/posts/?feedView=all">Data Engineering: Posts LinkedIn</a></li>
-<li><a href="https://quastor.substack.com/?nthPub=24">Quastor Quastor Tech Substack</a></li>
-</ul>
-</section>
-<section id="career" class="level2">
-<h2 class="anchored" data-anchor-id="career">Career</h2>
-<ul>
-<li><a href="https://interviewing.io/guides/system-design-interview/part-two#concepts-apis">A Senior Engineer’s Guide to the System Design Interview interviewing.io</a></li>
-<li><a href="https://github.com/jithendray/dp203-azure-data-engineering">GitHub - jithendray/dp203-azure-data-engineering: notes for DP203-Data Engineering on Azure</a></li>
-</ul>
-</section>
-<section id="data-science" class="level2">
-<h2 class="anchored" data-anchor-id="data-science">Data Science</h2>
-<ul>
-<li><a href="https://towardsdatascience.com/faker-library-in-python-an-intriguing-expedient-for-data-scientists-7dd06f953050">Faker library in python - An intriguing expedient for data scientists by Sanjay Nandakumar Towards Data Science</a></li>
-</ul>
-</section>
-<section id="security" class="level2">
-<h2 class="anchored" data-anchor-id="security">Security</h2>
-<ul>
-<li><a href="https://devm.io/devops/devops-pipelines-security">5 Ways for Enterprise Teams to Secure Their DevOps Pipelines in 2023</a></li>
-</ul>
-</section>
-<section id="python" class="level2">
-<h2 class="anchored" data-anchor-id="python">Python</h2>
-<ul>
-<li><a href="https://antonz.org/makefile-automation/">Automate your Python project with Makefile</a></li>
-</ul>
-</section>
-<section id="sql" class="level2">
-<h2 class="anchored" data-anchor-id="sql">SQL</h2>
-<ul>
-<li><a href="https://twitter.com/HaroldSinnott/status/1637559588231806977/photo/1">Harold Sinnott #MWC23 on Twitter: “Best of #SQL Cheat Sheet</a></li>
-<li><a href="https://sqlbolt.com/">SQLBolt - Learn SQL - Introduction to SQL</a></li>
-</ul>
-</section>
-<section id="learn" class="level2">
-<h2 class="anchored" data-anchor-id="learn">Learn</h2>
-<ul>
-<li><a href="https://learn.microsoft.com/en-us/certifications/exams/dp-203/">Exam DP-203: Data Engineering on Microsoft Azure - Certifications Microsoft Learn</a></li>
-<li><a href="https://www.udemy.com/course/sqldatabases/?ranMID=39197&amp;ranEAID=GjbDpcHcs4w&amp;ranSiteID=GjbDpcHcs4w-PUSFwymG6hWEeJK4omaHXw&amp;LSNPUBID=GjbDpcHcs4w&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">Learn MS SQL Server &amp; PostgreSQL: Database Design A-Z™ Udemy</a></li>
-<li><a href="https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/?LSNPUBID=GjbDpcHcs4w&amp;ranEAID=GjbDpcHcs4w&amp;ranMID=39197&amp;ranSiteID=GjbDpcHcs4w-WwMLJrOGOzPYaIxBnd3xQw&amp;utm_medium=udemyads&amp;utm_source=aff-campaign">Ultimate AWS Certified Solutions Architect Associate (SAA) Udemy</a></li>
-<li><a href="https://www.udemy.com/course/the-complete-sql-bootcamp/?ranMID=39197&amp;ranEAID=HTtUFxqit0c&amp;ranSiteID=HTtUFxqit0c-4gKQS74XfsAh.IZSlqreSA&amp;LSNPUBID=HTtUFxqit0c&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">The Complete SQL Bootcamp for the Manipulation and Analysis of Data Udemy</a></li>
-<li><a href="https://www.udemy.com/course/linux-for-beginners-2021/?ranMID=39197&amp;ranEAID=HTtUFxqit0c&amp;ranSiteID=HTtUFxqit0c-DuIubHb12wJSCBhhkJ.YLQ&amp;LSNPUBID=HTtUFxqit0c&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">Linux for Beginners: Linux Basics Udemy</a></li>
-<li><a href="https://www.udemy.com/course/data-warehouse-fundamentals-for-beginners/?ranMID=39197&amp;ranEAID=HTtUFxqit0c&amp;ranSiteID=HTtUFxqit0c-9yFtjfjjGG9Hb2iBfrIPWg&amp;LSNPUBID=HTtUFxqit0c&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">Data Warehouse Fundamentals for Beginners Udemy</a></li>
-<li><a href="https://www.udemy.com/course/spark-and-python-for-big-data-with-pyspark/?ranMID=39197&amp;ranEAID=HTtUFxqit0c&amp;ranSiteID=HTtUFxqit0c-Pbp3UMxUqvLxanBaqwTPJg&amp;LSNPUBID=HTtUFxqit0c&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">Spark and Python for Big Data with PySpark Udemy</a></li>
-<li><a href="https://www.udemy.com/course/the-complete-hands-on-course-to-master-apache-airflow/?ranMID=39197&amp;ranEAID=HTtUFxqit0c&amp;ranSiteID=HTtUFxqit0c-J6iO3LtbOFBDGXT2lH5dUA&amp;LSNPUBID=HTtUFxqit0c&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">The Complete Hands-On Introduction to Apache Airflow Udemy</a></li>
-<li><a href="https://www.udemy.com/course/implementing-real-world-use-cases-in-azure-data-factory-v2/?ranMID=39197&amp;ranEAID=HTtUFxqit0c&amp;ranSiteID=HTtUFxqit0c-hziIO3LSO84o8wc3_JYtrw&amp;LSNPUBID=HTtUFxqit0c&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">[8 Course BUNDLE]: DP-203: Data Engineering on MS Azure Udemy</a></li>
-<li><a href="https://www.udemy.com/course/sql-mysql-for-data-analytics-and-business-intelligence/?ranMID=39197&amp;ranEAID=GjbDpcHcs4w&amp;ranSiteID=GjbDpcHcs4w-d4YWyAls6bMMAhmDcmEN1g&amp;utm_source=aff-campaign&amp;LSNPUBID=GjbDpcHcs4w&amp;utm_medium=udemyads">BI Analysis: MySQL for Data Analytics and Business Intelligence Udemy</a></li>
-<li><a href="https://www.udemy.com/course/docker-kubernetes-the-practical-guide/?ranMID=39197&amp;ranEAID=GjbDpcHcs4w&amp;ranSiteID=GjbDpcHcs4w-7ellSaNnSbyL6hGq9tSvag&amp;LSNPUBID=GjbDpcHcs4w&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">Docker &amp; Kubernetes: The Practical Guide- [2023 Edition] Udemy</a></li>
-<li><a href="https://www.udemy.com/course/data-warehouse-the-ultimate-guide/?ranMID=39197&amp;ranEAID=GjbDpcHcs4w&amp;ranSiteID=GjbDpcHcs4w-ivsJYgXfpWSS23Z3otILXg&amp;LSNPUBID=GjbDpcHcs4w&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">Data Warehouse - The Ultimate Guide Udemy</a></li>
-<li><a href="https://www.udemy.com/course/practice-exams-aws-certified-solutions-architect-associate/?src=sac&amp;kw=aws&amp;ranMID=39197&amp;ranEAID=GjbDpcHcs4w&amp;ranSiteID=GjbDpcHcs4w-pZEYq01OMjucejKWZqCn.w&amp;LSNPUBID=GjbDpcHcs4w&amp;utm_source=aff-campaign&amp;utm_medium=udemyads">Practice Exams AWS Certified Solutions Architect Associate Udemy</a></li>
-</ul>
-</section>
-<section id="misc" class="level2">
-<h2 class="anchored" data-anchor-id="misc">Misc</h2>
-<ul>
-<li><a href="https://blog.pragmaticengineer.com/what-is-data-engineering/?utm_source=substack&amp;utm_medium=email">What is Data Engineering? - The Pragmatic Engineer</a></li>
-<li><a href="https://medium.com/geekculture/if-you-only-read-a-few-data-articles-in-2023-read-these-c589a00c763d">If You Only Read A Few Data Articles In 2023, Read These by Sven Balnojan Geek Culture Feb, 2023 Medium</a></li>
-<li><a href="https://jaylittle.com/post/view/2023/4/low-code-software-development-is-a-lie">Low Code Software Development Is A Lie</a></li>
-<li><a href="https://github.com/davidbullado/blog/blob/main/we-need-a-new-versioning-notation.md">blog/we-need-a-new-versioning-notation.md at main - davidbullado/blog - GitHub</a></li>
-</ul>
-</section>
-<section id="uncategorised-todo" class="level2">
-<h2 class="anchored" data-anchor-id="uncategorised-todo">Uncategorised (todo)</h2>
-<ul>
-<li><p><a href="https://superset.apache.org/">Welcome Superset</a></p></li>
-<li><p><a href="https://libgen.li/index.php">Library Genesis</a></p></li>
-<li><p><a href="https://iceberg.apache.org/">Apache Iceberg</a></p></li>
-<li><p><a href="https://pypi.org/project/confusables/">confusables - PyPI</a></p></li>
-<li><p><a href="https://fal.ai/">fal - Features &amp; Labels</a></p></li>
-<li><p><a href="https://earthly.dev/blog/launching-earthly-ci/">Earthly CI: Launching a new era for CI - Earthly Blog</a></p></li>
-<li><p><a href="https://tabular.email/pricing">Pricing Tabular</a></p></li>
-<li><p><a href="https://pypi.org/project/pydantic-factories/">pydantic-factories - PyPI</a></p></li>
-<li><p><a href="https://www.vaultproject.io/">Vault by HashiCorp</a></p></li>
-<li><p><a href="https://github.com/digitalghost-dev">digitalghost-dev (Christian) - GitHub</a></p></li>
-<li><p><a href="https://github.com/andrem8/surf_dash">GitHub - andrem8/surf_dash</a></p></li>
-<li><p><a href="https://github.com/context-labs/autodoc">GitHub - context-labs/autodoc: Toolkit for auto-generating codebase documentation using LLMs</a></p></li>
-<li><p><a href="https://jsonnet.org/">Jsonnet - The Data Templating Language</a></p></li>
-<li><p><a href="https://www.reddit.com/r/dataengineering/comments/125cd6n/mountpoint_for_s3/">Mountpoint for S3 : dataengineering</a></p></li>
-<li><p><a href="https://www.kdnuggets.com/2023/03/data-quality-dimensions-assuring-data-quality-great-expectations.html">Data Quality Dimensions: Assuring Your Data Quality with Great Expectations - KDnuggets</a></p></li>
-<li><p><a href="https://sqlmesh.com/">SQLMesh</a></p></li>
-<li><p><a href="https://sqlmesh.readthedocs.io/en/stable/comparisons/#complexity">Comparisons - SQLMesh</a></p></li>
-<li><p><a href="https://www.soda.io/core">Soda Core - Data Reliability Engineering as Code</a></p></li>
-<li><p><a href="https://www.startdataengineering.com/post/how-to-join-fact-scd2-tables/">How to Join a fact and a type 2 dimension (SCD2) table - Start Data Engineering</a></p></li>
-<li><p><a href="https://perspective.finos.org/">Perspective Perspective</a></p></li>
-<li><p><a href="https://towardsdatascience.com/5-helpful-extract-load-practices-for-high-quality-raw-data-65b9a59a8721">5 Helpful Extract &amp; Load Practices for High-Quality Raw Data by Sven Balnojan Apr, 2023 Towards Data Science</a></p></li>
-<li><p><a href="https://materialize.com/guides/cdc-in-production/">CDC in Production: An Operating Guide</a></p></li>
-<li><p><a href="https://medium.com/gocardless-tech/implementing-data-contracts-at-gocardless-3b5c49074d13">Implementing Data Contracts at GoCardless Tech @ GoCardless</a></p></li>
-<li><p><a href="https://theaisummer.com/apache-airflow-tutorial/">A complete Apache Airflow tutorial: building data pipelines with Python AI Summer</a></p></li>
-<li><p><a href="https://github.com/getdozer/dozer">GitHub - getdozer/dozer: Connect any data source, combine them in real-time and instantly get low-latency Data APIs. All with just a simple configuration!</a></p></li>
-<li><p><a href="https://getdozer.io/">Dozer Start building real-time data apps in minutes Dozer Start building real-time data apps in minutes</a></p></li>
-<li><p><a href="https://octopus.com/blog/devops-uses-capability-not-maturity">DevOps uses a capability model, not a maturity model - Octopus Deploy</a></p></li>
-<li><p><a href="https://www.ddanieltan.com/posts/blogtips/">ddanieltan.com - How to add some personality to your Quarto Blog</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/-tech-dive-apis">Tech Dive - APIs - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/-tech-dive-apis-part-2">Tech Dive - APIs PART 2 - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/-tech-dive-database-sharding">Tech Dive - Database Sharding - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/-learn-system-design">Learn System Design? - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/-the-metaverse">The Metaverse - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/-software-architecture-in-the-real">Software Architecture in the Real World - by Quastor Tech</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/-docker-explained-13d">Docker Explained - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/-the-architecture-behind-the-worlds">The Architecture Behind the World’s Largest Developer Site…</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/tech-dive-apis">Tech Dive - APIs - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/-the-engineering-behind-facebook">The Engineering Behind Facebook Newsfeed</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/-distributed-databases-explained">Distributed Databases Explained - by Quastor Tech</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/khan-academys-migration-from-python">Khan Academy’s migration from Python to Go</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/-writing-clean-code">A summary of Clean Code - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/clean-code-part-2">Clean Code - Part 2 - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/clean-code-part-3">Clean Code - Part 3 - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/how-whatsapp-scaled-to-1-billion">How WhatsApp scaled to 1 billion users with only 50 engineers</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/the-architecture-of-databases">The Architecture of Databases - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/principles-for-api-design">Principles for API Design - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/how-notion-sharded-their-postgres">How Notion sharded their Postgres Database</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/githubs-shift-from-monolith-to-microservices">How GitHub shifted from a Monolith to Microservices</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/partitioning-relational-databases">Partitioning Relational Databases at GitHub</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/software-architecture-principles">Software Architecture Principles - by Quastor Tech</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/an-introduction-to-big-data-architectures">An Introduction to Big Data Architectures - by Quastor Tech</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/why-linkedin-changed-their-tech-stack">Why LinkedIn changed their tech stack - by Quastor Tech</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/how-khan-academy-rewrote-their-backend">How Khan Academy Rewrote their Backend - by Quastor Tech</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/how-distributed-databases-work">How Distributed Databases work - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/clean-codes-advice-on-comments">Clean Code’s Advice on Comments - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/the-architecture-of-databases-ba6">The Architecture of Databases - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/observability-at-twitter">Observability at Twitter - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/airbnbs-architecture">Airbnb’s Architecture - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/how-to-design-better-apis">How to Design Better APIs - by Quastor Tech - Quastor</a></p></li>
-<li><p><a href="https://quastor.substack.com/p/reliability-engineering-at-blackrock">Reliability Engineering at BlackRock - by Quastor Tech</a></p></li>
-<li><p><a href="https://www.industrialempathy.com/posts/design-docs-at-google/">Design Docs at Google</a></p></li>
-<li><p><a href="https://blog.quastor.org/p/notion-sharded-postgres-database-8af4">How Notion Sharded Their Postgres Database</a></p></li>
-<li><p><a href="https://blog.quastor.org/p/whatsapp-scaled-1-billion-users-50-engineers">How WhatsApp scaled to 1 billion users with only 50 engineers</a></p></li>
-<li><p><a href="https://luminousmen.com/post/explaining-the-mechanics-of-spark-caching">Explaining the mechanics of Spark caching - Blog luminousmen</a></p></li>
-<li><p><a href="https://luminousmen.com/post/choosing-the-right-aws-storage-service-a-comprehensive-guide-to-s3-s3n-and-s3a">Choosing the Right AWS Storage Service: A Comprehensive Guide to S3, S3N, and S3A - Blog luminousmen</a></p></li>
-<li><p><a href="https://luminousmen.com/post/making-ci-workflow-faster-with-github-actions">Making CI workflow faster with Github Actions - Blog luminousmen</a></p></li>
-<li><p><a href="https://luminousmen.com/post/quality-is-the-responsibility-of-the-team">Quality is the responsibility of the team - Blog luminousmen</a></p></li>
-<li><p><a href="https://luminousmen.com/post/rumbling-about-test-driven-development">Rumbling about Test Driven Development - Blog luminousmen</a></p></li>
-<li><p><a href="https://luminousmen.com/post/drunk-post-things-ive-learned-as-a-sr-engineer">Drunk Post: Things I’ve learned as a Sr Engineer- [reddit] - Blog luminousmen</a></p></li>
-<li><p><a href="https://luminousmen.com/post/first-rule-of-the-leader">First rule of the leader - grow people - Blog luminousmen</a></p></li>
-<li><p><a href="https://luminousmen.com/post/change-data-capture">Change Data Capture (CDC) - Blog luminousmen</a></p></li>
-<li><p><a href="https://luminousmen.com/post/acid-vs-base-comparison-of-two-design-philosophies">ACID vs BASE: Comparison of two Design Philosophies - Blog luminousmen</a></p></li>
-<li><p><a href="https://luminousmen.com/post/operational-challenges-in-big-data">Operational Challenges in Big Data - Blog luminousmen</a></p></li>
-<li><p><a href="https://luminousmen.com/post/analytical-challenges-in-big-data">Analytical Challenges in Big Data - Blog luminousmen</a></p></li>
-<li><p><a href="https://luminousmen.com/post/architecturally-significant-requirements">Architecturally Significant Requirements - Blog luminousmen</a></p></li>
-<li><p><a href="https://luminousmen.com/post/management-challenges-in-big-data">Management Challenges in Big Data - Blog luminousmen</a></p></li>
-<li><p><a href="https://luminousmen.com/post/data-challenges-in-big-data">Data Challenges in Big Data - Blog luminousmen</a></p></li>
-<li><p><a href="https://luminousmen.com/post/soft-skills-guide-for-software-engineer">Soft Skills guide for Software Engineer - Blog luminousmen</a></p></li>
-<li><p><a href="https://luminousmen.com/post/modern-big-data-architectures-lambda-kappa">Modern Big Data Architectures - Lambda &amp; Kappa - Blog luminousmen</a></p></li>
-<li><p><a href="https://luminousmen.com/post/guidelines-for-business-meetings">Guidelines for business meetings - Blog luminousmen</a></p></li>
-<li><p><a href="https://luminousmen.com/post/airflow-dag-dependencies">Airflow dag dependencies - Blog luminousmen</a></p></li>
-<li><p><a href="https://luminousmen.com/post/clean-up-your-digital-hygiene">Clean up your digital hygiene - Blog luminousmen</a></p></li>
-<li><p><a href="https://luminousmen.com/post/data-management-skills">Data Engineering skills - Blog luminousmen</a></p></li>
-<li><p><a href="https://luminousmen.com/post/kubernetes-101">Kubernetes 101 - Blog luminousmen</a></p></li>
-<li><p><a href="https://luminousmen.com/post/data-lake-vs-data-warehouse">Data Lake vs Data Warehouse - Blog luminousmen</a></p></li>
-<li><p><a href="https://luminousmen.com/post/python-resource-limitation">Python resource limitation - Blog luminousmen</a></p></li>
-<li><p><a href="https://luminousmen.com/post/the-ultimate-python-style-guidelines">The ultimate Python style guidelines - Blog luminousmen</a></p></li>
-<li><p><a href="https://staysaasy.com/">Stay SaaSy Keeping it SaaSy</a></p></li>
-<li><p><a href="https://law.stanford.edu/wp-content/uploads/2023/03/Next-Steps-on-Protests-and-Free-Speech.pdf?mkt_tok=ODg0LUZTQi0zMDcAAAGKqNfmUfz2S_PCzkgUjCQGrC2DR1ji-TGeKtn3NnnIoJpAduaZaZdKteNsL5dGzCkk5cwWC_6vm8autYIUyUQO4uIJy6lLbBGo47NHk8_3iTA">SLS Letter from Dean</a></p></li>
-</ul>
-
-
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><div>MIT</div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shenton2023,
-  author = {Craig Shenton},
-  title = {Data {Engineering} {Links}},
-  date = {2023-04-08},
-  url = {https://craig-shenton.github.io/craigrshenton/data_eng_list.html},
-  langid = {en}
-}
-</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shenton2023" class="csl-entry quarto-appendix-citeas">
-Craig Shenton. 2023. <span>“Data Engineering Links.”</span> April 8,
-2023. <a href="https://craig-shenton.github.io/craigrshenton/data_eng_list.html">https://craig-shenton.github.io/craigrshenton/data_eng_list.html</a>.
-</div></div></section></div> ]]></description>
-  <guid>https://craig-shenton.github.io/craigrshenton/posts/data_eng_list.html</guid>
-  <pubDate>Sat, 08 Apr 2023 00:00:00 GMT</pubDate>
-</item>
+<generator>quarto-1.3.353</generator>
+<lastBuildDate>Thu, 09 Sep 2021 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Azure Data Factory Templates</title>
   <dc:creator>Craig Shenton</dc:creator>
@@ -387,12 +44,12 @@ Craig Shenton. 2023. <span>“Data Engineering Links.”</span> April 8,
 <li>SQL Table Staging Pipeline</li>
 <li>Multiple SQL Table Staging Pipeline</li>
 </ul>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Note
 </div>
 </div>
@@ -419,7 +76,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://craig-shenton.github.io/craigrshenton/assets/images/pipeline_temps/sql-ingest.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Data ingestion from a SQL database</figcaption><p></p>
+<figcaption class="figure-caption">Data ingestion from a SQL database</figcaption>
 </figure>
 </div>
 <p><em>Figure 1: Data ingestion from a SQL database</em></p>
@@ -444,19 +101,99 @@ Note
 </section>
 <section id="pipeline-configuration" class="level3">
 <h3 class="anchored" data-anchor-id="pipeline-configuration">Pipeline Configuration</h3>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb1-1"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb1-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb1-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"ingestion_sql"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/ingestion/sql"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-6">    <span class="dt" style="color: #AD0000;">"raw"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb1-7">      <span class="dt" style="color: #AD0000;">"source_dbo"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"dbo"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-8">      <span class="dt" style="color: #AD0000;">"source_table"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"table_1"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-9">      <span class="dt" style="color: #AD0000;">"source_query"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"SELECT * FROM dbo.table_1 ORDER BY Date DESC"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-10">      <span class="dt" style="color: #AD0000;">"sink_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"raw/path/to/data"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-11">      <span class="dt" style="color: #AD0000;">"sink_file"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"table_1.parquet"</span></span>
-<span id="cb1-12">    <span class="fu" style="color: #4758AB;">}</span></span>
-<span id="cb1-13"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb1-2">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"pipeline"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb1-3">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"name"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ingestion_sql"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb1-4">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"folder"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"templates/ingestion/sql"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb1-5">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"adl_file_system"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"file_system"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb1-6">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"raw"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb1-7">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"source_dbo"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"dbo"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb1-8">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"source_table"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"table_1"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb1-9">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"source_query"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"SELECT * FROM dbo.table_1 ORDER BY Date DESC"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb1-10">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"sink_path"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"raw/path/to/data"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb1-11">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"sink_file"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"table_1.parquet"</span></span>
+<span id="cb1-12">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span>
+<span id="cb1-13"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span></code></pre></div>
 </section>
 <section id="data-factory-configuration" class="level3">
 <h3 class="anchored" data-anchor-id="data-factory-configuration">Data Factory Configuration</h3>
@@ -482,7 +219,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://craig-shenton.github.io/craigrshenton/assets/images/pipeline_temps/databricks/databricks.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Data ingestion using a databricks notebook</figcaption><p></p>
+<figcaption class="figure-caption">Data ingestion using a databricks notebook</figcaption>
 </figure>
 </div>
 <p><em>Figure 2: Data ingestion using a databricks notebook</em></p>
@@ -497,15 +234,63 @@ Note
 </section>
 <section id="pipeline-configuration-1" class="level3">
 <h3 class="anchored" data-anchor-id="pipeline-configuration-1">Pipeline Configuration</h3>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb2-1"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb2-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb2-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"ingestion_databricks"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb2-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/ingestion/databricks"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb2-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb2-6">    <span class="dt" style="color: #AD0000;">"raw"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb2-7">      <span class="dt" style="color: #AD0000;">"databricks_notebook"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"/path/to/databricks/notebook"</span></span>
-<span id="cb2-8">    <span class="fu" style="color: #4758AB;">}</span></span>
-<span id="cb2-9"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb2-2">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"pipeline"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb2-3">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"name"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ingestion_databricks"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb2-4">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"folder"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"templates/ingestion/databricks"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb2-5">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"adl_file_system"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"file_system"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb2-6">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"raw"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb2-7">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"databricks_notebook"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"/path/to/databricks/notebook"</span></span>
+<span id="cb2-8">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span>
+<span id="cb2-9"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span></code></pre></div>
 </section>
 <section id="data-factory-configuration-1" class="level3">
 <h3 class="anchored" data-anchor-id="data-factory-configuration-1">Data Factory Configuration</h3>
@@ -531,7 +316,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://craig-shenton.github.io/craigrshenton/assets/images/pipeline_temps/excel_sheet_ingestion.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Data ingestion of an excel file sheet</figcaption><p></p>
+<figcaption class="figure-caption">Data ingestion of an excel file sheet</figcaption>
 </figure>
 </div>
 <p><em>Figure 3: Data ingestion of an excel file sheet</em></p>
@@ -547,19 +332,99 @@ Note
 </section>
 <section id="pipeline-configuration-2" class="level3">
 <h3 class="anchored" data-anchor-id="pipeline-configuration-2">Pipeline Configuration</h3>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb3-1"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb3-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb3-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"ingestion_excel_sheet"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb3-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/ingestion/excel_sheet"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb3-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb3-6">    <span class="dt" style="color: #AD0000;">"raw"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb3-7">      <span class="dt" style="color: #AD0000;">"source_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"raw/"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb3-8">      <span class="dt" style="color: #AD0000;">"source_file"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file.xlsx"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb3-9">      <span class="dt" style="color: #AD0000;">"source_sheet"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"table_1"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb3-10">      <span class="dt" style="color: #AD0000;">"sink_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"processed/"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb3-11">      <span class="dt" style="color: #AD0000;">"sink_name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"table_1.csv"</span></span>
-<span id="cb3-12">    <span class="fu" style="color: #4758AB;">}</span></span>
-<span id="cb3-13"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb3-2">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"pipeline"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb3-3">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"name"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ingestion_excel_sheet"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb3-4">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"folder"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"templates/ingestion/excel_sheet"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb3-5">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"adl_file_system"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"file_system"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb3-6">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"raw"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb3-7">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"source_path"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"raw/"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb3-8">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"source_file"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"file.xlsx"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb3-9">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"source_sheet"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"table_1"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb3-10">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"sink_path"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"processed/"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb3-11">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"sink_name"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"table_1.csv"</span></span>
+<span id="cb3-12">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span>
+<span id="cb3-13"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span></code></pre></div>
 </section>
 <section id="data-factory-configuration-2" class="level3">
 <h3 class="anchored" data-anchor-id="data-factory-configuration-2">Data Factory Configuration</h3>
@@ -588,14 +453,14 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://craig-shenton.github.io/craigrshenton/assets/images/pipeline_temps/multiple_excel_sheet_ingestion.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Data ingestion of multiple excel file sheets</figcaption><p></p>
+<figcaption class="figure-caption">Data ingestion of multiple excel file sheets</figcaption>
 </figure>
 </div>
 <p><em>Figure 4: Data ingestion of multiple excel file sheets</em></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://craig-shenton.github.io/craigrshenton/assets/images/pipeline_temps/multiple_excel_sheet_ingestion_2.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">ForEach loop activities within pipeline</figcaption><p></p>
+<figcaption class="figure-caption">ForEach loop activities within pipeline</figcaption>
 </figure>
 </div>
 <p><em>Figure 5: ForEach loop activities within pipeline</em></p>
@@ -619,7 +484,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://craig-shenton.github.io/craigrshenton/assets/images/pipeline_temps/multiple_excel_sheet_ingestion_3.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Copy activity wildcard setup</figcaption><p></p>
+<figcaption class="figure-caption">Copy activity wildcard setup</figcaption>
 </figure>
 </div>
 <p><em>Figure 6: Copy activity wildcard setup</em></p>
@@ -627,30 +492,158 @@ Note
 </section>
 <section id="pipeline-configuration-3" class="level3">
 <h3 class="anchored" data-anchor-id="pipeline-configuration-3">Pipeline Configuration</h3>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb4-1"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb4-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb4-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"ingestion_multiple_excel_sheets"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb4-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/ingestion/multiple_excel_sheets"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb4-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb4-6">    <span class="dt" style="color: #AD0000;">"raw"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb4-7">      <span class="dt" style="color: #AD0000;">"source_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"ingestion/"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb4-8">      <span class="dt" style="color: #AD0000;">"sink_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"raw/path/to/data"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb4-9">      <span class="dt" style="color: #AD0000;">"sink_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"processed/"</span></span>
-<span id="cb4-10">      <span class="st" style="color: #20794D;">"excel"</span><span class="er" style="color: #AD0000;">:</span><span class="ot" style="color: #003B4F;">[</span></span>
-<span id="cb4-11">    <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb4-12">      <span class="dt" style="color: #AD0000;">"sink_file"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"table_1.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb4-13">      <span class="dt" style="color: #AD0000;">"source_sheet"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"sheet_1"</span></span>
-<span id="cb4-14">    <span class="fu" style="color: #4758AB;">}</span><span class="ot" style="color: #003B4F;">,</span></span>
-<span id="cb4-15">    <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb4-16">      <span class="dt" style="color: #AD0000;">"sink_file"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"table_2.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb4-17">      <span class="dt" style="color: #AD0000;">"source_sheet"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"sheet_2"</span></span>
-<span id="cb4-18">    <span class="fu" style="color: #4758AB;">}</span><span class="ot" style="color: #003B4F;">,</span></span>
-<span id="cb4-19">    <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb4-20">      <span class="dt" style="color: #AD0000;">"sink_file"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"table_3.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb4-21">      <span class="dt" style="color: #AD0000;">"source_sheet"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"sheet_3"</span></span>
-<span id="cb4-22">    <span class="fu" style="color: #4758AB;">}</span></span>
-<span id="cb4-23">  <span class="ot" style="color: #003B4F;">]</span></span>
-<span id="cb4-24"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb4-2">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"pipeline"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb4-3">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"name"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ingestion_multiple_excel_sheets"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-4">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"folder"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"templates/ingestion/multiple_excel_sheets"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-5">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"adl_file_system"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"file_system"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-6">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"raw"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb4-7">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"source_path"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ingestion/"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-8">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"sink_path"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"raw/path/to/data"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-9">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"sink_path"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"processed/"</span></span>
+<span id="cb4-10">      <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"excel"</span><span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">:</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">[</span></span>
+<span id="cb4-11">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb4-12">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"sink_file"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"table_1.csv"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-13">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"source_sheet"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"sheet_1"</span></span>
+<span id="cb4-14">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-15">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb4-16">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"sink_file"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"table_2.csv"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-17">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"source_sheet"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"sheet_2"</span></span>
+<span id="cb4-18">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-19">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb4-20">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"sink_file"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"table_3.csv"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-21">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"source_sheet"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"sheet_3"</span></span>
+<span id="cb4-22">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span>
+<span id="cb4-23">  <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">]</span></span>
+<span id="cb4-24"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span></code></pre></div>
 </section>
 <section id="data-factory-configuration-3" class="level3">
 <h3 class="anchored" data-anchor-id="data-factory-configuration-3">Data Factory Configuration</h3>
@@ -676,7 +669,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://craig-shenton.github.io/craigrshenton/assets/images/pipeline_temps/web_url_ingestion.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Data ingestion from a web URL</figcaption><p></p>
+<figcaption class="figure-caption">Data ingestion from a web URL</figcaption>
 </figure>
 </div>
 <p><em>Figure 7: Data ingestion from a web URL</em></p>
@@ -693,17 +686,81 @@ Note
 </section>
 <section id="pipeline-configuration-4" class="level3">
 <h3 class="anchored" data-anchor-id="pipeline-configuration-4">Pipeline Configuration</h3>
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb5-1"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb5-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb5-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"ingestion_web_url"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb5-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/ingestion/web_url"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb5-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb5-6">    <span class="dt" style="color: #AD0000;">"raw"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb5-7">      <span class="dt" style="color: #AD0000;">"source_url"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"https://www.sourcedata.com"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb5-8">      <span class="dt" style="color: #AD0000;">"sink_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"raw/path/to/data"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb5-9">      <span class="dt" style="color: #AD0000;">"sink_file"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"table_1.csv"</span></span>
-<span id="cb5-10">    <span class="fu" style="color: #4758AB;">}</span></span>
-<span id="cb5-11"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb5-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb5-2">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"pipeline"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb5-3">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"name"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ingestion_web_url"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb5-4">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"folder"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"templates/ingestion/web_url"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb5-5">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"adl_file_system"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"file_system"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb5-6">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"raw"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb5-7">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"source_url"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"https://www.sourcedata.com"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb5-8">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"sink_path"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"raw/path/to/data"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb5-9">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"sink_file"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"table_1.csv"</span></span>
+<span id="cb5-10">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span>
+<span id="cb5-11"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span></code></pre></div>
 </section>
 <section id="data-factory-configuration-4" class="level3">
 <h3 class="anchored" data-anchor-id="data-factory-configuration-4">Data Factory Configuration</h3>
@@ -729,7 +786,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://craig-shenton.github.io/craigrshenton/assets/images/pipeline_temps/function_app_ingestion.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Data ingestion using an azure function app</figcaption><p></p>
+<figcaption class="figure-caption">Data ingestion using an azure function app</figcaption>
 </figure>
 </div>
 <p><em>Figure 8: Data ingestion using an azure function app</em></p>
@@ -744,15 +801,63 @@ Note
 </section>
 <section id="pipeline-configuration-5" class="level3">
 <h3 class="anchored" data-anchor-id="pipeline-configuration-5">Pipeline Configuration</h3>
-<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb6-1"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb6-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb6-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"ingestion_function_app"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb6-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/ingestion/function_app"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb6-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb6-6">    <span class="dt" style="color: #AD0000;">"raw"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb6-7">      <span class="dt" style="color: #AD0000;">"func_name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"azure_func_app"</span></span>
-<span id="cb6-8">    <span class="fu" style="color: #4758AB;">}</span></span>
-<span id="cb6-9"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb6-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb6-2">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"pipeline"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb6-3">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"name"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ingestion_function_app"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb6-4">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"folder"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"templates/ingestion/function_app"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb6-5">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"adl_file_system"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"file_system"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb6-6">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"raw"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb6-7">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"func_name"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"azure_func_app"</span></span>
+<span id="cb6-8">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span>
+<span id="cb6-9"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span></code></pre></div>
 </section>
 <section id="data-factory-configuration-5" class="level3">
 <h3 class="anchored" data-anchor-id="data-factory-configuration-5">Data Factory Configuration</h3>
@@ -778,7 +883,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://craig-shenton.github.io/craigrshenton/assets/images/pipeline_temps/sharepoint_ingestion.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Data ingestion from microsoft sharepoint</figcaption><p></p>
+<figcaption class="figure-caption">Data ingestion from microsoft sharepoint</figcaption>
 </figure>
 </div>
 <p><em>Figure 9: Data ingestion from microsoft sharepoint</em></p>
@@ -792,16 +897,72 @@ Note
 </section>
 <section id="pipeline-configuration-6" class="level3">
 <h3 class="anchored" data-anchor-id="pipeline-configuration-6">Pipeline Configuration</h3>
-<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb7-1"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb7-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb7-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"ingestion_sharepoint"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb7-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/ingestion/sharepoint"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb7-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb7-6">    <span class="dt" style="color: #AD0000;">"raw"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb7-7">      <span class="dt" style="color: #AD0000;">"source_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"...sharepoint/..."</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb7-8">      <span class="dt" style="color: #AD0000;">"logic_app_url"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"https://...logic.azure.com/..."</span></span>
-<span id="cb7-9">    <span class="fu" style="color: #4758AB;">}</span></span>
-<span id="cb7-10"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb7-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb7-2">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"pipeline"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb7-3">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"name"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ingestion_sharepoint"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb7-4">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"folder"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"templates/ingestion/sharepoint"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb7-5">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"adl_file_system"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"file_system"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb7-6">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"raw"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb7-7">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"source_path"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"...sharepoint/..."</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb7-8">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"logic_app_url"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"https://...logic.azure.com/..."</span></span>
+<span id="cb7-9">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span>
+<span id="cb7-10"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span></code></pre></div>
 </section>
 <section id="data-factory-configuration-6" class="level3">
 <h3 class="anchored" data-anchor-id="data-factory-configuration-6">Data Factory Configuration</h3>
@@ -827,7 +988,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://craig-shenton.github.io/craigrshenton/assets/images/pipeline_temps/databricks/databricks.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Data processing using a Databricks notebook</figcaption><p></p>
+<figcaption class="figure-caption">Data processing using a Databricks notebook</figcaption>
 </figure>
 </div>
 <p><em>Figure 10: Data processing using a Databricks notebook</em></p>
@@ -841,46 +1002,222 @@ Note
 </section>
 <section id="pipeline-configuration-7" class="level3">
 <h3 class="anchored" data-anchor-id="pipeline-configuration-7">Pipeline Configuration</h3>
-<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb8-1"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb8-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb8-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"processing_databricks"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb8-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/processing/databricks"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb8-5">    <span class="dt" style="color: #AD0000;">"project"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb8-6">      <span class="dt" style="color: #AD0000;">"databricks_notebook"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"/path/to/databricks/notebook"</span></span>
-<span id="cb8-7">    <span class="fu" style="color: #4758AB;">}</span></span>
-<span id="cb8-8"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb8-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb8-2">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"pipeline"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb8-3">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"name"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"processing_databricks"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb8-4">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"folder"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"templates/processing/databricks"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb8-5">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"project"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb8-6">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"databricks_notebook"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"/path/to/databricks/notebook"</span></span>
+<span id="cb8-7">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span>
+<span id="cb8-8"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span></code></pre></div>
 </section>
 <section id="databricks-orchestration" class="level3">
 <h3 class="anchored" data-anchor-id="databricks-orchestration">Databricks Orchestration</h3>
 <section id="note-2" class="level4">
 <h4 class="anchored" data-anchor-id="note-2">Note</h4>
 <p>Alternatively this pipeline can be used to trigger an orchestrator databricks notebook which in turn runs a series of data processing notebooks.</p>
-<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb9-1"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb9-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb9-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"processing_databricks"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb9-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/processing/databricks_orchestrator"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb9-5">    <span class="dt" style="color: #AD0000;">"project"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb9-6">      <span class="dt" style="color: #AD0000;">"databricks_orchestrator_notebook"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"/path/to/databricks/orchestrator_notebook"</span></span>
-<span id="cb9-7">      <span class="st" style="color: #20794D;">"databricks"</span><span class="er" style="color: #AD0000;">:</span><span class="ot" style="color: #003B4F;">[</span>    </span>
-<span id="cb9-8">          <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb9-9">        <span class="dt" style="color: #AD0000;">"sink_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"path/to/processed/data"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb9-10">        <span class="dt" style="color: #AD0000;">"sink_file"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_1.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb9-11">        <span class="dt" style="color: #AD0000;">"databricks_notebook"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"/path/to/databricks/processing_notebook1"</span></span>
-<span id="cb9-12">        <span class="fu" style="color: #4758AB;">}</span><span class="ot" style="color: #003B4F;">,</span>    </span>
-<span id="cb9-13">          <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb9-14">        <span class="dt" style="color: #AD0000;">"sink_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"path/to/processed/data"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb9-15">        <span class="dt" style="color: #AD0000;">"sink_file"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_2.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb9-16">        <span class="dt" style="color: #AD0000;">"databricks_notebook"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"/path/to/databricks/processing_notebook2"</span></span>
-<span id="cb9-17">        <span class="fu" style="color: #4758AB;">}</span><span class="ot" style="color: #003B4F;">,</span></span>
-<span id="cb9-18">    <span class="er" style="color: #AD0000;">}</span></span>
-<span id="cb9-19"><span class="er" style="color: #AD0000;">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb9-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb9-2">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"pipeline"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb9-3">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"name"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"processing_databricks"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb9-4">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"folder"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"templates/processing/databricks_orchestrator"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb9-5">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"project"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb9-6">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"databricks_orchestrator_notebook"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"/path/to/databricks/orchestrator_notebook"</span></span>
+<span id="cb9-7">      <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"databricks"</span><span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">:</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">[</span>    </span>
+<span id="cb9-8">          <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb9-9">        <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"sink_path"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"path/to/processed/data"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb9-10">        <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"sink_file"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"file_1.csv"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb9-11">        <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"databricks_notebook"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"/path/to/databricks/processing_notebook1"</span></span>
+<span id="cb9-12">        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">,</span>    </span>
+<span id="cb9-13">          <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb9-14">        <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"sink_path"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"path/to/processed/data"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb9-15">        <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"sink_file"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"file_2.csv"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb9-16">        <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"databricks_notebook"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"/path/to/databricks/processing_notebook2"</span></span>
+<span id="cb9-17">        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb9-18">    <span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">}</span></span>
+<span id="cb9-19"><span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">}</span></span></code></pre></div>
 <p>Python code to sequentially run databricks notebook paths specified in a <code>.json</code> config file from a databricks orchestrator notebook.</p>
-<div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><span class="co" style="color: #5E5E5E;">#Squentially run datbricks notebooks</span></span>
-<span id="cb10-2"><span class="cf" style="color: #003B4F;">for</span> index, item <span class="kw" style="color: #003B4F;">in</span> <span class="bu" style="color: null;">enumerate</span>(config_JSON[<span class="st" style="color: #20794D;">'pipeline'</span>][<span class="st" style="color: #20794D;">'project'</span>][<span class="st" style="color: #20794D;">'databricks'</span>]): </span>
-<span id="cb10-3">notebook <span class="op" style="color: #5E5E5E;">=</span> config_JSON[<span class="st" style="color: #20794D;">'pipeline'</span>][<span class="st" style="color: #20794D;">'project'</span>][<span class="st" style="color: #20794D;">'databricks'</span>][index][<span class="st" style="color: #20794D;">'databricks_notebook'</span>]</span>
-<span id="cb10-4">    dbutils.notebook.run(notebook, <span class="dv" style="color: #AD0000;">120</span>)</span>
-<span id="cb10-5">  <span class="cf" style="color: #003B4F;">except</span> <span class="pp" style="color: #AD0000;">Exception</span> <span class="im" style="color: #00769E;">as</span> e:</span>
-<span id="cb10-6">    <span class="bu" style="color: null;">print</span>(e)</span></code></pre></div>
+<div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#Squentially run datbricks notebooks</span></span>
+<span id="cb10-2"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> index, item <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">enumerate</span>(config_JSON[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'pipeline'</span>][<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'project'</span>][<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'databricks'</span>]): </span>
+<span id="cb10-3">notebook <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> config_JSON[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'pipeline'</span>][<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'project'</span>][<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'databricks'</span>][index][<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'databricks_notebook'</span>]</span>
+<span id="cb10-4">    dbutils.notebook.run(notebook, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">120</span>)</span>
+<span id="cb10-5">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">except</span> <span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">Exception</span> <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> e:</span>
+<span id="cb10-6">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(e)</span></code></pre></div>
 </section>
 </section>
 <section id="data-factory-configuration-7" class="level3">
@@ -907,7 +1244,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://craig-shenton.github.io/craigrshenton/assets/images/pipeline_temps/function_app_processing.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Data processing using an azure function app</figcaption><p></p>
+<figcaption class="figure-caption">Data processing using an azure function app</figcaption>
 </figure>
 </div>
 <p><em>Figure 11: Data processing using an azure function app</em></p>
@@ -933,16 +1270,72 @@ Note
 </section>
 <section id="pipeline-configuration-8" class="level3">
 <h3 class="anchored" data-anchor-id="pipeline-configuration-8">Pipeline Configuration</h3>
-<div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb11-1"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb11-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb11-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"processing_function_app"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb11-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/processing/function_app"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb11-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb11-6">    <span class="dt" style="color: #AD0000;">"project"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb11-7">      <span class="dt" style="color: #AD0000;">"func_name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"azure_func_app"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb11-8">      <span class="dt" style="color: #AD0000;">"source_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"raw/historical/data/source"</span></span>
-<span id="cb11-9">    <span class="fu" style="color: #4758AB;">}</span></span>
-<span id="cb11-10"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb11-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb11-2">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"pipeline"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb11-3">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"name"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"processing_function_app"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb11-4">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"folder"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"templates/processing/function_app"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb11-5">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"adl_file_system"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"file_system"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb11-6">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"project"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb11-7">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"func_name"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"azure_func_app"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb11-8">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"source_path"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"raw/historical/data/source"</span></span>
+<span id="cb11-9">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span>
+<span id="cb11-10"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span></code></pre></div>
 </section>
 <section id="data-factory-configuration-8" class="level3">
 <h3 class="anchored" data-anchor-id="data-factory-configuration-8">Data Factory Configuration</h3>
@@ -968,14 +1361,14 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://craig-shenton.github.io/craigrshenton/assets/images/pipeline_temps/multiple_function_app_processing.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Data processing using multiple azure function apps</figcaption><p></p>
+<figcaption class="figure-caption">Data processing using multiple azure function apps</figcaption>
 </figure>
 </div>
 <p><em>Figure 12: Data processing using multiple azure function apps</em></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://craig-shenton.github.io/craigrshenton/assets/images/pipeline_temps/multiple_function_app_processing_2.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">ForEach loop activities within pipeline</figcaption><p></p>
+<figcaption class="figure-caption">ForEach loop activities within pipeline</figcaption>
 </figure>
 </div>
 <p><em>Figure 13: ForEach loop activities within pipeline</em></p>
@@ -1005,20 +1398,112 @@ Note
 </section>
 <section id="pipeline-configuration-9" class="level3">
 <h3 class="anchored" data-anchor-id="pipeline-configuration-9">Pipeline Configuration</h3>
-<div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb12-1"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb12-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb12-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"processing_function_app"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb12-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/processing/function_app"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb12-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb12-6">    <span class="dt" style="color: #AD0000;">"project"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb12-7">      <span class="dt" style="color: #AD0000;">"functions"</span><span class="fu" style="color: #4758AB;">:</span> <span class="ot" style="color: #003B4F;">[</span></span>
-<span id="cb12-8">        <span class="fu" style="color: #4758AB;">{</span><span class="dt" style="color: #AD0000;">"func_name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"azure_func_app_1"</span><span class="fu" style="color: #4758AB;">}</span><span class="ot" style="color: #003B4F;">,</span></span>
-<span id="cb12-9">        <span class="fu" style="color: #4758AB;">{</span><span class="dt" style="color: #AD0000;">"func_name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"azure_func_app_2"</span><span class="fu" style="color: #4758AB;">}</span><span class="ot" style="color: #003B4F;">,</span></span>
-<span id="cb12-10">        <span class="fu" style="color: #4758AB;">{</span><span class="dt" style="color: #AD0000;">"func_name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"azure_func_app_3"</span><span class="fu" style="color: #4758AB;">}</span></span>
-<span id="cb12-11">            <span class="ot" style="color: #003B4F;">]</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb12-12">      <span class="dt" style="color: #AD0000;">"source_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"raw/historical/data/source"</span></span>
-<span id="cb12-13">    <span class="fu" style="color: #4758AB;">}</span></span>
-<span id="cb12-14"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb12-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb12-2">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"pipeline"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb12-3">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"name"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"processing_function_app"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb12-4">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"folder"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"templates/processing/function_app"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb12-5">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"adl_file_system"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"file_system"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb12-6">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"project"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb12-7">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"functions"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">[</span></span>
+<span id="cb12-8">        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"func_name"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"azure_func_app_1"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb12-9">        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"func_name"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"azure_func_app_2"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb12-10">        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"func_name"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"azure_func_app_3"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span>
+<span id="cb12-11">            <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">]</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb12-12">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"source_path"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"raw/historical/data/source"</span></span>
+<span id="cb12-13">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span>
+<span id="cb12-14"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span></code></pre></div>
 </section>
 <section id="data-factory-configuration-9" class="level3">
 <h3 class="anchored" data-anchor-id="data-factory-configuration-9">Data Factory Configuration</h3>
@@ -1044,7 +1529,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://craig-shenton.github.io/craigrshenton/assets/images/pipeline_temps/csv_file_processing.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Copying a .csv file between Azure Datalake directories</figcaption><p></p>
+<figcaption class="figure-caption">Copying a .csv file between Azure Datalake directories</figcaption>
 </figure>
 </div>
 <p><em>Figure 14: Copying a <code>.csv</code> file between Azure Datalake directories</em></p>
@@ -1064,18 +1549,90 @@ Note
 </section>
 <section id="pipeline-configuration-10" class="level3">
 <h3 class="anchored" data-anchor-id="pipeline-configuration-10">Pipeline Configuration</h3>
-<div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb13-1"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb13-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb13-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"processing_csv_file"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb13-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/processing/csv_file"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb13-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb13-6">    <span class="dt" style="color: #AD0000;">"project"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb13-7">      <span class="dt" style="color: #AD0000;">"source_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"raw/"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb13-8">      <span class="dt" style="color: #AD0000;">"source_name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb13-9">      <span class="dt" style="color: #AD0000;">"sink_path"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"proc/"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb13-10">      <span class="dt" style="color: #AD0000;">"sink_name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_copy.csv"</span></span>
-<span id="cb13-11">    <span class="fu" style="color: #4758AB;">}</span></span>
-<span id="cb13-12"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb13-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb13-2">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"pipeline"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb13-3">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"name"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"processing_csv_file"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb13-4">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"folder"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"templates/processing/csv_file"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb13-5">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"adl_file_system"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"file_system"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb13-6">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"project"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb13-7">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"source_path"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"raw/"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb13-8">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"source_name"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"file.csv"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb13-9">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"sink_path"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"proc/"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb13-10">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"sink_name"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"file_copy.csv"</span></span>
+<span id="cb13-11">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span>
+<span id="cb13-12"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span></code></pre></div>
 </section>
 <section id="data-factory-configuration-10" class="level3">
 <h3 class="anchored" data-anchor-id="data-factory-configuration-10">Data Factory Configuration</h3>
@@ -1101,7 +1658,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://craig-shenton.github.io/craigrshenton/assets/images/pipeline_temps/sql_database_staging.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Data staging to a table in an Azure SQL database</figcaption><p></p>
+<figcaption class="figure-caption">Data staging to a table in an Azure SQL database</figcaption>
 </figure>
 </div>
 <p><em>Figure 15: Data staging to a table in an Azure SQL database</em></p>
@@ -1124,18 +1681,90 @@ Note
 </section>
 <section id="pipeline-configuration-11" class="level3">
 <h3 class="anchored" data-anchor-id="pipeline-configuration-11">Pipeline Configuration</h3>
-<div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb14-1"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb14-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb14-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"staging_sql_database"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb14-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/staging/sql_database"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb14-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb14-6">    <span class="dt" style="color: #AD0000;">"staging"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb14-7">        <span class="dt" style="color: #AD0000;">"stored_procedure"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"[dbo].[sql_stored_procedure_table_1]"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb14-8">        <span class="dt" style="color: #AD0000;">"source_path"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"proc/projects/path/to/processed/data/"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb14-9">        <span class="dt" style="color: #AD0000;">"source_file"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"table_1.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb14-10">        <span class="dt" style="color: #AD0000;">"sink_table"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"sql_table_1"</span></span>
-<span id="cb14-11">    <span class="fu" style="color: #4758AB;">}</span></span>
-<span id="cb14-12"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb14-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb14-2">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"pipeline"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb14-3">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"name"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"staging_sql_database"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb14-4">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"folder"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"templates/staging/sql_database"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb14-5">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"adl_file_system"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"file_system"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb14-6">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"staging"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb14-7">        <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"stored_procedure"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"[dbo].[sql_stored_procedure_table_1]"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb14-8">        <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"source_path"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"proc/projects/path/to/processed/data/"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb14-9">        <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"source_file"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"table_1.csv"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb14-10">        <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"sink_table"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"sql_table_1"</span></span>
+<span id="cb14-11">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span>
+<span id="cb14-12"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span></code></pre></div>
 </section>
 <section id="data-factory-configuration-11" class="level3">
 <h3 class="anchored" data-anchor-id="data-factory-configuration-11">Data Factory Configuration</h3>
@@ -1161,14 +1790,14 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://craig-shenton.github.io/craigrshenton/assets/images/pipeline_temps/multiple_table_sql_database_staging.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Data staging to multiple tables in an Azure SQL database</figcaption><p></p>
+<figcaption class="figure-caption">Data staging to multiple tables in an Azure SQL database</figcaption>
 </figure>
 </div>
 <p><em>Figure 16: Data staging to multiple tables in an Azure SQL database</em></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://craig-shenton.github.io/craigrshenton/assets/images/pipeline_temps/multiple_table_sql_database_staging_2.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">ForEach loop activities within pipeline</figcaption><p></p>
+<figcaption class="figure-caption">ForEach loop activities within pipeline</figcaption>
 </figure>
 </div>
 <p><em>Figure 17: ForEach loop activities within pipeline</em></p>
@@ -1194,32 +1823,180 @@ Note
 </section>
 <section id="pipeline-configuration-12" class="level3">
 <h3 class="anchored" data-anchor-id="pipeline-configuration-12">Pipeline Configuration</h3>
-<div class="sourceCode" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb15-1"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb15-2">  <span class="dt" style="color: #AD0000;">"pipeline"</span><span class="fu" style="color: #4758AB;">:</span> <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb15-3">    <span class="dt" style="color: #AD0000;">"name"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"multiple_tables_staging_sql_database"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb15-4">    <span class="dt" style="color: #AD0000;">"folder"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"templates/staging/multiple_tables_sql_database"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb15-5">    <span class="dt" style="color: #AD0000;">"adl_file_system"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"file_system"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb15-6">    <span class="dt" style="color: #AD0000;">"staging"</span><span class="fu" style="color: #4758AB;">:</span> <span class="ot" style="color: #003B4F;">[</span></span>
-<span id="cb15-7">          <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb15-8">            <span class="dt" style="color: #AD0000;">"stored_procedure"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"[dbo].[sql_stored_procedure_table_1]"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb15-9">            <span class="dt" style="color: #AD0000;">"source_path"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"proc/projects/path/to/processed/data/"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb15-10">            <span class="dt" style="color: #AD0000;">"source_file"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"table_1.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb15-11">            <span class="dt" style="color: #AD0000;">"sink_table"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"sql_table_1"</span></span>
-<span id="cb15-12">          <span class="fu" style="color: #4758AB;">}</span><span class="ot" style="color: #003B4F;">,</span></span>
-<span id="cb15-13">          <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb15-14">            <span class="dt" style="color: #AD0000;">"stored_procedure"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"[dbo].[sql_stored_procedure_table_2]"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb15-15">            <span class="dt" style="color: #AD0000;">"source_path"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"proc/projects/path/to/processed/data2/"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb15-16">            <span class="dt" style="color: #AD0000;">"source_file"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"table_2.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb15-17">            <span class="dt" style="color: #AD0000;">"sink_table"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"sql_table_2"</span></span>
-<span id="cb15-18">          <span class="fu" style="color: #4758AB;">}</span><span class="ot" style="color: #003B4F;">,</span></span>
-<span id="cb15-19">          <span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb15-20">            <span class="dt" style="color: #AD0000;">"stored_procedure"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"[dbo].[sql_stored_procedure_table_3]"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb15-21">            <span class="dt" style="color: #AD0000;">"source_path"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"proc/projects/path/to/processed/data3/"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb15-22">            <span class="dt" style="color: #AD0000;">"source_file"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"table_3.csv"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb15-23">            <span class="dt" style="color: #AD0000;">"sink_table"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"sql_table_3"</span></span>
-<span id="cb15-24">          <span class="fu" style="color: #4758AB;">}</span></span>
-<span id="cb15-25">      <span class="ot" style="color: #003B4F;">]</span></span>
-<span id="cb15-26"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb15-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb15-2">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"pipeline"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb15-3">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"name"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"multiple_tables_staging_sql_database"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb15-4">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"folder"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"templates/staging/multiple_tables_sql_database"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb15-5">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"adl_file_system"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"file_system"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb15-6">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"staging"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">[</span></span>
+<span id="cb15-7">          <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb15-8">            <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"stored_procedure"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"[dbo].[sql_stored_procedure_table_1]"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb15-9">            <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"source_path"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"proc/projects/path/to/processed/data/"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb15-10">            <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"source_file"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"table_1.csv"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb15-11">            <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"sink_table"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"sql_table_1"</span></span>
+<span id="cb15-12">          <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb15-13">          <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb15-14">            <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"stored_procedure"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"[dbo].[sql_stored_procedure_table_2]"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb15-15">            <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"source_path"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"proc/projects/path/to/processed/data2/"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb15-16">            <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"source_file"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"table_2.csv"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb15-17">            <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"sink_table"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"sql_table_2"</span></span>
+<span id="cb15-18">          <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb15-19">          <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb15-20">            <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"stored_procedure"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"[dbo].[sql_stored_procedure_table_3]"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb15-21">            <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"source_path"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"proc/projects/path/to/processed/data3/"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb15-22">            <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"source_file"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"table_3.csv"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb15-23">            <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"sink_table"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"sql_table_3"</span></span>
+<span id="cb15-24">          <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span>
+<span id="cb15-25">      <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">]</span></span>
+<span id="cb15-26"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span></code></pre></div>
 </section>
 <section id="data-factory-configuration-12" class="level3">
 <h3 class="anchored" data-anchor-id="data-factory-configuration-12">Data Factory Configuration</h3>
@@ -1230,22 +2007,21 @@ Note
 </section>
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><div>MIT</div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shenton2021,
-  author = {Craig Shenton},
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>MIT</div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shenton2021,
+  author = {Shenton, Craig},
   title = {Azure {Data} {Factory} {Templates}},
   date = {2021-09-09},
-  url = {https://craig-shenton.github.io/craigrshenton/azure-data-factory-templates.html},
+  url = {https://craig-shenton.github.io/craigrshenton/posts/azure-data-factory-templates.html},
   langid = {en}
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shenton2021" class="csl-entry quarto-appendix-citeas">
-Craig Shenton. 2021. <span>“Azure Data Factory Templates.”</span>
-September 9, 2021. <a href="https://craig-shenton.github.io/craigrshenton/azure-data-factory-templates.html">https://craig-shenton.github.io/craigrshenton/azure-data-factory-templates.html</a>.
+Shenton, Craig. 2021. <span>“Azure Data Factory Templates.”</span>
+September 9, 2021. <a href="https://craig-shenton.github.io/craigrshenton/posts/azure-data-factory-templates.html">https://craig-shenton.github.io/craigrshenton/posts/azure-data-factory-templates.html</a>.
 </div></div></section></div> ]]></description>
   <category>Azure</category>
   <category>Data Factory</category>
   <guid>https://craig-shenton.github.io/craigrshenton/posts/azure-data-factory-templates.html</guid>
   <pubDate>Thu, 09 Sep 2021 00:00:00 GMT</pubDate>
-  <media:content url="https://craig-shenton.github.io/craigrshenton/assets/images/pipeline_temps/sql-ingest.png" medium="image" type="image/png" height="57" width="144"/>
 </item>
 <item>
   <title>Azure Data Engineering Principles</title>
@@ -1276,12 +2052,12 @@ September 9, 2021. <a href="https://craig-shenton.github.io/craigrshenton/azure-
 <li>References</li>
 </ul></li>
 </ul>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Note
 </div>
 </div>
@@ -1298,7 +2074,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://craig-shenton.github.io/craigrshenton/assets/images/posts/azure-data-engineering-principles/fig1.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure 1. An Azure Data Factory dataset file path configuration using the parameters; <code>@dataset().fileSystem</code>, <code>@dataset().filePath</code>, <code>@dataset().fileName</code> to denote the datalake file system name, the file path and and the file name.</figcaption><p></p>
+<figcaption class="figure-caption">Figure 1. An Azure Data Factory dataset file path configuration using the parameters; <code>@dataset().fileSystem</code>, <code>@dataset().filePath</code>, <code>@dataset().fileName</code> to denote the datalake file system name, the file path and and the file name.</figcaption>
 </figure>
 </div>
 <p>From these parameters, that specify the file path and name and the file system of the Azure Datalake linked service, we can use any <code>.csv</code> file available as the source for any pipeline activity. This has reduced the number of datasets listed in our ADF environment dramatically, reducing the overhead required to organise, search, and maintain our pipelines.</p>
@@ -1308,7 +2084,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://craig-shenton.github.io/craigrshenton/assets/images/posts/azure-data-engineering-principles/fig2.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure 2. An example Azure Data Factory pipeline utility that can append the source path of any file with the latest time-stamped folder path.</figcaption><p></p>
+<figcaption class="figure-caption">Figure 2. An example Azure Data Factory pipeline utility that can append the source path of any file with the latest time-stamped folder path.</figcaption>
 </figure>
 </div>
 <p>A practical example of the utility of parameterisation is the ability to append the source path of any file with a time-stamped folder, for example <code>@concat(variables('sourcePath'),variables('latestFolder'))</code>. This allows for a well organised record of data sampled at different time points to be stored within the Datalake.</p>
@@ -1340,7 +2116,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://craig-shenton.github.io/craigrshenton/assets/images/posts/azure-data-engineering-principles/fig3.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure 3. An example Azure Data Factory ingestion pipeline template that can be configured to extract data from an Azure SQL database to Azure Datalake blob storage.</figcaption><p></p>
+<figcaption class="figure-caption">Figure 3. An example Azure Data Factory ingestion pipeline template that can be configured to extract data from an Azure SQL database to Azure Datalake blob storage.</figcaption>
 </figure>
 </div>
 <p>The pipeline shown above is a fully parameterised template developed to ingest raw data from an Azure SQL database to Azure Datalake blob storage. This is an example of a ‘Source-Sink’ pattern–used for parameterising and configuring data copy activities that move data from one location to another. As mentioned in the parameterisation section, each Azure Data Factory copy activity requires at least two datasets to configure both source and sink locations. However, here we have created a generic SQL dataset and a generic Azure Datalake dataset that can be dynamically configured across all pipelines. As such, this template can be used and re-used to move data from any Azure SQL server to any Azure blob storage container.</p>
@@ -1359,7 +2135,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://craig-shenton.github.io/craigrshenton/assets/images/posts/azure-data-engineering-principles/fig4.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure 4. An example Azure Data Factory pipeline processing pipeline template that can be configured to run a Databricks notebook.</figcaption><p></p>
+<figcaption class="figure-caption">Figure 4. An example Azure Data Factory pipeline processing pipeline template that can be configured to run a Databricks notebook.</figcaption>
 </figure>
 </div>
 <p>The parameterised pipeline template above has been developed to run a Databricks notebook from Azure Data Factory. This is an example of a ‘Key-Value’ pattern–useful for configuring the settings of activities outside of Azure Data Factory itself. Here the json configuration file is providing the key-value of a Databricks notebook file path. This could also be used to give the URL of an Azure logic app or pass multiple variables to an Azure function app for example.</p>
@@ -1378,7 +2154,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://craig-shenton.github.io/craigrshenton/assets/images/posts/azure-data-engineering-principles/fig5.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure 5.A hierarchicy of pipelines. At the top, a orchestration pipeline that triggers the sub-pipelines below. Each phase of the data processing (extract, transform, and load, or ETL) is a fully parameterised template that requires no setup of its own.</figcaption><p></p>
+<figcaption class="figure-caption">Figure 5.A hierarchicy of pipelines. At the top, a orchestration pipeline that triggers the sub-pipelines below. Each phase of the data processing (extract, transform, and load, or ETL) is a fully parameterised template that requires no setup of its own.</figcaption>
 </figure>
 </div>
 <p>One of the most significant changes made to our data engineering setup is the use of hierarchical pipelines; that is the use of a single orchestration pipeline to trigger multiple ETL pipelines and utility sub-pipelines. This is based on Paul Andrews’ grandparent, parent, child design pattern that may be familiar to SSIS users [<a href="https://mrpaulandrew.com/2019/09/25/azure-data-factory-pipeline-hierarchies-generation-control/">9</a>]. With this design, and the generic ETL templates outlined above, we can create a ‘plug-and-play’ data engineering system. We simply select the ingestion, transformation, and staging patterns required from the templates and link them together under the orchestration pipeline. A single json config file is then created with all the ‘Sink-Source’ and ‘Key-Value’ pairs needed to move the data through the ETL process, so no configuration is required in Azure Data Factory itself. This has significantly reduced the amount of time needed to set up new pipelines, and ensures best practices are maintained across all our products.</p>
@@ -1411,21 +2187,20 @@ Note
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><div>MIT</div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shenton2021,
-  author = {Craig Shenton},
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div>MIT</div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shenton2021,
+  author = {Shenton, Craig},
   title = {Azure {Data} {Engineering} {Principles}},
   date = {2021-09-01},
-  url = {https://craig-shenton.github.io/craigrshenton/azure-data-engineering-principles.html},
+  url = {https://craig-shenton.github.io/craigrshenton/posts/azure-data-engineering-principles.html},
   langid = {en}
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shenton2021" class="csl-entry quarto-appendix-citeas">
-Craig Shenton. 2021. <span>“Azure Data Engineering Principles.”</span>
-September 1, 2021. <a href="https://craig-shenton.github.io/craigrshenton/azure-data-engineering-principles.html">https://craig-shenton.github.io/craigrshenton/azure-data-engineering-principles.html</a>.
+Shenton, Craig. 2021. <span>“Azure Data Engineering Principles.”</span>
+September 1, 2021. <a href="https://craig-shenton.github.io/craigrshenton/posts/azure-data-engineering-principles.html">https://craig-shenton.github.io/craigrshenton/posts/azure-data-engineering-principles.html</a>.
 </div></div></section></div> ]]></description>
   <category>Azure</category>
   <guid>https://craig-shenton.github.io/craigrshenton/posts/azure-data-engineering-principles.html</guid>
   <pubDate>Wed, 01 Sep 2021 00:00:00 GMT</pubDate>
-  <media:content url="https://craig-shenton.github.io/craigrshenton/assets/images/posts/azure-data-engineering-principles/fig1.png" medium="image" type="image/png" height="17" width="144"/>
 </item>
 </channel>
 </rss>

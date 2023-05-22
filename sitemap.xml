@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://craig-shenton.github.io/craigrshenton/posts/azure-data-factory-templates.html</loc>
-    <lastmod>2023-04-15T19:47:59.982Z</lastmod>
+    <loc>https://craig-shenton.github.io/craigrshenton/index.html</loc>
+    <lastmod>2023-05-22T21:29:14.417Z</lastmod>
   </url>
   <url>
     <loc>https://craig-shenton.github.io/craigrshenton/posts/azure-data-engineering-principles.html</loc>
-    <lastmod>2023-04-15T19:48:00.958Z</lastmod>
+    <lastmod>2023-05-22T21:29:15.721Z</lastmod>
   </url>
   <url>
-    <loc>https://craig-shenton.github.io/craigrshenton/posts/data_eng_list.html</loc>
-    <lastmod>2023-04-15T19:48:01.874Z</lastmod>
-  </url>
-  <url>
-    <loc>https://craig-shenton.github.io/craigrshenton/index.html</loc>
-    <lastmod>2023-04-15T19:48:02.594Z</lastmod>
-  </url>
-  <url>
-    <loc>https://craig-shenton.github.io/craigrshenton/drafts/azure-data-factory-resources.html</loc>
-    <lastmod>2023-04-15T19:48:03.206Z</lastmod>
+    <loc>https://craig-shenton.github.io/craigrshenton/posts/azure-data-factory-templates.html</loc>
+    <lastmod>2023-05-22T21:29:17.229Z</lastmod>
   </url>
   <url>
     <loc>https://craig-shenton.github.io/craigrshenton/about.html</loc>
-    <lastmod>2023-04-15T19:48:03.494Z</lastmod>
+    <lastmod>2023-05-22T21:29:17.853Z</lastmod>
+  </url>
+  <url>
+    <loc>https://craig-shenton.github.io/craigrshenton/drafts/azure-data-factory-resources.html</loc>
+    <lastmod>2023-05-22T21:29:18.173Z</lastmod>
   </url>
 </urlset>
