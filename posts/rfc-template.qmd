@@ -1,0 +1,72 @@
+
+---
+title: "Request for Comments Template"
+description: "An RFC is a formal document used to propose, discuss, and establish standards or specifications."
+date: "2023-05-28"
+layout: post
+categories: [Template]
+---
+
+# RFC: [Title of the RFC]
+
+**Author(s):** [List of author(s)]
+
+**Last Updated:** [Date of the last update]
+
+## Abstract
+
+- Summarize the problem that the proposal aims to solve.
+- Explain the proposed solution in a concise manner.
+
+## Motivation
+
+- Describe the specific pain points or limitations that the proposal addresses.
+- Discuss the benefits and advantages of implementing the proposed change.
+- Explain how the proposal aligns with the goals and philosophy of the language.
+
+## Proposal
+
+- Provide a detailed explanation of the proposed change or addition.
+- Outline the technical details and specifications of the proposal.
+- Discuss any modifications or extensions to existing language features.
+
+## Syntax
+
+- If applicable, present the proposed syntax for any new language constructs.
+- Provide examples of how the new syntax would be used in code.
+
+## Examples
+
+- Include code examples or use cases that illustrate the proposed change in action.
+- Demonstrate how the proposal improves upon existing patterns or simplifies complex scenarios.
+
+## Compatibility
+
+- Discuss the potential impact of the proposal on existing codebases and libraries.
+- Address any potential backward compatibility issues and suggest solutions or workarounds.
+
+## Drawbacks
+
+- Identify potential drawbacks or trade-offs associated with the proposal.
+- Discuss any challenges or risks that should be considered when implementing the change.
+
+## Alternatives
+
+- Describe alternative approaches or solutions that have been considered.
+- Explain why the proposed solution is preferred over the alternatives.
+
+## Implementation Plan
+
+- Outline the steps required to implement the proposed change.
+- Discuss any dependencies, such as other language features or external libraries.
+- Consider potential challenges or considerations that may arise during implementation.
+
+## Open Questions
+
+- List any unresolved questions or uncertainties related to the proposal.
+- Identify areas where further discussion or investigation is needed.
+
+## References
+
+- Provide references to relevant documentation, articles, or resources that support the proposal.
+- Include links to related discussions or GitHub issues if applicable.
