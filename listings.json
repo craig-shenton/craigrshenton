@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/rfc-template.html",
       "/posts/azure-data-factory-templates.html",
       "/posts/azure-data-engineering-principles.html"
     ]

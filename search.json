@@ -4,7 +4,91 @@
     "href": "index.html",
     "title": "Craig Robert Shenton",
     "section": "",
-    "text": "Azure Data Factory Templates\n\n\n\n\nOpen access and reusable design documentation of pipelines used in the NHSX Analytics Azure Data Factory (ADF) environment.\n\n\n\n\n\n\n9/9/21\n\n\n\n\n\n\n\n\nAzure Data Engineering Principles\n\n\n\n\nIn this post, we aim to set out the data engineering principles NHSX has developed in designing and building our Azure cloud-analytics infrastructure.\n\n\n\n\n\n\n9/1/21\n\n\n\n\n\n\nNo matching items"
+    "text": "Request for Comments Template\n\n\n\n\nAn RFC is a formal document used to propose, discuss, and establish standards or specifications.\n\n\n\n\n\n\n5/28/23\n\n\n\n\n\n\n\n\nAzure Data Factory Templates\n\n\n\n\nOpen access and reusable design documentation of pipelines used in the NHSX Analytics Azure Data Factory (ADF) environment.\n\n\n\n\n\n\n9/9/21\n\n\n\n\n\n\n\n\nAzure Data Engineering Principles\n\n\n\n\nIn this post, we aim to set out the data engineering principles NHSX has developed in designing and building our Azure cloud-analytics infrastructure.\n\n\n\n\n\n\n9/1/21\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/rfc-template.html",
+    "href": "posts/rfc-template.html",
+    "title": "Request for Comments Template",
+    "section": "",
+    "text": "Author(s): [List of author(s)]\nLast Updated: [Date of the last update]\n\n\n\nSummarize the problem that the proposal aims to solve.\nExplain the proposed solution in a concise manner.\n\n\n\n\n\nDescribe the specific pain points or limitations that the proposal addresses.\nDiscuss the benefits and advantages of implementing the proposed change.\nExplain how the proposal aligns with the goals and philosophy of the language.\n\n\n\n\n\nProvide a detailed explanation of the proposed change or addition.\nOutline the technical details and specifications of the proposal.\nDiscuss any modifications or extensions to existing language features.\n\n\n\n\n\nIf applicable, present the proposed syntax for any new language constructs.\nProvide examples of how the new syntax would be used in code.\n\n\n\n\n\nInclude code examples or use cases that illustrate the proposed change in action.\nDemonstrate how the proposal improves upon existing patterns or simplifies complex scenarios.\n\n\n\n\n\nDiscuss the potential impact of the proposal on existing codebases and libraries.\nAddress any potential backward compatibility issues and suggest solutions or workarounds.\n\n\n\n\n\nIdentify potential drawbacks or trade-offs associated with the proposal.\nDiscuss any challenges or risks that should be considered when implementing the change.\n\n\n\n\n\nDescribe alternative approaches or solutions that have been considered.\nExplain why the proposed solution is preferred over the alternatives.\n\n\n\n\n\nOutline the steps required to implement the proposed change.\nDiscuss any dependencies, such as other language features or external libraries.\nConsider potential challenges or considerations that may arise during implementation.\n\n\n\n\n\nList any unresolved questions or uncertainties related to the proposal.\nIdentify areas where further discussion or investigation is needed.\n\n\n\n\n\nProvide references to relevant documentation, articles, or resources that support the proposal.\nInclude links to related discussions or GitHub issues if applicable."
+  },
+  {
+    "objectID": "posts/rfc-template.html#abstract",
+    "href": "posts/rfc-template.html#abstract",
+    "title": "Request for Comments Template",
+    "section": "",
+    "text": "Summarize the problem that the proposal aims to solve.\nExplain the proposed solution in a concise manner."
+  },
+  {
+    "objectID": "posts/rfc-template.html#motivation",
+    "href": "posts/rfc-template.html#motivation",
+    "title": "Request for Comments Template",
+    "section": "",
+    "text": "Describe the specific pain points or limitations that the proposal addresses.\nDiscuss the benefits and advantages of implementing the proposed change.\nExplain how the proposal aligns with the goals and philosophy of the language."
+  },
+  {
+    "objectID": "posts/rfc-template.html#proposal",
+    "href": "posts/rfc-template.html#proposal",
+    "title": "Request for Comments Template",
+    "section": "",
+    "text": "Provide a detailed explanation of the proposed change or addition.\nOutline the technical details and specifications of the proposal.\nDiscuss any modifications or extensions to existing language features."
+  },
+  {
+    "objectID": "posts/rfc-template.html#syntax",
+    "href": "posts/rfc-template.html#syntax",
+    "title": "Request for Comments Template",
+    "section": "",
+    "text": "If applicable, present the proposed syntax for any new language constructs.\nProvide examples of how the new syntax would be used in code."
+  },
+  {
+    "objectID": "posts/rfc-template.html#examples",
+    "href": "posts/rfc-template.html#examples",
+    "title": "Request for Comments Template",
+    "section": "",
+    "text": "Include code examples or use cases that illustrate the proposed change in action.\nDemonstrate how the proposal improves upon existing patterns or simplifies complex scenarios."
+  },
+  {
+    "objectID": "posts/rfc-template.html#compatibility",
+    "href": "posts/rfc-template.html#compatibility",
+    "title": "Request for Comments Template",
+    "section": "",
+    "text": "Discuss the potential impact of the proposal on existing codebases and libraries.\nAddress any potential backward compatibility issues and suggest solutions or workarounds."
+  },
+  {
+    "objectID": "posts/rfc-template.html#drawbacks",
+    "href": "posts/rfc-template.html#drawbacks",
+    "title": "Request for Comments Template",
+    "section": "",
+    "text": "Identify potential drawbacks or trade-offs associated with the proposal.\nDiscuss any challenges or risks that should be considered when implementing the change."
+  },
+  {
+    "objectID": "posts/rfc-template.html#alternatives",
+    "href": "posts/rfc-template.html#alternatives",
+    "title": "Request for Comments Template",
+    "section": "",
+    "text": "Describe alternative approaches or solutions that have been considered.\nExplain why the proposed solution is preferred over the alternatives."
+  },
+  {
+    "objectID": "posts/rfc-template.html#implementation-plan",
+    "href": "posts/rfc-template.html#implementation-plan",
+    "title": "Request for Comments Template",
+    "section": "",
+    "text": "Outline the steps required to implement the proposed change.\nDiscuss any dependencies, such as other language features or external libraries.\nConsider potential challenges or considerations that may arise during implementation."
+  },
+  {
+    "objectID": "posts/rfc-template.html#open-questions",
+    "href": "posts/rfc-template.html#open-questions",
+    "title": "Request for Comments Template",
+    "section": "",
+    "text": "List any unresolved questions or uncertainties related to the proposal.\nIdentify areas where further discussion or investigation is needed."
+  },
+  {
+    "objectID": "posts/rfc-template.html#references",
+    "href": "posts/rfc-template.html#references",
+    "title": "Request for Comments Template",
+    "section": "",
+    "text": "Provide references to relevant documentation, articles, or resources that support the proposal.\nInclude links to related discussions or GitHub issues if applicable."
   },
   {
     "objectID": "posts/azure-data-engineering-principles.html",
